@@ -35,6 +35,7 @@ apt-cache showpkg PACKAGE                  #liste de toutes les versions disponi
 apt-mark hold PACKAGE                      #bloquer en version actuelle (pas d update)
 apt-cache policy PACKAGE                   #montre le paquet et les versions disponibles
 sudo aptitude install PACKAGE=VERSIONS     #Installer un paquet dans une version spécifique
+apt-get install --no-install-recommends PACKAGE    #ne pas installer les paquets recommandés
 ```
 
 _____________________________________________________________________________________
