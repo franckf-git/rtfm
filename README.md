@@ -9,6 +9,7 @@ Manual pages for GNU/linux and others tips.
 * [How to write Bash script](./bash.md)
 * [Raspberry Pi basics commands](./rasp_basics.md)
 * [Raspberry Pi manage GPIO](./rasp_gpio.md)
+* [Tips for sysadmin programs](./programs_sysadmin.md)
 
 ## Sources
 
