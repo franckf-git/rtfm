@@ -23,13 +23,13 @@ DROP DATABASE IF EXISTS basededonnee;
 
 -- creation table
 CREATE TABLE table (
-    colonne SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+    id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
     colonne1 VARCHAR(40) NOT NULL,
     colonne2 CHAR(1),
     colonne3 DATETIME NOT NULL,
     colonne4 VARCHAR(30),
     colonne5 TEXT,
-    PRIMARY KEY (colonne)
+    PRIMARY KEY (id)
 )
 ENGINE=INNODB;
 
@@ -54,12 +54,12 @@ ALTER TABLE nom_table MODIFY nom VARCHAR(30) NOT NULL DEFAULT 'commentaires';   
 -- insertion nouvelle ligne
 INSERT INTO table VALUES (1, 'valeur2', 'valeur3', 'date', 'valeur5', 'valeur6');
 INSERT INTO table VALUES (NULL, 'valeur2', 'valeur3', 'date', 'valeur5', NULL);
-INSERT INTO table (colonne1, colonne2, colonnedate, colonne4);
+INSERT INTO table (id, colonne2, colonnedate, colonne4);
 VALUES ('valeur1', 'valeur2', 'date', 'valeur4'),
        ('valeur1', NULL, '2010-08-23 05:18:00', NULL);
 
 SOURCE \chemin\fichier.sql;
-    INSERT INTO table (colonne1, colonne2, colonnedate, colonne4)
+    INSERT INTO table (id, colonne2, colonnedate, colonne4)
 VALUES ('valeur1', 'valeur2', 'date', 'valeur4'),
        ('valeur1', NULL, '2010-08-23 05:18:00', NULL)
     ...;

@@ -10,6 +10,7 @@ Manual pages for GNU/linux and others tips.
 * [Raspberry Pi basics commands](./rasp_basics.md)
 * [Raspberry Pi manage GPIO](./rasp_gpio.md)
 * [Tips for sysadmin programs](./programs_sysadmin.md)
+* [The most useful commands](./utils.md)
 
 ## Sources
 

@@ -50,6 +50,7 @@ shell
 exit $?               #en fin de script
 /usr/local/bin        #emplacement des scripts personnels
 caller 0              #débogage si dans une fonction
+echo -e '\E[37;44m'"\033[1mMESSAGE\033[0m"             #colorisation du code
 
 set -x                #Activation du débogage
 set +x                #Désactivation du débogage
@@ -259,4 +260,139 @@ var++ var--                   #post-incrément, post-décrément                
 =                             #affectation   affectation                              #égal + multiplication, égal + division, égal + modulo, etc.
 ,                             #virgule                                                #lie un ensemble d opérations
 ###>>>PLUS BASSE PRÉCÉDENCE
+```
+
+_____________________________________________________________________________________
+résumé shell
+-------------------------------------------------------------------------------------
+###Variables spéciales du shell
+```
+Variable   Signification
+$0         Nom du script
+$1         Paramètre de position #1
+$2 - $9    Paramètres de position #2 - #9
+${10}      Paramètre de position #10
+$#         Nombre de paramètres de position
+"$*"       Tous les paramètres de position (en un seul mot)
+"$@"       Tous les paramètres de position (en des chaînes séparées)
+${#*}      Nombre de paramètres de position
+${#@}      Nombre de paramètres de position
+$?         Code de retour
+$$         Numéro d'identifiant du processus (PID) généré par le script
+$-         Options passées au script (utilisant set)
+$_         Dernier argument de la commande précédente
+$!         Identifiant du processus (PID) du dernier job exécuté en tâche de fond
+```
+
+###Opérateurs de test : comparaison binaire
+```
+Opérateur     Signification     -----     Opérateur    Signification
+Comparaison arithmétique                  Comparaison de chaînes
+-eq           Égal à                      =            Égal à
+                                          ==           Égal à
+-ne           Différent de                !=           Différent de
+-lt           Plus petit que              \<           Plus petit que (ASCII)
+-le           Plus petit que ou égal à
+-gt           Plus grand que              \>           Plus grand que (ASCII)
+-ge           Plus grand que ou égal à
+                                          -z           Chaîne vide
+                                          -n           Chaîne non vide
+Comparaison arithmétique (( ... ))
+>             Plus grand que
+>=            Plus grand que ou égal à
+<             Plus petit que
+<=            Plus petit que ou égal à
+```
+
+###Opérateurs de test : fichiers
+```
+Opérateur     Tests si                            -----    Opérateur     Tests si
+-e   Le fichier existe                                         -s     Le fichier est vide
+-f   Le fichier est un fichier standard                  
+-d   Le fichier est un répertoire                              -r     Le fichier a un droit de lecture
+-h   Le fichier est un lien symbolique                         -w     Le fichier a un droit en écriture
+-L   Le fichier est un lien symbolique                         -x     Le fichier a le droit d exécution
+-b   Le fichier est un périphérique bloc                  
+-c   Le fichier est un périphérique caractère                  -g     L option sgid est positionnée
+-p   Le fichier est un tube                                    -u     L option suid est positionnée
+-S   Le fichier est un socket                                  -k     L option sticky bit est positionnée
+-t   Le fichier est associé à un terminal
+-N   Le fichier a été modifié depuis sa dernière lecture       F1 -nt F2     Le fichier F1 est plus récent que F2
+-O   Vous êtes le propriétaire du fichier                      F1 -ot F2     Le fichier F1 est plus ancien que F2
+-G   L identifiant du groupe du fichier est le même que vous   F1 -ef F2     Les fichiers F1 et F2 sont des liens vers le même fichier
+!    NOT (inverse le résultat des tests ci-dessus)
+```
+
+###Substitution et expansion de paramètres
+```
+Expression        Signification
+${var}            Valeur de var (identique à $var)
+${var-DEFAUT}     Si var n est pas initialisé, évalue l expression DEFAUT
+${var:-DEFAUT}    Si var n est pas initialisé ou est vide, évalue l expression DEFAUT
+${var=DEFAUT}     Si var n est pas initialisé, évalue l expression DEFAUT
+${var:=DEFAUT}    Si var n est pas initialisé, évalue l expression DEFAUT
+${var+AUTRE}      Si var est initialisé, évalue l expression AUTRE, sinon est une chaîne null
+${var:+AUTRE}     Si var est initialisé, évalue l expression AUTRE, sinon est une chaîne null
+${var?ERR_MSG}    Si var n est pas initialisé, affiche ERR_MSG et interrompt l exécution avec un code de sortie de 1
+${var:?ERR_MSG}   Si var n est pas initialisé, affiche ERR_MSG et interrompt l exécution avec un code de sortie de 1
+${!varprefix*}    Correspond à toutes les variables déclarées précédemment et commençant par varprefix
+${!varprefix@}    Correspond à toutes les variables déclarées précédemment et commençant par varprefix
+```
+
+###Opérations sur les chaînes
+```
+Expression                                   Signification
+${#chaine}                                   Longueur de $chaine
+${chaine:position}                           Extrait la sous-chaîne à partir de $chaine jusqu à $position
+${chaine:position:longueur}                  Extrait $longueur caractères dans la sous-chaîne à partir de $chaine jusqu à $position
+${chaine#sous-chaine}                        Supprime la plus petite correspondance de $sous-chaine à partir du début de $chaine
+${chaine##sous-chaine}                       Supprime la plus grande correspondance de $sous-chaine à partir du début de $chaine
+${chaine%sous-chaine}                        Supprime la plus courte correspondance de $sous-chaine à partir de la fin de $chaine
+${chaine%%sous-chaine}                       Supprime la plus longue correspondance de $sous-chaine à partir de la fin de $chaine
+${chaine/sous-chaine/remplacement}           Remplace la première correspondance de $sous-chaine avec $remplacement
+${chaine//sous-chaine/remplacement}          Remplace toutes les correspondances de $sous-chaine avec $remplacement
+${chaine/#sous-chaine/remplacement}          Si $sous-chaine correspond au début de $chaine, substitue $remplacement par $sous-chaine
+${chaine/%sous-chaine/remplacement}          Si $sous-chaine correspond à la fin de $chaine, substitue $remplacement par $sous-chaine
+expr match "$chaine" '$sous-chaine'          Longueur de $sous-chaine* correspondant au début de $chaine
+expr "$chaine" : '$sous-chaine'              Longueur de $sous-chaine* correspondant au début de $chaine
+expr index "$chaine" $sous-chaine            Position numérique dans $chaine du premier caractère correspondant dans $sous-chaine
+expr substr $chaine $position $longueur      Extrait $longueur caractères à partir de $chaine commençant à $position
+expr match "$chaine" '\($sous-chaine\)'      Extrait $sous-chaine*, en cherchant à partir du début de $chaine
+expr "$chaine" : '\($sous-chaine\)'          Extrait $sous-chaine* en cherchant à partir du début de $chaine
+expr match "$chaine" '.*\($sous-chaine\)'    Extrait $sous-chaine* en cherchant à partir de la fin de $chaine
+expr "$chaine" : '.*\($sous-chaine\)'        Extrait $sous-chaine* en cherchant à partir de la fin de $chaine
+```
+
+###Syntaxes diverses
+```
+Expression                        Interprétation
+Crochets
+if [ CONDITION ]                  Construction de tests
+if [[ CONDITION ]]                Construction de tests étendue
+Tableau[1]=element1               Initialisation d un tableau
+[a-z]                             Suite de caractères au sein d une Regex
+Accolades
+${variable}                       Substitution de paramètres
+${!variable}                      Référence de variable indirecte
+{ commande1; ... commandeN; }     Bloc de code
+{chaine1,string2,string3,...}     Expansion
+{a..z}                            Expansion d accolades
+{}                                Remplacement de texte, après find et xargs
+Parenthèses
+( commande1; commande2 )          Groupe de commandes exécutées dans un sous-shell
+Tableau=(element1 element2)       Initialisation d un tableau
+result=$(COMMANDE)                Substitution de commande, nouvelle manière
+>(COMMANDE)                       Substitution de processus
+<(COMMANDE)                       Substitution de processus
+Double parenthèses
+(( var = 78 ))                    Arithmétique sur des entiers
+var=$(( 20 + 5 ))                 Arithmétique sur des entiers, avec affectation de variables
+(( var++ ))                       Incrément de variables style C
+(( var-- ))                       Incrément de variables style C
+(( var0 = var1<98?9:21 ))         Opération à trois arguments
+Guillemets
+"$variable"                       Guillemets "faibles"
+'chaine'                          Guillements 'forts'
+Guillemets inverses
+result=`COMMANDE`                 Substitution de commande, manière habituelle
 ```
