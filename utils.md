@@ -16,11 +16,11 @@ ________________________________________________________________________________
 operations sur les fichiers
 -------------------------------------------------------------------------------------
 ```bash
-mv source CIBLE          #deplace le fichier source vers cible
-cp source CIBLE          #copie le fichier source vers cible
-cp -R source CIBLE       #copie le repertoire source vers cible
-ln source LIEN           #creer un lien fort de source vers lien
-ln -s source LIEN        #creer un lien symbolique de source vers lien
+mv SOURCE CIBLE          #deplace le fichier source vers cible
+cp SOURCE CIBLE          #copie le fichier source vers cible
+cp -R SOURCE CIBLE       #copie le repertoire source vers cible
+ln SOURCE LIEN           #creer un lien fort de source vers lien
+ln -s SOURCE LIEN        #creer un lien symbolique de source vers lien
 touch FILE               #creer le fichier file ou met a jour sa date de modification
 mkdir REP                #creer un repertoire rep
 mkdir -p REP/REP2        #mkdir avec creation des dossiers parents si necessaire
@@ -213,9 +213,9 @@ zip -r ARCHIVE.zip FICHIERS         unzip ARCHIVE.zip -d REP
 compress FICHIERS                   uncompress
 7z a FICHIERS                       7z x
 xz -z REP                           unxz
-bzcat                          #cat pour fichier .bz2
-zcat                           #cat pour fichier .gz
-tar -tvjf DOSSIER/ELEMENT .    #lecture tar.bz2
+bzcat                               #cat pour fichier .bz2
+zcat                                #cat pour fichier .gz
+tar -tvjf DOSSIER/ELEMENT .         #lecture tar.bz2
 ```
 
 _____________________________________________________________________________________
