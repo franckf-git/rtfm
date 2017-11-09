@@ -19,7 +19,7 @@ operations sur les fichiers
 mv SOURCE CIBLE          #deplace le fichier source vers cible
 cp SOURCE CIBLE          #copie le fichier source vers cible
 cp -R SOURCE CIBLE       #copie le repertoire source vers cible
-ln SOURCE LIEN           #creer un lien fort de source vers lien
+ln SOURCE LIEN           #creer un lien fort de source vers lien (inode identique)
 ln -s SOURCE LIEN        #creer un lien symbolique de source vers lien
 touch FILE               #creer le fichier file ou met a jour sa date de modification
 mkdir REP                #creer un repertoire rep
@@ -41,6 +41,7 @@ fichiers texte et binaire
 ```bash
 wc FICHIER            #compte le nombre de lignes, de mots, d octets de fichier
 cat FICHIERS          #concatene les fichiers
+tac FICHIERS          #cat inverse
 more FICHIER          #Espace=page suivante, Entree=ligne suivante, u=remonter
 less FICHIER          #navigation Left/Right/Up/Down/PageUp/PageDown
 head -n x FICHIER     #affiche les x premieres lignes de fichier
@@ -168,6 +169,7 @@ pkill signal NOM             #tuer un processus en utilisant le nom du programme
 #-15 (TERM)                  #terminer le processus proprement
 #-18 (STOP)                  #geler le processus
 #-20 (CONT)                  #reprendre l execution d un processus gele
+nice -n 10 NOMDUPROGRAMME    #changement de priorité cpu
 
 time COMMAND >/dev/null      #mesurer temps execution
 watch -d COMMAND             #executer une commande periodiquement
@@ -571,6 +573,9 @@ log
 journalctl -p err -b                               #messages d erreurs
 watch -n 1800 ps aux > $(date +%H%M).log           #log avec date
 find /home -type f -mtime +7 -exec rm {} \;        #purger plus vieux que 7 jours
+pastebinit                                         #utilitaire pastebin
+pastebinit -l                                      #liste des sites d export
+pastebinit -i FICHIER -a Untitled -b http://pastebin.com
 ```
 
 _____________________________________________________________________________________
