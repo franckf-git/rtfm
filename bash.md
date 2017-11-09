@@ -2,29 +2,30 @@ ________________________________________________________________________________
 interaction entre les commandes
 -------------------------------------------------------------------------------------
 ```bash
-command &             #commande en arriere plan
-nohup commande        #commande en arriere plan et hors console
-bg commande           #commande en arriere plan
-fg commande           #Reprend la main
-command && command    #execute si la premiere est un success
-command ; command     #execute toujours la seconde commande
-command || command    #execute si la premiere est un echec
-command !(*.file)     #execute la commande sauf pour les file
-command | command     #la seconde commande execute le resultat de la premiere
-(Command_x1 && Command_x2) || (Command_x3 && Command_x4)   #separe les commandes
-test\(1\).txt         #pour les caracteres speciaux
-command >> file.log   #rediriger les resultats a la fin d un fichier
-command 2>> file.log  #rediriger les erreurs a la fin d un fichier
-command >> file.log 2>&1   #rediriger les resultats et les erreurs
-commande > file.log 2>&1   #rediriger à la fois la sortie standard et l erreur standard
-commande < file.log        #rediriger l entrée standard de la commande vers le fichier
-commande << délimiteur                                                                #rediriger l entrée standard de la commande vers les lignes suivantes jusqu’à ce que le délimiteur soit rencontré
-command && echo "tout va bien" || echo "ca rate"       #exemples
-command | command -   #- recupere la sortie de commande
-variable=$(command)   #commande dans une variable
-(regex)(regex)        #peut etre appeler avec $1,$2...
+COMMAND &             #commande en arriere plan
+nohup COMMANDE        #commande en arriere plan et hors console
+bg COMMANDE           #commande en arriere plan
+fg COMMANDE           #Reprend la main
+COMMAND && COMMAND    #execute si la premiere est un success
+COMMAND ; COMMAND     #execute toujours la seconde commande
+COMMAND || COMMAND    #execute si la premiere est un echec
+COMMAND !(*.FILE)     #execute la commande sauf pour les file
+COMMAND | COMMAND     #la seconde commande execute le resultat de la premiere
+(COMMAND1 && COMMAND2) || (COMMAND3 && COMMAND4)   #separe les commandes
+TEST\(1\).txt         #pour les caracteres speciaux
+COMMAND >> FILE.log   #rediriger les resultats a la fin d un fichier
+COMMAND 2>> FILE.log  #rediriger les erreurs a la fin d un fichier
+COMMAND >> FILE.log 2>&1   #rediriger les resultats et les erreurs
+COMMANDE > FILE.log 2>&1   #rediriger à la fois la sortie standard et l erreur standard
+COMMANDE < FILE.log        #rediriger l entrée standard de la commande vers le fichier
+COMMANDE << DELIMITEUR     #rediriger l entrée standard de la commande vers les lignes
+DELIMITEUR                 #+ suivantes jusqu à ce que le délimiteur soit rencontré
+COMMAND && echo "OK" || echo "FAIL"       #exemples
+COMMAND | COMMAND -   # - recupere la sortie de commande
+VARIABLE=$(COMMAND)   #commande dans une variable
+(REGEX)(REGEX)        #peut etre appeler avec $1,$2...
 sudo !!               #exectue la derniere commande en root
-xterm -geometry 170x60 -sb -rightbar -hold -e /home/scripts.sh                        #script auto dans fenetre pour logs
+xterm -geometry 170x60 -sb -rightbar -hold -e /home/SCRIPTS.sh                        #script auto dans fenetre pour logs
 $_                    #le dernier argument final de la dernière commande
 $?                    #code de sortie d une commande
 diff <(ls -l) <(ls -al)
@@ -54,13 +55,13 @@ echo -e '\E[37;44m'"\033[1mMESSAGE\033[0m"             #colorisation du code
 
 set -x                #Activation du débogage
 set +x                #Désactivation du débogage
-test option fichier   #verification
+test OPTION FICHIER   #verification
    -s                 #fichier non vide
    -f                 #fichier ordinaire
    -d                 #fichier répertoire
    -e                 #fichier existe
 
-test chaîne1-nb1 option chaîne2-nb2   #comparaison
+test CHAINE1-NB1 OPTION CHAINE2-NB2   #comparaison
    =                  #chaîne1 identique à chaîne2
    !=                 #chaîne1 différente de chaîne2
    -eq                #nb1 égal à nb2 (equal)
@@ -71,22 +72,22 @@ test chaîne1-nb1 option chaîne2-nb2   #comparaison
    -ge                #nb1 supérieur ou égal à nb2 (greater or equal)
 
 TMOUT=SEC             #en début de script arret dans SEC secondes
-read variable         #entree de données
-let "variable++"      #opérations arithmétiques
-$(commande)           #variable venant d une commande
-$variable             #reformatage la variable
-"$variable"           #conserve les espaces et retour a la ligne
-'$variable'           #interprétation littérale pas de variable
-variable1=`<fichier1`
+read VARIABLE         #entree de données
+let "VARIABLE++"      #opérations arithmétiques
+$(COMMANDE)           #variable venant d une commande
+$VARIABLE             #reformatage la variable
+"$VARIABLE"           #conserve les espaces et retour a la ligne
+'$VARIABLE'           #interprétation littérale pas de variable
+VARIABLE1=`<FICHIER1`
 ###>>>plus rapide que
-variable2=`cat fichier2`
+VARIABLE2=`cat FICHIER2`
 
-sh -n nomscript       #vérifie les erreurs de syntaxe sans exécuter
-sh -v nomscript       #affiche chaque commande avant de l exécuter
-sh -nv nomscript      #permet une vérification verbeuse de la syntaxe
-sh -x nomscript       #affiche le résultat abrégée de chaque commande
+sh -n SCRIPT          #vérifie les erreurs de syntaxe sans exécuter
+sh -v SCRIPT          #affiche chaque commande avant de l exécuter
+sh -nv SCRIPT         #permet une vérification verbeuse de la syntaxe
+sh -x SCRIPT          #affiche le résultat abrégée de chaque commande
 
-./script.sh argument1 argument2       #ajouter des aguments
+./SCRIPT.sh ARGUMENT1 ARGUMENT2       #ajouter des aguments
 $0                    #appeler le nom du script
 $1                    #appeler l agument1
 $2                    #appeler l agument2
@@ -97,88 +98,98 @@ $#                    #nbr de paramètres
 ${!#}                 #tout dernier paramètres
 echo $?               #verification code erreur
 
-liste="un deux trois"                   #creation d une liste
-tab=( un deux "trois" )                 #creation d un tableau
-tab=([0]=un [1]=deux [2]="trois")
-tab[0]=element1
-tab[1]=element2
-tab[2]=element3
-tab[${#tab[*]}]="nouvel élément"        #ajouter un élément
-len=${#tab[*]}                          #compter les elements du tableau
-echo ${tab[2]}                          #afficher un élément
-echo ${tab[@]}                          #afficher tous les éléments
-for i in ${!tab[@]}; do commande done   #utiliser le tableau
+LISTE="UN DEUX TROIS"                   #creation d une liste
+TAB=( UN DEUX "TROIS" )                 #creation d un tableau
+TAB=([0]=UN [1]=DEUX [2]="TROIS")
+TAB[0]=ELEMENT1
+TAB[1]=ELEMENT2
+TAB[2]=ELEMENT3
+TAB[${#TAB[*]}]="NOUVEL ELEMENT"        #ajouter un élément
+LEN=${#TAB[*]}                          #compter les elements du tableau
+echo ${TAB[2]}                          #afficher un élément
+echo ${TAB[@]}                          #afficher tous les éléments
+for i in ${!TAB[@]}; do COMMANDE done   #utiliser le tableau
 
 for ((i=1;i<=n;i++))                    #boucle entre 1 et n
 for i in {1..5} ; do echo $i ; done     #boucle entre 1 et 5
 for i in *                              #application a tous
-for i in `command`                      #au resultat de la commande
-for fichier in $repertoire/*            #pour les fichiers d un repertoire
+for i in `COMMAND`                      #au resultat de la commande
+for FICHIER in $REPERTOIRE/*            #pour les fichiers d un repertoire
 done | sort >> "$FICHIER_DE_SORTIE"     #log de boucle
 
-if [ condition1 ]                       #conditionnel
+if [ CONDITION1 ]                       #conditionnel
 then
-  commande1
-  commande2
-  commande3
-elif [ condition2 ]
+  COMMANDE1
+  COMMANDE2
+  COMMANDE3
+elif [ CONDITION2 ]
 then
-  commande4
-  commande5
+  COMMANDE4
+  COMMANDE5
 else
-  commande_par_defaut
+  COMMANDE_PAR_DEFAUT
 fi
 
-if [ -x "$nom_fichier" ]; then          #conditionnel sur une ligne
+if [ -x "$NOM_FICHIER" ]; then          #conditionnel sur une ligne
 
 for i in '                              #boucle liste
 ...
 ...'
 do
-   command $i
+   COMMAND $i
 done
 
-while fonction                          #boucle si vrai
+for i in /PATH
+do
+echo $i
+done
+
+for i in "$@"
+do
+echo $i
+done
+
+while FONCTION                          #boucle si vrai
    do
-       commande1 $condition
+       COMMANDE1 $CONDITION
 done
 
 while true                              #boucle infinie
    do
-       commande1
+       COMMANDE1
 done
 
-while  [ condition != etat ]            #boucle si vrai(espaces !)
+while  [ CONDITION != ETAT ]            #boucle si vrai(espaces !)
    do
-       commande1
+       COMMANDE1
 done
 
-until  [ condition != etat ]            #boucle si faux(espaces !)
+until  [ CONDITION != ETAT ]            #boucle si faux(espaces !)
    do
-       commande1
+       COMMANDE1
 done
 
-nom_de_fonction()                       #creation de fonction
+FONCTION()                              #creation de fonction
    {
-       commande1
+       COMMANDE1
    }
 
 if [ -n "$1" ]                          #condition dossier
 then
-  repertoire=$1     # Si nom du répertoire donné en argument au script...
+  REPERTOIRE=$1     # Si nom du répertoire donné en argument au script...
 else
-  repertoire=$PWD   # Sinon, utilise le répertoire courant.
+  REPERTOIRE=$PWD   # Sinon, utilise le répertoire courant.
 fi
 
-for i in "var1 1bis" "var2 2bis" ...    #boucle avec 2 variables
+for i in "VAR1 1BIS" "VAR2 2BIS" ...    #boucle avec 2 variables
 do
    set -- $i
-....command $1 ; command $2
+....COMMAND $1 ; COMMAND $2
 done
 
-fonction ()                             #appel de fonction
+FONCTION ()                             #appel de fonction
 {
-  if [ $condition ]
+  if [ $CONDITION ]
   then
    return 0 # true
   else
@@ -197,21 +208,21 @@ COMMANDE
 exit
 )
 
-nom_fonction ()                         #fonction
+FONCTION ()                             #fonction
 {
-commande $1
+COMMANDE $1
 ...
 }
 
-cat $nomfichier |                       #lire et agir sur les lignes d un fichier
-while read ligne
+cat $NOMFICHIER |                       #lire et agir sur les lignes d un fichier
+while read LIGNE
 do
   ...
 done
 
-boucle                                  #gestion de boucles
+BOUCLE                                  #gestion de boucles
 do
-   if condition
+   if CONDITION
    then
        break                            #termine la boucle
 ###>>>ou
@@ -219,9 +230,9 @@ do
    fi
 done
 
-case "$variable" in                     #bloc conditionnel (if/then/else)
-"$condition1" ) commande... ;;
-"$condition2" ) commande... ;;
+case "$VARIABLE" in                     #bloc conditionnel (if/then/else)
+"$CONDITION1" ) COMMANDE... ;;
+"$CONDITION2" ) COMMANDE... ;;
 esac
 
 ###>>>si un argument est manquant
@@ -237,35 +248,12 @@ fi
 (( a-- ))                    #Post-décrémente a
 (( ++a ))                    #Pre-incrémente a
 (( --a ))                    #Pre-décrémente a
-
-###>>>PLUS HAUTE PRÉCÉDENCE
-var++ var--                   #post-incrément, post-décrément                         #Opérateurs style C
-++var --var                   #pre-incrément, pre-décrément
-! ~                           #négation                                               #inverse le sens de l opérateur qui suit
-**                            #exposant                                               #opération arithmétique
-* / %                         #multiplication, division, modulo                       #opération arithmétique
-+ -                           #addition, soustraction                                 #opération arithmétique
-<< >>                         #décalage à gauche et à droite                          #bit
--z -n                         #comparaison unitaire                                   #chaîne est/n est pas null
--e -f -t -x, etc.             #comparaison unitaire                                   #fichier test
-< -lt > -gt <= -le >= -ge     #comparaison composée                                   #string and integer
--nt -ot -ef                   #comparaison composée                                   #fichier test
-== -eq != -ne                 #égalité / différence                                   #opérateurs de test, chaîne et entier
-&                             #AND                                                    #bit
-^                             #XOR                                                    #OU exclusif, bit
-|                             #OU                                                     #bit
-&& -a                         #ET                                                     #logique, comparaison composée
-|| -o                         #OR                                                     #logique, comparaison composée
-?:                            #opérateur ternaire                                     #style C
-=                             #affectation   affectation                              #égal + multiplication, égal + division, égal + modulo, etc.
-,                             #virgule                                                #lie un ensemble d opérations
-###>>>PLUS BASSE PRÉCÉDENCE
 ```
 
 _____________________________________________________________________________________
 résumé shell
 -------------------------------------------------------------------------------------
-###Variables spéciales du shell
+### Variables spéciales du shell
 ```
 Variable   Signification
 $0         Nom du script
@@ -284,7 +272,7 @@ $_         Dernier argument de la commande précédente
 $!         Identifiant du processus (PID) du dernier job exécuté en tâche de fond
 ```
 
-###Opérateurs de test : comparaison binaire
+### Opérateurs de test : comparaison binaire
 ```
 Opérateur     Signification     -----     Opérateur    Signification
 Comparaison arithmétique                  Comparaison de chaînes
@@ -304,7 +292,7 @@ Comparaison arithmétique (( ... ))
 <=            Plus petit que ou égal à
 ```
 
-###Opérateurs de test : fichiers
+### Opérateurs de test : fichiers
 ```
 Opérateur     Tests si                            -----    Opérateur     Tests si
 -e   Le fichier existe                                         -s     Le fichier est vide
@@ -323,7 +311,7 @@ Opérateur     Tests si                            -----    Opérateur     Tests
 !    NOT (inverse le résultat des tests ci-dessus)
 ```
 
-###Substitution et expansion de paramètres
+### Substitution et expansion de paramètres
 ```
 Expression        Signification
 ${var}            Valeur de var (identique à $var)
@@ -339,7 +327,7 @@ ${!varprefix*}    Correspond à toutes les variables déclarées précédemment 
 ${!varprefix@}    Correspond à toutes les variables déclarées précédemment et commençant par varprefix
 ```
 
-###Opérations sur les chaînes
+### Opérations sur les chaînes
 ```
 Expression                                   Signification
 ${#chaine}                                   Longueur de $chaine
@@ -363,7 +351,7 @@ expr match "$chaine" '.*\($sous-chaine\)'    Extrait $sous-chaine* en cherchant 
 expr "$chaine" : '.*\($sous-chaine\)'        Extrait $sous-chaine* en cherchant à partir de la fin de $chaine
 ```
 
-###Syntaxes diverses
+### Syntaxes diverses
 ```
 Expression                        Interprétation
 Crochets
@@ -372,14 +360,14 @@ if [[ CONDITION ]]                Construction de tests étendue
 Tableau[1]=element1               Initialisation d un tableau
 [a-z]                             Suite de caractères au sein d une Regex
 Accolades
-${variable}                       Substitution de paramètres
-${!variable}                      Référence de variable indirecte
-{ commande1; ... commandeN; }     Bloc de code
+${VARIABLE}                       Substitution de paramètres
+${!VARIABLE}                      Référence de variable indirecte
+{ COMMANDE1; ... COMMANDEN; }     Bloc de code
 {chaine1,string2,string3,...}     Expansion
 {a..z}                            Expansion d accolades
 {}                                Remplacement de texte, après find et xargs
 Parenthèses
-( commande1; commande2 )          Groupe de commandes exécutées dans un sous-shell
+( COMMANDE1; COMMANDE2 )          Groupe de commandes exécutées dans un sous-shell
 Tableau=(element1 element2)       Initialisation d un tableau
 result=$(COMMANDE)                Substitution de commande, nouvelle manière
 >(COMMANDE)                       Substitution de processus
@@ -391,8 +379,33 @@ var=$(( 20 + 5 ))                 Arithmétique sur des entiers, avec affectatio
 (( var-- ))                       Incrément de variables style C
 (( var0 = var1<98?9:21 ))         Opération à trois arguments
 Guillemets
-"$variable"                       Guillemets "faibles"
+"$VARIABLE"                       Guillemets "faibles"
 'chaine'                          Guillements 'forts'
 Guillemets inverses
 result=`COMMANDE`                 Substitution de commande, manière habituelle
+```
+
+```
+###>>>PLUS HAUTE PRÉCÉDENCE
+var++ var--                   #post-incrément, post-décrément                         #Opérateurs style C
+++var --var                   #pre-incrément, pre-décrément
+! ~                           #négation                                               #inverse le sens de l opérateur qui suit
+**                            #exposant                                               #opération arithmétique
+* / %                         #multiplication, division, modulo                       #opération arithmétique
++ -                           #addition, soustraction                                 #opération arithmétique
+<<i i>>                       #décalage à gauche et à droite                          #bit
+-z -n                         #comparaison unitaire                                   #chaîne est/n est pas null
+-e -f -t -x, etc.             #comparaison unitaire                                   #fichier test
+< -lt > -gt <= -le >= -ge     #comparaison composée                                   #string and integer
+-nt -ot -ef                   #comparaison composée                                   #fichier test
+== -eq != -ne                 #égalité / différence                                   #opérateurs de test, chaîne et entier
+&                             #AND                                                    #bit
+^                             #XOR                                                    #OU exclusif, bit
+|                             #OU                                                     #bit
+&& -a                         #ET                                                     #logique, comparaison composée
+|| -o                         #OR                                                     #logique, comparaison composée
+?:                            #opérateur ternaire                                     #style C
+=                             #affectation   affectation                              #égal + multiplication, égal + division, égal + modulo, etc.
+,                             #virgule                                                #lie un ensemble d opérations
+###>>>PLUS BASSE PRÉCÉDENCE
 ```
