@@ -386,7 +386,7 @@ result=`COMMANDE`                 Substitution de commande, manière habituelle
 ```
 
 ```
-###>>>PLUS HAUTE PRÉCÉDENCE
+###>>>PLUS HAUTE PRECEDENCE
 var++ var--                   #post-incrément, post-décrément                         #Opérateurs style C
 ++var --var                   #pre-incrément, pre-décrément
 ! ~                           #négation                                               #inverse le sens de l opérateur qui suit
@@ -407,5 +407,70 @@ var++ var--                   #post-incrément, post-décrément                
 ?:                            #opérateur ternaire                                     #style C
 =                             #affectation   affectation                              #égal + multiplication, égal + division, égal + modulo, etc.
 ,                             #virgule                                                #lie un ensemble d opérations
-###>>>PLUS BASSE PRÉCÉDENCE
+###>>>PLUS BASSE PRECEDENCE
+```
+
+_____________________________________________________________________________________
+PS1
+-------------------------------------------------------------------------------------
+```
+export PS1="\\[\e[1;31m\]\$\[\e[1;31m\]>\[\e[m\]\A\[\e[34m\][\[\e[m\]\u\[\e[34m\]@\[\e[m\]\h\[\e[34m\]]\[\e[m\]\[\e[1;31m\]-\[\e[m\]\[\e[34m\][\[\e[m\]\W\[\e[34m\]]\[\e[m\]\[\e[1;31m\]:\[\e[m\] "
+
+\u : nom de l utilisateur
+\h : nom de la machine
+\W : nom du dossier courant
+\$ : affiche $ pour un utilisateur et # pour root
+\w : chemin complet du répertoire de travail
+\d : date format texte ("sam. janv. 31")
+\A : heure format 24h sans secondes
+\t : heure format 24h avec les secondes
+\T : heure format 12h avec les secondes
+\@ : heure format 12H sans secondes
+\D{%d-%m-%Y %H:%M:%S%z} : Date et heure
+\j : nombre de tache en cours dans le terminal
+\# : le numéro de la commande
+\v : version de bash
+\n : nouvelle ligne
+
+"\e[0;34m"
+Noir 0;30
+Gris foncé 1;30
+Bleu 0;34
+Bleu clair 1;34
+Vert 0;32
+Vert clair 1;32
+Cyan 0;36
+Cyan clair 1;36
+Rouge 0;31
+Rouge clair 1;31
+Violet 0;35
+Violet clair 1;35
+Brun 0;33
+Jaune 1;33
+Gris clair 0;37
+Blanc 1;37
+0 foncé
+1 clair
+4 souligné
+7 fond
+9 barré
+
+Couleur   Avant-plan   Arrière-plan
+noir      30           40
+rouge     31           41
+vert      32           42
+jaune     33           43
+bleu      34           44
+magenta   35           45
+cyan      36           46
+blanc     37           47
+
+noir='\E[30;47m'
+rouge='\E[31;47m'
+vert='\E[32;47m'
+jaune='\E[33;47m'
+bleu='\E[34;47m'
+magenta='\E[35;47m'
+cyan='\E[36;47m'
+blanc='\E[37;47m'
 ```
