@@ -262,7 +262,8 @@ sed '2,5!d' FICHIER.txt                       #sauf ligne 2 à 5
 sed '/regex/ d' FICHIER.txt                   #supprimer motif
 sed -i -e "s/MOTIF/SUBSTITUT/g" FICHIER.txt   #substitution toutes occurences
 sed -e 's/REGEX/SUBT&SUBT/g' FICHIER.txt      #avec rappel regex
-sed 's/\(.*)\)\(.*-\)\(.*$\)/SUBT \1 SUBT \2 SUBT \3/'   #avec insertion
+sed 's/\(.*)\)\(.*-\)\(.*$\)/SUBT \1 SUBT \2 SUBT \3/'          #avec insertion
+sed -e 's/\(.*\) \(.*\) \(.*\)/INS \1-\2 INS \3/' MYFILE.txt    #avec insertion exemple
 sed 's:/CHEMIN:/CHEMIN:g'                     #separateur :
 sed '10s/MOTIF/SUBSTITUT/g'                   #remplacement à la ligne 10
 ###>>>exemples
@@ -343,6 +344,20 @@ bing                      #testeur de bande passante empirique et stochastique
 bwm-ng                    #moniteur de bande passante simple en mode console
 ethstatus                 #moniteur de statistiques Ethernet en mode console
 iptraf-ng
+
+apt-get install tcpdump
+tcpdump -D                #Visualiser les interfaces
+tcpdump -v                #Capturer le trafic
+tcpdump -A                #Afficher le contenu des paquets
+tcpdump -n                #Afficher les adresses IP plutôt que les résolutions DNS
+tcpdump -w CAPTURE.dump   #Envoi du résultat de la capture dans un fichier
+tcpdump -r CAPTURE.dump   #Lecture du fichier
+tcpdump -i                #Capturer le trafic d une interface spécifique
+tcpdump host SITE.COM     #Capturer le trafic d un hôte spécifié
+tcpdump port http         #Capturer le trafic HTTP
+tcpdump -i eth0 PROTOCOL  #Filtrage par protocole tcp,udp,arp,icmp
+tcpdump -A src IPS and dst IPD and port ftp    #Capturer le trafic FTP
+tcpdump -c 50             #Capturer seulement 50 paquets
 ```
 
 _____________________________________________________________________________________
