@@ -135,6 +135,78 @@ more /etc/services
 ```
 
 _____________________________________________________________________________________
+serveur ntp france
+-------------------------------------------------------------------------------------
+```bash
+sudo nano /etc/ntp.conf
+server 0.fr.pool.ntp.org
+server 1.fr.pool.ntp.org
+server 2.fr.pool.ntp.org
+server 3.fr.pool.ntp.org
+
+ntpq -p
+```
+
+_____________________________________________________________________________________
+Google et openDNS
+-------------------------------------------------------------------------------------
+```bash
+cp /etc/resolv.conf /etc/resolv.conf.save
+sudo nano /etc/resolv.conf
+nameserver 2001:4860:4860::8888                  ; google-public-dns-a.google.com
+nameserver 2001:4860:4860::8844                  ; google-public-dns-b.google.com
+nameserver 8.8.8.8                               ; google-public-dns-a.google.com
+nameserver 8.8.4.4                               ; google-public-dns-b.google.com
+
+nameserver 2620:0:ccc::2
+nameserver 2620:0:ccd::2
+nameserver 208.67.220.220
+nameserver 208.67.222.222
+
+dig a www.google.fr | grep time
+```
+
+_____________________________________________________________________________________
+serveur dns libre
+-------------------------------------------------------------------------------------
+```
+nameserver 80.67.188.188                         ; ns0.ldn-fai.net
+nameserver 2001:913::8                           ; ns0.ldn-fai.net
+
+nameserver 80.67.169.12                          ; ns0.fdn.fr
+nameserver 80.67.169.40                          ; ns1.fdn.fr
+nameserver 2001:910:800::12                      ; ns0.fdn.fr
+nameserver 2001:910:800::40                      ; ns1.fdn.fr
+
+nameserver 4.2.2.6                               ; vnsc-lc-dsl.genuity.net
+nameserver 4.2.2.5                               ; vnsc-bak-dsl.genuity.net
+nameserver 4.2.2.4                               ; vnsc-pri-dsl.genuity.net
+nameserver 4.2.2.3                               ; vnsc-lc.sys.gtei.net
+nameserver 4.2.2.2                               ; vnsc-bak.sys.gtei.net
+nameserver 4.2.2.1                               ; vnsc-pri.sys.gtei.net
+
+nameserver 163.172.189.181                       ; dns.vtbox.net
+nameserver 217.182.205.213                       ; sdns.vtbox.net
+nameserver 2001:bc8:4400:2100::25:5              ; dns.vtbox.net
+nameserver 2001:41d0:302:2100::7a77              ; sdns.vtbox.net
+
+nameserver 89.234.141.66                         ; recursif.arn-fai.net
+nameserver 2a00:5881:8100:1000::3                ; recursif.arn-fai.net
+```
+
+_____________________________________________________________________________________
+DNSsec
+-------------------------------------------------------------------------------------
+```
+nameserver 2001:4f8:3:2bc:1::64:20               ; bind.odvr.dns-oarc.net
+nameserver 149.20.64.20                          ; bind.odvr.dns-oarc.net
+nameserver 2001:4f8:3:2bc:1::64:21               ; unbound.odvr.dns-oarc.net
+nameserver 149.20.64.21                          ; unbound.odvr.dns-oarc.net
+nameserver 2001:4f8:3:2bc:1::64:22               ; iana-testbed.odvr.dns-oarc.net
+nameserver 149.20.64.22                          ; iana-testbed.odvr.dns-oarc.net
+```
+
+_____________________________________________________________________________________
 date
 -------------------------------------------------------------------------------------
 ```
@@ -244,6 +316,15 @@ $            Fin de ligne
 [[:space:]]                Whitespace
 [[:upper:]]                Uppercase letters [A-Z]
 [[:xdigit:]]               Hex digits [0-9 a-f A-F]
+
+/./          toute ligne qui contient au moins un caractère
+/../         toute ligne qui contient au moins deux caractères
+/^#/         toute ligne qui commence par dièse
+/^$/         toute ligne vide
+/}$/         toute ligne qui termine par }
+/} *$/       toute ligne qui termine par } et un caractère
+/[abc]/      toute ligne qui contient a b ou c
+/^[abc]/     toute ligne qui commence par a b ou c
 ```
 
 _____________________________________________________________________________________
@@ -307,6 +388,21 @@ identifiant de connexion:mot de passe crypté dans (/etc/shadow):UID droits d ac
 administrateur root UID = 0
 utilisateurs système UID compris entre 1 et 999, gérant les droits d accès de services sur la machine
 utilisateurs physique UID sera supérieur ou égal à 1000
+```
+
+_____________________________________________________________________________________
+chmod
+-------------------------------------------------------------------------------------
+```
+Directory/User/Group/Others    Logique      Decimal
+aucun droit                    (---)          0
+execution seulement            (--x)          1
+ecriture seulement             (-w-)          2
+ecriture et execution          (-wx)          3
+lecture seulement              (r--)          4
+lecture et execution           (r-x)          5
+lecture et ecriture            (rw-)          6
+tous les droits                (rwx)          7
 ```
 
 _____________________________________________________________________________________
