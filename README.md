@@ -34,6 +34,7 @@ Manual pages for GNU/linux and others tips.
 - [Web Browser Benchmark](http://browserbench.org/JetStream/)
 - [Markdown Visualisation](https://stackedit.io/editor)
 - [Down Detector](http://downdetector.fr/)
+- [HTML5 Editor](https://liveweave.com/)
 
 ### Generator
 
