@@ -258,6 +258,35 @@ apt update
 ```
 
 _____________________________________________________________________________________
+creation d un iso live perso
+-------------------------------------------------------------------------------------
+```bash
+apt-get install live-manual live-build
+mkdir Live_Build_Work && cd Live_Build_Work
+mkdir auto
+cp /usr/share/doc/live-build/examples/auto/* auto/
+
+nano auto/config
+#!/bin/sh
+lb config noauto \
+    --architectures amd64 \
+    --linux-packages "linux-image" \
+    --ignore-system-defaults \
+    --bootappend-live "boot=live components autologin username=user"
+    "${@}"
+
+nano config/packages-list/live.list.chroot
+linux-image-amd64
+...
+###>>>liste de tous les paquets souhaites
+
+mkdir -p /config/includes.chroot/etc/skel
+###>>>copier tous les fichiers de configurations
+
+lb build
+```
+
+_____________________________________________________________________________________
 compilation
 -------------------------------------------------------------------------------------
 ```bash

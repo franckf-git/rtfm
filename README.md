@@ -59,6 +59,7 @@ Manual pages for GNU/linux and others tips.
 - [Send Email](http://send-email.org/)
 - [Send Email 2](http://anonymouse.org/cgi-bin/anon-email.cgi)
 - [Fake Name](http://www.fakenamegenerator.com/)
+- [Pastebin](https://pastebin.com/)
 
 ### Security
 
@@ -72,6 +73,7 @@ Manual pages for GNU/linux and others tips.
 - [DNS Leak Test](https://dnsleaktest.com/)
 - [CERT](https://www.cert.ssi.gouv.fr/)
 - [Exploit DataBase](https://www.exploit-db.com/)
+- [Terms of Service](https://tosdr.org/)
 
 ## Sources
 

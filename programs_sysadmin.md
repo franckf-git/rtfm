@@ -1,4 +1,87 @@
 _____________________________________________________________________________________
+crontab -e
+-------------------------------------------------------------------------------------
+```
+ .---------------- minute (0 - 59)
+ |  .------------- hour (0 - 23)
+ |  |  .---------- day of month (1 - 31)
+ |  |  |  .------- month (1 - 12) OR jan feb mar apr ...
+ |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun mon tue wed thu fri sat
+ |  |  |  |  |
+ *  *  *  *  *  [USER] COMMAND > LOG
+1-5 : les unites de temps de 1 a 5
+1,5 : les unites de temps de 1 et 5
+*/6 : toutes les 6 unites de temps (toutes les 6 heures par exemple)
+
+0 9 * * * /home/user/TEST.sh
+
+Mot cle        Equivalent
+@yearly        0 0 1 1 *
+@daily         0 0 * * *
+@hourly        0 * * * *
+@reboot        Executer au demarrage
+```
+
+_____________________________________________________________________________________
+cron quotidienne
+-------------------------------------------------------------------------------------
+```bash
+###>>>vérifie si les paquets sont toujours marqués comme bogués
+cat /etc/cron.daily/apt-listbugs
+#!/bin/sh -e
+...
+prefclean()
+{
+    file="/etc/apt/preferences.d/apt-listbugs"
+    backup="/var/backups/apt-listbugs.preferences"
+
+    test -x /usr/lib/ruby/vendor_ruby/aptlistbugs/aptcleanup || return 0
+    test -x /usr/bin/apt-listbugs || return 0
+    test -f "$file" || return 0
+
+    tmp=$(mktemp --tmpdir apt-listbugs_tmp_preferences.XXXXXX)
+
+    /usr/lib/ruby/vendor_ruby/aptlistbugs/aptcleanup > "$tmp" || return 0
+    if ! diff -B "$tmp" "$file" > /dev/null
+    then
+        if test -f "$backup"
+        then
+            savelog -q "$backup"
+        fi
+        cp -aH "$file" "$backup"
+        cp "$tmp" "$file"
+    fi
+    /bin/rm -f "$tmp"
+}
+
+prefclean
+```
+
+_____________________________________________________________________________________
+commandes periodiques en dessous de une minute
+-------------------------------------------------------------------------------------
+```bash
+while (sleep 5 && COMMAND) &
+do
+wait $!
+done
+
+while true
+do
+bash COMMAND
+sleep 1
+done
+
+* * * * * sleep 1 ; COMMAND
+* * * * * sleep 2 ; COMMAND
+...
+
+* * * * * for i in {1..60}; do COMMAND ; sleep 1; done
+
+* * * * * while true; do COMMAND & sleep 1; done
+```
+
+_____________________________________________________________________________________
 SQL
 -------------------------------------------------------------------------------------
 ```bash
@@ -312,7 +395,8 @@ git rm FICHIER                              #Supprime le fichier du répertoire
 git rm --cached FICHIER                     #Supprime le fichier du système de suivi
 git mv FICHIER NOUVEAU-NOM                  #Renomme le fichier
 git ls-files --others --ignored --exclude-standard   #Tous les fichiers exclus du suivi
-.gitignore                                  #Exclure du suivi de version
+.gitignore                                  #Exclure du suivi (mais contenu sur tous les repos)
+.git/info/exclude                           #Exclure du projet (reste en local)
 git stash                                   #Remiser son travail
 git stash pop                               #Applique une remise et la supprime
 git stash list                              #Liste toutes les remises
