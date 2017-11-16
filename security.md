@@ -51,6 +51,9 @@ Banner /etc/banner
 
 sudo systemctl restart ssh
 sudo systemctl status ssh
+
+###>>>monter un partage ssh sur le client
+sshfs USER@MACHINE:/home/SERVER mnt/CLIENT
 ```
 
 _____________________________________________________________________________________
@@ -66,6 +69,7 @@ ssh-keygen -o -a 100 -t ed25519 -f id_ed -C "COMMENTAIRES"
 ssh -i ~/.ssh/id_ed -o "IdentitiesOnly=yes" USER_SERVER@SERVER
 ###>>>Envoyer votre clé publique vers le serveur
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@SERVER
+
 
 ###>>>serveur
 sudo apt-get install openssh-server
