@@ -20,6 +20,18 @@ Manual pages for GNU/linux and others tips.
 - [Startup and install of the system](./startup.md)
 - [The most useful commands](./utils.md)
 
+### IT
+
+- [Internet Archive](https://archive.org/index.php)
+- [Linux Packages](https://pkgs.org/)
+- [French Reporting](https://www.internet-signalement.gouv.fr/PortailWeb/planets/SignalerEtapeInformer!load.action)
+- [Python Documentation](https://www.python.org/)
+- [Bash Documentation](https://abs.traduc.org/abs-fr/index.html)
+- [IANA](https://www.iana.org/numbers)
+- [First to do](https://lmgtfy.com/)
+- [1st April](http://fakeupdate.net/)
+- [Securing Debian Howto](https://www.debian.org/doc/manuals/securing-debian-howto/ap-checklist.fr.html)
+
 ### Testing
 
 - [W3C Validation Service](https://validator.w3.org/#validate_by_input+with_options)
@@ -35,6 +47,7 @@ Manual pages for GNU/linux and others tips.
 - [Markdown Visualisation](https://stackedit.io/editor)
 - [Down Detector](http://downdetector.fr/)
 - [HTML5 Editor](https://liveweave.com/)
+- [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)
 
 ### Generator
 
@@ -75,6 +88,23 @@ Manual pages for GNU/linux and others tips.
 - [CERT](https://www.cert.ssi.gouv.fr/)
 - [Exploit DataBase](https://www.exploit-db.com/)
 - [Terms of Service](https://tosdr.org/)
+
+### Raspberry Pi
+
+- [Pinout](http://fr.pinout.xyz/)
+- [SenseHat Emulator](https://trinket.io/sense-hat)
+- [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_intro/py_intro.html)
+- [Gpiozero Library](https://gpiozero.readthedocs.io/en/stable/recipes.html)
+- [Guizero Library](https://lawsie.github.io/guizero/#on-raspberry-pi)
+- [COnfig.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
+
+- [NextCloud](https://ownyourbits.com/2017/02/13/nextcloud-ready-raspberry-pi-image/)
+- [Gladys](https://gladysproject.com/fr/)
+- [Seafile](https://github.com/haiwen/seafile-rpi/releases)
+- [Magic Mirror](https://magicmirror.builders/)
+- [Pirate Box](https://piratebox.cc/raspberry_pi:diy)
+- [Jasper](https://jasperproject.github.io/documentation/installation/)
+- [Alexa](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
 
 ## Sources
 
