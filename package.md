@@ -255,6 +255,9 @@ sudo nano /etc/apt/sources.list
 deb file:/media/$USER/doc  ./ ###>>>(uniquement)
 
 apt update
+
+###>>>ou simplement
+sudo apt-get install aptoncd
 ```
 
 _____________________________________________________________________________________
