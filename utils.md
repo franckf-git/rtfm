@@ -293,6 +293,7 @@ netstat -a                #netstat avec l affichage des processus serveurs
 sudo netstat -ntplou      #lister les ports ouverts sur la machine
 sudo netstat -lp --inet   #liste des programmes utilisant le reseau
 netstat -antp             #liste des connexions ouvertes
+sudo netstat -lapute      #Connexions Internet actives
 ss -ona                   #toutes les connexions
 ss -lnptu                 #lister uniquement les connexions ayant letat LISTENNING
 ss -lpt                   #afficher le nom du processus lie et son pid
@@ -304,7 +305,7 @@ host -a IP
 dig IP -ANY
 nmblookup -A IP_LOCAL
 nbtscan IP
-lsof                      #liste detaillee de l usage des fichiers et du reseau
+lsof -i                   #liste detaillee de l usage des fichiers et du reseau
 ifconfig                  #afficher l état et l adresse du lien des interfaces actives
 ifconfig INTERFACE IP MASQUE           #configure une interface reseau
 ip a                      #affiche la configuration des interfaces reseaux
