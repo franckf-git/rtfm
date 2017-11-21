@@ -96,7 +96,8 @@ Manual pages for GNU/linux and others tips.
 - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_intro/py_intro.html)
 - [Gpiozero Library](https://gpiozero.readthedocs.io/en/stable/recipes.html)
 - [Guizero Library](https://lawsie.github.io/guizero/#on-raspberry-pi)
-- [COnfig.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
+- [Config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
+
 
 - [NextCloud](https://ownyourbits.com/2017/02/13/nextcloud-ready-raspberry-pi-image/)
 - [Gladys](https://gladysproject.com/fr/)
