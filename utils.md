@@ -1,3 +1,26 @@
+## Index
+
+- [navigation systeme](#navigation-systeme)
+- [operations sur les fichiers](#operations-sur-les-fichiers)
+- [fichiers texte et binaire](#fichiers-texte-et-binaire)
+- [infos systemes](#infos-systemes)
+- [gestion des utilisateurs](#gestion-des-utilisateurs)
+- [gestion processus](#gestion-processus)
+- [infos materiel](#infos-materiel)
+- [archivage](#archivage)
+- [streameditor](#streameditor)
+- [infos reseau](#infos-reseau)
+- [recuperation web](#recuperation-web)
+- [recherche](#recherche)
+- [benchmark](#benchmark)
+- [hdd et partitions](#hdd-et-partitions)
+- [ram / swap](#ram--swap)
+- [audiovisuel](#audiovisuel)
+- [outils CLI ligne de commande](#outils-cli-ligne-de-commande)
+- [commandes futiles](#commandes-futiles)
+- [log](#log)
+- [commandes tokill](#commandes-tokill)
+
 _____________________________________________________________________________________
 navigation systeme
 -------------------------------------------------------------------------------------
@@ -33,6 +56,7 @@ sudo du -shxc /*
 stat                     #details sur un fichier ou dossier
 file FILE1 FILE2         #affiche le type de fichier
 mkdir FOLDER ; cd $_     #creer et entrer dans un dossier
+echo "!!" > SCRIPT.sh    #creer un script de la derniere commande
 ```
 
 _____________________________________________________________________________________
@@ -147,6 +171,7 @@ gestion processus
 ps                           #afficher les processus de l utilisateur
 ps ax                        #afficher tous les processus
 ps aux                       #afficher tous les processus avec les utilisateurs
+ps aux | sort -nk +4 | tail  #les 10 processus qui utilisent le plus de mémoire
 strace -p PID -e trace=all   #lister les appels systeme
 pidof NOMDUPROGRAMME         #retrouver le pid
 whereis NOMDUPROGRAMME       #dossier programme
@@ -323,7 +348,7 @@ mtr SITE.COM              #tracer la connexion Internet vers site.com (répétit
 dig [@DNS-SRV.COM] SITE.COM [{a|mx|any}]       #vérifier DNS de example par dns-srv
 dig @x.y.z.t SOA fr       #flag ra = serveur DNS récursif
 iptables -L -n            #vérifier le filtre de paquets
-dlint SITE.COM            #vérifier les informations de zone DNS de « example.com »
+dlint SITE.COM            #vérifier les informations de zone DNS de example.com
 route                     #affiche la table de routage
 curl ifconfig.me          #IP publique
 nl /etc/resolv.conf       #liste des serveurs DNS utilises
@@ -532,6 +557,7 @@ mc -e ou mcedit FICHIER                          #editeur de fichier
 mc -v ou mcview FICHIER                          #visualisateur
 links2                                           #navigateur web
 googler                                          #recheche google (--news)
+ddgr                                             #recheche duckduck (avec bang)
 column -s';' -t FILE.csv                         #tableur
 bc                                               #calculatrice
 echo "MESSAGE" | mail -s "OBJET" MAIL@MAIL.com   #mail
@@ -550,6 +576,9 @@ setxkbmap fr                                     #clavier azerty
 setxkbmap us
 loadkeys fr                                      #sans serveur X sur la machine
 loadkeys us
+dpkg-reconfigure tzdata                          #définir l heure
+timedatectl list-timezones                       #définir l heure systemd
+timedatectl set-timezone 'COUNTRY'
 sudo nano /etc/default/grub 
 ###>>>ajouter vga=791 a GRUB_CMDLINE_LINUX       #tty avec une meilleure resolution
 sudo aptitude -u                                 #gestion interactive des paquets
