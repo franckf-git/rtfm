@@ -5,7 +5,7 @@
 - [disque ssd](#disque-ssd)
 - [baisser le niveau de mise en swap pour economiser le hdd](#baisser-le-niveau-de-mise-en-swap-pour-economiser-le-hdd)
 - [mode laptop gestion plus econome du disque dur](#mode-laptop-gestion-plus-econome-du-disque-dur)
-- [securisation de /dev/shm/](#securisation-de--dev-shm-)
+- [securisation de /dev/shm/](#securisation-de-devshm)
 - [connexion sans login](#connexion-sans-login)
 - [fenetre de connexion lightdm login deroulant](#fenetre-de-connexion-lightdm-login-deroulant)
 - [lightdm personnalisation](#lightdm-personnalisation)
