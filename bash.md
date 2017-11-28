@@ -1,3 +1,16 @@
+## Index
+
+- [interaction entre les commandes](#interaction-entre-les-commandes)
+- [shell](#shell)
+- [résumé shell](#résumé-shell)
+  - [Variables spéciales du shell](#variables-spéciales-du-shell)
+  - [Opérateurs de test : comparaison binaire](#opérateurs-de-test--comparaison-binaire)
+  - [Opérateurs de test : fichiers](#opérateurs-de-test--fichiers)
+  - [Substitution et expansion de paramètres](#substitution-et-expansion-de-paramètres)
+  - [Opérations sur les chaînes](#opérations-sur-les-chaînes)
+  - [Syntaxes diverses](#syntaxes-diverses)
+- [PS1](#ps1)
+
 _____________________________________________________________________________________
 interaction entre les commandes
 -------------------------------------------------------------------------------------
@@ -70,6 +83,21 @@ test CHAINE1-NB1 OPTION CHAINE2-NB2   #comparaison
    -le                #nb1 inférieur ou égal à nb2 (less or equal)
    -gt                #nb1 supérieur à nb2 (greater than)
    -ge                #nb1 supérieur ou égal à nb2 (greater or equal)
+
+[ -a FICHIER ]                 existe et est un fichier
+[ -e FICHIER ]
+[ -f FICHIER ]                 existe et est un fichier normal
+[ -b BLOCKSPECIALFILE ]        existe et est de type bloc spécial
+[ -c CHARACTERSPECIALFILE ]    existe et est de type caractère spécial
+[ -d DOSSIER ]                 existe et est un dossier
+[ -h LIEN_SYMBOLIQUE ]         existe et est un lien symbolique
+[ -l LIEN_SYMBOLIQUE ]
+[ -r FICHIER_LISIBLE ]         existe et est lisible par le script
+[ -s FICHIER_NON_VIDE ]        existe et possède une taille non nulle
+[ -w FICHIER_WRITABLE ]        existe et le script peut y écrire
+[ -x EXECUTABLE ]              existe et est exécutable depuis le script
+[ -n STRING_NON_VIDE ]
+[ -z STRING_VIDE ]
 
 TMOUT=SEC             #en début de script arret dans SEC secondes
 read VARIABLE         #entree de données
@@ -196,6 +224,13 @@ FONCTION ()                             #appel de fonction
    return 1 # false
   fi
 }
+
+echo "Voulez faire cela (Y/N)?"         #choix et interaction
+read ENTREE
+if [$ENTREE = "N"]
+  then
+    COMMAND
+fi
 
 COMMANDE <<EOF                          #document intégré macro
 ...
