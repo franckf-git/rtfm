@@ -31,6 +31,7 @@ Manual pages for GNU/linux and others tips.
 - [First to do](https://lmgtfy.com/)
 - [1st April](http://fakeupdate.net/)
 - [Securing Debian Howto](https://www.debian.org/doc/manuals/securing-debian-howto/ap-checklist.fr.html)
+- [DistroWatch](https://distrowatch.com/)
 
 ### Testing
 
@@ -75,6 +76,10 @@ Manual pages for GNU/linux and others tips.
 - [Send Email 2](http://anonymouse.org/cgi-bin/anon-email.cgi)
 - [Fake Name](http://www.fakenamegenerator.com/)
 - [Pastebin](https://pastebin.com/)
+- [TOR](https://www.torproject.org/projects/torbrowser.html)
+- [ZeroNet](https://github.com/HelloZeroNet/ZeroNet)
+- [I2P](https://geti2p.net/fr/download)
+- [FreeNet](https://freenetproject.org/fr/pages/download.html)
 
 ### Security
 
@@ -98,8 +103,6 @@ Manual pages for GNU/linux and others tips.
 - [Gpiozero Library](https://gpiozero.readthedocs.io/en/stable/recipes.html)
 - [Guizero Library](https://lawsie.github.io/guizero/#on-raspberry-pi)
 - [Config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
-
-
 - [NextCloud](https://ownyourbits.com/2017/02/13/nextcloud-ready-raspberry-pi-image/)
 - [Gladys](https://gladysproject.com/fr/)
 - [Seafile](https://github.com/haiwen/seafile-rpi/releases)
