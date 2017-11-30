@@ -1,3 +1,49 @@
+## Index
+
+- [pinout](#pinout)
+- [bibliotheque](#bibliotheque)
+- [mode](#mode)
+- [configuration des entrées-sorties](#configuration-des-entrées-sorties)
+- [lire une entrée numérique](#lire-une-entrée-numérique)
+- [Changer l état d une sortie numérique](#changer-l-état-d-une-sortie-numérique)
+- [Connaître la configuration d une entrée-sortie numérique](#connaître-la-configuration-d-une-entrée-sortie-numérique)
+- [PWM](#pwm)
+- [Remettre à zéro](#remettre-à-zéro)
+- [modele python](#modele-python)
+- [SPI](#spi)
+- [I2C](#i2c)
+- [LED](#led)
+- [PWM servomoteur](#pwm-servomoteur)
+- [Servo](#servo)
+- [Bouton](#bouton)
+- [gpiozero](#gpiozero)
+- [gpiozero LED](#gpiozero-led)
+- [gpiozero PWMLED](#gpiozero-pwmled)
+- [gpiozero RGBLED](#gpiozero-rgbled)
+- [gpiozero Buzzer](#gpiozero-buzzer)
+- [gpiozero Motor](#gpiozero-motor)
+- [gpiozero Button](#gpiozero-button)
+- [gpiozero Line Sensor](#gpiozero-line-sensor)
+- [gpiozero Motion Sensor](#gpiozero-motion-sensor)
+- [gpiozero Light Sensor](#gpiozero-light-sensor)
+- [gpiozero Distance Sensor](#gpiozero-distance-sensor)
+- [gpiozero LED bouton](#gpiozero-led-bouton)
+- [7 segment display](#7-segment-display)
+- [Tkinter](#tkinter)
+- [Sensehat Simulator](#sensehat-simulator)
+- [Sensehat text scroll](#sensehat-text-scroll)
+- [Sensehat image import jpg et png 8x8](#sensehat-image-import-jpg-et-png-8x8)
+- [Sensehat shake](#sensehat-shake)
+- [Sensehat rotation](#sensehat-rotation)
+- [Sensehat orientation](#sensehat-orientation)
+- [Sensehat lettre](#sensehat-lettre)
+- [Sensehat image](#sensehat-image)
+- [Sensehat environnement](#sensehat-environnement)
+- [Sensehat joystick simple](#sensehat-joystick-simple)
+- [Sensehat joystick](#sensehat-joystick)
+- [Sensehat compass](#sensehat-compass)
+- [SenseHat 3d](#sensehat-3d)
+
 _____________________________________________________________________________________
 pinout
 -------------------------------------------------------------------------------------
@@ -252,7 +298,7 @@ while True:
 ```
 
 _____________________________________________________________________________________
-PWM
+PWM servomoteur
 -------------------------------------------------------------------------------------
 ```python
 # Import des modules
