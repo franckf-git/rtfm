@@ -1,3 +1,27 @@
+## Index
+
+- [Liste des masques de sous-reseaux](#liste-des-masques-de-sous-reseaux)
+- [OSI 3](#osi-3)
+- [plage d adresses methode du nombre magique](#plage-d-adresses-methode-du-nombre-magique)
+- [ports tcp/udp](#ports-tcpudp)
+- [serveur ntp france](#serveur-ntp-france)
+- [Google et openDNS](#google-et-opendns)
+- [serveur dns libre](#serveur-dns-libre)
+- [DNSsec](#dnssec)
+- [Public DNS Servers](#public-dns-servers)
+- [date](#date)
+- [regex](#regex)
+- [megaoctet 1000-1024](#megaoctet-1000-1024)
+- [dossiers linux](#dossiers-linux)
+- [utilisateurs linux](#utilisateurs-linux)
+- [chmod](#chmod)
+- [python](#python)
+- [testeur](#testeur)
+- [pygame event.key](#pygame-eventkey)
+- [table ASCII ( 0 - 127 )](#table-ascii--0---127-)
+- [lorem ipsum](#lorem-ipsum)
+- [Creative Commons by-nc-sa](#creative-commons-by-nc-sa)
+
 _____________________________________________________________________________________
 Liste des masques de sous-reseaux
 -------------------------------------------------------------------------------------
@@ -773,6 +797,7 @@ ________________________________________________________________________________
 table ASCII ( 0 - 127 )
 -------------------------------------------------------------------------------------
 ```
+man ascii
 
        Decimal   Octal   Hex  Binaire   Caractere
        -------   -----   ---  --------    ------
