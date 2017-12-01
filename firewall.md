@@ -51,6 +51,18 @@ systemctl list-unit-files | grep iptables
 systemctl start iptables
 systemctl enable iptables
 service iptables save
+
+iptables -S
+###>>>Persisting Rules through Reboots (Debian/Ubuntu)
+sudo apt-get install -y iptables-persistent
+sudo service iptables-persistent start
+sudo iptables-save > /etc/iptables/rules.v4
+sudo service iptables-persistent restart
+
+###>>>Persisting Rules through Reboots (CentOS/RedHat)
+sudo chkconfig iptables on
+sudo service iptables save
+sudo service iptables start
 ```
 
 _____________________________________________________________________________________
