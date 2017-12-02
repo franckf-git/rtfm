@@ -1,3 +1,22 @@
+## Index
+
+- [Gestion des paquets debian](#gestion-des-paquets-debian)
+- [Gestion des paquets fedora vs debian](#gestion-des-paquets-fedora-vs-debian)
+- [Gestion des paquets archlinux](#gestion-des-paquets-archlinux)
+- [Gestion des paquets openSUSE](#gestion-des-paquets-opensuse)
+- [MAJ debian](#maj-debian)
+- [MAJ fedora](#maj-fedora)
+- [fedora RPM fusion](#fedora-rpm-fusion)
+- [debian depots](#debian-depots)
+- [debian mise à niveau](#debian-mise-à-niveau)
+- [debian passer en testing](#debian-passer-en-testing)
+- [debian passer en sid](#debian-passer-en-sid)
+- [backport un paquet Sid dans stable](#backport-un-paquet-sid-dans-stable)
+- [dupliquer un systeme debian](#dupliquer-un-systeme-debian)
+- [creation d un mirroir local debian](#creation-d-un-mirroir-local-debian)
+- [creation d un iso live perso](#creation-d-un-iso-live-perso)
+- [compilation](#compilation)
+
 _____________________________________________________________________________________
 Gestion des paquets debian
 -------------------------------------------------------------------------------------
@@ -88,6 +107,46 @@ yum clean headers             apt-file purge                                    
 ###>>>--------------------------------------General Packaging System Information
 *.rpm                         *.deb                                             #Package file extension
 /etc/yum.conf                 /etc/apt/sources.list                             #Repository location configuration
+```
+
+_____________________________________________________________________________________
+Gestion des paquets fedora
+-------------------------------------------------------------------------------------
+```bash
+dnf repolist all                           #Lister les dépots disponibles
+dnf install PACKAGE                        #Installer un paquet
+dnf remove PACKAGE                         #Supprimer un paquet
+dnf erase PACKAGE                          #Supprimer les fichiers de configuration
+dnf update PACKAGE                         #Mettre à jour un paquet
+dnf check-update                           #Verifier les mises à jour disponibles
+dnf upgrade                                #Mettre à jour tous les paquets
+dnf grouplist                              #Liste les groupes de paquets disponibles
+dnf groupinstall "GROUP NAME"              #Installer un groupe de paquets
+dnf groupinfo "GROUP NAME"                 #Lister les paquets d un groupe
+dnf groupremove "GROUP NAME"               #Supprimer un groupe de paquets
+dnf search PACKAGE                         #Rechercher un paquet
+dnf download PACKAGE                       #Telecharge sans installer
+dnf list available | more                  #Liste les paquets disponibles
+dnf list installed                         #Liste les paquets installés
+dnf install --enablerepo=DEPOT PACKAGE     #Installer un paquet depuis un dépot
+dnf provides COMMAND                       #Connaitre le paquet associé
+dnf provides CHEMIN/FICHIER                #Connaitre le paquet associé
+dnf info PACKAGE                           #Trouver des informations sur un paquet
+time dnf makecache                         #Créer un cache manuel
+dnf clean all                              #Supprimer le cache
+dnf history                                #Historique des installations
+dnf history info ID                        #Details sur une installation
+dnf autoremove                             #Supprimer les paquets inutilisés
+dnf distro-sync                            #Synchronise dans la dernière version stable
+dnf reinstall PACKAGE                      #Reinstaller un paquet
+dnf upgrade-to PACKAGE-VERSION.fcNUM       #Installer un paquet dans une version spécifique
+dnf copr enable USER/PROJECT          #Installer un projet hors dépot
+dnf help                                   #Aide
+
+sudo dnf upgrade --refresh                 #Changement de version
+sudo dnf install dnf-plugin-system-upgrade
+sudo dnf system-upgrade download --releasever=NEWNUM
+sudo dnf system-upgrade reboot
 ```
 
 _____________________________________________________________________________________
