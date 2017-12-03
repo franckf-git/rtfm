@@ -1,3 +1,22 @@
+## Index
+
+- [message of the day ssh custom](#message-of-the-day-ssh-custom)
+- [ssh](#ssh)
+- [ssh echange de cle](#ssh-echange-de-cle)
+- [reverse ssh](#reverse-ssh)
+- [ssh-X affichage gui server X](#ssh-x-affichage-gui-server-x)
+- [tester WannaCry Bulletin CVE-2017-0143 ou MS17-010](#tester-wannacry-bulletin-cve-2017-0143-ou-ms17-010)
+- [backup incremental](#backup-incremental)
+- [eicar test antivirus](#eicar-test-antivirus)
+- [hasher un mot de passe](#hasher-un-mot-de-passe)
+- [effacer le disque](#effacer-le-disque)
+- [chkrootkit](#chkrootkit)
+- [rkhunter](#rkhunter)
+- [verifications des paquets](#verifications-des-paquets)
+- [protection basique contre attaques classiques](#protection-basique-contre-attaques-classiques)
+- [generateur password](#generateur-password)
+- [durcissement et suggestions de securite](#durcissement-et-suggestions-de-securite)
+
 _____________________________________________________________________________________
 message of the day ssh custom
 -------------------------------------------------------------------------------------
@@ -180,6 +199,13 @@ X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
 ```
 
 _____________________________________________________________________________________
+hasher un mot de passe
+-------------------------------------------------------------------------------------
+```bash
+echo "PASSWORD" | sha1sum
+```
+
+_____________________________________________________________________________________
 effacer le disque
 -------------------------------------------------------------------------------------
 ```bash
@@ -222,6 +248,20 @@ sudo debsums -cs
 
 ###>>>reinstaller les paquets affectes
 sudo apt-get --reinstall install $(debsums -c 2>&1 | grep -E -o 'from [^ ]* package' | cut -d\ -f2 | sort -u)
+```
+
+_____________________________________________________________________________________
+protection basique contre attaques classiques
+-------------------------------------------------------------------------------------
+```bash
+echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts          #anti smurf (attaque par rebond via ping)
+echo "0" > /proc/sys/net/ipv4/conf/all/accept_source_route         #source routing
+echo "1" > /proc/sys/net/ipv4/tcp_syncookies                       #anti syn flood (déni de service)
+echo "1024" > /proc/sys/net/ipv4/tcp_max_syn_backlog
+echo "1" > /proc/sys/net/ipv4/conf/all/rp_filter
+echo "1" > /proc/sys/net/ipv4/icmp_ignore_bogus_error_responses    #pas de log pour les mauvais icmp
+echo "0" > /proc/sys/net/ipv4/conf/all/accept_redirects            #desactive redirections icmp
+echo "0" > /proc/sys/net/ipv4/conf/all/secure_redirects
 ```
 
 _____________________________________________________________________________________
