@@ -1,3 +1,20 @@
+## Index
+
+- [openscad syntax](#openscad-syntax)
+- [irc - discord](#irc---discord)
+- [lxc](#lxc)
+- [raid logiciel mdadm](#raid-logiciel-mdadm)
+- [imagemagick traitement image en cli](#imagemagick-traitement-image-en-cli)
+- [install virtualbox](#install-virtualbox)
+- [installation des addons invites virtualbox](#installation-des-addons-invites-virtualbox)
+- [monter un disque virtualbox](#monter-un-disque-virtualbox)
+- [QEMU](#qemu)
+- [disques smart](#disques-smart)
+- [correction de commande en python](#correction-de-commande-en-python)
+- [outil de benchmarking simple](#outil-de-benchmarking-simple)
+- [multi-fenetre terminal](#multi--fenetre-terminal)
+- [QR code](#qr-code)
+
 _____________________________________________________________________________________
 openscad syntax
 -------------------------------------------------------------------------------------
