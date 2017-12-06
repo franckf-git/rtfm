@@ -8,6 +8,7 @@
 - [overclock raspberry pi 3](#overclock-raspberry-pi-3)
 - [boot sur usb](#boot-sur-usb)
 - [pi zero USB OTG device](#pi-zero-usb-otg-device)
+- [Expansion GPIO](#expansion-gpio)
 - [gestion LED au demarrage](#gestion-led-au-demarrage)
 - [desactiver USB](#desactiver-usb)
 - [gestion des logs pour card sd](#gestion-des-logs-pour-card-sd)
@@ -143,6 +144,26 @@ modules-load=dwc2,g_ether ###>>>entre rootwait et quiet
 ssh pi@raspberrypi.local
 
 ###>>>windows>network>properties>sharing>allow USB/RNDIS ethernet reboot
+```
+
+_____________________________________________________________________________________
+Expansion GPIO
+-------------------------------------------------------------------------------------
+```bash
+###>>>utiliser la version x86 de Raspbian pour piloter un Raspberry 0 en USB
+sudo apt install usbbootgui
+
+###>>>brancher le Raspberry 0 en USB sans carte SD
+###>>>choisir GPIO expansion board
+ifconfig
+###>>>usb0
+
+export GPIOZERO_PIN_FACTORY=pigpio
+export PIGPIO_ADDR=fe80::1%usb0
+python3
+>>> from gpiozero import LED
+>>> led = LED(17)
+>>> led.blink()
 ```
 
 _____________________________________________________________________________________
