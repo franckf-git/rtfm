@@ -1,3 +1,33 @@
+## Index
+
+- [sauvegarde media vers image](#sauvegarde-media-vers-image)
+- [coucher une image sur un media](#coucher-une-image-sur-un-media)
+- [installation archlinux](#installation-archlinux)
+- [installation fedora](#installation-fedora)
+- [stopper le resize automatique](#stopper-le-resize-automatique)
+- [overclock raspberry pi 3](#overclock-raspberry-pi-3)
+- [boot sur usb](#boot-sur-usb)
+- [pi zero USB OTG device](#pi-zero-usb-otg-device)
+- [gestion LED au demarrage](#gestion-led-au-demarrage)
+- [desactiver USB](#desactiver-usb)
+- [gestion des logs pour card sd](#gestion-des-logs-pour-card-sd)
+- [screensaver CLI](#screensaver-cli)
+- [bloquer wifi et bluetooth](#bloquer-wifi-et-bluetooth)
+- [picamera](#picamera)
+- [nouvel utilisateur](#nouvel-utilisateur)
+- [capture video pour 30 min (-t 0 pour infini)](#capture-video-pour-30-min--t-0-pour-infini)
+- [slowmotion](#slowmotion)
+- [surveillance motion](#surveillance-motion)
+- [serveur streaming vlc](#serveur-streaming-vlc)
+- [ip statique](#ip-statique)
+- [wifi config](#wifi-config)
+- [hotspot](#hotspot)
+- [VNC](#vnc)
+- [RPI monitor](#rpi-monitor)
+- [pihole bloqueur pub](#pihole-bloqueur-pub)
+- [mode kiosque](#mode-kiosque)
+- [compilation opencv (3h sur raspberry 3)](#compilation-opencv-3h-sur-raspberry-3)
+
 _____________________________________________________________________________________
 sauvegarde media vers image
 -------------------------------------------------------------------------------------
@@ -115,7 +145,7 @@ ssh pi@raspberrypi.local
 ###>>>windows>network>properties>sharing>allow USB/RNDIS ethernet reboot
 ```
 
-___________________________________________________________________________________
+_____________________________________________________________________________________
 gestion LED au demarrage
 -------------------------------------------------------------------------------------
 ```
