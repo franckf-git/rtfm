@@ -10,7 +10,7 @@
 - [fenetre de connexion lightdm login deroulant](#fenetre-de-connexion-lightdm-login-deroulant)
 - [lightdm personnalisation](#lightdm-personnalisation)
 - [grub](#grub)
-- [lancer un script au branchement d une cle USB](#lancer-un-script-au-branchement-d-une-cle-USB)
+- [lancer un script au branchement d une cle USB](#lancer-un-script-au-branchement-d-une-cle-usb)
 - [script au demarrage](#script-au-demarrage)
 
 _____________________________________________________________________________________
@@ -27,7 +27,7 @@ ________________________________________________________________________________
 mes dossiers
 -------------------------------------------------------------------------------------
 ```bash
-mkdir ~/Documents ~/Downloads ~/Transferts ~/Medias ~/Unclear
+mkdir ~/Files ~/Downloads ~/Transferts ~/Medias ~/Unclear
 ```
 
 _____________________________________________________________________________________
@@ -80,13 +80,18 @@ connexion sans login
 ```bash
 sudo nano /etc/lightdm/lightdm.conf
 [SeatDefaults]
-autologin-user=user
+pam-service=lightdm
+pam-autologin-service=lightdm-autologin
+autologin-user=USER
+autologin-user-timeout=0
 
+groupadd -r autologin
+gpasswd -a USER autologin
 ###>>>mettre fond d ecran dans /usr/share/images/desktop-base/
 update-alternatives --config FICHIER.jpg
 
 ###>>>ou
-echo 'startx' >> bashrc
+echo 'startx' >> .bashrc
 ```
 
 _____________________________________________________________________________________
@@ -128,8 +133,13 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 GRUB_CMDLINE_LINUX=""
 GRUB_TERMINAL=console
 
-sudo update-grub
 sudo rm /boot/grub/.background_cache.png
+###>>>BIOSS
+sudo update-grub
+###>>>ou
+grub2-mkconfig -o /boot/grub2/grub.cfg
+###>>>UEFI
+grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
 
 _____________________________________________________________________________________
@@ -227,4 +237,50 @@ RemainAfterExit=yes
 [Install]
 WantedBy=default.target
 Alias=SCRIPT.service
+```
+
+_____________________________________________________________________________________
+gestion batterie
+-------------------------------------------------------------------------------------
+```bash
+sudo powertop
+sudo powertop --calibrate
+sudo powertop --auto-tune          #appliquer
+sudo powertop --calibrate          #permanent
+
+sudo nano /etc/systemd/system/powertop.service
+[Unit]
+Description=Powertop tunings
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/powertop --auto-tune
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl enable powertop
+
+###>>>ou
+dnf install tlp tlp-rdw
+sudo tlp stat
+sudo tlp start
+```
+
+_____________________________________________________________________________________
+gestion webcam
+-------------------------------------------------------------------------------------
+```bash
+###>>>désactivation
+sudo nano /etc/modprobe.d/blacklist.conf
+blacklist uvcvideo
+
+###>>>désactivation et activation
+sudo rmmod -f uvcvideo
+sudo modprobe uvcvideo
+
+###>>>controle
+sudo apt-get install v4l-utils
+v4l2-ctl --info
+v4l2-ctl --list-ctrls
 ```
