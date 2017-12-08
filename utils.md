@@ -131,6 +131,8 @@ hddtemp /dev/sda                               #HDD
 smartctl -a /dev/sda                           #HDD
 cat /sys/class/net/enp0s25/                    #infos interface reseau
 sudo nano /etc/hostname     #renommer la Machine
+hostnamectl set-hostname "HOSTNAME"
+hostnamectl                 #afficher le nom de la machine
 type COMMAND                #emplacement d une commande 
 vmstat                      #statistiques systeme
 powertop                    #statistiques systeme
@@ -219,6 +221,7 @@ lspci | grep -i audio | cut -d: -f3     #afficher le modele de sa carte son
 cat /proc/cpuinfo                       #affiche les informations processeur
 lsblk                                   #liste tous les peripheriques de stockage
 inxi -F                                 #liste materiel
+inxi -Frmxx﻿
 sensors                                 #afficher les informations senseurs
 udevadm monitor --udev                  #observation evenements peripheriques
 procinfo                                #informations systemes /proc
@@ -331,6 +334,7 @@ dig IP -ANY
 nmblookup -A IP_LOCAL
 nbtscan IP
 lsof -i                   #liste detaillee de l usage des fichiers et du reseau
+
 ifconfig                  #afficher l état et l adresse du lien des interfaces actives
 ifconfig INTERFACE IP MASQUE           #configure une interface reseau
 ip a                      #affiche la configuration des interfaces reseaux
@@ -339,6 +343,14 @@ route -n                  #afficher toutes les tables de routage
 ip route show             #afficher toutes les tables de routage
 arp                       #afficher le contenu actuel des tables de cache d ARP
 ip neigh                  #afficher le contenu actuel des tables de cache d ARP
+sudo ip addr add IP/MASQUE dev enp0s3                 #assign IP address
+sudo ip addr add broadcast IP_BROADCAST dev enp0s3    #set broadcast address
+sudo ip addr del IP/MASQUE dev enp0s3                 #removing IP address
+sudo ip link set enp0s3 up                            #enabling a network interface
+sudo ip link set enp0s3 down                          #disabling a network interface
+ip route show                                         #checking route
+ip -s link                                            #checking network statistics
+
 plog                      #afficher le journal du démon ppp
 ping SITE.COM             #vérifier la connexion internet vers site.com
 whois SITE.COM            #vérifier qui a enregistré site.com
@@ -551,6 +563,7 @@ shc -v -f FILE.sh                                #convertir un script en binaire
 jp2a                                             #image en ascii
 ccze                                             #coloration syntaxique des logs
 nmon                                             #moniteur systeme
+glances                                          #moniteur (copr tartare/glances)
 script                                           #enregistreur terminal
 mc                                               #explorateur de fichier
 mc -e ou mcedit FICHIER                          #editeur de fichier
@@ -609,6 +622,10 @@ sudo apt-get install oneko
 sudo visudo
 Defaults insults
 ###>>>noms wifi : loading, searching
+ninvanders
+bastet
+nethack
+bsd-games
 ```
 
 _____________________________________________________________________________________
