@@ -5,6 +5,7 @@
 - [installation archlinux](#installation-archlinux)
 - [installation fedora](#installation-fedora)
 - [stopper le resize automatique](#stopper-le-resize-automatique)
+- [utiliser les cartes SD en lecture seule](#utiliser-les-cartes-SD-en-lecture-seule)
 - [overclock raspberry pi 3](#overclock-raspberry-pi-3)
 - [boot sur usb](#boot-sur-usb)
 - [pi zero USB OTG device](#pi-zero-usb-otg-device)
@@ -91,6 +92,17 @@ stopper le resize automatique
 ```bash
 sudo nano /boot/cmdline.txt
 ###>>>retirer init=/usr/lib/raspi-config/init_resize.sh
+```
+
+_____________________________________________________________________________________
+utiliser les cartes SD en lecture seule
+-------------------------------------------------------------------------------------
+```bash
+###>>>modifications dans le micrologiciel donc irreversible !
+###>>>seulement sur la version lite de raspbian
+wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/read-only-fs.sh
+sudo bash read-only-fs.sh
+#jumper yes on GPIO21
 ```
 
 _____________________________________________________________________________________
