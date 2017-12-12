@@ -9,10 +9,11 @@
 - [installation des addons invites virtualbox](#installation-des-addons-invites-virtualbox)
 - [monter un disque virtualbox](#monter-un-disque-virtualbox)
 - [QEMU](#qemu)
+- [gestionnaire de machines virtuelles](#gestionnaire-de-machines-virtuelles)
 - [disques smart](#disques-smart)
 - [correction de commande en python](#correction-de-commande-en-python)
 - [outil de benchmarking simple](#outil-de-benchmarking-simple)
-- [multi-fenetre terminal](#multi--fenetre-terminal)
+- [multi-fenetre terminal](#multi-fenetre-terminal)
 - [QR code](#qr-code)
 
 _____________________________________________________________________________________
@@ -107,20 +108,27 @@ __***italique gras souligné***__
 `code` 
 ```language
 bloc de code
-```
+
 ```
 
 _____________________________________________________________________________________
 lxc
 -------------------------------------------------------------------------------------
 ```bash
+sudo apt install lxc lxc-templates
+###>>>Paquets optionnels
+sudo apt bridge-utils libvirt-bin debootstrap
+lxc-checkconfig                                    #vérification de la configuration
+
 lxc-create -n NOMDUCONTENEUR -t TYPEDUCONTENEUR    #creer un conteneur
 ###>>>ex sudo lxc-create -n ma_machine -t download -- -d debian -r jessie -a amd64
 lxc-ls --active                                    #liste des connecteurs actifs
+lxc-ls --fancy
 lxc-start -n NOMDUCONTENEUR                        #Démarrer un conteneur
 lxc-console -n NOMDUCONTENEUR                      #Se connecter à un conteneur démarré
 lxc-info -n NOMDUCONTENEUR                         #Avoir des infos sur le conteneur
 lxc-stop -n NOMDUCONTENEUR                         #Arrêter un conteneur
+lxc-halt -n NOMDUCONTENEUR                         #Arrêter un conteneur proprement
 lxc-clone NOM NOUVEAUNOM                           #Cloner un conteneur
 lxc-snapshot -n NOM                                #Instantanés de conteneurs
 lxc-snapshot -n NOM -L                             #Pour voir les snapshots réalisés
@@ -298,6 +306,14 @@ fdisk -l /dev/nbd0
 mount /dev/nbd0p1 /mnt
 ###>>>ou
 mount -o loop,offset=32256 /PATH/TO/HDD.img /mnt/MOUNTPOINT
+```
+
+_____________________________________________________________________________________
+gestionnaire de machines virtuelles
+-------------------------------------------------------------------------------------
+```bash
+sudo apt install gnome-boxes virt-manager qemu-kvm qemu gir1.2-spice-client-gtk-3.0
+sudo systemctl start libvirtd
 ```
 
 _____________________________________________________________________________________
