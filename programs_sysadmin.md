@@ -414,6 +414,7 @@ git stash list                              #Liste toutes les remises
 git stash drop                              #Supprime la remise la plus récente
 git log                                     #Montre l historique des versions
 git log --follow FICHIER                    #Les actions de renommage, pour le fichier
+git log -p FICHIER                          #voir le détail des modifications
 git diff 1ere-BRANCHE...2eme-BRANCHE        #Montre les différences de contenu
 git show COMMIT                             #Montre les modifications de métadonnées
 git reset COMMIT                            #Annule tous les commits après COMMIT
@@ -440,10 +441,31 @@ git commit -m "first commit"
 git commit -a -m "MAJ fichier"
 git log
 
-GitHub > Create new > New repository
+###>>>GitHub > Create new > New repository
 git remote add origin https://github.com/USER/REPO.git
 git push -u origin master
 git remote -v
 https://github.com/USER/REPO
 wget https://raw.githubusercontent.com/USER/REPO/master/FILE.md
+
+###>>>Connecting to GitHub with SSH
+###>>>a faire avant de créer le repot
+ls -al ~/.ssh
+ssh-keygen -t rsa -b 4096 -C "youremail@mailsite.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+clip < ~/.ssh/id_rsa.pub
+###>>>GitHub > Settings > SSH and GPG keys > Add SSH key (paste)
+ssh -T git@github.com
+git clone git@github.com:USER/REPO.git
+git remote set-url origin git@github.com:USER/REPO.git
+
+###>>>GitHub Pages > create a new repository named USERNAME.github.io
+git clone https://github.com/USERNAME/USERNAME.github.io
+cd USERNAME.github.io
+echo "Hello World" > index.html
+git add --all
+git commit -m "Initial commit"
+git push -u origin master
+###>>>https://USERNAME.github.io
 ```
