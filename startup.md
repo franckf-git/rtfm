@@ -11,7 +11,10 @@
 - [lightdm personnalisation](#lightdm-personnalisation)
 - [grub](#grub)
 - [lancer un script au branchement d une cle USB](#lancer-un-script-au-branchement-d-une-cle-usb)
+- [LVM](#lvm)
 - [script au demarrage](#script-au-demarrage)
+- [gestion webcam](#gestion-webcam)
+- [gestion batterie](#gestion-batterie)
 
 _____________________________________________________________________________________
 stopper les services listen inutiles
@@ -156,6 +159,32 @@ SUBSYSTEM=="block", ACTION=="remove", ATTRS{serial}=="........", RUN="/usr/local
 ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]1", ATTRS{vendor}=="CONSTRUCTEUR", RUN+="/usr/local/bin/BACKUP.sh"
 
 udevadm control --reload-rules
+```
+
+_____________________________________________________________________________________
+LVM
+-------------------------------------------------------------------------------------
+## Decrease LVM
+```bash
+###>>>Shrinking a root volume
+vgchange -a y
+
+###>>>Shrinking a non-root volume
+umount /MONTAGE/
+e2fsck -fy /MONTAGE/
+resize2fs /MONTAGE/ 5G
+###>>>ou
+lvreduce -L 5G /dev/vg/DISK_NAME
+resize2fs /MONTAGE/
+
+mount /MONTAGE/ /mnt
+```
+
+## Increase LVM
+```bash
+vgdisplay | grep free
+lvextend -L+5G /MONTAGE/
+resize2fs /MONTAGE/
 ```
 
 _____________________________________________________________________________________
