@@ -76,6 +76,7 @@ diff -u FILE1 FILE2   #affiche les differences au format utilise par patch
 comp FILE1 FILE2      #compare deux fichiers binaires
 comp FILE1 FILE2 n N  #file1 a partir du nieme octet, et file2 a partir du Nieme
 diff FILE1 FILE2      #donne les modifications a apporter a file1
+diff -rus FILE1 FILE2
 awk 'NR==FNR {t[$0]++; next} !t[$0]' F2 F1      #afficher les lignes uniquement dans f1
 awk '($1=="NOM") { print }' <FILE     #afficher les lignes contenant la colonne nom
 awk '{ print $3,$4 }' <FILE           #afficher les colonnes 3 et 4
@@ -95,6 +96,8 @@ unexpand              #transforme les espaces en tabulations
 fold -w N             #retour à la ligne après N caractères
 fmt                   #formatage paragraphe
 column -s C -t FIC    #affichage en colonnes selon le caractère C
+apropos TERMES        #recherche dans toutes les man pages
+clip < FILE           #copier dans le presse-passier
 ```
 
 _____________________________________________________________________________________
@@ -146,7 +149,8 @@ gestion des utilisateurs
 -------------------------------------------------------------------------------------
 ```bash
 passwd                       #changer le mot de passe de l utilisateur courant
-adduser                      #ajouter un utilisateur
+useradd                      #ajouter utilisateur
+adduser                      #ajouter utilisateur interactif
 adduser USER sudo            #passer un utilisateur en sudo
 usermod -aG sudo USER        #ajout au groupe sudo
 deluser                      #supprime un utilisateur
@@ -161,6 +165,9 @@ echo "MESSAGE" | wall        #Envoyer un message à tous les utilisateurs du sys
 sudo cat /etc/passwd | awk -F: '{print $ 1}'   #liste des utilisateurs
 grep bash /etc/passwd        #utilisateurs physiques du système
 awk -F: '$3 > 999 {print $1}' /etc/passwd | sort
+more /etc/group              #tous les groupes
+id USER                      #details des ID et groupes
+cat /etc/shells              #voir les shells disponibles
 
 nano /etc/sudoers            #activer sudo
 %sudo    #ALL=(ALL:ALL) ALL
@@ -374,9 +381,11 @@ nc URL/IP PORT                    #test connexions reseaux
 
 ssh USER@IP COMMAND       #lancer une commande distante sans connexion ssh
 ssh -o "PubkeyAuthentication=no" USER@HOSTNAME              #sans clé disponible
-iftop                     #afficher l utilisation de la bande passante
+iftop -i                  #afficher l utilisation de la bande passante
 iperf                     #outil de mesure de la bande passante du protocole Internet
 ifstat                    #InterFace STATistics Monitoring
+iptraf
+sysstat
 bmon                      #surveillance portable de la bande passante
 bing                      #testeur de bande passante empirique et stochastique
 bwm-ng                    #moniteur de bande passante simple en mode console
@@ -480,6 +489,7 @@ cat /dev/sda3 | pipebench -q > /dev/null  #hdd
 /usr/bin/awk '{print $0 ; }' /dev/zero    #ram
 dd if=/dev/zero | ssh IP_AUTRE dd of=/dev/null                   #reseau emission
 ssh IP_AUTRE dd if=/dev/zero | dd of=/dev/null                   #reseau reception
+cat /proc/sys/kernel/random/entropy_avail #vérifier niveau entropie (inf à 3000)
 ```
 
 _____________________________________________________________________________________
@@ -509,6 +519,7 @@ mkfs.vfat      #/dev/sdb1
 mount -o remount,rw /                    #remonter une partition en lecture/ecriture
 sudo blkid                               #UUID des partitions
 mount -t TYPE /dev/sda3 /media/MOUNT     #monter un systeme de fichier inconnu
+umount -l                                #forcer le demontage
 pvdisplay                                #afficher les volumes physiques
 pvdisplay -C                             #sous forme de liste 
 pvcreate /dev/sd2                        #creer un volume physique 
@@ -516,9 +527,11 @@ vgdisplay                                #afficher les groupes de volumes
 vgcreate name /dev/sda1 /dev/sdb3        #creer un groupe de volume
 lvdisplay                                #afficher les disques virtuels
 lvcreate -n LV_FILES -L 5G NAME_VG       #creer un disque virtuel
-shutdown -F -r now         #forcer la verification du systeme de fichier au redemmarage
+shutdown -F -r now                       #forcer la verification du systeme au reboot
 sudo mlabel -i /dev/sdb2 ::NOUVEAUNOM    #Changer le label clé USB type FAT32
 sudo e2label /dev/sdb2 "NOUVEAUNOM"      #Changer le label clé USB type EXT2/3/4
+badblocks -s -v -w /dev/hda              #test en lecture et écriture, effacement !
+mount -o remount,size=6G,... /TMP        #resize the tmpfs volume
 ```
 
 _____________________________________________________________________________________
@@ -617,15 +630,19 @@ ________________________________________________________________________________
 commandes futiles
 -------------------------------------------------------------------------------------
 ```bash
-sudo apt-get install cmatrix
-sudo apt-get install oneko
 sudo visudo
 Defaults insults
+
 ###>>>noms wifi : loading, searching
+cmatrix
+oneko
 ninvanders
 bastet
 nethack
 bsd-games
+
+apt install sysvbanner
+banner MESSAGES
 ```
 
 _____________________________________________________________________________________
