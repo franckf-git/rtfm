@@ -15,6 +15,7 @@
 - [debian passer en sid](#debian-passer-en-sid)
 - [backport un paquet Sid dans stable](#backport-un-paquet-sid-dans-stable)
 - [dupliquer un systeme debian](#dupliquer-un-systeme-debian)
+- [preconfiguration durant installation debian](#preconfiguration-durant-installation-debian)
 - [creation d un mirroir local debian](#creation-d-un-mirroir-local-debian)
 - [creation d un iso live perso](#creation-d-un-iso-live-perso)
 - [compilation](#compilation)
@@ -303,6 +304,17 @@ dupliquer un systeme debian
 dpkg --get-selections > lstpkg.dpkg
 dpkg --set-selections < lstpkg.dpkg
 apt-get dselect-upgrade
+```
+
+_____________________________________________________________________________________
+preconfiguration durant installation debian
+-------------------------------------------------------------------------------------
+```bash
+sudo echo "#_preseed_V1" > preseed.cfg
+sudo debconf-get-selections --installer >> preseed.cfg
+sudo debconf-get-selections >> preseed.cfg
+sudo debconf-set-selections -c preseed.cfg
+###>>>a l installation choisir Advanced options / expert et pointer le cfg sur USB
 ```
 
 _____________________________________________________________________________________
