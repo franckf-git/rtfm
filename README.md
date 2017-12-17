@@ -94,6 +94,7 @@ Manual pages for GNU/linux and others tips.
 - [CERT](https://www.cert.ssi.gouv.fr/)
 - [Exploit DataBase](https://www.exploit-db.com/)
 - [Terms of Service](https://tosdr.org/)
+- [QubesOS]((https://github.com/QubesOS)
 
 ### Raspberry Pi
 
@@ -110,6 +111,24 @@ Manual pages for GNU/linux and others tips.
 - [Pirate Box](https://piratebox.cc/raspberry_pi:diy)
 - [Jasper](https://jasperproject.github.io/documentation/installation/)
 - [Alexa](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
+
+### Browser Extensions
+
+#### [Chromium](https://www.chromium.org/developers/how-tos/get-the-code)
+- [Disconnect](https://chrome.google.com/webstore/detail/disconnect/jeoacafpbcihiomhlakheieifhpjdfeo?hl=fr)
+- [HTTPS Everywhere](https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp?hl=fr)
+- [Dark Mode](https://chrome.google.com/webstore/detail/dark-mode/dmghijelimhndkbmpgbldicpogfkceaj?hl=fr)
+- [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=fr)
+- [Clear Data](https://chrome.google.com/webstore/detail/clear-browsing-data/bjilljlpencdcpihofiobpnfgcakfdbe?hl=fr)
+
+
+#### [Firefox](https://www.mozilla.org/fr/firefox/all/)
+- [Disconnect](https://addons.mozilla.org/fr/firefox/addon/disconnect/)
+- [HTTPS Everywhere](https://addons.mozilla.org/fr/firefox/addon/https-everywhere/)
+- [Dark Mode](https://addons.mozilla.org/fr/firefox/addon/dark-mode-webextension)
+- [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin)
+- [Clear Data](https://addons.mozilla.org/fr/firefox/addon/clear-browsing-data/)
+- [4chan](https://addons.mozilla.org/fr/firefox/addon/4chan-media-downloader/)
 
 ## Sources
 
