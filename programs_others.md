@@ -15,6 +15,7 @@
 - [outil de benchmarking simple](#outil-de-benchmarking-simple)
 - [multi-fenetre terminal](#multi-fenetre-terminal)
 - [QR code](#qr-code)
+- [i3-wm](#i3-wm)
 
 _____________________________________________________________________________________
 openscad syntax
@@ -391,3 +392,49 @@ qrencode -o IMAGE.png 'BEGIN:VCARD VERSION:4.0 FN: N:NOM;PRENOM;;; ADR:;;ADRESS.
 sudo apt-get install libdecodeqr-examples
 libdecodeqr-simpletest IMAGE.png
 ```
+
+_____________________________________________________________________________________
+i3-wm
+-------------------------------------------------------------------------------------
+
+### Controlling i3
+
+`$mod+Shift+r`       Restart i3
+`$mod+Shift+e`       Exit i3
+`$mod+Shift+c`       Reload config fil
+
+### Manage Windows
+
+`$mod+Shift+q`       Kill current window
+`$mod+Shift+NUM`     Move current window to workspace number
+`$mod+Shift+f`       Set window to floating mode
+`$mod+j`             Focus on window to the left
+`$mod+k`             Focus on window above
+`$mod+l`             Focus on window below
+`$mod+;`             Focus on window to the right
+`$mod+Shift+DIRKEY`  Move window in direction keys
+`$mod+Shift+j`       Move window left
+`$mod+Shift+k`       Move window up
+`$mod+Shift+l`       Move window down
+`$mod+Shift+;`       Move window right
+
+### Workspaces
+
+`$mod+NUM`           Switch to workspace 
+`$mod+Shift+NUM`     Move current window to workspace number
+
+### Containers
+
+`$mod+e`             Default container
+`$mod+h`             Horizontal split container
+`$mod+v`             Vertical split container
+`$mod+w`             Tabbed container
+`$mod+f`             Toggle fullscreen mode
+`$mod+s`             Toggle stacking mode
+`$mod+Shift+SPACE`   Toggle floating mode
+`$mod+r`             Resize mode (<Esc> or <Enter> to leave)
+
+### Applications
+
+`$mod+Enter`         Open new terminal window
+`$mod+d`             Open dmenu
