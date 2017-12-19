@@ -129,6 +129,11 @@ Host NOM_CONNEXION
 ssh NOM_CONNEXION
 ###>>>ou
 ssh USER@IP_DISTANTE -p NUMERO_PORT -i /CHEMIN/CLE_PRIVEE
+
+###>>>supprimer les clés
+ssh-add -d ~/.ssh/id_rsa
+###>>>supprimer une entrée known_hosts
+ssh-keygen -R NOMDUSERVEUR
 ```
 
 _____________________________________________________________________________________
