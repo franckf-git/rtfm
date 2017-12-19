@@ -13,8 +13,9 @@
 - [lancer un script au branchement d une cle USB](#lancer-un-script-au-branchement-d-une-cle-usb)
 - [LVM](#lvm)
 - [script au demarrage](#script-au-demarrage)
-- [gestion webcam](#gestion-webcam)
 - [gestion batterie](#gestion-batterie)
+- [gestion webcam](#gestion-webcam)
+- [mode graphique systemd](#mode-graphique-systemd)
 
 _____________________________________________________________________________________
 stopper les services listen inutiles
@@ -312,4 +313,11 @@ sudo modprobe uvcvideo
 sudo apt-get install v4l-utils
 v4l2-ctl --info
 v4l2-ctl --list-ctrls
+```
+
+_____________________________________________________________________________________
+mode graphique systemd
+-------------------------------------------------------------------------------------
+```bash
+systemctl set-default graphical.target
 ```
