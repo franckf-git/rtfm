@@ -575,6 +575,9 @@ zmap                                             #scanner reseau plus rapide que
 shc -v -f FILE.sh                                #convertir un script en binaire
 jp2a                                             #image en ascii
 ccze                                             #coloration syntaxique des logs
+most                                             #colorisation man pages
+fc-list                                          #lister les polices installées
+xprop                                            #lecture d une fenetre
 nmon                                             #moniteur systeme
 glances                                          #moniteur (copr tartare/glances)
 script                                           #enregistreur terminal
