@@ -95,6 +95,7 @@ Manual pages for GNU/linux and others tips.
 - [Exploit DataBase](https://www.exploit-db.com/)
 - [Terms of Service](https://tosdr.org/)
 - [QubesOS]((https://github.com/QubesOS)
+- [Virus Total](#https://www.virustotal.com/#/home/url)
 
 ### Raspberry Pi
 
