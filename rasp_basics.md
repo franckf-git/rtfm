@@ -15,6 +15,7 @@
 - [gestion des logs pour card sd](#gestion-des-logs-pour-card-sd)
 - [screensaver CLI](#screensaver-cli)
 - [bloquer wifi et bluetooth](#bloquer-wifi-et-bluetooth)
+- [jumellage bluetooth](#jumellage-bluetooth)
 - [picamera](#picamera)
 - [nouvel utilisateur](#nouvel-utilisateur)
 - [capture video pour 30 min (-t 0 pour infini)](#capture-video-pour-30-min--t-0-pour-infini)
@@ -233,6 +234,27 @@ blacklist brcmutil
 #bluetooth
 blacklist btbcm
 blacklist hci_uart
+```
+
+_____________________________________________________________________________________
+jumellage bluetooth
+-------------------------------------------------------------------------------------
+```bash
+###>>>CLI
+sudo bluetoothctl
+agent on
+default-agent
+scan on
+pair 01:02:03:04:05:06:07:08
+connect 01:02:03:04:05:06:07:08
+
+sudo nano /etc/bluetooth/main.conf
+[Policy]
+AutoEnable=true
+
+###>>>GUI
+sudo apt-get install bluetooth bluez blueman
+###>>>Bluetooth Manager
 ```
 
 _____________________________________________________________________________________
