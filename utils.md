@@ -593,13 +593,19 @@ echo "MESSAGE" | mail -s "OBJET" MAIL@MAIL.com   #mail
 mail -s "OBJET" MAIL@MAIL.com < PJ.jpg           #mail avec piece jointe
 wget wttr.in -O - -o /dev/null                   #meteo
 sudo iwconfig wlan0 essid MONSSID                #wifi
+iw                                               #gestionnaire reseau
+wicd-curses
 ncdu                                             #taille des dossiers > df -h
 espeak -v fr+f1 "MESSAGE"                        #synthetiseur vocal
 espeak -f PLAINTEXTFILE.txt                      #lecture d un fichier
 espeak -w AUDIO.wav "MESSAGE"                    #ecriture dans un fichier
 echo "MESSAGE" | espeak -s 160 -a 100 -g 4       #resultat commande
 moc                                              #music on command
-calcurse                                         #calendrier
+wordgrinder                                      #traitement de texte
+pandoc                                           #convertiseur format texte
+calcurse                                         #calendrier et todo-list
+finch                                            #client de messagerie
+mapscii                                          #carte
 sudo nano /etc/motd                              #message de bienvenue ssh
 setxkbmap fr                                     #clavier azerty
 setxkbmap us
@@ -643,6 +649,7 @@ ninvanders
 bastet
 nethack
 bsd-games
+figlet -f
 
 apt install sysvbanner
 banner MESSAGES
