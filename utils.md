@@ -665,6 +665,14 @@ find /home -type f -mtime +7 -exec rm {} \;        #purger plus vieux que 7 jour
 pastebinit                                         #utilitaire pastebin
 pastebinit -l                                      #liste des sites d export
 pastebinit -i FICHIER -a Untitled -b http://pastebin.com
+history -d 000                                     #supprimer une ligne de history
+history -c                                         #tout nettoyer
+export HISTTIMEFORMAT='%F %T '                     #date des commandes
+export HISTIGNORE='ls -l:pwd:history'              #ignorer certaines commandes
+unset export HISTIGNORE                            #desactiver ignorance
+export HISTCONTROL=ignoredups                      #ignorer duplicatats
+unset HISTCONTROL                                  #desactiver ignorer duplicatats
+export HISTSIZE=0                                  #desactiver history
 ```
 
 _____________________________________________________________________________________
