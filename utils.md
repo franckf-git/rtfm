@@ -361,6 +361,7 @@ ip -s link                                            #checking network statisti
 plog                      #afficher le journal du démon ppp
 ping SITE.COM             #vérifier la connexion internet vers site.com
 whois SITE.COM            #vérifier qui a enregistré site.com
+curl -Is SITE.COM -L | grep HTTP/ #vérifier si un site est tombé
 traceroute SITE.COM       #tracer la connexion Internet vers site.com
 tracepath SITE.COM        #tracer la connexion Internet vers site.com
 mtr SITE.COM              #tracer la connexion Internet vers site.com (répétitive)
@@ -504,6 +505,7 @@ sudo tune2fs -j /dev/hda1                #ajoute la possibilité de journalisati
 cat /proc/partitions                     #affiche les partitions montees
 sudo fdisk -l                            #details partitions
 sudo fdisk /dev/sdb                      #table de partition disque
+sudo cfdisk                              #fdisk simple
 fsck.ext4 -f /dev/sda2                   #verifier le systeme de fichier
 tune2fs -c 30 /dev/sda2                  #tout les 30 montages
 mkfs.bfs       #/dev/sdb1                #formatage
