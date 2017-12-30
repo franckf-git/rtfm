@@ -4,6 +4,7 @@
 - [OSI 3](#osi-3)
 - [plage d adresses methode du nombre magique](#plage-d-adresses-methode-du-nombre-magique)
 - [ports tcp/udp](#ports-tcpudp)
+- [Consoles Chromium](#consoles-chromium)
 - [serveur ntp france](#serveur-ntp-france)
 - [Google et openDNS](#google-et-opendns)
 - [serveur dns libre](#serveur-dns-libre)
@@ -157,6 +158,41 @@ more /etc/services
 5900         tcp     VNC Server
 6667         tcp     IRC
 ```
+
+_____________________________________________________________________________________
+Consoles Chromium
+-------------------------------------------------------------------------------------
+##### informations
+chrome://version/
+chrome://system/
+chrome://conflicts/
+chrome://flash/
+chrome://components/
+##### sites visités
+chrome://site-engagement/
+chrome://media-engagement/
+chrome://view-http-cache/
+chrome://quota-internals/
+##### stratégies
+chrome://policy/
+chrome://flags/
+##### extensions
+chrome://extensions
+chrome://inspect/#extensions
+chrome://net-internals/#modules
+##### confidentialité et données personnelles
+chrome://settings/passwords
+chrome://settings/siteData
+chrome://settings/clearBrowserData
+##### activité
+chrome://net-export/
+chrome://net-internals/#import
+##### activité réseau
+chrome://net-internals/#dns
+chrome://net-internals/#sockets
+chrome://net-internals/#quic
+chrome://net-internals/#http2
+chrome://net-internals/#timeline
 
 _____________________________________________________________________________________
 serveur ntp france
