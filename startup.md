@@ -261,12 +261,18 @@ Description=Service SCRIPT
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/SCRIPT.sh start ; AUTRE_COMMAND
+#ExecStart=/bin/sh -c COMMANDE
 ExecStop=/usr/local/bin/SCRIPT.sh stop
 RemainAfterExit=yes
 
 [Install]
 WantedBy=default.target
 Alias=SCRIPT.service
+
+chmod a+x /etc/systemd/system/SCRIPT.service
+systemctl --system daemon-reload
+systemctl start SCRIPT.service
+systemctl enable SCRIPT.service
 ```
 
 _____________________________________________________________________________________
