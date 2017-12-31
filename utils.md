@@ -189,9 +189,11 @@ top                          #afficher un tableau de bord des processus
 tload                        #charge cpu graphique
 lsof +L1                     #processus utilisant des fichiers
 systemd-analyse blame        #services demarres pardefaut selon leur temps de lancement
-systemctl disable NOMDUSERVICE.service           #desactiver les services inutiles
+
 service NOMDUSERVICE start/stop/restart/reload   #gestion service init.d
 systemctl start/stop/restart/reload/enable/disable NOMDUSERVICE   #systemd
+systemctl list-unit-files | grep enabled         #lister tous les services activés
+systemctl status NOMDUSERVICE.service            #etat du service
 
 kill signal PID              #tuer un processus en utilisant son pid
 pkill signal NOM             #tuer un processus en utilisant le nom du programme
