@@ -1,7 +1,7 @@
 ## Index
 
 - [gpg](#gpg)
-- [GPG/PGP](#gpg-pgp)
+- [GPG/PGP](#gpgpgp)
 - [creer une archive chiffree](#creer-une-archive-chiffree)
 - [chiffrement disque dur externe](#chiffrement-disque-dur-externe)
 - [chiffrement de dossier par ecryptfs](#chiffrement-de-dossier-par-ecryptfs)
