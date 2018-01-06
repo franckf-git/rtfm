@@ -123,15 +123,20 @@ dnf erase PACKAGE                          #Supprimer les fichiers de configurat
 dnf update PACKAGE                         #Mettre à jour un paquet
 dnf check-update                           #Verifier les mises à jour disponibles
 dnf upgrade                                #Mettre à jour tous les paquets
+dnf --exclude=PAQUET update                #exclure un paquet d une mise à jour
+dnf downgrade PAQUET                       #Rétrograder un paquet
 dnf grouplist                              #Liste les groupes de paquets disponibles
 dnf groupinstall "GROUP NAME"              #Installer un groupe de paquets
 dnf groupinfo "GROUP NAME"                 #Lister les paquets d un groupe
 dnf groupremove "GROUP NAME"               #Supprimer un groupe de paquets
 dnf search PACKAGE                         #Rechercher un paquet
+dnf provides /usr/bin/FICHIER              #Rechercher un paquet contenant un fichier
 dnf download PACKAGE                       #Telecharge sans installer
 dnf list available | more                  #Liste les paquets disponibles
 dnf list installed                         #Liste les paquets installés
 dnf install --enablerepo=DEPOT PACKAGE     #Installer un paquet depuis un dépot
+dnf --enablerepo=NOMDEPOT update           #Activer un dépôt pendant la mise à jour
+dnf --disablerepo=NOMDEPOT update          #Désactiver un dépôt pendant la mise à jour
 dnf provides COMMAND                       #Connaitre le paquet associé
 dnf provides CHEMIN/FICHIER                #Connaitre le paquet associé
 dnf info PACKAGE                           #Trouver des informations sur un paquet
@@ -143,10 +148,24 @@ dnf autoremove                             #Supprimer les paquets inutilisés
 dnf distro-sync                            #Synchronise dans la dernière version stable
 dnf reinstall PACKAGE                      #Reinstaller un paquet
 dnf upgrade-to PACKAGE-VERSION.fcNUM       #Installer un paquet dans une version spécifique
-dnf copr enable USER/PROJECT          #Installer un projet hors dépot
+dnf copr enable USER/PROJECT               #Installer un projet hors dépot
 dnf help                                   #Aide
 
-sudo dnf upgrade --refresh                 #Changement de version
+###>>>Limiter la bande passante de dnf
+sudo nano /etc/dnf/dnf.conf
+throttle=20k
+max_connections=1
+
+###>>>Désactiver les deltarpm
+sudo nano /etc/dnf/dnf.conf
+deltarpm=0
+
+###>>>Utiliser le miroir le plus rapide
+sudo nano /etc/dnf/dnf.conf
+fastestmirror=true
+
+###>>>Changement de version
+sudo dnf upgrade --refresh
 sudo dnf install dnf-plugin-system-upgrade
 sudo dnf system-upgrade download --releasever=NEWNUM
 sudo dnf system-upgrade reboot
