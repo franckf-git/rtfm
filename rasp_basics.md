@@ -5,7 +5,7 @@
 - [installation archlinux](#installation-archlinux)
 - [installation fedora](#installation-fedora)
 - [stopper le resize automatique](#stopper-le-resize-automatique)
-- [utiliser les cartes SD en lecture seule](#utiliser-les-cartes-SD-en-lecture-seule)
+- [utiliser les cartes SD en lecture seule](#utiliser-les-cartes-sd-en-lecture-seule)
 - [overclock raspberry pi 3](#overclock-raspberry-pi-3)
 - [boot sur usb](#boot-sur-usb)
 - [pi zero USB OTG device](#pi-zero-usb-otg-device)
