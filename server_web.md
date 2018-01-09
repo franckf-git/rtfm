@@ -6,7 +6,7 @@
 - [html minimal](#html-minimal)
 - [serveur dhcp](#serveur-dhcp)
 - [fail2ban](#fail2ban)
-- [denyhosts (alternative fail2ban)](#denyhosts-alternative--fail2ban-)
+- [denyhosts (alternative fail2ban)](#denyhosts-alternative-fail2ban)
 - [ftp](#ftp)
 - [serveur dns](#serveur-dns)
 
