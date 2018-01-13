@@ -283,6 +283,10 @@ fi
 (( a-- ))                    #Post-décrémente a
 (( ++a ))                    #Pre-incrémente a
 (( --a ))                    #Pre-décrémente a
+
+let "TOTAL = A *-+%/ B" ; echo $TOTAL     #entier
+let "m += 15"                             #equiv. "m = m + 15"
+echo "32.0 + 1.4" | bc                    #flottant
 ```
 
 _____________________________________________________________________________________
