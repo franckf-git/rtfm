@@ -130,6 +130,7 @@ Manual pages for GNU/linux and others tips.
 - [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin)
 - [Clear Data](https://addons.mozilla.org/fr/firefox/addon/clear-browsing-data/)
 - [4chan](https://addons.mozilla.org/fr/firefox/addon/4chan-media-downloader/)
+- [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/)
 
 ## Sources
 
