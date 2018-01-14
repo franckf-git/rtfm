@@ -408,6 +408,8 @@ git mv FICHIER NOUVEAU-NOM                  #Renomme le fichier
 git ls-files --others --ignored --exclude-standard   #Tous les fichiers exclus du suivi
 .gitignore                                  #Exclure du suivi (mais contenu sur tous les repos)
 .git/info/exclude                           #Exclure du projet (reste en local)
+cat ~/.gitconfig                            #Configuration globale
+git config --global alias.lp "log --pretty" #Création d alias
 git stash                                   #Remiser son travail
 git stash pop                               #Applique une remise et la supprime
 git stash list                              #Liste toutes les remises
@@ -421,6 +423,7 @@ git reset COMMIT                            #Annule tous les commits après COMM
 git reset --hard COMMIT                     #Supprime tout l historique après COMMIT
 git fetch NOM-DE-DEPOT                      #Récupère tout l historique du dépôt nommé
 git merge NOM-DE-DEPOT/BRANCHE              #Fusionne la branche du dépôt
+git bisect                                  #mode debug pour traquer un mauvais commit
 git push ALIAS BRANCHE                      #Envoie tous les commits vers GitHub
 git pull                                    #Récupère tout l historique du dépôt
 git repack -a -d; git prune                 #Réempaqueter le dépôt local en un seul
