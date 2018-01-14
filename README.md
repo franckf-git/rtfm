@@ -121,6 +121,7 @@ Manual pages for GNU/linux and others tips.
 - [Dark Mode](https://chrome.google.com/webstore/detail/dark-mode/dmghijelimhndkbmpgbldicpogfkceaj?hl=fr)
 - [uBlock Origin](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=fr)
 - [Clear Data](https://chrome.google.com/webstore/detail/clear-browsing-data/bjilljlpencdcpihofiobpnfgcakfdbe?hl=fr)
+- [ScriptSafe](https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf/related?hl=fr)
 
 
 #### [Firefox](https://www.mozilla.org/fr/firefox/all/)
@@ -129,8 +130,8 @@ Manual pages for GNU/linux and others tips.
 - [Dark Mode](https://addons.mozilla.org/fr/firefox/addon/dark-mode-webextension)
 - [uBlock Origin](https://addons.mozilla.org/fr/firefox/addon/ublock-origin)
 - [Clear Data](https://addons.mozilla.org/fr/firefox/addon/clear-browsing-data/)
+- [ScriptSafe](https://addons.mozilla.org/fr/firefox/addon/script-safe/)
 - [4chan](https://addons.mozilla.org/fr/firefox/addon/4chan-media-downloader/)
-- [NoScript](https://addons.mozilla.org/en-US/firefox/addon/noscript/)
 
 ## Sources
 
