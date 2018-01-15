@@ -236,6 +236,7 @@ sensors                                 #afficher les informations senseurs
 udevadm monitor --udev                  #observation evenements peripheriques
 procinfo                                #informations systemes /proc
 lshw -html > FILE.html                  #obtenir le détail dans un fichier html
+systemctl poweroff -i                   #extinction sans sudo
 ```
 
 _____________________________________________________________________________________
