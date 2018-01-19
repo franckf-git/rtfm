@@ -2,6 +2,8 @@
 
 Manual pages for GNU/linux and others tips.
 
+[TOC]
+
 ## Index
 
 - [How to write Bash script](./bash.md)
@@ -96,6 +98,8 @@ Manual pages for GNU/linux and others tips.
 - [Terms of Service](https://tosdr.org/)
 - [QubesOS](https://github.com/QubesOS)
 - [Virus Total](https://www.virustotal.com/#/home/url)
+- [Private Message](https://privnote.com/#)
+- [Private Message2](http://www.destructingmessage.com/)
 
 ### Raspberry Pi
 
