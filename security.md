@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [message of the day ssh custom](#message-of-the-day-ssh-custom)
 - [ssh](#ssh)
 - [ssh echange de cle](#ssh-echange-de-cle)
@@ -182,6 +184,14 @@ tester WannaCry Bulletin CVE-2017-0143 ou MS17-010
 nmap -sC -p 445 --script smb-vuln-ms17-010.nse 10.21.21.187
 ###>>>réseau complet
 nmap -sC -p 445 --script smb-vuln-ms17-010.nse 10.21.21.0/24
+```
+
+_____________________________________________________________________________________
+Spectre et Meltdown
+-------------------------------------------------------------------------------------
+```bash
+wget https://raw.githubusercontent.com/speed47/spectre-meltdown-checker/master/spectre-meltdown-checker.sh
+sudo bash spectre-meltdown-checker.sh
 ```
 
 _____________________________________________________________________________________
