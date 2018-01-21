@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [openscad syntax](#openscad-syntax)
 - [irc - discord](#irc---discord)
 - [lxc](#lxc)

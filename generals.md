@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [Liste des masques de sous-reseaux](#liste-des-masques-de-sous-reseaux)
 - [OSI 3](#osi-3)
 - [plage d adresses methode du nombre magique](#plage-d-adresses-methode-du-nombre-magique)

@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [sauvegarde media vers image](#sauvegarde-media-vers-image)
 - [coucher une image sur un media](#coucher-une-image-sur-un-media)
 - [installation archlinux](#installation-archlinux)

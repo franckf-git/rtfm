@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [gpg](#gpg)
 - [GPG/PGP](#gpgpgp)
 - [creer une archive chiffree](#creer-une-archive-chiffree)

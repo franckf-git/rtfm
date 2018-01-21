@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [changer serveur DNS en CLI](#changer-serveur-dns-en-cli)
 - [transformer une machine en routeur](#transformer-une-machine-en-routeur)
 - [monter un partage samba au demarrage](#monter-un-partage-samba-au-demarrage)

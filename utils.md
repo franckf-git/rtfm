@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [navigation systeme](#navigation-systeme)
 - [operations sur les fichiers](#operations-sur-les-fichiers)
 - [fichiers texte et binaire](#fichiers-texte-et-binaire)

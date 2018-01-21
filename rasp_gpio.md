@@ -1,5 +1,7 @@
 ## Index
 
+[TOC]
+
 - [pinout](#pinout)
 - [bibliotheque](#bibliotheque)
 - [mode](#mode)
