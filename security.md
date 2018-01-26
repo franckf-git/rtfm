@@ -8,6 +8,7 @@
 - [reverse ssh](#reverse-ssh)
 - [ssh-X affichage gui server X](#ssh-x-affichage-gui-server-x)
 - [tester WannaCry Bulletin CVE-2017-0143 ou MS17-010](#tester-wannacry-bulletin-cve-2017-0143-ou-ms17-010)
+- [Spectre et Meltdown](#spectre-et-meltdown)
 - [backup incremental](#backup-incremental)
 - [eicar test antivirus](#eicar-test-antivirus)
 - [hasher un mot de passe](#hasher-un-mot-de-passe)
@@ -192,6 +193,7 @@ Spectre et Meltdown
 ```bash
 wget https://raw.githubusercontent.com/speed47/spectre-meltdown-checker/master/spectre-meltdown-checker.sh
 sudo bash spectre-meltdown-checker.sh
+grep . /sys/devices/system/cpu/vulnerabilities/*
 ```
 
 _____________________________________________________________________________________
