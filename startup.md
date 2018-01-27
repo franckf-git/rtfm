@@ -12,6 +12,7 @@
 - [fenetre de connexion lightdm login deroulant](#fenetre-de-connexion-lightdm-login-deroulant)
 - [lightdm personnalisation](#lightdm-personnalisation)
 - [grub](#grub)
+- [ecran de chargement fedora](#ecran-de-chargement-fedora)
 - [lancer un script au branchement d une cle USB](#lancer-un-script-au-branchement-d-une-cle-usb)
 - [LVM](#lvm)
 - [script au demarrage](#script-au-demarrage)
@@ -146,6 +147,14 @@ sudo update-grub
 grub2-mkconfig -o /boot/grub2/grub.cfg
 ###>>>UEFI
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+```
+
+_____________________________________________________________________________________
+ecran de chargement fedora
+-------------------------------------------------------------------------------------
+```bash
+plymouth-set-default-theme --list
+sudo plymouth-set-default-theme tribar -R
 ```
 
 _____________________________________________________________________________________
