@@ -286,7 +286,7 @@ qemu -cdrom IMAGE.iso -m 1024
 ###>>>installation
 qemu-img create -f qcow2 HDD.qcow2 5G
 qemu -hda HDD.qcow2 -cdrom IMAGE.iso -boot d -m 256
-qcow ###>>>pour disque dynamique
+###>>>qcow pour disque dynamique
 ###>>>ou
 qemu-img create HDD.img 2G
 qemu -k fr -cdrom IMAGE.iso -hda HDD.img -user-net -boot a
@@ -296,7 +296,8 @@ qemu -boot c -hda /dev/hda
 
 ###>>>demarrage
 qemu -hda HDD.img -m 256
-#option : -enable-audio -soundhw all -full-screen -no-acpi --enable-kvm
+#options : -enable-audio -soundhw all -full-screen -no-acpi --enable-kvm
+-net nic -net user #reseau
 qemu-system-x86_64 -hda HDD.qcow2 -m 1024
 
 ###>>>compression
