@@ -455,7 +455,7 @@ find ./ -depth -name "* *"  -exec rename 's/ /_/g' "{}" \;                      
 find /home/ -name *._* -exec rm {} \;               #nettoyage
 find . -name "*.zip" -exec unzip -o {} \;           #nettoyage
 find /DOSSIER_ORIGINE/* -mtime 0 -type d -exec ls -lht {} \;                           #rechercher les dossiers modifies dans les dernieres 24 heures et lister leurs contenus
-find / -iname cAsSe.H             #recherche sur le nom du fichier sans casse
+find / -iname cAsSe.H              #recherche sur le nom du fichier sans casse
 find / -iname "*.pid"              #recherche sur l extension
 find / -iname log -type d          #recherche de dossier
 | grep -v EXPRESSION               #a l exclusion de
@@ -576,6 +576,7 @@ mpv --vid=no https://www.youtube.com/URL         #music youtube terminal
 convert -density 600 *.pdf *.jpg                 #Convertir des fichiers pdf en jpg
 convert *.jpg FICHIER.pdf  -limit memory 1mb -limit map 1mb            #jpg en pdf
 aplay /dev/urandom                               #bruit rose
+cat LIST | gnuplot -p -e 'plot "-"'              #afficher un graphique de nombre
 ```
 
 _____________________________________________________________________________________
