@@ -365,6 +365,17 @@ sentence `code` follow
 ---
 _________________
 
+[^footnote]
+[^footnote]: Here is the *text* of the **footnote**.
+
+<kbd>Encart</kbd>
+
+|                  | Colonne  | Colonne  |
+ ----------------- | -------- | --------
+| Ligne            | `Ligne`  | Ligne    |
+| Ligne            | Ligne    | Ligne    |
+| Ligne            | Ligne    | Ligne    |
+
 Colonne  | Colonne
 -------- | ---
 Ligne    | Ligne
