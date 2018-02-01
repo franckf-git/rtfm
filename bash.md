@@ -337,11 +337,11 @@ Comparaison arithmétique (( ... ))
 ```
 Opérateur     Tests si                            -----    Opérateur     Tests si
 -e   Le fichier existe                                         -s     Le fichier est vide
--f   Le fichier est un fichier standard                  
+-f   Le fichier est un fichier standard
 -d   Le fichier est un répertoire                              -r     Le fichier a un droit de lecture
 -h   Le fichier est un lien symbolique                         -w     Le fichier a un droit en écriture
 -L   Le fichier est un lien symbolique                         -x     Le fichier a le droit d exécution
--b   Le fichier est un périphérique bloc                  
+-b   Le fichier est un périphérique bloc
 -c   Le fichier est un périphérique caractère                  -g     L option sgid est positionnée
 -p   Le fichier est un tube                                    -u     L option suid est positionnée
 -S   Le fichier est un socket                                  -k     L option sticky bit est positionnée
@@ -473,45 +473,93 @@ export PS1="\\[\e[1;31m\]\$\[\e[1;31m\]>\[\e[m\]\A\[\e[34m\][\[\e[m\]\u\[\e[34m\
 \v : version de bash
 \n : nouvelle ligne
 
-"\e[0;34m"
-Noir 0;30
-Gris foncé 1;30
-Bleu 0;34
-Bleu clair 1;34
-Vert 0;32
-Vert clair 1;32
-Cyan 0;36
-Cyan clair 1;36
-Rouge 0;31
-Rouge clair 1;31
-Violet 0;35
-Violet clair 1;35
-Brun 0;33
-Jaune 1;33
-Gris clair 0;37
-Blanc 1;37
-0 foncé
-1 clair
-4 souligné
-7 fond
-9 barré
+# Reset
+Color_Off='\033[0m'       # Text Reset
 
-Couleur   Avant-plan   Arrière-plan
-noir      30           40
-rouge     31           41
-vert      32           42
-jaune     33           43
-bleu      34           44
-magenta   35           45
-cyan      36           46
-blanc     37           47
+# Regular Colors
+Black='\033[0;30m'        # Black
+Red='\033[0;31m'          # Red
+Green='\033[0;32m'        # Green
+Yellow='\033[0;33m'       # Yellow
+Blue='\033[0;34m'         # Blue
+Purple='\033[0;35m'       # Purple
+Cyan='\033[0;36m'         # Cyan
+White='\033[0;37m'        # White
 
-noir='\E[30;47m'
-rouge='\E[31;47m'
-vert='\E[32;47m'
-jaune='\E[33;47m'
-bleu='\E[34;47m'
-magenta='\E[35;47m'
-cyan='\E[36;47m'
-blanc='\E[37;47m'
+# Bold
+BBlack='\033[1;30m'       # Black
+BRed='\033[1;31m'         # Red
+BGreen='\033[1;32m'       # Green
+BYellow='\033[1;33m'      # Yellow
+BBlue='\033[1;34m'        # Blue
+BPurple='\033[1;35m'      # Purple
+BCyan='\033[1;36m'        # Cyan
+BWhite='\033[1;37m'       # White
+
+# Underline
+UBlack='\033[4;30m'       # Black
+URed='\033[4;31m'         # Red
+UGreen='\033[4;32m'       # Green
+UYellow='\033[4;33m'      # Yellow
+UBlue='\033[4;34m'        # Blue
+UPurple='\033[4;35m'      # Purple
+UCyan='\033[4;36m'        # Cyan
+UWhite='\033[4;37m'       # White
+
+# Background
+On_Black='\033[40m'       # Black
+On_Red='\033[41m'         # Red
+On_Green='\033[42m'       # Green
+On_Yellow='\033[43m'      # Yellow
+On_Blue='\033[44m'        # Blue
+On_Purple='\033[45m'      # Purple
+On_Cyan='\033[46m'        # Cyan
+On_White='\033[47m'       # White
+
+# High Intensity
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+
+# Bold High Intensity
+BIBlack='\033[1;90m'      # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+
+# High Intensity backgrounds
+On_IBlack='\033[0;100m'   # Black
+On_IRed='\033[0;101m'     # Red
+On_IGreen='\033[0;102m'   # Green
+On_IYellow='\033[0;103m'  # Yellow
+On_IBlue='\033[0;104m'    # Blue
+On_IPurple='\033[0;105m'  # Purple
+On_ICyan='\033[0;106m'    # Cyan
+On_IWhite='\033[0;107m'   # White
+```
+
+_____________________________________________________________________________________
+export LESS_TERMCAP_XX
+-------------------------------------------------------------------------------------
+```
+termcap terminfo
+ks      smkx      make the keypad send commands
+ke      rmkx      make the keypad send digits
+vb      flash     emit visual bell
+mb      blink     start blink
+md      bold      start bold
+me      sgr0      turn off bold, blink and underline
+so      smso      start standout (reverse video)
+se      rmso      stop standout
+us      smul      start underline
+ue      rmul      stop underline
 ```
