@@ -296,8 +296,9 @@ qemu -boot c -hda /dev/hda
 
 ###>>>demarrage
 qemu -hda HDD.img -m 256
-#options : -enable-audio -soundhw all -full-screen -no-acpi --enable-kvm
+#options : -enable-audio -soundhw all -full-screen -no-acpi 
 -net nic -net user #reseau
+--enable-kvm       #kvm rapidité
 qemu-system-x86_64 -hda HDD.qcow2 -m 1024
 
 ###>>>compression
