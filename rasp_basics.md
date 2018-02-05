@@ -127,6 +127,7 @@ disable_splash=1        #Desactive l affichage de l ecran d alerte electrique
 sdram_freq=(400-475)
 
 ###>>>hold down the shift key during the boot to temporarily disable all overclocking
+cat /opt/vc/bin/vcgencmd measure_temp # Afficher la température du processeur
 ```
 
 _____________________________________________________________________________________
@@ -195,6 +196,11 @@ eteinte  : probleme avec la carte SD, formatage, corruption, version
 3 eclats : start.elf introuvable
 4 eclats : start.elf pas lance
 7 eclats : kernel.img introuvable
+
+echo 0 >/sys/class/leds/led0/brightness      # Éteindre la LED verte (ACT)
+echo 1 >/sys/class/leds/led0/brightness      # la rallumer
+echo 0 >/sys/class/leds/led1/brightness      # Éteindre la LED rouge (PWR)
+echo 1 >/sys/class/leds/led1/brightness      # la rallumer
 ```
 
 _____________________________________________________________________________________
