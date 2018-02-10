@@ -53,6 +53,7 @@ echo "
 
 sudo mv ON_LOGIN.sh /etc/update-motd.d/05-info
 sudo chmod +x /etc/update-motd.d/05-info
+sudo echo "" > /etc/motd
 ```
 
 _____________________________________________________________________________________
