@@ -190,6 +190,7 @@ pstree                       #afficher les processus dans une arborescence
 top                          #afficher un tableau de bord des processus
 tload                        #charge cpu graphique
 lsof +L1                     #processus utilisant des fichiers
+lsof -n | grep deleted       #fichier supprimé mais en cours d écriture
 systemd-analyse blame        #services demarres pardefaut selon leur temps de lancement
 
 service NOMDUSERVICE start/stop/restart/reload   #gestion service init.d
