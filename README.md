@@ -41,13 +41,12 @@ Manual pages for GNU/linux and others tips.
 - [User Agent Testing](https://www.whoishostingthis.com/tools/user-agent/)
 - [HTML5test](https://html5test.com/)
 - [Online Regex Tester](https://regex101.com/)
-- [Minimal Web Hosting](http://yesse.io/)
 - [Shell Check](https://www.shellcheck.net/#)
 - [EICAR Test Files](http://securite-informatique.info/virus/eicar/)
 - [Test OpenDNS](https://welcome.opendns.com/)
 - [Test your IPv6 Configuration](http://216.218.228.119/)
 - [Web Browser Benchmark](http://browserbench.org/JetStream/)
-- [Markdown Visualisation](https://stackedit.io/editor)
+- [Markdown Visualisation](https://stackedit.io/app)
 - [GitHub Markdown Visualisation](https://jbt.github.io/markdown-editor/)
 - [Down Detector](http://downdetector.fr/)
 - [HTML5 Editor](https://liveweave.com/)
@@ -85,7 +84,6 @@ Manual pages for GNU/linux and others tips.
 
 ### Security
 
-- [IP/DNS Detect](https://ipleak.net/)
 - [IP Tracker](http://www.ip-tracker.org/)
 - [Web Browser Tracker](https://amiunique.org/fp)
 - [Web Browser Tracker 2](https://panopticlick.eff.org/results?&dnt=111)
@@ -136,6 +134,24 @@ Manual pages for GNU/linux and others tips.
 - [Clear Data](https://addons.mozilla.org/fr/firefox/addon/clear-browsing-data/)
 - [ScriptSafe](https://addons.mozilla.org/fr/firefox/addon/script-safe/)
 - [4chan](https://addons.mozilla.org/fr/firefox/addon/4chan-media-downloader/)
+
+## Santé
+
+* Faire une pause de 5 min toutes les heures et bouger pendant les pauses
+
+* Regarder au loin toutes les 20 minutes (gauche et droite sans bouger la tête)
+
+* Avoir un éclairage indirect
+
+* Le haut de l'écran doit être juste en dessous de la ligne de regard
+
+* Distance optimale de l'écran
+```
+17 / 18 pouces  70 cm
+21 / 22 pouces  90 cm
+```
+
+**Etre confortable sans forcer le corps**
 
 ## Sources
 
