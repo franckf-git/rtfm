@@ -270,6 +270,21 @@ sudo rpm --import "http://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM
 ```
 
 _____________________________________________________________________________________
+centos ajout de depots
+-------------------------------------------------------------------------------------
+```bash
+yum -y install deltarpm
+yum-config-manager --enable extras
+yum install epel-release
+yum install --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+yum install --nogpgcheck https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+yum install http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+
+yum check-update
+yum -y update
+```
+
+_____________________________________________________________________________________
 debian depots
 -------------------------------------------------------------------------------------
 ```bash
