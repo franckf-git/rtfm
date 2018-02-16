@@ -34,6 +34,9 @@ Manual pages for GNU/linux and others tips.
 - [1st April](http://fakeupdate.net/)
 - [Securing Debian Howto](https://www.debian.org/doc/manuals/securing-debian-howto/ap-checklist.fr.html)
 - [DistroWatch](https://distrowatch.com/)
+- [Selfhosted](https://github.com/Kickball/awesome-selfhosted/blob/master/README.md)
+- [Sysadmin help](https://github.com/n1trux/awesome-sysadmin/blob/master/README.md)
+- [Post code](https://gist.github.com/)
 
 ### Testing
 
@@ -64,6 +67,7 @@ Manual pages for GNU/linux and others tips.
 - [Crontab](http://www.crontabgenerator.com/)
 - [Bash Prompt](http://ezprompt.net/)
 - [Timestamp](http://www.timestampgenerator.com/)
+- [Python calculator](https://www.numworks.com/fr/simulateur/)
 
 ### Anonymous
 
@@ -161,6 +165,7 @@ Manual pages for GNU/linux and others tips.
 - [Advanced Bash scripts](https://abs.traduc.org/abs-fr/index.html)
 - [Developpez.com](https://www.developpez.com/)
 - [Admin Linux](https://www.admin-linux.fr/)
+- [MicroLinux](https://blog.microlinux.fr/)
 - Personal works
 
 ## License
