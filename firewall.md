@@ -84,12 +84,25 @@ firewall-cmd --list-all-zones
 firewall-cmd --get-default-zone
 firewall-cmd --get-active-zones
 firewall-cmd --list-all
+firewall-cmd --list-interfaces
 ###>>>passer sur une nouvelle zone
 firewall-cmd --set-default-zone=drop
+firewall-cmd --zone=ZONE --list-all
+firewall-cmd --reload
+firewall-cmd --complete-reload
 ###>>>les services disponibles
 firewall-cmd --get-services
+firewall-cmd --permanent --get-services
+firewall-cmd --info-service=SERVICE
+###>>>modifications permanentes
+firewall-offline-cmd
 ###>>>editer un service
 cp /usr/lib/firewalld/services/service.xml /etc/firewalld/services/service.xml
+
+###>>>mode panique
+firewall-cmd --panic-on
+firewall-cmd --panic-off
+firewall-cmd --query-panic
 
 nano /etc/firewalld/services/service.xml
 firewall-cmd --reload
