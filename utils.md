@@ -196,6 +196,7 @@ systemd-analyse blame        #services demarres pardefaut selon leur temps de la
 service NOMDUSERVICE start/stop/restart/reload   #gestion service init.d
 systemctl start/stop/restart/reload/enable/disable NOMDUSERVICE   #systemd
 systemctl list-unit-files | grep enabled         #lister tous les services activés
+systemctl --failed                               #lister les services echoues
 systemctl status NOMDUSERVICE.service            #etat du service
 
 kill signal PID              #tuer un processus en utilisant son pid
@@ -341,6 +342,12 @@ ss -ona                   #toutes les connexions
 ss -lnptu                 #lister uniquement les connexions ayant letat LISTENNING
 ss -lpt                   #afficher le nom du processus lie et son pid
 ss -s                     #afficher des statistiques
+netstat -pan -A inet,inet6 | grep -v ESTABLISHED
+netstat -tlnw
+ss -tlw
+ss -plno -A tcp,udp,sctp
+netstat -plnS
+netstat -nl -A inet,inet6
 cat /etc/hosts            #resolution ip
 resolveip IP
 nslookup IP
