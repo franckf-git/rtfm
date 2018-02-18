@@ -54,6 +54,7 @@ Manual pages for GNU/linux and others tips.
 - [Down Detector](http://downdetector.fr/)
 - [HTML5 Editor](https://liveweave.com/)
 - [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)
+- [Multi-Password tests](https://madiba.encs.concordia.ca/software/passwordchecker/)
 
 ### Generator
 
