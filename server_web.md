@@ -21,6 +21,8 @@ sudo chown -R www-data:pi /var/www/html/
 sudo chmod -R 770 /var/www/html/
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 serveur Web
 -------------------------------------------------------------------------------------
@@ -40,6 +42,8 @@ yum install httpd php php-mysql mariadb-server mariadb sqlite php-dom php-mbstri
 apt-get install apache2 php5 php5-common php5-gd php5-mysql php5-curl mariadb-server php5-sqlite sqlite wget bzip2 openssl
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 bloquer l indexation web
 -------------------------------------------------------------------------------------
@@ -48,6 +52,8 @@ nano /var/local/www/robots.txt
 User-agent: *
 Disallow: /
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 html minimal
@@ -68,6 +74,8 @@ html minimal
     </body>
 </html>
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 serveur dhcp
@@ -113,6 +121,8 @@ netstat -anup | grep dhcp
 sudo dhclient eth0
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 fail2ban
 -------------------------------------------------------------------------------------
@@ -155,6 +165,8 @@ ignoreregex =
 sudo fail2ban-client reload
 sudo fail2ban-client status
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 denyhosts (alternative fail2ban)
@@ -213,6 +225,8 @@ sudo nano /etc/hosts.deny
 service denyhosts restart
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 ftp
 -------------------------------------------------------------------------------------
@@ -226,6 +240,8 @@ Write_enabled=YES
 Ascii_upload_enabled=YES
 Ascii_download_enabled=YES
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 serveur dns
@@ -442,3 +458,5 @@ host IP
 time (for i in `seq 1 1000`;   do dig google.com @8.8.8.8 >   /dev/null 2>>/dev/null; done)
 time (for i in `seq 1 1000`;   do dig google.com @127.0.0.1 >   /dev/null 2>>/dev/null; done)
 ```
+
+**[`^        back to top        ^`](#)**

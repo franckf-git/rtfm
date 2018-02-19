@@ -35,6 +35,8 @@ Mot cle        Equivalent
 @reboot        Executer au demarrage
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 cron quotidienne
 -------------------------------------------------------------------------------------
@@ -70,6 +72,8 @@ prefclean()
 prefclean
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 commandes periodiques en dessous de une minute
 -------------------------------------------------------------------------------------
@@ -93,6 +97,8 @@ done
 
 * * * * * while true; do COMMAND & sleep 1; done
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 SQL
@@ -185,6 +191,8 @@ UPDATE table SET colonne1='valeur1', colonne2='valeur2' WHERE id=21;  --irrevers
 DELETE FROM table WHERE colonne2 = 'valeur2';                         --supp ligne
 UPDATE table SET colonne8='commentaires';
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Cassandra
@@ -299,6 +307,8 @@ nodetool snapshot                                       # sauvegarde
 COPY nomtable (colonne, colonne, ...) FROM 'dump.csv';  # restoration
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 syslog-ng
 -------------------------------------------------------------------------------------
@@ -345,6 +355,8 @@ log {
 sudo systemctl restart syslog-ng.service
 tail /var/log/perso.log
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 dokuwiki
@@ -432,6 +444,8 @@ citation d un fichier
 </file>
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 markdown
 -------------------------------------------------------------------------------------
@@ -509,6 +523,8 @@ Term 2
 - [x] This is a complete item
 - [ ] This is an incomplete item
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 git
@@ -598,3 +614,5 @@ git commit -m "Initial commit"
 git push -u origin master
 ###>>>https://USERNAME.github.io
 ```
+
+**[`^        back to top        ^`](#)**

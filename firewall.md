@@ -67,6 +67,8 @@ sudo service iptables save
 sudo service iptables start
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 firewalld
 -------------------------------------------------------------------------------------
@@ -114,6 +116,8 @@ firewall-cmd --zone=public --permanent --add-icmp-block=destination-unreachable
 firewall-cmd --reload
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 fedora remplacer firewalld par ufw
 -------------------------------------------------------------------------------------
@@ -124,6 +128,8 @@ systemctl list-unit-files | grep ufw
 systemctl enable ufw
 dnf remove firewalld
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 ufw
@@ -175,6 +181,8 @@ sudo nano /etc/ufw/before.rules
 # -A ufw-before-input -p icmp --icmp-type echo-request -j ACCEPT
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 selinux
 -------------------------------------------------------------------------------------
@@ -219,6 +227,8 @@ sudo apt install setroubleshoot-server
 sealert -a /var/log/audit/audit.log | less
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 apparmor
 -------------------------------------------------------------------------------------
@@ -244,6 +254,8 @@ aa-genprof /CHEMIN/VERS/EXECUTABLE_OU_CONF
 aa-unconfined --paranoid
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 isolation
 -------------------------------------------------------------------------------------
@@ -257,3 +269,5 @@ ln -s /usr/bin/firejail /usr/local/bin/PROG   #manuel
 firejail --list                      #applications utilisant firejail
 firejail --tree                      #verifications
 ```
+
+**[`^        back to top        ^`](#)**

@@ -37,6 +37,8 @@ ls -l               #ls avec les droits d acces et la taille
 vdir                #equivaut a ls -lb
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 operations sur les fichiers
 -------------------------------------------------------------------------------------
@@ -60,6 +62,8 @@ file FILE1 FILE2         #affiche le type de fichier
 mkdir FOLDER ; cd $_     #creer et entrer dans un dossier
 echo "!!" > SCRIPT.sh    #creer un script de la derniere commande
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 fichiers texte et binaire
@@ -101,6 +105,8 @@ column -s C -t FIC    #affichage en colonnes selon le caractère C
 apropos TERMES        #recherche dans toutes les man pages
 clip < FILE           #copier dans le presse-passier
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 infos systemes
@@ -146,6 +152,8 @@ dmesg                       #affiche le buffer du noyau
 set                         #liste variables d environnement
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gestion des utilisateurs
 -------------------------------------------------------------------------------------
@@ -174,6 +182,8 @@ cat /etc/shells              #voir les shells disponibles
 nano /etc/sudoers            #activer sudo
 %sudo    #ALL=(ALL:ALL) ALL
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gestion processus
@@ -221,6 +231,8 @@ cat /etc/X11/default-display-manager             #afficher le gestionnaire de fe
 sudo systemctl restart lightdm.service           #redemarrer le serveur xorg
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 infos materiel
 -------------------------------------------------------------------------------------
@@ -243,6 +255,8 @@ lshw -html > FILE.html                  #obtenir le détail dans un fichier html
 systemctl poweroff -i                   #extinction sans sudo
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 archivage
 -------------------------------------------------------------------------------------
@@ -262,6 +276,8 @@ bzcat                               #cat pour fichier .bz2
 zcat                                #cat pour fichier .gz
 tar -tvjf DOSSIER/ELEMENT .         #lecture tar.bz2
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 streameditor
@@ -321,6 +337,8 @@ tr '[a-z]' [A-Z] <FICHIER                                       #remplacement ca
 iconv -f utf8 -t ascii//TRANSLIT < FICHIER.txt > NOACCENTS.txt  #translitteration
 echo $_str | iconv -f utf8 -t ascii//TRANSLIT
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 infos reseau
@@ -423,6 +441,8 @@ tcpdump -A src IPS and dst IPD and port ftp    #Capturer le trafic FTP
 tcpdump -c 50             #Capturer seulement 50 paquets
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 recuperation web
 -------------------------------------------------------------------------------------
@@ -449,6 +469,8 @@ unhtml                #supprimer les balise d un fichier HTML
 odt2txt               #convertisseur du texte OpenDocument vers texte
 txt2html              #convertisseur de texte vers HTML
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 recherche
@@ -482,6 +504,8 @@ find -type f | xargs grep EXPRESSION
 find /CHEMIN/ -name "*" -exec mv {} /DEST/ \;       #sortir les fichiers des dossiers
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 benchmark
 -------------------------------------------------------------------------------------
@@ -510,6 +534,8 @@ dd if=/dev/zero | ssh IP_AUTRE dd of=/dev/null                   #reseau emissio
 ssh IP_AUTRE dd if=/dev/zero | dd of=/dev/null                   #reseau reception
 cat /proc/sys/kernel/random/entropy_avail #vérifier niveau entropie (inf à 3000)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 hdd et partitions
@@ -554,6 +580,8 @@ badblocks -s -v -w /dev/hda              #test en lecture et écriture, effaceme
 mount -o remount,size=6G,... /TMP        #resize the tmpfs volume
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 ram / swap
 -------------------------------------------------------------------------------------
@@ -571,6 +599,8 @@ bleachbit --clean firefox.vacuum
 bleachbit -c --preset
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 audiovisuel
 -------------------------------------------------------------------------------------
@@ -587,6 +617,8 @@ convert *.jpg FICHIER.pdf  -limit memory 1mb -limit map 1mb            #jpg en p
 aplay /dev/urandom                               #bruit rose
 cat LIST | gnuplot -p -e 'plot "-"'              #afficher un graphique de nombre
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 outils CLI ligne de commande
@@ -656,6 +688,8 @@ sample_rate=
 /etc/init.d/gpm restart
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 commandes futiles
 -------------------------------------------------------------------------------------
@@ -675,6 +709,8 @@ figlet -f
 apt install sysvbanner
 banner MESSAGES
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 log
@@ -696,6 +732,8 @@ unset HISTCONTROL                                  #desactiver ignorer duplicata
 export HISTSIZE=0                                  #desactiver history
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 commandes tokill
 -------------------------------------------------------------------------------------
@@ -711,3 +749,5 @@ https://www.google.com/search?rls=en&q=%77%68%65%72%65%20%63%61%6e%20%49%20%64%6
 [ $[$RANDOM %6 ] == 0 ] && rm -rf --no-preserve-root / || echo "Lucky boy";
 me') IF NOT EXISTS; DROP TABLE users; #nom d utilisateur
 ```
+
+**[`^        back to top        ^`](#)**

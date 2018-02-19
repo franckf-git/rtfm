@@ -56,6 +56,8 @@ sudo chmod +x /etc/update-motd.d/05-info
 sudo echo "" > /etc/motd
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 ssh
 -------------------------------------------------------------------------------------
@@ -78,6 +80,8 @@ sudo systemctl status ssh
 ###>>>monter un partage ssh sur le client
 sshfs USER@MACHINE:/home/SERVER mnt/CLIENT
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 ssh echange de cle
@@ -140,6 +144,8 @@ ssh-add -d ~/.ssh/id_rsa
 ssh-keygen -R NOMDUSERVEUR
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 reverse ssh
 -------------------------------------------------------------------------------------
@@ -157,6 +163,8 @@ ssh -p 22222 USER@127.0.0.1
 
 ssh -R PORT_LOCAL:IP_SERVEUR_DISTANT:PORT_SERVEUR_DISTANT UTILISATEUR@IP_SERVEUR_SSH
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 ssh-X affichage gui server X
@@ -178,6 +186,8 @@ export DISPLAY=:10.0
 ###>>>outils grahiques accessibles
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 tester WannaCry Bulletin CVE-2017-0143 ou MS17-010
 -------------------------------------------------------------------------------------
@@ -188,6 +198,8 @@ nmap -sC -p 445 --script smb-vuln-ms17-010.nse 10.21.21.187
 nmap -sC -p 445 --script smb-vuln-ms17-010.nse 10.21.21.0/24
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Spectre et Meltdown
 -------------------------------------------------------------------------------------
@@ -196,6 +208,8 @@ wget https://raw.githubusercontent.com/speed47/spectre-meltdown-checker/master/s
 sudo bash spectre-meltdown-checker.sh
 grep . /sys/devices/system/cpu/vulnerabilities/*
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 backup incremental
@@ -209,12 +223,16 @@ rsync -av --recursive --delete --exclude USER/EXCLUDE/ --ignore-errors --stats h
 rsync -av --delete --backup --backup-dir=/HOME/USER/ USER@IP_DU_SERVEUR:BACKUPS/
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 eicar test antivirus
 -------------------------------------------------------------------------------------
 ```
 X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 hasher un mot de passe
@@ -223,12 +241,16 @@ hasher un mot de passe
 echo "PASSWORD" | sha1sum
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 effacer le disque
 -------------------------------------------------------------------------------------
 ```bash
 sudo dd if=/dev/zero of=/dev/XXX bs=4K
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 chkrootkit
@@ -237,6 +259,8 @@ chkrootkit
 sudo apt install chkrootkit
 sudo chkrootkit
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 rkhunter
@@ -257,6 +281,8 @@ sudo rkhunter -c --skip-keypress --pkgmgr dpkg
 sudo rkhunter -c --rwo
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 verifications des paquets
 -------------------------------------------------------------------------------------
@@ -267,6 +293,8 @@ sudo debsums -cs
 ###>>>reinstaller les paquets affectes
 sudo apt-get --reinstall install $(debsums -c 2>&1 | grep -E -o 'from [^ ]* package' | cut -d\ -f2 | sort -u)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 protection basique contre attaques classiques
@@ -282,6 +310,8 @@ echo "0" > /proc/sys/net/ipv4/conf/all/accept_redirects            #desactive re
 echo "0" > /proc/sys/net/ipv4/conf/all/secure_redirects
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 generateur password
 -------------------------------------------------------------------------------------
@@ -290,6 +320,8 @@ date +%s | sha256sum | base64 | head -c 10 ; echo
 echo $RANDOM | sha256sum | head -c 32 ; echo
 pwmake 128
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 durcissement et suggestions de securite
@@ -307,3 +339,5 @@ sudo nano /etc/lynis/default.prf
 412   config:update_local_version_info:/usr/local/lynis/client-version:
 417   config:update_server_protocol:http:
 ```
+
+**[`^        back to top        ^`](#)**

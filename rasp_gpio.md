@@ -123,12 +123,16 @@ GPIO26 (37) (38) GPIO20
    GND (39) (J8) GPIO21
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 bibliotheque
 -------------------------------------------------------------------------------------
 ```python
 import RPi.GPIO as GPIO
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 mode
@@ -139,6 +143,8 @@ GPIO.setmode(GPIO.BOARD) #pin
 GPIO.setmode(GPIO.BCM)   #broche gpio
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 configuration des entrées-sorties
 -------------------------------------------------------------------------------------
@@ -148,12 +154,16 @@ GPIO.setup(12, GPIO.OUT)                       # broche 12 est une sortie numeri
 GPIO.setup(12, GPIO.OUT, initial=GPIO.HIGH)    # broche 12 est une sortie initialement a l etat haut
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 lire une entrée numérique
 -------------------------------------------------------------------------------------
 ```python
 GPIO.input(12)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Changer l état d une sortie numérique
@@ -163,6 +173,8 @@ Changer l état d une sortie numérique
 GPIO.output(12, GPIO.LOW)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Connaître la configuration d une entrée-sortie numérique
 -------------------------------------------------------------------------------------
@@ -171,6 +183,8 @@ Connaître la configuration d une entrée-sortie numérique
 state = GPIO.gpio_function(12)
 print(state)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 PWM
@@ -189,12 +203,16 @@ p.ChangeDutyCycle(nouveau_rapport_cyclique)
 p.stop()
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Remettre à zéro
 -------------------------------------------------------------------------------------
 ```python
 GPIO.cleanup()
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 modele python
@@ -211,6 +229,8 @@ GPIO.setup(?, GPIO.OUT)
 #GPIO.cleanup()
 #root.mainloop()
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 SPI
@@ -247,6 +267,8 @@ if __name__ == '__main__':
     print(lire_analog())
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 I2C
 -------------------------------------------------------------------------------------
@@ -279,6 +301,8 @@ while True:
     time.sleep(2)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 LED
 -------------------------------------------------------------------------------------
@@ -298,6 +322,8 @@ while True:
     GPIO.output(18, True)
     time.sleep(0.1)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 PWM servomoteur
@@ -331,6 +357,8 @@ while True:
     time.sleep(0.25)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Servo
 -------------------------------------------------------------------------------------
@@ -354,6 +382,8 @@ while(1):
 pwm.stop
 GPIO.cleanup
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Bouton
@@ -382,6 +412,8 @@ while True:
     time.sleep(0.02)  # Pause pour ne pas saturer le processeur
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gpiozero
 -------------------------------------------------------------------------------------
@@ -390,6 +422,8 @@ gpiozero
 ###>>>https://gpiozero.readthedocs.io/en/stable/index.html
 from gpiozero import *
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gpiozero LED
@@ -411,6 +445,8 @@ toggle() Reverse the state of the device; if on, it ll turn off , and vice versa
 is_lit Returns True if the device is currently active, and False otherwise.
 pin The GPIO pin that the device is connected to.
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gpiozero PWMLED
@@ -436,6 +472,8 @@ pin The GPIO pin that the device is connected to.
 value The duty cycle of the PWM device, from 0.0 (off ) to 1.0 (fully on).
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gpiozero RGBLED
 -------------------------------------------------------------------------------------
@@ -458,6 +496,8 @@ color Represents the color of the LED as an RGB 3-tuple of (red, green, blue), w
 is_lit Returns True if the LED is currently active (not black) and False otherwise.
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gpiozero Buzzer
 -------------------------------------------------------------------------------------
@@ -479,6 +519,8 @@ is_active Returns True if the device is currently active, and False otherwise.
 pin The GPIO pin that the device is connected to.
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gpiozero Motor
 -------------------------------------------------------------------------------------
@@ -496,6 +538,8 @@ backward(speed=1) Drive the motor backwards. Speed can be any value between 0 an
 forward(speed=1) Drive the motor forwards. Speed can be any value between 0 and 1 (if pwm=True).
 stop() Stop the motor.
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gpiozero Button
@@ -525,6 +569,8 @@ pin The GPIO pin that the device is connected to.
 pull_up If True, the device uses a pull up resistor to set the GPIO pin  high  by default.
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gpiozero Line Sensor
 -------------------------------------------------------------------------------------
@@ -548,6 +594,8 @@ when_no_line The function to run when the device changes state from inactive to 
 pin The GPIO pin that the device s output is connected to.
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gpiozero Motion Sensor
 -------------------------------------------------------------------------------------
@@ -569,6 +617,8 @@ when_motion The function to run when the device changes state from inactive to a
 when_no_motion The function to run when the device changes state from active to inactive.
 pin The GPIO pin that the device s output is connected to.
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gpiozero Light Sensor
@@ -594,6 +644,8 @@ when_dark The function to run when the device changes state from active to inact
 when_light The function to run when the device changes state from inactive to active.
 pin The GPIO pin that the device is connected to.
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gpiozero Distance Sensor
@@ -622,6 +674,8 @@ wait_for_out_of_range(timeout=None) Pause the script until the device is activat
 echo Returns the GPIO pin that the sensor s ECHO pin is connected to.
 trigger Returns the GPIO pin that the sensor s TRIG pin is connected to.
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gpiozero LED bouton
@@ -652,6 +706,8 @@ while True:
     button.wait_for_press()
     led.toggle()
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 7 segment display
@@ -714,6 +770,8 @@ while 1:
         PORT(pin);               # showing each digit on display 
         time.sleep(1)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Tkinter
@@ -815,6 +873,8 @@ root.geometry('%dx%d+%d+%d' % (w, h, x, y))
 root.mainloop()
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Sensehat Simulator
 -------------------------------------------------------------------------------------
@@ -832,6 +892,8 @@ while True:
         hat.show_message(time.strftime("%H:%M"))
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Sensehat text scroll
 -------------------------------------------------------------------------------------
@@ -844,12 +906,16 @@ red = (255, 0, 0)
 sense.show_message("One small step for Pi!", text_colour=red)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Sensehat image import jpg et png 8x8
 -------------------------------------------------------------------------------------
 ```python
 sense.load_image("image.png")
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Sensehat shake
@@ -867,6 +933,8 @@ while True:
     else:
         sense.clear()
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Sensehat rotation
@@ -888,6 +956,8 @@ while True:
         sense.set_rotation(0)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Sensehat orientation
 -------------------------------------------------------------------------------------
@@ -897,12 +967,16 @@ while True:
     print("Elevation/pitch=%s, Roulis/roll=%s, Embardee/yaw=%s" % (pitch,yaw,roll))
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Sensehat lettre
 -------------------------------------------------------------------------------------
 ```python
 sense.show_letter("O",text_colour=[255, 0, 0])
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Sensehat image
@@ -925,6 +999,8 @@ steve_pixels = [
 ]
 sense.set_pixels(steve_pixels)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Sensehat environnement
@@ -949,6 +1025,8 @@ while True:
     sense.show_message(msg, scroll_speed=0.05, back_colour=bg)
     sense.set_rotation(90)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Sensehat joystick simple
@@ -980,6 +1058,8 @@ while running:
             running = False
             print("AU REVOIR")
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Sensehat joystick
@@ -1043,6 +1123,8 @@ while running:
 handle_event(event, BLACK)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Sensehat compass
 -------------------------------------------------------------------------------------
@@ -1084,6 +1166,8 @@ while True:
 prev_y = y
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 SenseHat 3d
 -------------------------------------------------------------------------------------
@@ -1102,3 +1186,5 @@ roll = round(roll, 1)
 yaw = round(yaw, 1)
 print("pitch %s roll %s yaw %s" % (pitch, roll, yaw))
 ```
+
+**[`^        back to top        ^`](#)**

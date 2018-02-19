@@ -30,12 +30,16 @@ sudo systemctl disable rpcbind.socket
 netstat -lt
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 mes dossiers
 -------------------------------------------------------------------------------------
 ```bash
 mkdir ~/Files ~/Downloads ~/Transferts ~/Medias ~/Unclear
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 disque ssd
@@ -53,6 +57,8 @@ echo noop | sudo tee /sys/block/sda/queue/scheduler
 cat /sys/block/sda/queue/scheduler
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 baisser le niveau de mise en swap pour economiser le hdd
 -------------------------------------------------------------------------------------
@@ -62,6 +68,8 @@ sudo nano /etc/sysctl.conf
 vm.swappiness = 10
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 mode laptop gestion plus econome du disque dur
 -------------------------------------------------------------------------------------
@@ -69,6 +77,8 @@ mode laptop gestion plus econome du disque dur
 sudo nano /etc/sysctl.conf
 vm.laptop_mode = 5
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 securisation de /dev/shm/
@@ -80,6 +90,8 @@ tmpfs /dev/shm tmpfs  defaults,noatime,nosuid,noexec,nodev   0 0
 
 sudo mount /dev/shm
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 connexion sans login
@@ -101,6 +113,8 @@ update-alternatives --config FICHIER.jpg
 echo 'startx' >> .bashrc
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 fenetre de connexion lightdm login deroulant
 -------------------------------------------------------------------------------------
@@ -109,6 +123,8 @@ sudo nano /etc/lightdm/lightdm.conf
 [SeatDefaults]
 greeter-hide-users=false
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 lightdm personnalisation
@@ -125,6 +141,8 @@ sudo apt-get install numlockx
 sudo nano /etc/lightdm/lightdm.conf
 greeter-setup-script=/usr/bin/numlockx on
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 grub
@@ -149,6 +167,8 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 ecran de chargement fedora
 -------------------------------------------------------------------------------------
@@ -156,6 +176,8 @@ ecran de chargement fedora
 plymouth-set-default-theme --list
 sudo plymouth-set-default-theme tribar -R
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 lancer un script au branchement d une cle USB
@@ -172,6 +194,8 @@ ACTION=="add", SUBSYSTEM=="block", KERNEL=="sd[a-z]1", ATTRS{vendor}=="CONSTRUCT
 
 udevadm control --reload-rules
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 LVM
@@ -198,6 +222,8 @@ vgdisplay | grep free
 lvextend -L+5G /MONTAGE/
 resize2fs /MONTAGE/
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 script au demarrage
@@ -286,6 +312,8 @@ systemctl start SCRIPT.service
 systemctl enable SCRIPT.service
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gestion batterie
 -------------------------------------------------------------------------------------
@@ -314,6 +342,8 @@ sudo tlp stat
 sudo tlp start
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gestion webcam
 -------------------------------------------------------------------------------------
@@ -332,9 +362,13 @@ v4l2-ctl --info
 v4l2-ctl --list-ctrls
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 mode graphique systemd
 -------------------------------------------------------------------------------------
 ```bash
 systemctl set-default graphical.target
 ```
+
+**[`^        back to top        ^`](#)**

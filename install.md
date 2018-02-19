@@ -25,6 +25,8 @@ sudo apt install wine32
 wine PROGRAM.exe
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 back in time outil de sauvegarde graphique
 -------------------------------------------------------------------------------------
@@ -41,6 +43,8 @@ sudo dpkg -i ../backintime-common-1.1.20.deb
 sudo dpkg -i ../backintime-qt-1.1.20.deb
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 installation de steam
 -------------------------------------------------------------------------------------
@@ -49,6 +53,8 @@ sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install steam
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 chromium authoriser l installation d extensions
@@ -62,6 +68,8 @@ export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --enable-remote-extensions"
 chromium --incognito
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 install de chrome
 -------------------------------------------------------------------------------------
@@ -69,6 +77,8 @@ install de chrome
 apt-get install gconf-service libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libappindicator1 libcurl3
 dpkg -i google-chrome-stable_current_amd64.deb
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 install de firefox 57
@@ -84,6 +94,8 @@ sudo nano /etc/apt/sources.list
 #deb http://ftp.fr.debian.org/debian/ unstable main contrib non-free
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 install multimedia fedora
 -------------------------------------------------------------------------------------
@@ -96,6 +108,8 @@ dnf -y install HandBrake-gui HandBrake-cli
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
 dnf -y install libdvdcss libdvdread libdvdnav
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 minimal desktop
@@ -114,6 +128,8 @@ wicd-client &
 feh
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 transfer.sh
 -------------------------------------------------------------------------------------
@@ -126,6 +142,8 @@ cat /tmp/TEXT.txt|gpg -ac -o-|curl -X PUT --upload-file "-" https://transfer.sh/
 curl https://transfer.sh/ID/TEXT.txt|gpg -o- > /tmp/TEXT.txt
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 nikto scanner pour serveur web
 -------------------------------------------------------------------------------------
@@ -136,6 +154,8 @@ perl nikto.pl -update
 perl nikto.pl -h 192.168.0.1
 nikto -host SITEWEB.COM -port 443 -ssl
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 webmin administration
@@ -165,6 +185,8 @@ rpm --import jcameron-key.asc
 yum install webmin
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 cockpit surveillance
 -------------------------------------------------------------------------------------
@@ -175,6 +197,8 @@ sudo apt-get install cockpit
 
 ###>>>https://IP_ADDRESS:9090
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 BoopSuite wifi
@@ -190,3 +214,5 @@ boopstrike -i wlan0mon -a MAC:AD:RE:SS:XX:XX
 cd ~/pcap
 aircrack-ng -a2 -b MAC:AD:RE:SS:XX:XX -w wordlist.txt fichier.pcap
 ```
+
+**[`^        back to top        ^`](#)**

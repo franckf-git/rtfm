@@ -69,6 +69,8 @@ CIDR    bits disponibles    Masque de sous-reseau    Nombre d hotes par sous-res
 /32           0             255.255.255.255             2^0=1
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 OSI 3
 -------------------------------------------------------------------------------------
@@ -111,6 +113,8 @@ fe80::/10       Adresses locales lien
 ff00::/8        Adresses multicast
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 plage d adresses methode du nombre magique
 -------------------------------------------------------------------------------------
@@ -125,6 +129,8 @@ plage d adresses methode du nombre magique
 194.34.56.0 adresse de reseau
 194.34.56.7 adresse de broadcast
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 ports tcp/udp
@@ -160,6 +166,8 @@ more /etc/services
 5900         tcp     VNC Server
 6667         tcp     IRC
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Consoles Chromium
@@ -224,6 +232,8 @@ chrome://net-internals/#http2
 chrome://net-internals/#timeline
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 serveur ntp france
 -------------------------------------------------------------------------------------
@@ -236,6 +246,8 @@ server 3.fr.pool.ntp.org
 
 ntpq -p
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Google et openDNS
@@ -255,6 +267,8 @@ nameserver 208.67.222.222
 
 dig a www.google.fr | grep time
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 serveur dns libre
@@ -284,6 +298,8 @@ nameserver 89.234.141.66                         ; recursif.arn-fai.net
 nameserver 2a00:5881:8100:1000::3                ; recursif.arn-fai.net
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 DNSsec
 -------------------------------------------------------------------------------------
@@ -295,6 +311,8 @@ nameserver 149.20.64.21                          ; unbound.odvr.dns-oarc.net
 nameserver 2001:4f8:3:2bc:1::64:22               ; iana-testbed.odvr.dns-oarc.net
 nameserver 149.20.64.22                          ; iana-testbed.odvr.dns-oarc.net
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Public DNS Servers
@@ -465,6 +483,8 @@ Public DNS Servers
 2a00:1508:0:4::9
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 date
 -------------------------------------------------------------------------------------
@@ -496,6 +516,8 @@ date
 %y     deux derniers chiffres de l annee (00..99)
 %Y     annee (1970...)
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 regex
@@ -586,6 +608,8 @@ $            Fin de ligne
 /^[abc]/     toute ligne qui commence par a b ou c
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 megaoctet 1000-1024
 -------------------------------------------------------------------------------------
@@ -606,6 +630,8 @@ Un Mégaoctet (Mo) = 2^20 octets = 1024 ko = 1 048 576 octets
 Un Gigaoctet (Go) = 2^30 octets = 1024 Mo = 1 073 741 824 octets
 Un Téraoctet (To) = 2^40 octets = 1024 Go = 1 099 511 627 776 octets
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 dossiers linux
@@ -637,6 +663,8 @@ dossiers linux
 /var           Contient les donnees variables (log bdd site web)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 utilisateurs linux
 -------------------------------------------------------------------------------------
@@ -648,6 +676,8 @@ administrateur root UID = 0
 utilisateurs système UID compris entre 1 et 999, gérant les droits d accès de services sur la machine
 utilisateurs physique UID sera supérieur ou égal à 1000
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 chmod
@@ -663,6 +693,8 @@ lecture et execution           (r-x)          5
 lecture et ecriture            (rw-)          6
 tous les droits                (rwx)          7
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 python
@@ -694,6 +726,8 @@ python
 help() modules
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 testeur
 -------------------------------------------------------------------------------------
@@ -718,6 +752,8 @@ ooo-----------------------titre
 |logs
 |______ooo
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 pygame event.key
@@ -859,6 +895,8 @@ pygame event.key
       K_EURO                euro
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 table ASCII ( 0 - 127 )
 -------------------------------------------------------------------------------------
@@ -997,12 +1035,16 @@ man ascii
          127      177    7F   01111111      DEL    (delete)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 lorem ipsum
 -------------------------------------------------------------------------------------
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras viverra placerat ligula, et congue nisl hendrerit a. Donec porttitor mi eu nulla elementum, sit amet gravida nibh hendrerit. Curabitur felis tellus, elementum vel sagittis at, cursus eget quam. Nunc sit amet nibh non arcu laoreet convallis. Aliquam ornare suscipit sem, quis feugiat turpis consequat ac. Cras et cursus erat. Ut tincidunt placerat fermentum. Pellentesque quis nunc nunc. Sed congue quam ut nulla aliquet cursus. Proin in suscipit orci, et iaculis felis. Ut venenatis eros dolor, congue fermentum orci aliquet a. Maecenas lacinia semper vulputate. Integer nisi augue, porta eget erat a, ullamcorper hendrerit magna. Phasellus pulvinar nunc et libero mattis tristique. Nunc quis dignissim sem. Duis vitae mauris pulvinar, sagittis eros at, aliquam mi. Nunc porta fermentum eros tempor maximus. Morbi luctus lobortis magna eu porta. Nam iaculis est vel lobortis varius. Morbi varius ante a ligula ultricies tristique. Etiam eu mauris diam. Morbi ac dolor porttitor, semper massa a, vehicula sapien. Nulla sodales, mi sit amet placerat vehicula, ex ante ultricies urna, a efficitur erat neque id sem. Vivamus vulputate lobortis tristique. Donec ex urna, porttitor et imperdiet pulvinar, tincidunt id libero. Nunc volutpat urna vel gravida tincidunt. Fusce eget luctus enim. Etiam condimentum volutpat lorem sed tristique. Suspendisse commodo erat id molestie mattis. Aenean eu magna diam. Donec ut condimentum velit. Morbi ut eros eget velit dictum aliquam. Proin enim nunc, aliquet vitae varius finibus, sollicitudin commodo ipsum. Aenean sed justo blandit, laoreet metus non, pretium purus. Maecenas finibus cursus odio. Etiam nunc eros, dictum quis consequat ut, tempor ac felis. Aliquam commodo felis vel tortor vestibulum dignissim. Donec gravida ligula ex, et laoreet augue egestas quis. Maecenas elit ligula, faucibus eget magna finibus, accumsan dictum velit. Curabitur lectus velit, mollis ut placerat maximus, interdum at tellus. Fusce feugiat ipsum condimentum sapien bibendum convallis. Fusce convallis urna non odio tincidunt, sit amet volutpat lectus pellentesque. Sed vel dapibus leo. Fusce at sem vel ex sollicitudin blandit. Sed tristique risus in lacus vulputate, nec eleifend nibh dapibus. Pellentesque pulvinar lorem nec magna fringilla, non aliquet enim elementum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sit amet mollis lectus, at bibendum nulla. Nulla facilisi. Ut ut fermentum massa. Integer varius sem nec quam eleifend malesuada. Nunc interdum erat ut augue vehicula iaculis. Phasellus eget ex ipsum. Praesent ipsum velit, maximus ac hendrerit vitae, finibus blandit erat. Pellentesque urna ligula, dictum at aliquam id, rhoncus quis arcu. Quisque pellentesque quam felis, nec venenatis metus mollis vitae. Donec interdum nisi ligula, sed ornare dolor malesuada mollis. Morbi nec eros eget metus tempus sollicitudin. Duis pulvinar nisi sit amet nisl ultrices volutpat non ac ipsum. Donec finibus lorem at hendrerit tempor. Quisque mollis libero eget lectus egestas iaculis. Aliquam erat volutpat. Proin commodo metus id quam condimentum sollicitudin.
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Creative Commons by-nc-sa
@@ -1022,3 +1064,5 @@ This work is licensed under a [Creative Commons Attribution 4.0 International Li
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 ```
+
+**[`^        back to top        ^`](#)**

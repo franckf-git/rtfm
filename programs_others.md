@@ -74,6 +74,8 @@ intersection()
 % transparent / background
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 irc - discord
 -------------------------------------------------------------------------------------
@@ -114,6 +116,8 @@ bloc de code
 
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 lxc
 -------------------------------------------------------------------------------------
@@ -150,6 +154,8 @@ lxc.network.ipv4.gateway = IPCONTENEUR.254                  #passerelle conteneu
 lxc.mount.entry=/MONTAGE/ CHEMIN/CONTENEUR none rw,bind 0 0 #Points de montage
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 raid logiciel mdadm
 -------------------------------------------------------------------------------------
@@ -180,6 +186,8 @@ mdadm --manage /dev/md0 --fail /dev/sdc --remove /dev/sdc
 mdadm --stop /dev/md0
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 imagemagick traitement image en cli
 -------------------------------------------------------------------------------------
@@ -209,6 +217,8 @@ composite -compose Over -gravity NorthEast IMAGE1.png IMAGE2.jpeg IMAGE_FINAL.jp
 composite -watermark valeur_luminosite Premiere Deuxieme IMAGE_resultante
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 install virtualbox
 -------------------------------------------------------------------------------------
@@ -221,6 +231,8 @@ sudo apt-key add oracle_vbox_2016.asc
 sudo apt-get update
 sudo apt-get install virtualbox-5.1
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 installation des addons invites virtualbox
@@ -238,6 +250,8 @@ mount /media/cdrom
 sh /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 monter un disque virtualbox
@@ -272,6 +286,8 @@ umount /media/BACKUP
 losetup -d /dev/loop0
 umount /media/MONDISQUE/
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 QEMU
@@ -313,6 +329,8 @@ mount /dev/nbd0p1 /mnt
 mount -o loop,offset=32256 /PATH/TO/HDD.img /mnt/MOUNTPOINT
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gestionnaire de machines virtuelles
 -------------------------------------------------------------------------------------
@@ -320,6 +338,8 @@ gestionnaire de machines virtuelles
 sudo apt install gnome-boxes virt-manager qemu-kvm qemu gir1.2-spice-client-gtk-3.0
 sudo systemctl start libvirtd
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 disques smart
@@ -341,6 +361,8 @@ sudo smartctl -l selftest /dev/sdX
 sudo smartctl -a /dev/sdX
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 correction de commande en python
 -------------------------------------------------------------------------------------
@@ -356,6 +378,8 @@ fuck
 ###>>>sudo apt install apache2
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 outil de benchmarking simple
 -------------------------------------------------------------------------------------
@@ -369,6 +393,8 @@ stress -d 2 --hdd-bytes 512M  ###>>>2 process de 512mo
 stress -c 4 -m 2 -d 1 -t 40s
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 multi-fenetre terminal
 -------------------------------------------------------------------------------------
@@ -380,6 +406,8 @@ screen -x NOM                #syncro du terminal NOM
 screen -ls                   #liste des terminaux
 screen -X -S NOM kill        #kill NOM
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 QR code
@@ -396,6 +424,8 @@ qrencode -o IMAGE.png 'BEGIN:VCARD VERSION:4.0 FN: N:NOM;PRENOM;;; ADR:;;ADRESS.
 sudo apt-get install libdecodeqr-examples
 libdecodeqr-simpletest IMAGE.png
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 i3-wm
@@ -452,3 +482,5 @@ $mod+r             #Resize mode (<Esc> or <Enter> to leave)
 $mod+Enter         #Open new terminal window
 $mod+d             #Open dmenu
 ```
+
+**[`^        back to top        ^`](#)**

@@ -22,6 +22,8 @@ Manual pages for GNU/linux and others tips.
 - [Startup and install of the system](./startup.md)
 - [The most useful commands](./utils.md)
 
+**[`^        back to top        ^`](#)**
+
 ### IT
 
 - [Internet Archive](https://archive.org/index.php)
@@ -37,6 +39,8 @@ Manual pages for GNU/linux and others tips.
 - [Selfhosted](https://github.com/Kickball/awesome-selfhosted/blob/master/README.md)
 - [Sysadmin help](https://github.com/n1trux/awesome-sysadmin/blob/master/README.md)
 - [Post code](https://gist.github.com/)
+
+**[`^        back to top        ^`](#)**
 
 ### Testing
 
@@ -56,6 +60,8 @@ Manual pages for GNU/linux and others tips.
 - [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)
 - [Multi-Password tests](https://madiba.encs.concordia.ca/software/passwordchecker/)
 
+**[`^        back to top        ^`](#)**
+
 ### Generator
 
 - [Text to ASCII](http://patorjk.com/software/taag/#p=display&f=Banner3&t=Type%20Something%20)
@@ -69,6 +75,8 @@ Manual pages for GNU/linux and others tips.
 - [Bash Prompt](http://ezprompt.net/)
 - [Timestamp](http://www.timestampgenerator.com/)
 - [Python calculator](https://www.numworks.com/fr/simulateur/)
+
+**[`^        back to top        ^`](#)**
 
 ### Anonymous
 
@@ -87,6 +95,8 @@ Manual pages for GNU/linux and others tips.
 - [I2P](https://geti2p.net/fr/download)
 - [FreeNet](https://freenetproject.org/fr/pages/download.html)
 
+**[`^        back to top        ^`](#)**
+
 ### Security
 
 - [IP Tracker](http://www.ip-tracker.org/)
@@ -104,6 +114,8 @@ Manual pages for GNU/linux and others tips.
 - [Private Message](https://privnote.com/#)
 - [Private Message2](http://www.destructingmessage.com/)
 
+**[`^        back to top        ^`](#)**
+
 ### Raspberry Pi
 
 - [Pinout](http://fr.pinout.xyz/)
@@ -119,6 +131,8 @@ Manual pages for GNU/linux and others tips.
 - [Pirate Box](https://piratebox.cc/raspberry_pi:diy)
 - [Jasper](https://jasperproject.github.io/documentation/installation/)
 - [Alexa](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
+
+**[`^        back to top        ^`](#)**
 
 ### Browser Extensions
 
@@ -140,6 +154,8 @@ Manual pages for GNU/linux and others tips.
 - [ScriptSafe](https://addons.mozilla.org/fr/firefox/addon/script-safe/)
 - [4chan](https://addons.mozilla.org/fr/firefox/addon/4chan-media-downloader/)
 
+**[`^        back to top        ^`](#)**
+
 ## Santé
 
 * Faire une pause de 5 min toutes les heures et bouger pendant les pauses
@@ -158,6 +174,8 @@ Manual pages for GNU/linux and others tips.
 
 **Etre confortable sans forcer le corps**
 
+**[`^        back to top        ^`](#)**
+
 ## Sources
 
 - [Wikipedia](https://www.wikipedia.org/)
@@ -168,6 +186,8 @@ Manual pages for GNU/linux and others tips.
 - [Admin Linux](https://www.admin-linux.fr/)
 - [MicroLinux](https://blog.microlinux.fr/)
 - Personal works
+
+**[`^        back to top        ^`](#)**
 
 ## License
 

@@ -62,6 +62,8 @@ sudo aptitude install PACKAGE=VERSIONS     #Installer un paquet dans une version
 apt-get install --no-install-recommends PACKAGE    #ne pas installer les paquets recommandés
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Gestion des paquets fedora vs debian
 -------------------------------------------------------------------------------------
@@ -113,6 +115,8 @@ yum clean headers             apt-file purge                                    
 *.rpm                         *.deb                                             #Package file extension
 /etc/yum.conf                 /etc/apt/sources.list                             #Repository location configuration
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Gestion des paquets fedora
@@ -190,6 +194,8 @@ sudo dnf system-upgrade download --releasever=NEWNUM
 sudo dnf system-upgrade reboot
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Gestion des paquets archlinux
 -------------------------------------------------------------------------------------
@@ -215,6 +221,8 @@ Server = http://repo.archlinux.fr/$arch
 pacman -S yaourt
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Gestion des paquets openSUSE
 -------------------------------------------------------------------------------------
@@ -231,6 +239,8 @@ zypper refresh              #rafraichissement des méta-données de tous les dé
 yast                        #outil magique
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Gestion des paquets Solus
 -------------------------------------------------------------------------------------
@@ -245,6 +255,8 @@ sudo eopkg info PROGRAMME                   #description d un paquet
 sudo eopkg remove PROGRAMME                 #désinstaller un logiciel
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 MAJ debian
 -------------------------------------------------------------------------------------
@@ -252,12 +264,16 @@ MAJ debian
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo rpi-update && sudo reboot
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 MAJ fedora
 -------------------------------------------------------------------------------------
 ```bash
 sudo dnf check-update && sudo dnf upgrade -y && sudo dnf clean packages -y && sudo reboot
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 fedora RPM fusion
@@ -268,6 +284,8 @@ fedora RPM fusion
 sudo rpm --import "http://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-25"
 sudo rpm --import "http://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-25"
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 centos ajout de depots
@@ -283,6 +301,8 @@ yum install http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0
 yum check-update
 yum -y update
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 debian depots
@@ -302,6 +322,8 @@ deb http://ftp.fr.debian.org/debian/ stretch-updates main contrib non-free
 deb http://ftp.fr.debian.org/debian/ stretch-backports main contrib non-free
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 debian mise à niveau
 -------------------------------------------------------------------------------------
@@ -309,6 +331,8 @@ debian mise à niveau
 sed -i 's/jessie/stretch/g' /etc/apt/sources.list
 sudo apt-get update -y && sudo apt-get dist-upgrade -y
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 debian passer en testing
@@ -322,6 +346,8 @@ deb http://ftp.fr.debian.org/debian/ testing-updates main contrib non-free
 sudo apt-get update
 sudo apt-get dist-upgrade
 ```
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 debian passer en sid
 -------------------------------------------------------------------------------------
@@ -335,6 +361,8 @@ sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get install apt-listbugs apt-listchanges deb-multimedia-keyring reportbug console-tools
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 backport un paquet Sid dans stable
@@ -350,6 +378,8 @@ apt-get -b source PACKAGE
 dpkg -i PACKAGE.deb
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 dupliquer un systeme debian
 -------------------------------------------------------------------------------------
@@ -358,6 +388,8 @@ dpkg --get-selections > lstpkg.dpkg
 dpkg --set-selections < lstpkg.dpkg
 apt-get dselect-upgrade
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 preconfiguration durant installation debian
@@ -369,6 +401,8 @@ sudo debconf-get-selections >> preseed.cfg
 sudo debconf-set-selections -c preseed.cfg
 ###>>>a l installation choisir Advanced options / expert et pointer le cfg sur USB
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 creation d un mirroir local debian
@@ -400,6 +434,8 @@ apt update
 sudo apt-get install aptoncd
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 creation d un iso live perso
 -------------------------------------------------------------------------------------
@@ -428,6 +464,8 @@ mkdir -p /config/includes.chroot/etc/skel
 
 lb build
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 compilation

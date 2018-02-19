@@ -26,6 +26,8 @@ sudo nano /etc/network/interfaces
 dns-nameservers 80.67.169.12
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 transformer une machine en routeur
 -------------------------------------------------------------------------------------
@@ -46,6 +48,8 @@ route -n
 traceroute
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 monter un partage samba au demarrage
 -------------------------------------------------------------------------------------
@@ -59,6 +63,8 @@ password=MOT_DE_PASSE
 domain=NOM_DE_DOMAINE(facultatif)
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 changement adresse mac
 -------------------------------------------------------------------------------------
@@ -67,6 +73,8 @@ changement adresse mac
 ifconfig eth0 hw ether 02:01:02:03:04:08
 /etc/init.d/networking start
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 tor en cli
@@ -94,6 +102,8 @@ sudo systemctl restart privoxy.service
 /usr/bin/chromium --proxy-server="socks5://127.0.0.1:8118"
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 protonvpn
 -------------------------------------------------------------------------------------
@@ -109,6 +119,8 @@ cd .protonvpn
 sudo openvpn PAYS-00.protonvpn.com.udp1194.ovpn
 ###>>>insérez identifiants de connexion : OpenVPN Login | OpenVPN Password
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 montage nfs
@@ -141,6 +153,8 @@ IP_SERVEUR:/CHEMIN/PARTAGE/ /media/MONTAGE nfs4 defaults,user,auto,noatime,intr 
 sudo mount -a
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gestion ssmtp mailutils
 -------------------------------------------------------------------------------------
@@ -172,3 +186,5 @@ sudo dpkg-statoverride --add root mail 0750 /etc/ssmtp
 sudo dpkg-statoverride --add root mail 0640 /etc/ssmtp/ssmtp.conf
 sudo dpkg-statoverride --add root mail 0644 /etc/ssmtp/revaliases
 ```
+
+**[`^        back to top        ^`](#)**

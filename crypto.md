@@ -47,6 +47,8 @@ gpg -o FICHIER -d FICHIER_CHIFFRE.gpg -r NOM     #déchiffrement
 gpg -o FICHIER --decrypt FICHIER_CHIFFRE.gpg     # , ,
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 GPG/PGP
 -------------------------------------------------------------------------------------
@@ -146,6 +148,8 @@ steghide embed -cf IMAGE.jpg -ef CLE.txt
 steghide extract -sf IMAGE.jpg
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 creer une archive chiffree
 -------------------------------------------------------------------------------------
@@ -154,6 +158,8 @@ tar -cvzf - DOSSIER/ | openssl enc -e -aes-256-ecb -in - -out DOSSIER  -pass pas
 sha256sum DOSSIER
 openssl enc -d -aes-256-ecb -in FICHIER-CHIFFRE -out FICHIER-DECHIFFRE
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 chiffrement disque dur externe
@@ -164,6 +170,8 @@ sudo cryptsetup luksFormat -h sha256 /dev/XXX
 sudo cryptsetup luksOpen /dev/XXX NOMDISQUE
 sudo mkfs.ext4 /dev/mapper/NOMDISQUE
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 chiffrement de dossier par ecryptfs
@@ -183,6 +191,8 @@ ecryptfs-add-passphrase
 mount.ecryptfs_private DOSSIER
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 chiffrement de dossier par encfs
 -------------------------------------------------------------------------------------
@@ -194,6 +204,8 @@ encfs /home/.DOSSIER_CRYPTE /home/MONTAGE_CLAIR
 ###>>>alimenter le dossier MONTAGE_CLAIR
 fusermount -u MONTAGE_CLAIR
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 creer une archive chiffrée
@@ -207,6 +219,8 @@ apt-get install p7zip-full
 7z x /CHEMIN/ARCHIVE_SECURE.7z
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 Chiffrement de fichier
 -------------------------------------------------------------------------------------
@@ -217,3 +231,5 @@ gpg2 --list-keys
 gpg2 --encrypt FICHIER
 gpg2 --output FICHIER --decrypt FICHIER.gpg
 ```
+
+**[`^        back to top        ^`](#)**

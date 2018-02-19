@@ -41,12 +41,16 @@ sauvegarde media vers image
 sudo dd if=/dev/mmcblk0 of=~/Desktop/RASPBERRYPI.img
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 coucher une image sur un media
 -------------------------------------------------------------------------------------
 ```bash
 sudo dd bs=1024 if=/raspbian-jessie.img of=/dev/SDCARD
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 installation archlinux
@@ -81,6 +85,8 @@ mv root/boot/* boot
 umount boot root
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 installation fedora
 -------------------------------------------------------------------------------------
@@ -90,6 +96,8 @@ xzcat Fedora-IMAGE-NAME.raw.xz | sudo dd status=progress bs=4M of=/dev/XXX
 gparted /dev/XXX
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 stopper le resize automatique
 -------------------------------------------------------------------------------------
@@ -97,6 +105,8 @@ stopper le resize automatique
 sudo nano /boot/cmdline.txt
 ###>>>retirer init=/usr/lib/raspi-config/init_resize.sh
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 utiliser les cartes SD en lecture seule
@@ -108,6 +118,8 @@ wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/m
 sudo bash read-only-fs.sh
 #jumper yes on GPIO21
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 overclock raspberry pi 3
@@ -130,6 +142,8 @@ sdram_freq=(400-475)
 cat /opt/vc/bin/vcgencmd measure_temp # Afficher la température du processeur
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 boot sur usb
 -------------------------------------------------------------------------------------
@@ -143,6 +157,8 @@ vcgencmd otp_dump | grep 17:
 ###>>>coucher une raspbian (2017_04_10 ou plus) sur cle usb
 ###>>>retirer la carte sd brancher usb et redemmarer
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 pi zero USB OTG device
@@ -162,6 +178,8 @@ ssh pi@raspberrypi.local
 
 ###>>>windows>network>properties>sharing>allow USB/RNDIS ethernet reboot
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Expansion GPIO
@@ -183,6 +201,8 @@ python3
 >>> led.blink()
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 gestion LED au demarrage
 -------------------------------------------------------------------------------------
@@ -203,12 +223,16 @@ echo 0 >/sys/class/leds/led1/brightness      # Éteindre la LED rouge (PWR)
 echo 1 >/sys/class/leds/led1/brightness      # la rallumer
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 desactiver USB
 -------------------------------------------------------------------------------------
 ```bash
 sudo sh -c "echo 0 > /sys/devices/platform/soc/3f980000.usb/buspower"
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 gestion des logs pour card sd
@@ -219,6 +243,8 @@ sudo nano /etc/fstab
 tmpfs /tmp tmpfs defaults,noatime,nosuid,size=100m 0 0
 tmpfs /var/tmp tmpfs defaults,noatime,nosuid,size=30m 0 0
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 ecran waveshare
@@ -233,6 +259,8 @@ hdmi_cvt 1024 600 60 6 0 0 0
 hdmi_drive=1
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 screensaver CLI
 -------------------------------------------------------------------------------------
@@ -244,6 +272,8 @@ cat /sys/module/kernel/parameters/consoleblank
 sudo nano /boot/cmdline.txt
 consoleblank=0
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 bloquer wifi et bluetooth
@@ -257,6 +287,8 @@ blacklist brcmutil
 blacklist btbcm
 blacklist hci_uart
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 jumellage bluetooth
@@ -278,6 +310,8 @@ AutoEnable=true
 sudo apt-get install bluetooth bluez blueman
 ###>>>Bluetooth Manager
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 picamera
@@ -322,6 +356,8 @@ sleep(5)
 camera.stop_recording()
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 nouvel utilisateur
 -------------------------------------------------------------------------------------
@@ -339,12 +375,16 @@ sudo raspi-config
 #3/B1/B2
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 capture video pour 30 min (-t 0 pour infini)
 -------------------------------------------------------------------------------------
 ```bash
 raspivid -n -vf -hf -fps 25 -w 1280 -h 720 -b 3500000 -t 1800000 -o - > VIDEO.h264
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 slowmotion
@@ -358,6 +398,8 @@ filename=$(date -u +"%d%m%Y_%H%M").jpg
 sleep 30m;
 done;
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 surveillance motion
@@ -380,6 +422,8 @@ sudo service motion start
 ###>>>http://IPRASPBERRY:8081
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 serveur streaming vlc
 -------------------------------------------------------------------------------------
@@ -389,6 +433,8 @@ raspivid -t 0 -n --width 1280 --height 720 -o - | cvlc stream:///dev/stdin --sou
 ###>>>client
 cvlc http://IPRASPBERRY:8090
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 ip statique
@@ -408,6 +454,8 @@ netmask 255.255.255.0
 gateway 192.168.1.1
 wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 wifi config
@@ -429,6 +477,8 @@ iface wlan0 inet dhcp
 ###>>>recherche ip dynamique
 sudo dhclient wlan0
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 hotspot
@@ -537,6 +587,8 @@ bridge=br0
 #driver=nl80211
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 VNC
 -------------------------------------------------------------------------------------
@@ -577,6 +629,8 @@ sudo chmod +x /etc/init.d/vncboot
 sudo update-rc.d vncboot defaults
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 RPI monitor
 -------------------------------------------------------------------------------------
@@ -591,6 +645,8 @@ sudo /etc/init.d/rpimonitor update
 ###>>>http://IPRASPBERRYPI:8888/
 ```
 
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 pihole bloqueur pub
 -------------------------------------------------------------------------------------
@@ -599,6 +655,8 @@ curl -sSL https://install.pi-hole.net | bash
 ###>>>ports a ouvrir : 53 80 4711
 ###>>>http://IPRASPBERRY/admin/
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 mode kiosque
@@ -616,6 +674,8 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 @xset -dpms
 @/usr/bin/chromium-browser --noerrdialogs --kiosk --incognito "https://URL"
 ```
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 compilation opencv (3h sur raspberry 3)
@@ -678,3 +738,5 @@ python
 #>>> cv2.__version__
 #'3.3.0'
 ```
+
+**[`^        back to top        ^`](#)**
