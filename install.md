@@ -131,6 +131,16 @@ feh
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
+proxmox interface web en local
+-------------------------------------------------------------------------------------
+```bash
+apt install xorg i3 xinit chromium wicd-curses xterm
+echo "exec --no-startup-id chromium --no-sandbox --start-fullscreen https://localhost:8006" >> .config/i3/config
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
 transfer.sh
 -------------------------------------------------------------------------------------
 ```bash
