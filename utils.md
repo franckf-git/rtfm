@@ -35,6 +35,15 @@ ls REP              #liste les fichiers du repertoire rep
 ls -a               #ls avec les fichiers caches
 ls -l               #ls avec les droits d acces et la taille
 vdir                #equivaut a ls -lb
+dirs -v             #affiche la liste des dossiers enregistrés
+pushd FOLDER        #sauvegarde le dossier
+popd                #reinitialise les dossiers enregistrés
+COMMAND ~N          #utilise le dossier N enregistré
+###>>>système de fichiers virtuel
+.local/share/gvfs-metadata/home
+gio info FILEFOLDER | grep metadata
+gio set FILEFOLDER 'metadata::comment' 'COMMENT'
+gio set FILEFOLDER -t stringv metadata::emblems emblem-default 
 ```
 
 **[`^        back to top        ^`](#)**
@@ -104,6 +113,7 @@ fmt                   #formatage paragraphe
 column -s C -t FIC    #affichage en colonnes selon le caractère C
 apropos TERMES        #recherche dans toutes les man pages
 clip < FILE           #copier dans le presse-passier
+echo 'MESSAGE' | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' #rot13
 ```
 
 **[`^        back to top        ^`](#)**
@@ -578,6 +588,8 @@ sudo mlabel -i /dev/sdb2 ::NOUVEAUNOM    #Changer le label clé USB type FAT32
 sudo e2label /dev/sdb2 "NOUVEAUNOM"      #Changer le label clé USB type EXT2/3/4
 badblocks -s -v -w /dev/hda              #test en lecture et écriture, effacement !
 mount -o remount,size=6G,... /TMP        #resize the tmpfs volume
+badblocks -v /dev/sdb                    #Test des blocs des filesystems
+2fsck -cfp /dev/sdb1                     #Marquer les secteurs défectueux
 ```
 
 **[`^        back to top        ^`](#)**
@@ -724,6 +736,9 @@ pastebinit -l                                      #liste des sites d export
 pastebinit -i FICHIER -a Untitled -b http://pastebin.com
 history -d 000                                     #supprimer une ligne de history
 history -c                                         #tout nettoyer
+!COM:p                            #affiche la dernière commande commençant par COM
+COM !:1 !:3                       #reutilise les arguments 1 et 3 de la dernière
+COM !211:1                        #reutilise l argument 1 de la commande 211
 export HISTTIMEFORMAT='%F %T '                     #date des commandes
 export HISTIGNORE='ls -l:pwd:history'              #ignorer certaines commandes
 unset export HISTIGNORE                            #desactiver ignorance
