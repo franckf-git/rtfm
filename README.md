@@ -144,6 +144,41 @@ Manual pages for GNU/linux and others tips.
 - [Clear Data](https://chrome.google.com/webstore/detail/clear-browsing-data/bjilljlpencdcpihofiobpnfgcakfdbe?hl=fr)
 - [ScriptSafe](https://chrome.google.com/webstore/detail/scriptsafe/oiigbmnaadbkfbmpbfijlflahbdbdgdf/related?hl=fr)
 
+    chrome://flags
+    #enable-site-per-process           > Enable
+    #reduced-referrer-granularity
+
+    #enable-top-document-isolation     > Enabled
+    #enable-simple-cache-backend
+    #enable-font-cache-scaling
+
+    #disable-hyperlink-auditing        > Disable
+    #enable-webrtc-srtp-aes-gcm
+    #enable-webrtc-srtp-encrypted-headers
+    #enable-webrtc-stun-origin
+    #show-autofill-type-predictions
+    #enable-scroll-prediction
+    #enable-print-preview-register-promos
+
+    #enable-tab-audio-muting           > Disabled
+    #web-payments
+    #web-payments-modifiers
+    #enable-single-click-autofill
+    #enable-autofill-credit-card-upload
+    #enable-autofill-credit-card-last-used-date-display
+    #enable-autofill-credit-card-upload-cvc-prompt
+    #enable-autofill-credit-card-upload-new-ui
+    #enable-autofill-credit-card-ablation-experiment
+    #enable-autofill-credit-card-bank-name-display
+    #WebRtcUseEchoCanceller3
+    #safe-search-url-reporting
+    #enable-new-preconnect
+    #enable-speculative-service-worker-start-on-query-input
+    #enable-resource-prefetch
+    #enable-nostate-prefetch
+    #use-google-local-ntp
+    #one-google-bar-on-local-ntp
+    #password-import-export
 
 #### [Firefox](https://www.mozilla.org/fr/firefox/all/)
 - [Disconnect](https://addons.mozilla.org/fr/firefox/addon/disconnect/)
