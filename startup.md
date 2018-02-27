@@ -180,6 +180,22 @@ sudo plymouth-set-default-theme tribar -R
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
+history avec date et exclure en commençant par espace
+-------------------------------------------------------------------------------------
+```bash
+echo '
+export HISTTIMEFORMAT=\"%m/%d/%y %T \"
+export HISTCONTROL=ignorespace:ignoredups
+
+ if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+ fi
+'>> ~/.bash_profile
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
 lancer un script au branchement d une cle USB
 -------------------------------------------------------------------------------------
 ```bash
