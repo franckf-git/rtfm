@@ -10,6 +10,7 @@
 - [install de firefox 57](#install-de-firefox-57)
 - [install multimedia fedora](#install-multimedia-fedora)
 - [minimal desktop](#minimal-desktop)
+- [proxmox interface web en local](#proxmox-interface-web-en-local)
 - [transfer.sh](#transfersh)
 - [nikto scanner pour serveur web](#nikto-scanner-pour-serveur-web)
 - [webmin administration](#webmin-administration)
