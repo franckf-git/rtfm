@@ -11,6 +11,7 @@
 - [MAJ debian](#maj-debian)
 - [MAJ fedora](#maj-fedora)
 - [fedora RPM fusion](#fedora-rpm-fusion)
+- [centos ajout de depots](#centos-ajout-de-depots)
 - [debian depots](#debian-depots)
 - [debian mise à niveau](#debian-mise-à-niveau)
 - [debian passer en testing](#debian-passer-en-testing)
