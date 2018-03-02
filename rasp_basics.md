@@ -678,6 +678,34 @@ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
+rasp dashboard
+-------------------------------------------------------------------------------------
+```bash
+#!/bin/bash
+
+# Install dependencies
+sudo apt-get update
+sudo apt-get install -y i3 dmenu xorg xinit chromium
+
+# Autologin
+sudo systemctl enable autologin@.service
+
+# i3 configuration
+mkdir -p ~/.i3 && cat > ~/.i3/config << EOF
+    exec --no-startup-id xset -dpms
+    exec --no-startup-id xset s off
+    exec --no-startup-id xdotool mousemove 9999 9999
+    exec --no-startup-id chromium https://framasoft.fr
+    exec --no-startup-id sleep 5 && xdotool key F11
+EOF
+echo 'exec i3' >> ~/.xinitrc
+echo '[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx' > ~/.bash_profile
+
+exit 0
+```
+
+**[`^        back to top        ^`](#)**
+_____________________________________________________________________________________
 compilation opencv (3h sur raspberry 3)
 -------------------------------------------------------------------------------------
 ```bash
