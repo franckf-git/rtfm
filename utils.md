@@ -92,6 +92,7 @@ comp FILE1 FILE2      #compare deux fichiers binaires
 comp FILE1 FILE2 n N  #file1 a partir du nieme octet, et file2 a partir du Nieme
 diff FILE1 FILE2      #donne les modifications a apporter a file1
 diff -rus FILE1 FILE2
+sdiff                 #différence cote à cote
 awk 'NR==FNR {t[$0]++; next} !t[$0]' F2 F1      #afficher les lignes uniquement dans f1
 awk '($1=="NOM") { print }' <FILE     #afficher les lignes contenant la colonne nom
 awk '{ print $3,$4 }' <FILE           #afficher les colonnes 3 et 4
