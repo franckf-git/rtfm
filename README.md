@@ -39,6 +39,7 @@ Manual pages for GNU/linux and others tips.
 - [Selfhosted](https://github.com/Kickball/awesome-selfhosted/blob/master/README.md)
 - [Sysadmin help](https://github.com/n1trux/awesome-sysadmin/blob/master/README.md)
 - [Post code](https://gist.github.com/)
+- [Licenses](https://choosealicense.com/)
 
 **[`^        back to top        ^`](#)**
 
