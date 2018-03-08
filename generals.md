@@ -7,6 +7,7 @@
 - [plage d adresses methode du nombre magique](#plage-d-adresses-methode-du-nombre-magique)
 - [ports tcp/udp](#ports-tcpudp)
 - [Consoles Chromium](#consoles-chromium)
+- [duck duck go](#duck-duck-go)
 - [serveur ntp france](#serveur-ntp-france)
 - [Google et openDNS](#google-et-opendns)
 - [serveur dns libre](#serveur-dns-libre)
@@ -230,6 +231,19 @@ chrome://net-internals/#sockets
 chrome://net-internals/#quic
 chrome://net-internals/#http2
 chrome://net-internals/#timeline
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+duck duck go
+-------------------------------------------------------------------------------------
+```
+password 25 strong   #generateur mot de passe
+sha265 CHAINE        #hash sha256
+md5 CHAINE           #hash md5
+is SITE up           #disponibilité site
+ip address           #addresse publique
 ```
 
 **[`^        back to top        ^`](#)**
