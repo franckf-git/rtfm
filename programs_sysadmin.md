@@ -6,6 +6,7 @@
 - [cron quotidienne](#cron-quotidienne)
 - [commandes periodiques en dessous de une minute](#commandes-periodiques-en-dessous-de-une-minute)
 - [SQL](#sql)
+- [Cassandra](#cassandra)
 - [syslog-ng](#syslog-ng)
 - [dokuwiki](#dokuwiki)
 - [markdown](#markdown)
