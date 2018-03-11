@@ -222,6 +222,7 @@ systemctl status NOMDUSERVICE.service            #etat du service
 
 kill signal PID              #tuer un processus en utilisant son pid
 pkill signal NOM             #tuer un processus en utilisant le nom du programme
+kill -l                      #liste des signaux de kill
 ###>>>signaux utilises par kill/pkill
 #-1 (HUP)                    #recharger le fichier de configuration du processus
 #-2 (INT)                    #interrompre le processus
