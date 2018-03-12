@@ -353,6 +353,8 @@ sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdX
 ###>>>infos sur le disque
 sudo smartctl -H -i /dev/sdX
 sudo smartctl -a /dev/sdX
+sudo smartctl -l selftest /dev/sdX     #accéder aux résultats
+sudo smartctl --scan | grep -i usb
 
 ###>>>tests
 sudo smartctl -t short /dev/sdX
