@@ -30,6 +30,7 @@ navigation systeme
 pwd                 #affiche le repertoire courant
 cd REP              #se place dans le repertoire rep
 cd                  #se place dans le repertoire de l utilisateur ~/
+cd -                #se place dans l ancien repertoire cd $OLDPWD
 cd ..               #se place dans le repertoire parent
 ls REP              #liste les fichiers du repertoire rep
 ls -a               #ls avec les fichiers caches
