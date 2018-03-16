@@ -227,6 +227,18 @@ Manual pages for GNU/linux and others tips.
 
 **[`^        back to top        ^`](#)**
 
+## Install
+
+git clone in a .rtfm folder and add
+
+```bash
+rtfm () {
+  grep $1 -n -A 3 ~/.rtfm/*
+}
+```
+
+to .bashrc
+
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
