@@ -42,6 +42,7 @@ Manual pages for GNU/linux and others tips.
 - [Licenses](https://choosealicense.com/)
 - [CVE global](http://cve.circl.lu/)
 - [Github Cheatsheet](https://github.com/tiimgreen/github-cheat-sheet)
+- [Games](https://github.com/leereilly/games)
 
 **[`^        back to top        ^`](#)**
 
