@@ -242,6 +242,11 @@ at 14:17 11/15/10            #lancer un programme a une heure precise
 echo 'COMMAND -ARGS'| at 3:40 monday
 cat /etc/X11/default-display-manager             #afficher le gestionnaire de fenetre
 sudo systemctl restart lightdm.service           #redemarrer le serveur xorg
+
+jobs                         #liste les arrières plans &
+fg %N                        #recupére le jobs N
+bg %N                        #execute en arrière plan
+[CRTL+Z]                     #stop en arrière plan
 ```
 
 **[`^        back to top        ^`](#)**
