@@ -232,6 +232,9 @@ kill -l                      #liste des signaux de kill
 #-15 (TERM)                  #terminer le processus proprement
 #-18 (STOP)                  #geler le processus
 #-20 (CONT)                  #reprendre l execution d un processus gele
+killall NOMDUPROGRAMME       #tuer tous les instances du programme
+xkill                        #tuer une fenetre graphique
+kill -USR1 CMD               #suivre une progression
 nice -n 10 NOMDUPROGRAMME    #changement de priorité cpu
 
 time COMMAND >/dev/null      #mesurer temps execution
@@ -732,6 +735,11 @@ figlet -f
 
 apt install sysvbanner
 banner MESSAGES
+
+#When I wrote this, only God and I understood what I was doing
+#Now, God only knows
+
+#Magic. Do not touch.
 ```
 
 **[`^        back to top        ^`](#)**
