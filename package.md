@@ -193,6 +193,9 @@ sudo dnf upgrade --refresh
 sudo dnf install dnf-plugin-system-upgrade
 sudo dnf system-upgrade download --releasever=NEWNUM
 sudo dnf system-upgrade reboot
+
+###>>>Détails des mirroirs
+cat /etc/yum.repos.d/fedora.repo
 ```
 
 **[`^        back to top        ^`](#)**
