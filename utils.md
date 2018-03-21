@@ -267,6 +267,7 @@ lspci | grep -i audio | cut -d: -f3     #afficher le modele de sa carte son
 cat /proc/cpuinfo                       #affiche les informations processeur
 lsblk                                   #liste tous les peripheriques de stockage
 lsblk -f                                #info partition (+fdisk)
+lsXXX                                   #listes des infos
 cat /sys/block/sda/queue/rotational     #le disque est un ssd ? oui si 0
 inxi -F                                 #liste materiel
 inxi -Frmxx﻿
