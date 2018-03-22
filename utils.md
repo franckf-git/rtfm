@@ -767,6 +767,7 @@ unset export HISTIGNORE                            #desactiver ignorance
 export HISTCONTROL=ignoredups                      #ignorer duplicatats
 unset HISTCONTROL                                  #desactiver ignorer duplicatats
 export HISTSIZE=0                                  #desactiver history
+dmesg -e                                           #message du kernel
 ```
 
 **[`^        back to top        ^`](#)**
