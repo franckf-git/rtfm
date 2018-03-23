@@ -76,6 +76,7 @@ Manual pages for GNU/linux and others tips.
 - [Abstract Fonts](http://www.abstractfonts.com/)
 - [Chmod](https://chmodcommand.com/)
 - [Crontab](http://www.crontabgenerator.com/)
+- [Crontab translator](https://crontab.guru/)
 - [Bash Prompt](http://ezprompt.net/)
 - [Timestamp](http://www.timestampgenerator.com/)
 - [Python calculator](https://www.numworks.com/fr/simulateur/)
@@ -98,6 +99,7 @@ Manual pages for GNU/linux and others tips.
 - [ZeroNet](https://github.com/HelloZeroNet/ZeroNet)
 - [I2P](https://geti2p.net/fr/download)
 - [FreeNet](https://freenetproject.org/fr/pages/download.html)
+- [SearcX](https://searx.laquadrature.net/)
 
 **[`^        back to top        ^`](#)**
 
