@@ -435,6 +435,7 @@ geoiplookup IP            #sudo apt-get install geoip-bin geoip-database
 cat IP.LIST | xargs -n 1 geoiplookup { }
 curl ipinfo.io/IP
 nc URL/IP PORT                    #test connexions reseaux
+nc -zv IP PORT | PORT PORT | PORT-PORT         #test ouverture port
 
 ssh USER@IP COMMAND       #lancer une commande distante sans connexion ssh
 ssh -o "PubkeyAuthentication=no" USER@HOSTNAME              #sans clé disponible
