@@ -137,6 +137,7 @@ lscpu                       #affiche les informations du processeur
 su - sudo                   #passer en mode administrateur, super-utilisateur
 dpkg -l                     #liste des paquets installes avec version
 df -h                       #espace libre
+df -hT                      #point de montage avec filesystem
 cat /proc/version           #detail du noyau Linux utilise
 tail -f /var/log/messages   #derniers logs
 uname -r                    #version du noyau utilise
@@ -373,6 +374,7 @@ traceroute MACHINE        #fait un traceroute vers machine
 sudo nmap -sn IP          #scanner le reseau local
 nmap -sS -sU -sV IP       #scan TCP SYN + un scan UDP + logiciel et version
 nmap -sO IP               #protocoles ouverts
+nmap -sP 192.168.0.0/24   #decouvrir le reseau local
 netstat                   #affiche l usage du reseau pas les processus
 netstat -a                #netstat avec l affichage des processus serveurs
 sudo netstat -ntplou      #lister les ports ouverts sur la machine
