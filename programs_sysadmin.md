@@ -208,7 +208,7 @@ tar -xvzf apache-cassandra-3.0.15-bin.tar.gz apache-cassandra-3.0.15
 
 ```bash
 ps auwx | grep cassandra
-sudo  kill pid
+sudo kill pid
 sudo rm -rf /var/lib/cassandra/data/data/system/*
 ```
 
@@ -267,7 +267,7 @@ ALTER TABLE                -- Modifies the columns and properties of a table.
 ALTER TYPE                 -- Modify a user-defined type.
 ALTER USER                 -- Alter existing user options.
 BATCH                      -- Applies multiple data modification with atomicity.
-C ONSISTENCY [level]        -- Determines nodes must respond (QUORUM, ALL, ONE, ANY).
+CONSISTENCY [level]        -- Determines nodes must respond (QUORUM, ALL, ONE, ANY).
 CREATE AGGREGATE           -- Create user-defined aggregate.
 CREATE INDEX               -- Define a new index on a single column of a table.
 CREATE FUNCTION            -- Creates custom function that execute user provided code.
