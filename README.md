@@ -3,6 +3,17 @@
 Manual pages for GNU/linux and others tips.
 
 [TOC]
+[Index](#index)
+[Install](#install)
+[IT](#it)
+[Testing](#testing)
+[Generator](#generator)
+[Anonymous](#anonymous)
+[Security](#security)
+[Raspberry Pi](#raspberry-pi)
+[Santé](#sante)
+[Sources](#sources)
+[License](#license)
 
 ## Index
 
