@@ -495,6 +495,12 @@ Public DNS Servers
 #puntCAT
 109.69.8.51
 2a00:1508:0:4::9
+
+#cloudflare
+nameserver 1.0.0.1
+nameserver 1.1.1.1
+nameserver 2606:4700:4700::1111
+nameserver 2606:4700:4700::1001
 ```
 
 **[`^        back to top        ^`](#)**
