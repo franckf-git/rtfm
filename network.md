@@ -3,6 +3,7 @@
 [TOC]
 
 - [changer serveur DNS en CLI](#changer-serveur-dns-en-cli)
+- [DNScrypt](#dnscrypt)
 - [transformer une machine en routeur](#transformer-une-machine-en-routeur)
 - [monter un partage samba au demarrage](#monter-un-partage-samba-au-demarrage)
 - [changement adresse mac](#changement-adresse-mac)
@@ -24,6 +25,21 @@ supersede domain-name-servers 80.67.169.12;
 
 sudo nano /etc/network/interfaces
 dns-nameservers 80.67.169.12
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+DNScrypt
+-------------------------------------------------------------------------------------
+```bash
+install dnscrypt-proxy
+dig SITE.TEST | grep server
+#mettre 127.0.0.1 en dns dans network connections
+/usr/share/dnscrypt-proxy/dnscrypt-resolvers.csv
+#choix selon pays, DNSsec et log
+dnscrypt-proxy -R CHOIXDNS
+dig SITE.TEST | grep server
 ```
 
 **[`^        back to top        ^`](#)**
