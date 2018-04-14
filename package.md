@@ -174,6 +174,9 @@ dnf repoclosure                            #Affiche liste de dépendances non r�
 dnf repograph                              #Sortie d un graphe de dépendance
 dnf repomanage                             #Gère un dossier de paquets rpm
 dnf reposync                               #télécharge tous les paquets depuis distant
+dnf info-security                          #affiche le détails des modifications
+dnf check-update --security                #affiche les paquets vitaux
+dnf check-update --sec-severity {Critical,Important,Moderate,Low,None}
 
 ###>>>Limiter la bande passante de dnf
 sudo nano /etc/dnf/dnf.conf
