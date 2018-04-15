@@ -19,6 +19,7 @@
 - [screensaver CLI](#screensaver-cli)
 - [bloquer wifi et bluetooth](#bloquer-wifi-et-bluetooth)
 - [jumellage bluetooth](#jumellage-bluetooth)
+- [activation des licences mpeg 2 (domaine public)](#activation-des-licences-mpeg-2-domaine-public)
 - [picamera](#picamera)
 - [nouvel utilisateur](#nouvel-utilisateur)
 - [capture video pour 30 min (-t 0 pour infini)](#capture-video-pour-30-min--t-0-pour-infini)
@@ -309,6 +310,18 @@ AutoEnable=true
 ###>>>GUI
 sudo apt-get install bluetooth bluez blueman
 ###>>>Bluetooth Manager
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+activation des licences mpeg 2 (domaine public)
+-------------------------------------------------------------------------------------
+```bash
+cd /boot
+sudo perl -i.bak -pe 's/\x47\xE9362H\x3C\x18/\x47\xE9362H\x3C\x1F/g' start.elf
+vcgencmd codec_enabled MPG2/WVC1
+#doit afficher enabled
 ```
 
 **[`^        back to top        ^`](#)**
