@@ -40,11 +40,13 @@ dirs -v             #affiche la liste des dossiers enregistrés
 pushd FOLDER        #sauvegarde le dossier
 popd                #reinitialise les dossiers enregistrés
 COMMAND ~N          #utilise le dossier N enregistré
+ln -s basic.file softlink.file    #lien vers le fichier basic (on peut changer les permissions)
+ln basic.file hardlink.file       #lien vers les données du fichier basic (inode identique)
 ###>>>système de fichiers virtuel
 .local/share/gvfs-metadata/home
 gio info FILEFOLDER | grep metadata
 gio set FILEFOLDER 'metadata::comment' 'COMMENT'
-gio set FILEFOLDER -t stringv metadata::emblems emblem-default 
+gio set FILEFOLDER -t stringv metadata::emblems emblem-default
 ```
 
 **[`^        back to top        ^`](#)**
@@ -273,6 +275,7 @@ cat /sys/block/sda/queue/rotational     #le disque est un ssd ? oui si 0
 inxi -F                                 #liste materiel
 inxi -Frmxx﻿
 sensors                                 #afficher les informations senseurs
+xev -event keyboard                     #affiche les action du clavier (keysym)
 udevadm monitor --udev                  #observation evenements peripheriques
 procinfo                                #informations systemes /proc
 lshw -html > FILE.html                  #obtenir le détail dans un fichier html
@@ -672,6 +675,11 @@ mc                                               #explorateur de fichier
 mc -e ou mcedit FICHIER                          #editeur de fichier
 mc -v ou mcview FICHIER                          #visualisateur
 links2                                           #navigateur web
+links2 -g                                        #en mode graphique
+w3m-img                                          #navigateur web avec images
+w3mimg () {
+        w3m -o imgdisplay=/usr/lib/w3m/w3mimgdisplay $1
+}
 googler                                          #recheche google (--news)
 ddgr                                             #recheche duckduck (avec bang)
 column -s';' -t FILE.csv                         #tableur
