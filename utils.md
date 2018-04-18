@@ -674,6 +674,9 @@ script                                           #enregistreur terminal
 mc                                               #explorateur de fichier
 mc -e ou mcedit FICHIER                          #editeur de fichier
 mc -v ou mcview FICHIER                          #visualisateur
+ranger                                           #explorateur de fichier avec visualisation
+sudo apt-get install ranger caca-utils highlight atool w3m-img poppler-utils mediainfo
+ranger --copy-config=all
 links2                                           #navigateur web
 links2 -g                                        #en mode graphique
 w3m-img                                          #navigateur web avec images
