@@ -302,6 +302,7 @@ xz -z REP                           unxz
 bzcat                               #cat pour fichier .bz2
 zcat                                #cat pour fichier .gz
 tar -tvjf DOSSIER/ELEMENT .         #lecture tar.bz2
+tar -c --listed-incremental=data.snar    #tar incremental (-g)
 ```
 
 **[`^        back to top        ^`](#)**
