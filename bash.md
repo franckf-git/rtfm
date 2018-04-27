@@ -479,6 +479,54 @@ export PS1="\\[\e[1;31m\]\$\[\e[1;31m\]>\[\e[m\]\A\[\e[34m\][\[\e[m\]\u\[\e[34m\
 \v : version de bash
 \n : nouvelle ligne
 
+# Formatting
+Bold='\e[1m'
+Dim='\e[2m'
+Underlined='\e[4m'
+Blink='\e[5m'
+Reverse='\e[7m'
+Hidden='\e[8m'
+Reset='\e[0m'
+Combined='\e[1;4;34m'
+
+# Foreground text
+Default='\e[39m'
+Black='\e[30m'
+Red='\e[31m'
+Green='\e[32m'
+Yellow='\e[33m'
+Blue='\e[34m'
+Magenta='\e[35m'
+Cyan='\e[36m'
+Light_gray='\e[37m'
+Dark_gray='\e[90m'
+Light_red='\e[91m'
+Light_green='\e[92m'
+Light_yellow='\e[93m'
+Light_blue='\e[94m'
+Light_magenta='\e[95m'
+Light_cyan='\e[96m'
+White='\e[97m'
+
+# Background
+B_Default='\e[49m'
+B_Black='\e[40m'
+B_Red='\e[41m'
+B_Green='\e[42m'
+B_Yellow='\e[43m'
+B_Blue='\e[44m'
+B_Magenta='\e[45m'
+B_Cyan='\e[46m'
+B_Light_gray='\e[47m'
+B_Dark_gray='\e[100m'
+B_Light_red='\e[101m'
+B_Light_green='\e[102m'
+B_Light_yellow='\e[103m'
+B_Light_blue='\e[104m'
+B_Light_magenta='\e[105m'
+B_Light_cyan='\e[106m'
+B_White='\e[107m'
+
 # Reset
 Color_Off='\033[0m'       # Text Reset
 
