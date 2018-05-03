@@ -288,6 +288,10 @@ ________________________________________________________________________________
 archivage
 -------------------------------------------------------------------------------------
 ```bash
+#.tar.gz   temps de compression rapide      taux de compression faible
+#.tar.bz2  temps de compression moyen       taux de compression moyen
+#.tar.xz   temps de compression lent        taux de compression fort
+
 #creation archive                   #desarchivage
 tar -cvjf ARCHIVE.tar.bz2 REP       tar -xvjf ARCHIVE.tar.bz2 REP
 tar -cvzf ARCHIVE.tar.gz REP        tar -xvzf ARCHIVE.tar.gz REP
