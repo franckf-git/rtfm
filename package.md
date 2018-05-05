@@ -11,6 +11,8 @@
 - [MAJ debian](#maj-debian)
 - [MAJ fedora](#maj-fedora)
 - [fedora RPM fusion](#fedora-rpm-fusion)
+- [Dépots supplémentaires fedora](#dépots-supplémentaires-fedora)
+- [fedora mise à niveau](#fedora-mise-à-niveau)
 - [centos ajout de depots](#centos-ajout-de-depots)
 - [debian depots](#debian-depots)
 - [debian mise à niveau](#debian-mise-à-niveau)
@@ -290,6 +292,31 @@ fedora RPM fusion
 ﻿sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo rpm --import "http://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-25"
 sudo rpm --import "http://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-nonfree-fedora-25"
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+Dépots supplémentaires fedora
+-------------------------------------------------------------------------------------
+```bash
+#Google Chrome
+#PyCharm
+#NVIDIA graphics drivers
+#Steam client
+sudo dnf install fedora-workstation-repositories
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+fedora mise à niveau
+-------------------------------------------------------------------------------------
+```bash
+sudo dnf upgrade --refresh
+sudo dnf install dnf-plugin-system-upgrade
+sudo dnf system-upgrade download --releasever=28
+sudo dnf system-upgrade reboot
 ```
 
 **[`^        back to top        ^`](#)**
