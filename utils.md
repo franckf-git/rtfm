@@ -748,7 +748,7 @@ commandes futiles
 sudo visudo
 Defaults insults
 
-###>>>noms wifi : loading, searching
+###>>>noms wifi : loading, searching, NullPointerException
 cmatrix
 oneko
 ninvanders
