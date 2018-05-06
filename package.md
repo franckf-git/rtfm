@@ -339,6 +339,24 @@ yum -y update
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
+proxmox depot communautaire
+-------------------------------------------------------------------------------------
+```bash
+nano /etc/apt/sources.list
+deb http://ftp.debian.org/debian stretch main contrib
+# security updates
+deb http://security.debian.org stretch/updates main contrib
+# PVE pve-no-subscription repository provided by proxmox.com,
+# NOT recommended for production use
+deb http://download.proxmox.com/debian/pve stretch pve-no-subscription
+
+apt-get update
+apt-get upgrade
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
 debian depots
 -------------------------------------------------------------------------------------
 ```bash
@@ -380,6 +398,7 @@ deb http://ftp.fr.debian.org/debian/ testing-updates main contrib non-free
 sudo apt-get update
 sudo apt-get dist-upgrade
 ```
+
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
