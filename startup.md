@@ -12,6 +12,7 @@
 - [fenetre de connexion lightdm login deroulant](#fenetre-de-connexion-lightdm-login-deroulant)
 - [lightdm personnalisation](#lightdm-personnalisation)
 - [grub](#grub)
+- [changer l ordre de démarrage du grub](#changer-l-ordre-de-démarrage-du-grub)
 - [ecran de chargement fedora](#ecran-de-chargement-fedora)
 - [lancer un script au branchement d une cle USB](#lancer-un-script-au-branchement-d-une-cle-usb)
 - [LVM](#lvm)
@@ -165,6 +166,28 @@ sudo update-grub
 grub2-mkconfig -o /boot/grub2/grub.cfg
 ###>>>UEFI
 grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+changer l ordre de démarrage du grub
+-------------------------------------------------------------------------------------
+```bash
+sudo mv /etc/grub.d/30_os-prober_proxy /etc/grub.d/09_os-prober_proxy
+sudo update-grub
+#ou
+sudo nano /etc/default/grub
+GRUB_DEFAULT=0-TO-5
+
+sudo update-grub
+
+#ou
+sudo nano /etc/default/grub
+GRUB_DEFAULT=saved
+
+sudo update-grub
+sudo grub-set-default 0-TO-5
 ```
 
 **[`^        back to top        ^`](#)**
