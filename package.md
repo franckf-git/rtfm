@@ -117,6 +117,16 @@ yum clean headers             apt-file purge                                    
 ###>>>--------------------------------------General Packaging System Information
 *.rpm                         *.deb                                             #Package file extension
 /etc/yum.conf                 /etc/apt/sources.list                             #Repository location configuration
+
+#in bashrc
+case $(lsb_release -i | awk '{ print $3 }') in
+Ubuntu|Debian)
+alias upgrade='sudo apt update && sudo apt -V upgrade && sudo apt-get autoremove -y && sudo apt-get clean'
+;;
+CentOS|Fedora)
+alias upgrade='sudo dnf check-update ; sudo dnf upgrade ; sudo dnf clean packages -y'
+;;
+esac
 ```
 
 **[`^        back to top        ^`](#)**
