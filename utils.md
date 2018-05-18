@@ -114,6 +114,7 @@ expand                #transforme les tabulations en espaces
 unexpand              #transforme les espaces en tabulations
 fold -w N             #retour à la ligne après N caractères
 fmt                   #formatage paragraphe
+jq                    #gestion de json
 column -s C -t FIC    #affichage en colonnes selon le caractère C
 apropos TERMES        #recherche dans toutes les man pages
 clip < FILE           #copier dans le presse-passier
@@ -253,6 +254,9 @@ jobs                         #liste les arrières plans &
 fg %N                        #recupére le jobs N
 bg %N                        #execute en arrière plan
 [CRTL+Z]                     #stop en arrière plan
+sudo pmap -x PID             #liste les processus dependants
+cat /proc/PID/smaps
+cat /proc/PID/status         #status d un processus
 ```
 
 **[`^        back to top        ^`](#)**
@@ -276,6 +280,7 @@ inxi -F                                 #liste materiel
 inxi -Frmxx﻿
 sensors                                 #afficher les informations senseurs
 xev -event keyboard                     #affiche les action du clavier (keysym)
+xmodmap -pke                            #liste des touches claviers
 udevadm monitor --udev                  #observation evenements peripheriques
 procinfo                                #informations systemes /proc
 lshw -html > FILE.html                  #obtenir le détail dans un fichier html
