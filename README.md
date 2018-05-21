@@ -11,6 +11,7 @@ Manual pages for GNU/linux and others tips.
 [Generator](#generator)
 [Anonymous](#anonymous)
 [Security](#security)
+[RGPD](#rgpd)
 [Raspberry Pi](#raspberry-pi)
 [Santé](#sante)
 [Sources](#sources)
@@ -89,6 +90,7 @@ to .bashrc
 - [HTML5 Editor](https://liveweave.com/)
 - [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)
 - [Multi-Password tests](https://madiba.encs.concordia.ca/software/passwordchecker/)
+- [Test debit and latency](#https://testdebit.info/)
 
 **[`^        back to top        ^`](#)**
 
@@ -145,6 +147,19 @@ to .bashrc
 - [Virus Total](https://www.virustotal.com/#/home/url)
 - [Private Message](https://privnote.com/#)
 - [Private Message2](http://www.destructingmessage.com/)
+
+**[`^        back to top        ^`](#)**
+
+### RGPD
+
+- [RoadMap](https://www.cnil.fr/fr/principes-cles/rgpd-se-preparer-en-6-etapes)
+- [Simplify](https://www.kanjian.fr/7-points-declaircissement-sur-le-rgpd-applique-aux-sites-internet.html)
+- [Reality](https://open-freax.fr/rgpd-12-mots-cles/)
+- [Checklist](https://gdprchecklist.io/)
+- [What to do for DevOps](https://bohzo.developpez.com/rgpd-guide-pratique-developpeurs/)
+- [Incident](https://www.kanjian.fr/wp-content/uploads/2017/09/DFqrUm8WAAEZ8ll.jpg)
+- [Tool CNIL PIA](https://www.cnil.fr/fr/outil-pia-telechargez-et-installez-le-logiciel-de-la-cnil)
+- [Videos](https://www.youtube.com/playlist?list=PLuQRA2ya9-BluC6w8rsf_d_2U9ykxixwp)
 
 **[`^        back to top        ^`](#)**
 
