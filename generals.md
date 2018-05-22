@@ -508,7 +508,7 @@ nameserver 2606:4700:4700::1001
 _____________________________________________________________________________________
 date
 -------------------------------------------------------------------------------------
-```
+```bash
 %H     heure (00..23)
 %I     heure (01..12)
 %k     heure ( 0..23)
@@ -535,6 +535,10 @@ date
 %x     representation locale de la date (mm/jj/aa)
 %y     deux derniers chiffres de l annee (00..99)
 %Y     annee (1970...)
+
+date -d last-saturday #retrouver le samedi précédent
+date -d "AAAA-MM-JJ -$(date -d AAAA-MM-JJ +%w) days + $(date -d 'saturday' +%u) day - 1 week" #retrouver le samedi précédent à partir d une date
+if [ $(date +%w) = 6 ]; then #si on est samedi
 ```
 
 **[`^        back to top        ^`](#)**
