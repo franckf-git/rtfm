@@ -59,6 +59,26 @@ usleep          #sleep en micro-secondes
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
+completions personnelles
+-------------------------------------------------------------------------------------
+```bash
+#lister les completions dans une fonctions
+nano .bashrc
+function _LISTCOMPLETION {
+   COMPREPLY=( "ELEMENT1" "ELEMENT2" )
+   return 0
+}
+#affecter la completion
+complete -F _LISTCOMPLETION COMMAND
+#en faisant COMMAND<SPACE><TAB> la completion apparait
+
+#selectionner certains extensions pour un commande
+complete -f -X '!*.@(EXT1|EXT2)' COMMAND
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
 shell
 -------------------------------------------------------------------------------------
 ```bash
