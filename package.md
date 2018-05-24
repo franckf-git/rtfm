@@ -138,6 +138,7 @@ Gestion des paquets fedora
 dnf repolist all                           #Lister les dépots disponibles
 dnf install PACKAGE                        #Installer un paquet
 dnf remove PACKAGE                         #Supprimer un paquet
+dnf autoremove PACKAGE                     #Supprimer un paquet proprement
 dnf erase PACKAGE                          #Supprimer les fichiers de configuration
 dnf update PACKAGE                         #Mettre à jour un paquet
 dnf check-update                           #Verifier les mises à jour disponibles
