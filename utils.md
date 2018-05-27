@@ -383,6 +383,11 @@ infos reseau
 -------------------------------------------------------------------------------------
 ```bash
 hostname                  #affiche le nom d hote de la machine
+/etc/hosts                #liste des résolutions IP
+hostname -I               #Display all the ip address
+hostname -d               #Display the domain name
+hostname -s               #Display the short name
+hostname -f               #Display with FQDN format
 ping MACHINE              #envoie un ping a une machine
 traceroute MACHINE        #fait un traceroute vers machine
 sudo nmap -sn IP          #scanner le reseau local
