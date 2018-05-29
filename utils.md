@@ -217,7 +217,7 @@ top                          #afficher un tableau de bord des processus
 tload                        #charge cpu graphique
 lsof +L1                     #processus utilisant des fichiers
 lsof -n | grep deleted       #fichier supprimé mais en cours d écriture
-systemd-analyse blame        #services demarres pardefaut selon leur temps de lancement
+systemd-analyze blame        #services demarres pardefaut selon leur temps de lancement
 
 service NOMDUSERVICE start/stop/restart/reload   #gestion service init.d
 systemctl start/stop/restart/reload/enable/disable NOMDUSERVICE   #systemd
@@ -271,7 +271,7 @@ lspci                       #avec details des pilotes
 lspci | egrep 3D|Display|VGA            #afficher le modele de sa carte graphique
 lspci | grep -i net | cut -d: -f3       #afficher le modele de sa carte Wi-Fi
 lspci | grep -i audio | cut -d: -f3     #afficher le modele de sa carte son
-cat /proc/cpuinfo                       #affiche les informations processeur
+cat /proc/cpuinfo                       #affiche les informations processeur (dont microcode|firmware)
 lsblk                                   #liste tous les peripheriques de stockage
 lsblk -f                                #info partition (+fdisk)
 lsXXX                                   #listes des infos
@@ -281,6 +281,9 @@ inxi -Frmxx﻿
 sensors                                 #afficher les informations senseurs
 xev -event keyboard                     #affiche les action du clavier (keysym)
 xmodmap -pke                            #liste des touches claviers
+xrandr                                  #liste les moniteurs
+xrandr --output eDP-1 --rotate normal   #orientation écran principal
+arandr                                  #gui
 udevadm monitor --udev                  #observation evenements peripheriques
 procinfo                                #informations systemes /proc
 lshw -html > FILE.html                  #obtenir le détail dans un fichier html
