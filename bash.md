@@ -125,6 +125,8 @@ test CHAINE1-NB1 OPTION CHAINE2-NB2   #comparaison
 
 TMOUT=SEC             #en début de script arret dans SEC secondes
 read VARIABLE         #entree de données
+read -p "Press enter to continue"               #pause
+read -n 1 -s -r -p "Press any key to continue"
 let "VARIABLE++"      #opérations arithmétiques
 $(COMMANDE)           #variable venant d une commande
 $VARIABLE             #reformatage la variable
