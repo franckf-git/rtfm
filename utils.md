@@ -372,7 +372,10 @@ sed -i 's/$/<br>/' FICHIER                    #rajouter en fin de ligne
 sed 'y/aâeèêëîïôöùûü/aaeeeeiioouuu/ y/aÂeÈÊËÎÏÔÖÙÛÜ/AAEEEEIIOOUUU/' FICHIER.txt        #translitteration
 sed -i -e 's/^#\(.*\)/\\033[0;35m#\1 \\033[0m/g' FILE     #rajout de couleur sur les commentaires
 sed -i "s/$var/r_str/g" FILE_name             #une variable de boucle
-sed -nE 's/.*(REGEX).*/\1/p                   #ne retourne que les correspondances
+sed -nE 's/.*(REGEX).*/\1/p'                  #ne retourne que les correspondances
+sed -e 's/ONE/TWO/; s/BIS/TER/'               #using multiple sed
+sed -n 'START/,/END/p' file                   #afficher un schema
+sed 's/MOTIF/SUBST/w OUTPUT' FILE             #remplacement dans un autre fichier
 ###>>>alternatives
 tr '[a-z]' [A-Z] <FICHIER                                       #remplacement casse
 iconv -f utf8 -t ascii//TRANSLIT < FICHIER.txt > NOACCENTS.txt  #translitteration
