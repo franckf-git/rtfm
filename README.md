@@ -108,6 +108,7 @@ to .bashrc
 - [Bash Prompt](http://ezprompt.net/)
 - [Timestamp](http://www.timestampgenerator.com/)
 - [Python calculator](https://www.numworks.com/fr/simulateur/)
+- [OpenData](https://www.data.gouv.fr/fr/datasets/)
 
 **[`^        back to top        ^`](#)**
 
@@ -128,6 +129,7 @@ to .bashrc
 - [I2P](https://geti2p.net/fr/download)
 - [FreeNet](https://freenetproject.org/fr/pages/download.html)
 - [SearcX](https://searx.laquadrature.net/)
+- [Qwant](https://lite.qwant.com/)
 
 **[`^        back to top        ^`](#)**
 
@@ -160,6 +162,7 @@ to .bashrc
 - [Incident](https://www.kanjian.fr/wp-content/uploads/2017/09/DFqrUm8WAAEZ8ll.jpg)
 - [Tool CNIL PIA](https://www.cnil.fr/fr/outil-pia-telechargez-et-installez-le-logiciel-de-la-cnil)
 - [Videos](https://www.youtube.com/playlist?list=PLuQRA2ya9-BluC6w8rsf_d_2U9ykxixwp)
+- [Day 1, reality](http://www.zdnet.fr/blogs/green-si/rgpd-le-jour-d-apres-39868698.htm)
 
 **[`^        back to top        ^`](#)**
 
@@ -178,6 +181,7 @@ to .bashrc
 - [Pirate Box](https://piratebox.cc/raspberry_pi:diy)
 - [Jasper](https://jasperproject.github.io/documentation/installation/)
 - [Alexa](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
+- [Simulate circuit](http://qucs.sourceforge.net/)
 
 **[`^        back to top        ^`](#)**
 
