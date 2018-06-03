@@ -665,6 +665,7 @@ aplay STEREO.wav                                 #lire audio
 ffmpeg -f video4linux2 -s 320x240 -i /dev/video0 VIDEO.mpg             #capture webcam
 mpv /dev/video0                                  #voir webcam
 HandBrakeCLI -i /media/DVD -t 3 -s 6 --subtitle-burned -o TEST.m4v     #handbrake
+HandBrakeCLI -i /dev/sr0 -Z "Fast 576p25" -t 23 -s 5 --subtitle-burned -o TITLE.m4v #avec preset
 youtube-dl -o "%(title)s.%(ext)s" -x --audio-format mp3 --audio-quality 0  URL         #extraire en MP3 d une video externe
 mpv --vid=no https://www.youtube.com/URL         #music youtube terminal
 convert -density 600 *.pdf *.jpg                 #Convertir des fichiers pdf en jpg
