@@ -191,8 +191,7 @@ sudo apt install selinux-basics selinux-policy-default
 sudo apt install setools setools-gui selinux-policy-devel setools-devel
 selinux-activate 
 check-selinux-installation
-touch /.autorelabel
-systemctl reboot
+touch /.autorelabel && systemctl reboot #réétiquetage du système de fichiers
 
 ###>>>Enforcing
 sudo sed -i 's/SELINUX=.*/SELINUX=enforcing/' /etc/selinux/config
