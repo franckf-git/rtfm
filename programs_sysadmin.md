@@ -203,6 +203,28 @@ DELETE FROM table WHERE colonne2 = 'valeur2';                         --supp lig
 UPDATE table SET colonne8='commentaires';
 ```
 
+reparation de bases SQL
+
+```sql
+ANALYZE TABLE myTable;
+CHECK TABLE myTable;
+SHOW PROCESSLIST;
+KILL <id>;
+REPAIR TABLE myTable;
+OPTIMIZE TABLE myTable:
+
+SHOW CREATE TABLE myTable;
+ALTER TABLE myTable ENGINE = InnoDB;
+```
+```bash
+mysqlcheck --repair --databases db_name ...
+mysqlcheck --repair --all-databases
+/usr/bin/mariadbcheck  -h localhost -u root -prdserdse --repair --all-databases
+
+mysqldump --all-databases > dump.sql
+mysql < dump.sql
+```
+
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
