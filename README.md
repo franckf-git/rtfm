@@ -90,7 +90,7 @@ to .bashrc
 - [HTML5 Editor](https://liveweave.com/)
 - [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)
 - [Multi-Password tests](https://madiba.encs.concordia.ca/software/passwordchecker/)
-- [Test debit and latency](#https://testdebit.info/)
+- [Test debit and latency](https://testdebit.info/)
 
 **[`^        back to top        ^`](#)**
 
