@@ -204,6 +204,10 @@ deltarpm=0
 sudo nano /etc/dnf/dnf.conf
 fastestmirror=true
 
+###>>>Nombre de kernel disponibles au démarrage
+sudo nano /etc/dnf/dnf.conf
+installonly_limit=2
+
 ###>>>Changement de version
 sudo dnf upgrade --refresh
 sudo dnf install dnf-plugin-system-upgrade
