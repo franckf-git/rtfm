@@ -602,6 +602,7 @@ git bisect                                  #mode debug pour traquer un mauvais 
 git push ALIAS BRANCHE                      #Envoie tous les commits vers GitHub
 git pull                                    #Récupère tout l historique du dépôt
 git repack -a -d; git prune                 #Réempaqueter le dépôt local en un seul
+git remote set-url origin git@GITSERVER:USER/REPO.git #remplacer le depot
 
 ###>>>installation
 sudo apt-get install git
