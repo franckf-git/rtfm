@@ -137,6 +137,11 @@ Host NOM_CONNEXION
 ssh NOM_CONNEXION
 ###>>>ou
 ssh USER@IP_DISTANTE -p NUMERO_PORT -i /CHEMIN/CLE_PRIVEE
+###>>>ou
+ssh-add /CHEMIN/CLE_PRIVEE
+echo "IdentityFile /CHEMIN/CLE_PRIVEE" > ~/.ssh/config
+chmod 600 ~/.ssh/config
+ssh USER@IP_DISTANTE -p NUMERO_PORT
 
 ###>>>supprimer les clés
 ssh-add -d ~/.ssh/id_rsa
