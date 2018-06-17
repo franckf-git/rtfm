@@ -185,6 +185,8 @@ to .bashrc
 
 **[`^        back to top        ^`](#)**
 
+![rtfm, for real.](https://imgs.xkcd.com/comics/rtfm.png)
+
 ## Santé
 
 * Faire une pause de 5 min toutes les heures et bouger pendant les pauses
