@@ -188,6 +188,7 @@ chrome://system/
 chrome://conflicts/
 chrome://flash/
 chrome://components/
+chrome://sandbox/
 ```
 
 ##### sites visités
