@@ -72,11 +72,14 @@ chromium --incognito
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
-install de chrome
+install de chrome et iridium (chrome sans google)
 -------------------------------------------------------------------------------------
 ```bash
 apt-get install gconf-service libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libappindicator1 libcurl3
 dpkg -i google-chrome-stable_current_amd64.deb
+
+dnf config-manager --add-repo https://dl.iridiumbrowser.de/fedora_28/iridium-browser.repo
+dnf install iridium-browser
 ```
 
 **[`^        back to top        ^`](#)**
