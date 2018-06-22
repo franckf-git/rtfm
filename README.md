@@ -91,6 +91,7 @@ to .bashrc
 - [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)
 - [Multi-Password tests](https://madiba.encs.concordia.ca/software/passwordchecker/)
 - [Test debit and latency](https://testdebit.info/)
+- [Test SMTP Server](https://mxtoolbox.com/diagnostic.aspx)
 
 **[`^        back to top        ^`](#)**
 
