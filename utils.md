@@ -717,6 +717,8 @@ wget wttr.in -O - -o /dev/null                   #meteo
 sudo iwconfig wlan0 essid MONSSID                #wifi
 iw                                               #gestionnaire reseau
 wicd-curses
+nmcli device wifi list
+nmcli device wifi connect SSID password PASSWORD
 ncdu                                             #taille des dossiers > df -h
 espeak -v fr+f1 "MESSAGE"                        #synthetiseur vocal
 espeak -f PLAINTEXTFILE.txt                      #lecture d un fichier
