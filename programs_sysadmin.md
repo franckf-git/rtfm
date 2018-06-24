@@ -187,6 +187,8 @@ SELECT * FROM table ORDER BY id LIMIT 6 OFFSET 0;
 SELECT * FROM table WHERE colonne1 LIKE '%val%';           -- insensible à la casse
 SELECT * FROM table WHERE colonne1 LIKE BINARY '%val%';    -- sensible à la casse
 SELECT * FROM table WHERE colonne1 IN ('valeur', 'valeur', 'valeur', 'valeur', 'valeur', 'valeur', 'valeur');    --IN equivaut a une suite de OR
+-- comparaison de tables
+SELECT * FROM TABLEA WHERE CHAMPA NOT IN( SELECT CHAMPB FROM TABLEB);
 ```
 
 ```bash
