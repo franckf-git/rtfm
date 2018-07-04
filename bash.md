@@ -74,6 +74,10 @@ complete -F _LISTCOMPLETION COMMAND
 
 #selectionner certains extensions pour un commande
 complete -f -X '!*.@(EXT1|EXT2)' COMMAND
+
+###>>> ou plus simple
+FONCTION { }
+complete -W "ARG1 ARG2 ARG3" FONCTION
 ```
 
 **[`^        back to top        ^`](#)**
