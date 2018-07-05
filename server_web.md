@@ -48,6 +48,8 @@ ________________________________________________________________________________
 bloquer l indexation web
 -------------------------------------------------------------------------------------
 ```bash
+<?php header("Location: https://URLREDIRECT"); exit; ?> #redirection php
+
 nano /var/local/www/robots.txt
 User-agent: *
 Disallow: /
@@ -68,6 +70,9 @@ html minimal
     </head>
 
     <body>
+    <script>
+        alert('runs');
+    </script>
     <!-- Ceci est un commentaire -->
     <video width="400" height="222" controls="controls"><source src="1917.webm" type="video/webm" />Ici alternative a la vidéo</video>
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - 4.0 International</a>.
