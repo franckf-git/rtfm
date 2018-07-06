@@ -125,6 +125,7 @@ GRANT ALL PRIVILEGES ON basededonnee * TO 'USER'@'localhost' IDENTIFIED BY 'MOTD
 ```
 ```bash
 mysql -h localhost -u USER -pMOTDEPASS --default-character-set=utf8
+mysql -A -hIP -uUSER -p BASE -e "SHOW TABLES LIKE 'TABLE%';"
 ```
 ```sql
 SELECT 'value';
@@ -193,6 +194,7 @@ SELECT * FROM TABLEA WHERE CHAMPA NOT IN( SELECT CHAMPB FROM TABLEB);
 
 ```bash
 mysqldump -u USER -p --opt NOM_DE_LA_BASE > SAUVEGARDE.sql
+mysqldump -hIP -uUSER -p BASE TABLE1 T2 T3 > DUMP.sql
 mysql NOM_BASE < CHEMIN/FICHIER_DE_SAUVEGARDE.sql
 ```
 ```sql
