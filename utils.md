@@ -370,7 +370,7 @@ sed '10s/MOTIF/SUBSTITUT/g'                   #remplacement à la ligne 10
 sed '/^$/d'                                   #eliminer les lignes vides
 sed -i "s/<font color=\"#[0-9A-Za-z]{6}\">//g" FICHIER   #remplacement d une expression
 sed -i 's/$/<br>/' FICHIER                    #rajouter en fin de ligne
-sed 'y/aâeèêëîïôöùûü/aaeeeeiioouuu/ y/aÂeÈÊËÎÏÔÖÙÛÜ/AAEEEEIIOOUUU/' FICHIER.txt        #translitteration
+sed 'y/aâàéeèêëîïôöùûü/aaaeeeeeiioouuu/ y/aÂeÈÊËÎÏÔÖÙÛÜ/AAEEEEIIOOUUU/' FICHIER.txt        #translitteration
 sed -i -e 's/^#\(.*\)/\\033[0;35m#\1 \\033[0m/g' FILE     #rajout de couleur sur les commentaires
 sed -i "s/$var/r_str/g" FILE_name             #une variable de boucle
 sed -nE 's/.*(REGEX).*/\1/p'                  #ne retourne que les correspondances
