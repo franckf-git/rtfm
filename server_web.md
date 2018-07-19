@@ -3,6 +3,7 @@
 [TOC]
 
 - [Serveur Web Apache](#serveur-web-apache)
+- [simple serveur web](#simple-serveur-web)
 - [serveur Web](#serveur-web)
 - [bloquer l indexation web](#bloquer-l-indexation-web)
 - [html minimal](#html-minimal)
@@ -19,6 +20,16 @@ Serveur Web Apache
 sudo aptitude install apache2
 sudo chown -R www-data:pi /var/www/html/
 sudo chmod -R 770 /var/www/html/
+ab #outil utile pour une vérification rapide des performances. Pour des tests de charge plus complexes, essayez siege
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+simple serveur web
+-------------------------------------------------------------------------------------
+```bash
+python -m SimpleHTTPServer 7777
 ```
 
 **[`^        back to top        ^`](#)**
