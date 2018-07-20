@@ -119,6 +119,7 @@ column -s C -t FIC    #affichage en colonnes selon le caractère C
 apropos TERMES        #recherche dans toutes les man pages
 clip < FILE           #copier dans le presse-passier
 echo 'MESSAGE' | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' #rot13
+stat -c '%A %a %n'    #FICHIER permissions d un fichier en octal
 ```
 
 **[`^        back to top        ^`](#)**
@@ -215,6 +216,7 @@ whereis NOMDUPROGRAMME       #dossier programme
 pstree                       #afficher les processus dans une arborescence
 top                          #afficher un tableau de bord des processus
 tload                        #charge cpu graphique
+dstat                        #rapide aperçu de ce qui se passe dans le système
 lsof +L1                     #processus utilisant des fichiers
 lsof -n | grep deleted       #fichier supprimé mais en cours d écriture
 systemd-analyze blame        #services demarres pardefaut selon leur temps de lancement
