@@ -73,6 +73,10 @@ stat                     #details sur un fichier ou dossier
 file FILE1 FILE2         #affiche le type de fichier
 mkdir FOLDER ; cd $_     #creer et entrer dans un dossier
 echo "!!" > SCRIPT.sh    #creer un script de la derniere commande
+<(COMMAND)               #traiter la sortie de la commande comme un fichier (ex. diff)
+mv FILE.{EXT1,EXT2} DIR  #déplace les deux fichiers avec une ext différente
+cp FILE{,.bak}           #copie de sauvegarde
+mkdir -p FOLD-{a,b,c}/SUBFOLD-{1,2,3}    #aborescence de répertoire avec toutes les combinaisons
 ```
 
 **[`^        back to top        ^`](#)**
