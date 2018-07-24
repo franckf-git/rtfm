@@ -124,6 +124,7 @@ SET NAMES 'utf8';
 GRANT ALL PRIVILEGES ON basededonnee * TO 'USER'@'localhost' IDENTIFIED BY 'MOTDEPASS';
 ```
 ```bash
+ls /var/lib/mysql/DATABASE #dossier de la base
 mysql -h localhost -u USER -pMOTDEPASS --default-character-set=utf8
 mysql -A -hIP -uUSER -p BASE -e "SHOW TABLES LIKE 'TABLE%';"
 ```
@@ -146,6 +147,10 @@ CREATE TABLE table (
     PRIMARY KEY (id)
 )
 ENGINE=INNODB;
+
+-- creation table avec clé étrangere
+CREATE TABLE table1 (id1, colonne1, PRIMARY KEY (id1))ENGINE=INNODB;
+CREATE TABLE table2 (id2, colonne2, id1 PRIMARY KEY (id1), INDEX (id1), FOREIGN KEY (id1) REFERENCES table1 (id1) ON UPDATE CASCADE ON DELETE CASCADE)ENGINE=INNODB;
 
 -- afficher table
 SHOW TABLES;           -- liste les tables de la base de donnees
@@ -190,6 +195,8 @@ SELECT * FROM table WHERE colonne1 LIKE BINARY '%val%';    -- sensible à la cas
 SELECT * FROM table WHERE colonne1 IN ('valeur', 'valeur', 'valeur', 'valeur', 'valeur', 'valeur', 'valeur');    --IN equivaut a une suite de OR
 -- comparaison de tables
 SELECT * FROM TABLEA WHERE CHAMPA NOT IN( SELECT CHAMPB FROM TABLEB);
+-- jointure
+SELECT t1.col1 , t2.col2 FROM table1 AS t1 JOIN table2 AS t2 on t1.COLID = t2.COLID;
 ```
 
 ```bash
