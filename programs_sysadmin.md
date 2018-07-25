@@ -5,6 +5,7 @@
 - [crontab -e](#crontab--e)
 - [cron quotidienne](#cron-quotidienne)
 - [commandes periodiques en dessous de une minute](#commandes-periodiques-en-dessous-de-une-minute)
+- [Ansible](#ansible-centos)
 - [SQL](#sql)
 - [Cassandra](#cassandra)
 - [syslog-ng](#syslog-ng)
@@ -107,6 +108,32 @@ done
 * * * * * for i in {1..60}; do COMMAND ; sleep 1; done
 
 * * * * * while true; do COMMAND & sleep 1; done
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+Ansible (centos)
+-------------------------------------------------------------------------------------
+```bash
+yum install epel-release
+yum install ansible
+yum install nano nmap
+nmap -sP 192.168.1.0/24
+nano /etc/hosts
+ssh-keygen
+cat /etc/hosts
+ssh-copy-id MACHINE4
+ssh MACHINE4
+ssh-copy-id MACHINE5
+ssh-copy-id MACHINE6
+nano /etc/ansible/hosts
+ansible -m ping all
+ansible -m yum -a 'name=* state=latest' ALLMIMES
+ansible -m yum -a 'name=epel-release state=latest' ALLMIMES
+ansible -m yum -a 'name=htop state=latest' ALLMIMES
+ansible -m yum -a 'name=nano state=latest' ALLMIMES
+ansible -m shell -a 'uname -a' MACHINE5
 ```
 
 **[`^        back to top        ^`](#)**
