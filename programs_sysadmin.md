@@ -5,7 +5,7 @@
 - [crontab -e](#crontab--e)
 - [cron quotidienne](#cron-quotidienne)
 - [commandes periodiques en dessous de une minute](#commandes-periodiques-en-dessous-de-une-minute)
-- [Ansible](#ansible-centos)
+- [Ansible](#ansible)
 - [SQL](#sql)
 - [Cassandra](#cassandra)
 - [syslog-ng](#syslog-ng)
@@ -113,14 +113,23 @@ done
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
-Ansible (centos)
+Ansible
 -------------------------------------------------------------------------------------
+
+- [Ansible Documentation](https://docs.ansible.com/ansible/latest/index.html)
+- [All modules](https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html)
+- [Best Practices Essentials](https://www.ansible.com/blog/ansible-best-practices-essentials)
+- [Best Practices](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html#best-practices)
+
 ```bash
+# Installation et configuration
 yum install epel-release
 yum install ansible
 yum install nano nmap
 nmap -sP 192.168.1.0/24
 nano /etc/hosts
+192.168.1.5 HOSTNAMEDISTANT
+
 ssh-keygen
 cat /etc/hosts
 ssh-copy-id MACHINE4
@@ -128,12 +137,53 @@ ssh MACHINE4
 ssh-copy-id MACHINE5
 ssh-copy-id MACHINE6
 nano /etc/ansible/hosts
+[GROUP]
+192.168.1.5 ansible_port=2222 ansible_user=root ansible_ssh_private_key_file=PRIVATEKEY
+#ou
+HOSTNAMEDISTANT
+
 ansible -m ping all
+
+# Instructions en CLI
 ansible -m yum -a 'name=* state=latest' ALLMIMES
 ansible -m yum -a 'name=epel-release state=latest' ALLMIMES
 ansible -m yum -a 'name=htop state=latest' ALLMIMES
 ansible -m yum -a 'name=nano state=latest' ALLMIMES
 ansible -m shell -a 'uname -a' MACHINE5
+
+# Les playbooks
+nano upgrade.yml
+---
+- hosts: ALLMIMES
+  remote_user: root
+
+  tasks:
+    - name: update
+      apt: update_cache=yes
+    - name: upgrade
+      apt: upgrade=dist
+    - name: install nano
+      apt: name=nano state=present
+    - name: install common packages for all servers
+      apt: 
+        update_cache=yes
+        state=latest
+        name={{item}}
+      with_items: 
+      - curl
+      - htop
+      - ncdu
+      - pwgen
+      - strace
+      - sudo
+      - tar
+      - unzip
+      - vim
+      - wget
+      - whois
+      - screen
+
+ansible-playbook upgrade.yml --verbose
 ```
 
 **[`^        back to top        ^`](#)**
