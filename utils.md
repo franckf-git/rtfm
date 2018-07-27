@@ -77,6 +77,9 @@ echo "!!" > SCRIPT.sh    #creer un script de la derniere commande
 mv FILE.{EXT1,EXT2} DIR  #déplace les deux fichiers avec une ext différente
 cp FILE{,.bak}           #copie de sauvegarde
 mkdir -p FOLD-{a,b,c}/SUBFOLD-{1,2,3}    #aborescence de répertoire avec toutes les combinaisons
+sudo nano /etc/sysctl.d/inotify.conf     #modifier le temps de rafraichissement des dossiers
+# Monitor directories for change
+fs.inotify.max_user_watches = 524288
 ```
 
 **[`^        back to top        ^`](#)**
