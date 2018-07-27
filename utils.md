@@ -127,6 +127,7 @@ apropos TERMES        #recherche dans toutes les man pages
 clip < FILE           #copier dans le presse-passier
 echo 'MESSAGE' | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' #rot13
 stat -c '%A %a %n'    #FICHIER permissions d un fichier en octal
+for i in *.* ; do  j=$(awk -F. '{print "PREFIX"$1"SUFIX."$2}') ; mv "$i" "$j" ; done    #renommage en lot
 ```
 
 **[`^        back to top        ^`](#)**
@@ -325,6 +326,7 @@ bzcat                               #cat pour fichier .bz2
 zcat                                #cat pour fichier .gz
 tar -tvjf DOSSIER/ELEMENT .         #lecture tar.bz2
 tar -c --listed-incremental=data.snar    #tar incremental (-g)
+tar --append -f FILE.tar /A_ARCHIVER     #rajouter des fichiers à une archive
 ```
 
 **[`^        back to top        ^`](#)**
