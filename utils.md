@@ -40,7 +40,7 @@ dirs -v             #affiche la liste des dossiers enregistrés
 pushd FOLDER        #sauvegarde le dossier
 popd                #reinitialise les dossiers enregistrés
 COMMAND ~N          #utilise le dossier N enregistré
-ln -s basic.file softlink.file    #lien vers le fichier basic (on peut changer les permissions)
+ln -s basic.file symboliclink.file    #lien vers le fichier basic (on peut changer les permissions)
 ln basic.file hardlink.file       #lien vers les données du fichier basic (inode identique)
 ###>>>système de fichiers virtuel
 .local/share/gvfs-metadata/home
@@ -806,9 +806,12 @@ pastebinit -l                                      #liste des sites d export
 pastebinit -i FICHIER -a Untitled -b http://pastebin.com
 history -d 000                                     #supprimer une ligne de history
 history -c                                         #tout nettoyer
+[CONTROL]r                                         #mode recherche [ENTER] ou [ECHAP]
 !COM:p                            #affiche la dernière commande commençant par COM
 COM !:1 !:3                       #reutilise les arguments 1 et 3 de la dernière
 COM !211:1                        #reutilise l argument 1 de la commande 211
+[ECHAP].                          #rappelle le dernier argument
+!$
 export HISTTIMEFORMAT='%F %T '                     #date des commandes
 export HISTIGNORE='ls -l:pwd:history'              #ignorer certaines commandes
 unset export HISTIGNORE                            #desactiver ignorance
