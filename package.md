@@ -148,6 +148,7 @@ dnf upgrade                                #Mettre à jour tous les paquets
 dnf --exclude=PAQUET update                #exclure un paquet d une mise à jour
 dnf downgrade PAQUET                       #Rétrograder un paquet
 dnf grouplist                              #Liste les groupes de paquets disponibles
+dnf grouplist hidden                       #tous les groupes
 dnf groupinstall "GROUP NAME"              #Installer un groupe de paquets
 dnf groupinfo "GROUP NAME"                 #Lister les paquets d un groupe
 dnf groupremove "GROUP NAME"               #Supprimer un groupe de paquets
@@ -190,6 +191,7 @@ dnf reposync                               #télécharge tous les paquets depuis
 dnf info-security                          #affiche le détails des modifications
 dnf check-update --security                #affiche les paquets vitaux
 dnf check-update --sec-severity {Critical,Important,Moderate,Low,None}
+rpm -Va                                    #verification de l intégrité des paquets
 
 ###>>>Limiter la bande passante de dnf
 sudo nano /etc/dnf/dnf.conf
