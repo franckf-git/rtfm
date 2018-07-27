@@ -335,7 +335,7 @@ ________________________________________________________________________________
 gestionnaire de machines virtuelles
 -------------------------------------------------------------------------------------
 ```bash
-sudo apt install gnome-boxes virt-manager qemu-kvm qemu gir1.2-spice-client-gtk-3.0
+sudo apt install gnome-boxes virt-manager qemu-kvm qemu gir1.2-spice-client-gtk-3.0 ovmf
 sudo systemctl start libvirtd
 ```
 
