@@ -136,7 +136,7 @@ feh
 dnf install i3 mesa-dri-drivers xorg-x11-drv-evdev xorg-x11-drv-fbdev xorg-x11-drv-synaptics
 systemctl set-default graphical.target
 systemctl isolate graphical.target
-echo "exec i3" >> ~/.xinitrc
+echo "exec i3" >> ~/.xinitrc #si pas de lightdm-gtk
 startx
 ```
 
