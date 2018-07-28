@@ -71,7 +71,9 @@ Alt+r             Restores all changes made to line
 Tab               Auto-complete a name
 Alt+?             List all possible completions
 Alt+*             Insert all possible completions
+# Others
 Esc+t             Switch arguments (service vs systmctl)
+Ctrl+x+e          Continue editing your current shell line in a text editor (uses $EDITOR)
 ```
 
 **[`^        back to top        ^`](#)**
