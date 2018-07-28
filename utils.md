@@ -408,6 +408,7 @@ hostname -s               #Display the short name
 hostname -f               #Display with FQDN format
 ping MACHINE              #envoie un ping a une machine
 traceroute MACHINE        #fait un traceroute vers machine
+mtr SITE                  #fait un traceroute
 sudo nmap -sn IP          #scanner le reseau local
 nmap -sS -sU -sV IP       #scan TCP SYN + un scan UDP + logiciel et version
 nmap -sO IP               #protocoles ouverts
