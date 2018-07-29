@@ -117,6 +117,7 @@ yum clean headers             apt-file purge                                    
 ###>>>--------------------------------------General Packaging System Information
 *.rpm                         *.deb                                             #Package file extension
 /etc/yum.conf                 /etc/apt/sources.list                             #Repository location configuration
+alien --to-rpm PCK.deb        #conversion
 
 #in bashrc
 case $(lsb_release -i | awk '{ print $3 }') in
