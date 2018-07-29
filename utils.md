@@ -226,6 +226,9 @@ top                          #afficher un tableau de bord des processus
 tload                        #charge cpu graphique
 dstat                        #rapide aperçu de ce qui se passe dans le système
 lsof +L1                     #processus utilisant des fichiers
+lsof /FILE                   #processus utilisant ce fichier
+lsof -p PID                  #tous les fichiers ouverts par un processus
+lsof -u USER                 #fichiers ouverts par un utilisateur
 lsof -n | grep deleted       #fichier supprimé mais en cours d écriture
 systemd-analyze blame        #services demarres pardefaut selon leur temps de lancement
 
