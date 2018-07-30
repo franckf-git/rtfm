@@ -216,6 +216,8 @@ restorecon                   #restaurer un contexte en fonction de la politique 
 restorecon -R -v /FOLDER     #reétiquettage du dossier
 chcon                        #modifier le contexte SELinux d un fichier
 semanage                     #gérer les politiques SELinux
+semanage port -l | grep ssh  #changer le port ssh
+semanage port -a -t ssh_port_t -p tcp 2222
 
 ls -Z                        #contexte de sécurité fichiers
 ps axZ                       #contexte de sécurité processus
