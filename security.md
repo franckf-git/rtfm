@@ -66,7 +66,8 @@ ssh -p PORT USER@IP
 sudo apt-get install ssh
 
 sudo nano /etc/ssh/sshd_config
-ListenAddress 192.168.0.1
+ListenAddress 192.168.0.1 #(client)
+ListenAddress 192.168.0.2 #(serveur)
 Port PORT
 PermitRootLogin no
 PermitEmptyPasswords no
