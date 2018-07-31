@@ -709,7 +709,8 @@ fc-list                                          #lister les polices installées
 xprop                                            #lecture d une fenetre
 nmon                                             #moniteur systeme
 glances                                          #moniteur (copr tartare/glances)
-script                                           #enregistreur terminal
+script  FILE.log -t time.log                     #enregistreur terminal
+scriptreplay -s FILE.log -t time.log             #rejouer la session
 mc                                               #explorateur de fichier
 mc -e ou mcedit FICHIER                          #editeur de fichier
 mc -v ou mcview FICHIER                          #visualisateur
