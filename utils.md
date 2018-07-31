@@ -737,6 +737,7 @@ nmcli device wifi list
 nmcli device wifi connect SSID password PASSWORD
 ncdu                                             #taille des dossiers > df -h
 espeak -v fr+f1 "MESSAGE"                        #synthetiseur vocal
+espeak -f TXT -a 10 -g 10 -k 20 -l 0 -p 50 -s 160 -v french -w WAV
 espeak -f PLAINTEXTFILE.txt                      #lecture d un fichier
 espeak -w AUDIO.wav "MESSAGE"                    #ecriture dans un fichier
 echo "MESSAGE" | espeak -s 160 -a 100 -g 4       #resultat commande
