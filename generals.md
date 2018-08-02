@@ -719,6 +719,9 @@ Un Téraoctet (To) = 2^40 octets = 1024 Go = 1 099 511 627 776 octets
 _____________________________________________________________________________________
 dossiers linux
 -------------------------------------------------------------------------------------
+```bash
+man hier
+```
 ```
 /              Racine elle contient les repertoires principaux
 /bin           Executables utilisables par tous les utilisateurs (ls pwd cp)
