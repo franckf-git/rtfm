@@ -193,6 +193,8 @@ SQL
 -------------------------------------------------------------------------------------
 ```bash
 sudo apt-get install mysql-server mysql-client
+mysql_install_db #script to initialize the database
+mysql_secure_installation #secure your MySQL installation
 mysql -h localhost -u root -pMOTDEPASS
 ```
 ```sql
