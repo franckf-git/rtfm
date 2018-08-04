@@ -21,6 +21,7 @@ sudo aptitude install apache2
 sudo chown -R www-data:pi /var/www/html/
 sudo chmod -R 770 /var/www/html/
 ab #outil utile pour une vérification rapide des performances. Pour des tests de charge plus complexes, essayez siege
+apachectl graceful #demarrage sécurisé des services hhtpd
 ```
 
 **[`^        back to top        ^`](#)**
