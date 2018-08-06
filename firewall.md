@@ -114,6 +114,13 @@ firewall-cmd --add-service=rtmp
 ###>>>bloquer les ping
 firewall-cmd --zone=public --permanent --add-icmp-block=destination-unreachable
 firewall-cmd --reload
+
+###>>>bloquer tous les ports sortants sauf le web
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 2 -j DROP
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 1 -p tcp -m tcp --dport 80 -j ACCEPT
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 1 -p tcp -m tcp --dport 443 -j ACCEPT
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 1 -p tcp -m tcp --dport 53 -j ACCEPT
+firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 1 -p udp --dport 53 -j ACCEPT
 ```
 
 **[`^        back to top        ^`](#)**
