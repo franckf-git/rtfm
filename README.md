@@ -71,6 +71,7 @@ to .bashrc
 - [Github Cheatsheet](https://github.com/tiimgreen/github-cheat-sheet)
 - [Games](https://github.com/leereilly/games)
 - [How to name commit](https://www.grafikart.fr/formations/git/nommage-commit)
+- [Cheatsheets](https://devhints.io/)
 
 **[`^        back to top        ^`](#)**
 
