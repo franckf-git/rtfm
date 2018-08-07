@@ -51,7 +51,7 @@ alert-dark
 alert-link
 alert-dismissible
 alert-heading
-----------------------------
+_____________________________________________________________________________________
 Badges
 badge
 badge-pill
@@ -63,10 +63,10 @@ badge-warning
 badge-danger
 badge-light
 badge-dark
-----------------------------
+_____________________________________________________________________________________
 Breadcrumbs
 breadcrumb
-----------------------------
+_____________________________________________________________________________________
 Buttons
 btn-primary
 btn-secondary
@@ -85,7 +85,7 @@ btn-outline-warning
 btn-outline-danger
 btn-outline-light
 btn-outline-dark
-----------------------------
+_____________________________________________________________________________________
 Button Groups
 btn-group
 btn-group-lg
@@ -93,7 +93,7 @@ btn-group-sm
 btn-group-vertical
 btn-group (nested)
 btn-toolbar
-----------------------------
+_____________________________________________________________________________________
 Button Modifiers
 btn-lg
 btn-sm
@@ -102,7 +102,7 @@ active button
 disabled button
 checkbox as button
 radio as button
-----------------------------
+_____________________________________________________________________________________
 Cards
 card
 card-body
@@ -122,17 +122,17 @@ card-group
 card-deck
 card-columns
 card bg-... text-...
-----------------------------
+_____________________________________________________________________________________
 Carousel
 carousel slide
 carousel-fade
 carousel-indicators
 carousel-caption
-----------------------------
+_____________________________________________________________________________________
 Collapse
 collapse
 accordion
-----------------------------
+_____________________________________________________________________________________
 Dropdowns
 dropdown
 dropdown (split)
@@ -145,7 +145,7 @@ dropdown-item-text
 dropdown-divider
 dropdown-item disabled
 dropdown-menu-right
-----------------------------
+_____________________________________________________________________________________
 Forms
 form-group
 form-inline
@@ -160,7 +160,7 @@ form-check
 form-check-inline
 disabled items
 readonly
-----------------------------
+_____________________________________________________________________________________
 Form Input Groups
 input-group
 input-group-prepend
@@ -171,14 +171,14 @@ checkbox
 radio
 dropdown
 segmented buttons
-----------------------------
+_____________________________________________________________________________________
 Custom Forms
 custom-checkbox
 custom-radio
 custom-select
 custom-file
 custom-range
-----------------------------
+_____________________________________________________________________________________
 Grid
 container
 container-fluid
@@ -194,15 +194,15 @@ no-gutters
 offset-*-#
 order-#
 nested columns
-----------------------------
+_____________________________________________________________________________________
 Images
 img-fluid
 img-thumbnail
-----------------------------
+_____________________________________________________________________________________
 Jumbotron
 jumbotron
 jumbotron-fluid
-----------------------------
+_____________________________________________________________________________________
 List Group
 list-group
 list-group-item active
@@ -218,7 +218,7 @@ list-group-item-light
 list-group-item-dark
 list-group with badges
 list-group with d-flex
-----------------------------
+_____________________________________________________________________________________
 Media Objects
 media
 nested media
@@ -226,14 +226,14 @@ d-flex align-self-start
 d-flex align-self-center
 d-flex align-self-end
 right aligned media
-----------------------------
+_____________________________________________________________________________________
 Modal
 modal
 modal-dialog-centered
 modal fade
 modal-lg
 modal-sm
-----------------------------
+_____________________________________________________________________________________
 Navs
 ul.nav
 nav.nav
@@ -246,7 +246,7 @@ nav-justified
 nav with flex utils
 nav-tabs with dropdown
 nav-pills with dropdown
-----------------------------
+_____________________________________________________________________________________
 Navbar
 navbar
 navbar-brand
@@ -260,18 +260,18 @@ navbar sticky-top
 collapse navbar-collapse
 navbar-toggler
 navbar-expand-*
-----------------------------
+_____________________________________________________________________________________
 Pagination
 pagination
 page-item disabled
 page-item active
 pagination-lg
 pagination-sm
-----------------------------
+_____________________________________________________________________________________
 Popover
 popovers
 dismissible popover
-----------------------------
+_____________________________________________________________________________________
 Progress
 progress
 progress-bar
@@ -282,10 +282,10 @@ multiple progress-bar
 progress-bar-striped
 progress-bar-striped bg-*
 progress-bar-animated
-----------------------------
+_____________________________________________________________________________________
 Scrollspy
 data-spy
-----------------------------
+_____________________________________________________________________________________
 Tables
 table
 thead-light
@@ -306,10 +306,10 @@ table-warning
 table-danger
 table-light
 table-dark
-----------------------------
+_____________________________________________________________________________________
 Tooltips
 tooltip
-----------------------------
+_____________________________________________________________________________________
 Typography
 display-# (1-4)
 lead
@@ -319,7 +319,7 @@ blockquote-reverse
 list-unstyled
 list-inline
 dl-horizontal
-----------------------------
+_____________________________________________________________________________________
 Utility: Borders
 border
 border-*-0
@@ -335,7 +335,7 @@ border-white
 rounded
 rounded-circle
 rounded-*
-----------------------------
+_____________________________________________________________________________________
 Utility: Colors
 bg-primary
 bg-secondary
@@ -355,7 +355,7 @@ text-danger
 text-light
 text-dark
 text-white
-----------------------------
+_____________________________________________________________________________________
 Utility: Display
 d-*-block
 d-*-flex
@@ -366,7 +366,7 @@ d-*-none
 d-*-table
 d-*-table-cell
 d-print-...
-----------------------------
+_____________________________________________________________________________________
 Utility: Flexbox
 flex-*-column
 flex-*-column-reverse
@@ -401,7 +401,7 @@ align-self-*-center
 align-self-*-baseline
 align-self-*-stretch
 order-*-#
-----------------------------
+_____________________________________________________________________________________
 Utility: Misc
 close
 embed-responsive
@@ -413,7 +413,7 @@ invisible
 visible
 sr-only
 sr-only-focusable
-----------------------------
+_____________________________________________________________________________________
 Utility: Positioning
 align-*
 clearfix
@@ -423,13 +423,13 @@ sticky-top
 float-*-left
 float-*-right
 float-*-none
-----------------------------
+_____________________________________________________________________________________
 Utility: Sizing
 w-100
 h-100
 mw-100
 mh-100
-----------------------------
+_____________________________________________________________________________________
 Utility: Spacing
 m-1 / m-*-#
 mt-1 / mt-*-#
@@ -445,7 +445,7 @@ pb-1 / pb-*-#
 pl-1 / pl-*-#
 px-1 / px-*-#
 py-1 / py-*-#
-----------------------------
+_____________________________________________________________________________________
 Utility: Text
 font-weight-bold
 font-weight-light
