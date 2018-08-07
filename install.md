@@ -11,6 +11,7 @@
 - [install multimedia fedora](#install-multimedia-fedora)
 - [minimal desktop](#minimal-desktop)
 - [proxmox interface web en local](#proxmox-interface-web-en-local)
+- [proxmox connexions web](#proxmox-connexions-web)
 - [transfer.sh](#transfersh)
 - [nikto scanner pour serveur web](#nikto-scanner-pour-serveur-web)
 - [webmin administration](#webmin-administration)
@@ -152,6 +153,35 @@ echo "exec --no-startup-id chromium --no-sandbox --start-fullscreen https://loca
 
 **[`^        back to top        ^`](#)**
 
+_____________________________________________________________________________________
+proxmox connexions web
+-------------------------------------------------------------------------------------
+```bash
+nano /etc/networks/interfaces
+#configuration pour machines virtuelles
+auto lo
+iface lo inet loopback
+
+iface enp3s0 inet manual
+
+auto vmbr0
+iface vmbr0 inet static
+        address 192.168.1.58
+        netmask 255.255.255.0
+        gateway 192.168.1.255
+        bridge_ports enp3s0
+        bridge_stp off
+        bridge_fd 0
+
+#configuration pour hyperviseur
+auto lo
+iface lo inet loopback
+
+auto enp3s0
+iface enp3s0 inet dhcp
+```
+
+**[`^        back to top        ^`](#)**
 _____________________________________________________________________________________
 transfer.sh
 -------------------------------------------------------------------------------------

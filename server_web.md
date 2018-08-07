@@ -7,6 +7,7 @@
 - [serveur Web](#serveur-web)
 - [bloquer l indexation web](#bloquer-l-indexation-web)
 - [html minimal](#html-minimal)
+- [nginx simple authentification](#nginx-simple-authentification)
 - [serveur dhcp](#serveur-dhcp)
 - [fail2ban](#fail2ban)
 - [denyhosts (alternative fail2ban)](#denyhosts-alternative-fail2ban)
@@ -90,6 +91,23 @@ html minimal
     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - 4.0 International</a>.
     </body>
 </html>
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+nginx simple authentification
+-------------------------------------------------------------------------------------
+```bash
+sudo yum -y install epel-release
+sudo yum -y install nginx httpd-tools
+sudo htpasswd -c /etc/nginx/htpasswd.users USERNAME
+sudo nano /etc/nginx/nginx.conf
+server {
+#ajouter
+    auth_basic "Restricted Access";
+    auth_basic_user_file /etc/nginx/htpasswd.users;
+}
 ```
 
 **[`^        back to top        ^`](#)**
