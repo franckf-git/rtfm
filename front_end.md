@@ -39,7 +39,7 @@ Bootstrap
 - [Documentation](http://getbootstrap.com/docs/4.1/getting-started/introduction/)
 - [Cheat Sheet](https://hackerthemes.com/bootstrap-cheatsheet/)
 
-Alerts
+>  Alerts
 alert-primary
 alert-secondary
 alert-success
@@ -52,7 +52,7 @@ alert-link
 alert-dismissible
 alert-heading
 _____________________________________________________________________________________
-Badges
+>  Badges
 badge
 badge-pill
 badge-primary
