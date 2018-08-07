@@ -14,6 +14,7 @@
 - [Dépots supplémentaires fedora](#dépots-supplémentaires-fedora)
 - [fedora mise à niveau](#fedora-mise-à-niveau)
 - [centos ajout de depots](#centos-ajout-de-depots)
+- [proxmox depot communautaire](#proxmox-depot-communautaire)
 - [debian depots](#debian-depots)
 - [debian mise à niveau](#debian-mise-à-niveau)
 - [debian passer en testing](#debian-passer-en-testing)
