@@ -66,10 +66,12 @@ badge-danger
 badge-light
 badge-dark
 _____________________________________________________________________________________
-Breadcrumbs
+**Breadcrumbs**
+
 breadcrumb
 _____________________________________________________________________________________
-Buttons
+**Buttons**
+
 btn-primary
 btn-secondary
 btn-success
@@ -88,7 +90,8 @@ btn-outline-danger
 btn-outline-light
 btn-outline-dark
 _____________________________________________________________________________________
-Button Groups
+**Button Groups**
+
 btn-group
 btn-group-lg
 btn-group-sm
@@ -96,7 +99,8 @@ btn-group-vertical
 btn-group (nested)
 btn-toolbar
 _____________________________________________________________________________________
-Button Modifiers
+**Button Modifiers**
+
 btn-lg
 btn-sm
 btn-block
@@ -105,7 +109,8 @@ disabled button
 checkbox as button
 radio as button
 _____________________________________________________________________________________
-Cards
+**Cards**
+
 card
 card-body
 card-title
@@ -125,17 +130,20 @@ card-deck
 card-columns
 card bg-... text-...
 _____________________________________________________________________________________
-Carousel
+**Carousel**
+
 carousel slide
 carousel-fade
 carousel-indicators
 carousel-caption
 _____________________________________________________________________________________
-Collapse
+**Collapse**
+
 collapse
 accordion
 _____________________________________________________________________________________
-Dropdowns
+**Dropdowns**
+
 dropdown
 dropdown (split)
 dropup
@@ -148,7 +156,8 @@ dropdown-divider
 dropdown-item disabled
 dropdown-menu-right
 _____________________________________________________________________________________
-Forms
+**Forms**
+
 form-group
 form-inline
 form using the grid
@@ -163,7 +172,8 @@ form-check-inline
 disabled items
 readonly
 _____________________________________________________________________________________
-Form Input Groups
+**Form Input Groups**
+
 input-group
 input-group-prepend
 input-group-append
@@ -174,14 +184,16 @@ radio
 dropdown
 segmented buttons
 _____________________________________________________________________________________
-Custom Forms
+**Custom Forms**
+
 custom-checkbox
 custom-radio
 custom-select
 custom-file
 custom-range
 _____________________________________________________________________________________
-Grid
+**Grid**
+
 container
 container-fluid
 row
@@ -197,15 +209,18 @@ offset-*-#
 order-#
 nested columns
 _____________________________________________________________________________________
-Images
+**Images**
+
 img-fluid
 img-thumbnail
 _____________________________________________________________________________________
-Jumbotron
+**Jumbotron**
+
 jumbotron
 jumbotron-fluid
 _____________________________________________________________________________________
-List Group
+**List Group**
+
 list-group
 list-group-item active
 list-group-item disabled
@@ -221,7 +236,8 @@ list-group-item-dark
 list-group with badges
 list-group with d-flex
 _____________________________________________________________________________________
-Media Objects
+**Media Objects**
+
 media
 nested media
 d-flex align-self-start
@@ -229,14 +245,16 @@ d-flex align-self-center
 d-flex align-self-end
 right aligned media
 _____________________________________________________________________________________
-Modal
+**Modal**
+
 modal
 modal-dialog-centered
 modal fade
 modal-lg
 modal-sm
 _____________________________________________________________________________________
-Navs
+**Navs**
+
 ul.nav
 nav.nav
 nav justify-content-*
@@ -249,7 +267,8 @@ nav with flex utils
 nav-tabs with dropdown
 nav-pills with dropdown
 _____________________________________________________________________________________
-Navbar
+**Navbar**
+
 navbar
 navbar-brand
 navbar with form
@@ -263,18 +282,21 @@ collapse navbar-collapse
 navbar-toggler
 navbar-expand-*
 _____________________________________________________________________________________
-Pagination
+**Pagination**
+
 pagination
 page-item disabled
 page-item active
 pagination-lg
 pagination-sm
 _____________________________________________________________________________________
-Popover
+**Popover**
+
 popovers
 dismissible popover
 _____________________________________________________________________________________
-Progress
+**Progress**
+
 progress
 progress-bar
 progress-bar with label
@@ -285,10 +307,12 @@ progress-bar-striped
 progress-bar-striped bg-*
 progress-bar-animated
 _____________________________________________________________________________________
-Scrollspy
+**Scrollspy**
+
 data-spy
 _____________________________________________________________________________________
-Tables
+**Tables**
+
 table
 thead-light
 thead-dark
@@ -309,10 +333,12 @@ table-danger
 table-light
 table-dark
 _____________________________________________________________________________________
-Tooltips
+**Tooltips**
+
 tooltip
 _____________________________________________________________________________________
-Typography
+**Typography**
+
 display-# (1-4)
 lead
 blockquote
@@ -322,7 +348,8 @@ list-unstyled
 list-inline
 dl-horizontal
 _____________________________________________________________________________________
-Utility: Borders
+**Utility: Borders**
+
 border
 border-*-0
 border-primary
@@ -338,7 +365,8 @@ rounded
 rounded-circle
 rounded-*
 _____________________________________________________________________________________
-Utility: Colors
+**Utility: Colors**
+
 bg-primary
 bg-secondary
 bg-success
@@ -358,7 +386,8 @@ text-light
 text-dark
 text-white
 _____________________________________________________________________________________
-Utility: Display
+**Utility: Display**
+
 d-*-block
 d-*-flex
 d-*-inline
@@ -369,7 +398,8 @@ d-*-table
 d-*-table-cell
 d-print-...
 _____________________________________________________________________________________
-Utility: Flexbox
+**Utility: Flexbox**
+
 flex-*-column
 flex-*-column-reverse
 flex-*-row
@@ -404,7 +434,8 @@ align-self-*-baseline
 align-self-*-stretch
 order-*-#
 _____________________________________________________________________________________
-Utility: Misc
+**Utility: Misc**
+
 close
 embed-responsive
 shadow-none
@@ -416,7 +447,8 @@ visible
 sr-only
 sr-only-focusable
 _____________________________________________________________________________________
-Utility: Positioning
+**Utility: Positioning**
+
 align-*
 clearfix
 fixed-top
@@ -426,13 +458,15 @@ float-*-left
 float-*-right
 float-*-none
 _____________________________________________________________________________________
-Utility: Sizing
+**Utility: Sizing**
+
 w-100
 h-100
 mw-100
 mh-100
 _____________________________________________________________________________________
-Utility: Spacing
+**Utility: Spacing**
+
 m-1 / m-*-#
 mt-1 / mt-*-#
 mr-1 / mr-*-#
@@ -448,7 +482,8 @@ pl-1 / pl-*-#
 px-1 / px-*-#
 py-1 / py-*-#
 _____________________________________________________________________________________
-Utility: Text
+**Utility: Text**
+
 font-weight-bold
 font-weight-light
 font-weight-normal
