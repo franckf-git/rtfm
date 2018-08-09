@@ -32,6 +32,7 @@ cd REP              #se place dans le repertoire rep
 cd                  #se place dans le repertoire de l utilisateur ~/
 cd -                #se place dans l ancien repertoire cd $OLDPWD
 cd ..               #se place dans le repertoire parent
+cd $(mktemp -d)     #cree et se place dans un dossier temp
 ls REP              #liste les fichiers du repertoire rep
 ls -a               #ls avec les fichiers caches
 ls -l               #ls avec les droits d acces et la taille
