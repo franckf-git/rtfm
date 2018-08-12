@@ -7,6 +7,7 @@
 - [transformer une machine en routeur](#transformer-une-machine-en-routeur)
 - [monter un partage samba au demarrage](#monter-un-partage-samba-au-demarrage)
 - [changement adresse mac](#changement-adresse-mac)
+- [desactiver ipv6](#desactiver-ipv6)
 - [tor en cli](#tor-en-cli)
 - [protonvpn](#protonvpn)
 - [montage nfs](#montage-nfs)
@@ -88,6 +89,23 @@ changement adresse mac
 /etc/init.d/networking stop
 ifconfig eth0 hw ether 02:01:02:03:04:08
 /etc/init.d/networking start
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+desactiver ipv6
+-------------------------------------------------------------------------------------
+```bash
+###>>>redhat
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+###>>>debian
+sudo nano /etc/sysctl.conf
+#ajouter à la fin
+net.ipv6.conf.all.disable_ipv6 = 1
+net.ipv6.conf.default.disable_ipv6 = 1
+net.ipv6.conf.lo.disable_ipv6 = 1
 ```
 
 **[`^        back to top        ^`](#)**
