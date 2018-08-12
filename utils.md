@@ -417,6 +417,9 @@ sudo nmap -sn IP          #scanner le reseau local
 nmap -sS -sU -sV IP       #scan TCP SYN + un scan UDP + logiciel et version
 nmap -sO IP               #protocoles ouverts
 nmap -sP 192.168.0.0/24   #decouvrir le reseau local
+dhclient -r INTERFACE     #demander une nouvelle IP
+dhclient -1
+ifdown INTERFACE ; ifup INTERFACE
 netstat                   #affiche l usage du reseau pas les processus
 netstat -a                #netstat avec l affichage des processus serveurs
 sudo netstat -ntplou      #lister les ports ouverts sur la machine
