@@ -134,7 +134,9 @@ feh
 
 ###>>>OU dans fedora
 
-dnf install i3 mesa-dri-drivers xorg-x11-drv-evdev xorg-x11-drv-fbdev xorg-x11-drv-synaptics
+dnf install i3 lightdm
+dnf group install base-x
+systemctl enable lightdm.service
 systemctl set-default graphical.target
 systemctl isolate graphical.target
 echo "exec i3" >> ~/.xinitrc #si pas de lightdm-gtk
