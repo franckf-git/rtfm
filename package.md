@@ -220,6 +220,11 @@ sudo dnf system-upgrade reboot
 
 ###>>>Détails des mirroirs
 cat /etc/yum.repos.d/fedora.repo
+
+###>>>Activer flatpak
+dnf install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub
 ```
 
 **[`^        back to top        ^`](#)**
