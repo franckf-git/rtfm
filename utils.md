@@ -653,6 +653,11 @@ badblocks -s -v -w /dev/hda              #test en lecture et écriture, effaceme
 mount -o remount,size=6G,... /TMP        #resize the tmpfs volume
 badblocks -v /dev/sdb                    #Test des blocs des filesystems
 2fsck -cfp /dev/sdb1                     #Marquer les secteurs défectueux
+###>>> montage automatique
+/dev/sda1 /MNT/POINT auto defaults,noatime,auto,nofail 0 2
+#ou pour un element precis
+LABEL=MY_USB_DRIVE /MNT/POINT auto defaults,auto,nofail 0 2
+sudo systemctl daemon-reload
 ```
 
 **[`^        back to top        ^`](#)**
