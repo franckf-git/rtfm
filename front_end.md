@@ -89,6 +89,8 @@ Bootstrap
 - [Cheat Sheet](https://hackerthemes.com/bootstrap-cheatsheet/)
 - [Visual examples](https://getbootstrap.com/docs/3.3/examples/theme/)
 - [Editor](https://www.bootply.com/)
+- [Customize](https://getbootstrap.com/docs/3.3/customize/)
+- [Templates](https://bootswatch.com/)
 
 **Alerts**
 
