@@ -10,6 +10,7 @@
 - [install de firefox 57](#install-de-firefox-57)
 - [install multimedia fedora](#install-multimedia-fedora)
 - [minimal desktop](#minimal-desktop)
+- [minimal install of centos](#minimal-install-of-centos)
 - [proxmox interface web en local](#proxmox-interface-web-en-local)
 - [proxmox connexions web](#proxmox-connexions-web)
 - [transfer.sh](#transfersh)
@@ -142,6 +143,30 @@ systemctl isolate graphical.target
 echo "exec i3" >> ~/.xinitrc #si pas de lightdm-gtk
 startx
 ```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+minimal install of centos
+-------------------------------------------------------------------------------------
+```bash
+#install centos from minimal cd
+#use source
+mirror.CentOS.org/CentOS/7.5.1804/os/x86_64/
+#dont check use "This URL refers to a mirror list"
+
+yum install epel-release
+yum groupinstall "X Window System" "Desktop" "Desktop Platform"
+yum install lightdm xorg-x11-xinit-session
+yum install dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts i3 i3status lilyterm urxvt
+systemctl set-default graphical.target
+systemctl isolate graphical.target
+#less than 700 packages
+#it is really working (for once)
+```
+
+
+
 
 **[`^        back to top        ^`](#)**
 
