@@ -157,8 +157,7 @@ mirror.CentOS.org/CentOS/7.5.1804/os/x86_64/
 
 yum install epel-release
 yum groupinstall "X Window System" "Desktop" "Desktop Platform"
-yum install lightdm xorg-x11-xinit-session
-yum install dejavu-sans-fonts dejavu-sans-mono-fonts dejavu-serif-fonts i3 i3status rxvt-unicode
+yum install lightdm xorg-x11-xinit-session dejavu-sans-mono-fonts i3 i3status rxvt-unicode
 systemctl set-default graphical.target
 systemctl isolate graphical.target
 #less than 700 packages
