@@ -14,6 +14,7 @@
 - [Dépots supplémentaires fedora](#dépots-supplémentaires-fedora)
 - [fedora mise à niveau](#fedora-mise-à-niveau)
 - [centos ajout de depots](#centos-ajout-de-depots)
+- [centos priorite des depots](#centos-priorite-des-depots)
 - [proxmox depot communautaire](#proxmox-depot-communautaire)
 - [debian depots](#debian-depots)
 - [debian mise à niveau](#debian-mise-à-niveau)
@@ -352,12 +353,13 @@ centos ajout de depots
 # must have
 yum -y install deltarpm
 yum-config-manager --enable extras
+# must have
 yum install epel-release
 # multimedia
 yum install --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
 yum install --nogpgcheck https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
 # workstation
-yum install http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+yum install https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
 # hardware drivers
 yum install http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
 
@@ -367,6 +369,50 @@ yum -y update
 
 **[`^        back to top        ^`](#)**
 
+_____________________________________________________________________________________
+centos priorite des depots
+-------------------------------------------------------------------------------------
+```bash
+yum install yum-plugin-priorities
+
+vim /etc/yum.repos.d/CentOS-Base.repo
+[base]
+enabled=1
+priority=1
+name=CentOS-$releasever - Base
+...
+[updates]
+enabled=1
+priority=1
+name=CentOS-$releasever - Updates
+...
+[extras]
+enabled=1
+priority=1
+name=CentOS-$releasever - Extras
+...
+
+vim /etc/yum.repos.d/epel.repo
+[epel]
+enabled=1
+priority=10
+name=Extra Packages for Enterprise Linux 7 - $basearch
+
+vim /etc/yum.repos.d/nux-dextop.repo
+[nux-dextop]
+name=Nux.Ro RPMs for general desktop use
+baseurl=http://li.nux.ro/download/nux/dextop/el7/$basearch/
+enabled=1
+priority=10
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-nux.ro
+protect=0
+
+yum check-update
+yum -y update
+```
+
+**[`^        back to top        ^`](#)**
 _____________________________________________________________________________________
 proxmox depot communautaire
 -------------------------------------------------------------------------------------
