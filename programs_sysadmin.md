@@ -196,6 +196,7 @@ sudo apt-get install mysql-server mysql-client
 mysql_install_db #script to initialize the database
 mysql_secure_installation #secure your MySQL installation
 mysql -h localhost -u root -pMOTDEPASS
+cat ~/.mysql_history #history des requetes sql
 ```
 ```sql
 -- creation base de donnees et affectation des droits
