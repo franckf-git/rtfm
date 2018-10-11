@@ -108,7 +108,7 @@ install multimedia fedora
 ```bash
 ###>>>rip dvd
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
-dnf -y install HandBrake-gui HandBrake-cli
+dnf -y install ffmpeg HandBrake-{gui,cli}
 
 ###>>>lecture dvd
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
