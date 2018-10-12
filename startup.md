@@ -14,6 +14,7 @@
 - [grub](#grub)
 - [changer l ordre de démarrage du grub](#changer-l-ordre-de-démarrage-du-grub)
 - [ecran de chargement fedora](#ecran-de-chargement-fedora)
+- [reconfiguration du clavier](#reconfiguration-du-clavier)
 - [lancer un script au branchement d une cle USB](#lancer-un-script-au-branchement-d-une-cle-usb)
 - [LVM](#lvm)
 - [script au demarrage](#script-au-demarrage)
@@ -198,6 +199,21 @@ ecran de chargement fedora
 ```bash
 plymouth-set-default-theme --list
 sudo plymouth-set-default-theme tribar -R
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+reconfiguration du clavier
+-------------------------------------------------------------------------------------
+```bash
+# on genere le fichier de map
+xmodmap -pke > ~/.Xmodmap
+# on trouve la clef a remaper
+xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'
+# on modifie le fichier Xmodmap et on teste avec
+xmodmap ~/.Xmodmap
+# exemple : keycode 49 = Super_L
 ```
 
 **[`^        back to top        ^`](#)**
