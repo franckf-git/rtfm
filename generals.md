@@ -778,6 +778,16 @@ lecture seulement              (r--)          4
 lecture et execution           (r-x)          5
 lecture et ecriture            (rw-)          6
 tous les droits                (rwx)          7
+
+r = 4
+w = 2
+x = 1
+
+r w x = 7
+4+2+1 = 7
+
+r w - r - - - - - = 640
+4+2+0|4+0+0|0+0+0 = 640
 ```
 
 **[`^        back to top        ^`](#)**
