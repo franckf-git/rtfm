@@ -79,6 +79,10 @@ install de chrome et iridium (chrome sans google)
 ```bash
 apt-get install gconf-service libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libappindicator1 libcurl3
 dpkg -i google-chrome-stable_current_amd64.deb
+#ou
+sudo dnf install fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
+sudo dnf install google-chrome-stable
 
 dnf config-manager --add-repo https://dl.iridiumbrowser.de/fedora_28/iridium-browser.repo
 dnf install iridium-browser
