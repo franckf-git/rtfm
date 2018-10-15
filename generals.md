@@ -18,6 +18,7 @@
 - [regex](#regex)
 - [megaoctet 1000-1024](#megaoctet-1000-1024)
 - [dossiers linux](#dossiers-linux)
+- [creer man page](#creer-man-page)
 - [utilisateurs linux](#utilisateurs-linux)
 - [chmod](#chmod)
 - [python](#python)
@@ -747,6 +748,31 @@ man hier
 /usr/sbin      Programmes reserves a l admin systeme
 /usr/local/bin Stocker les exécutables non-gérés par la distribution
 /var           Contient les donnees variables (log bdd site web)
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+creer man page
+-------------------------------------------------------------------------------------
+```
+.\" Manpage for {{ COMMAND }}.
+.\" Contact me to correct errors or typos.
+.TH man 8 "{{ DATE }}" "{{ VERSION }}" "{{ COMMAND }} man page"
+.SH NAME
+{{ COMMAND }} \- {{ DESCRIPTION }}
+.SH SYNOPSIS
+{{ COMMAND }} {{ ARGUMENTS }}
+.SH DESCRIPTION
+{{ COMMAND }} {{ DETAILS }}
+.SH OPTIONS
+The {{ COMMAND }} take this {{ ARGUMENTS }}
+.SH SEE ALSO
+COMMANDS, {{ COMMAND }}
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+{{ AUTHOR }}
 ```
 
 **[`^        back to top        ^`](#)**
