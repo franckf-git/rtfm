@@ -3,6 +3,11 @@
 [TOC]
 
 - [Bootstrap](#bootstrap)
+
+_____________________________________________________________________________________
+Bootstrap
+-------------------------------------------------------------------------------------
+
 - [Documentation](http://getbootstrap.com/docs/4.1/getting-started/introduction/)
 - [Cheat Sheet](https://hackerthemes.com/bootstrap-cheatsheet/)
 - [Visual examples](https://www.w3schools.com/bootstrap/)
@@ -10,9 +15,6 @@
 - [Customize](https://getbootstrap.com/docs/3.3/customize/)
 - [Templates](https://bootswatch.com/)
 
-_____________________________________________________________________________________
-Bootstrap
--------------------------------------------------------------------------------------
 ```html
 <!DOCTYPE html>
 <html lang="en">
