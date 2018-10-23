@@ -269,6 +269,7 @@ SELECT * FROM table WHERE colonnedate < 'date';
 SELECT * FROM table WHERE colonne1='valeur1' AND colonne2='valeur2';
 SELECT * FROM table WHERE colonne3 = NULL;
 SELECT * FROM table WHERE colonne3='valeur3' AND colonne4 IS NOT NULL ORDER BY colonne4 DESC;
+SELECT * FROM table WHERE id BETWEEN 1 and 10;
 SELECT * FROM table ORDER BY id LIMIT 6 OFFSET 0;
 SELECT * FROM table WHERE colonne1 LIKE '%val%';           -- insensible à la casse
 SELECT * FROM table WHERE colonne1 LIKE BINARY '%val%';    -- sensible à la casse
@@ -277,6 +278,7 @@ SELECT * FROM table WHERE colonne1 IN ('valeur', 'valeur', 'valeur', 'valeur', '
 SELECT * FROM TABLEA WHERE CHAMPA NOT IN( SELECT CHAMPB FROM TABLEB);
 -- jointure
 SELECT t1.col1 , t2.col2 FROM table1 AS t1 JOIN table2 AS t2 on t1.COLID = t2.COLID;
+select t1.col1, t1.col2, t3.col4 from table1 as t1 join table2 as t2 on t1.col1 = t2.col1 join table3 as t3 on t2.col2 = t3.col1;
 ```
 
 ```bash
