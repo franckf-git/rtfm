@@ -17,6 +17,10 @@ Manual pages for GNU/linux and others tips.
 [Sources](#sources)
 [License](#license)
 
+![rtfm, for real.](https://imgs.xkcd.com/comics/rtfm.png)
+
+**[`^        back to top        ^`](#)**
+
 ## Index
 
 - [How to write Bash script](./bash.md)
@@ -187,8 +191,6 @@ to .bashrc
 - [Simulate circuit](http://qucs.sourceforge.net/)
 
 **[`^        back to top        ^`](#)**
-
-![rtfm, for real.](https://imgs.xkcd.com/comics/rtfm.png)
 
 ## Santé
 
