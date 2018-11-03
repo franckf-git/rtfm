@@ -583,6 +583,8 @@ __my bold text__
 ***my bold and italic text***
 ___my bold and italic text___
 
+jump line, two spaces at the end  
+
 # Heading level 1
 ## Heading level 2
 ### Heading level 3
@@ -668,6 +670,7 @@ git commit -a                               #déposer des modifications sur le d
 git branch                                  #Liste toutes les branches locales
 git branch NOM-DE-BRANCHE                   #Crée une nouvelle branche
 git checkout NOM-DE-BRANCHE                 #Bascule sur la branche et met à jour
+git checkout -b BRANCH                      #creer la branch et passer dessus
 git merge NOM-DE-BRANCHE                    #Combine la branche courante et spécifiée
 git branch -d NOM-DE-BRANCHE                #Supprime la branche spécifiée
 git rm FICHIER                              #Supprime le fichier du répertoire
@@ -696,6 +699,11 @@ git push ALIAS BRANCHE                      #Envoie tous les commits vers GitHub
 git pull                                    #Récupère tout l historique du dépôt
 git repack -a -d; git prune                 #Réempaqueter le dépôt local en un seul
 git remote set-url origin git@GITSERVER:USER/REPO.git #remplacer le depot
+git tag                                     #Listing the available tags
+git tag -a v1.4 -m "my version 1.4"         #Annotated Tags
+git tag v1.4-lw                             #Lightweight Tags
+git tag -a v1.2 9fceb02                     #tag after commits
+git tag -d v1.4-lw                          #Deleting Tags
 
 ###>>>installation
 sudo apt-get install git
