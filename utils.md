@@ -753,6 +753,7 @@ echo "MESSAGE" | espeak -s 160 -a 100 -g 4       #resultat commande
 moc                                              #music on command
 wordgrinder                                      #traitement de texte
 pandoc                                           #convertiseur format texte
+pandoc -f markdown -t html5 -o WEB.html INPUTTEXT.md -c STYLE.css
 calcurse                                         #calendrier et todo-list
 finch                                            #client de messagerie
 mapscii                                          #carte
