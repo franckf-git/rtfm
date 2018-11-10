@@ -607,6 +607,8 @@ View the page by [clicking here](URL)
 >> subBlockquote
 1. Ordered List
 2. Ordered List
+3) Ordered List
+4) Ordered List
 * Unordered List
 * Unordered List
 - Unordered List
@@ -615,7 +617,15 @@ View the page by [clicking here](URL)
     code
 sentence `code` follow
 
-(lines)
+~~~bash
+code
+~~~
+
+```bash
+code
+```
+
+(LINE)
 ***
 ---
 _________________
