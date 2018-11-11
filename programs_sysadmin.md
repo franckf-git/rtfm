@@ -669,6 +669,8 @@ git
 -------------------------------------------------------------------------------------
 ```bash
 git init NOM-DU-PROJET                      #Crée un dépôt local
+git init --bare                             # creer un depot sur le serveur
+git remote -v                               # liste des depots distants
 git clone URL                               #Télécharge un projet et son historique
 git status                                  #Liste les fichiers modifiés à commiter
 git diff                                    #Montre les modifications
@@ -678,6 +680,7 @@ git reset FICHIER                           #Enleve le fichier de l index
 git commit -m "MESSAGE"                     #Enregistre des instantanés de fichiers
 git commit -a                               #déposer des modifications sur le dépôt
 git branch                                  #Liste toutes les branches locales
+git branch -r                               # liste des branches distantes
 git branch NOM-DE-BRANCHE                   #Crée une nouvelle branche
 git checkout NOM-DE-BRANCHE                 #Bascule sur la branche et met à jour
 git checkout -b BRANCH                      #creer la branch et passer dessus
@@ -692,6 +695,10 @@ git ls-files --others --ignored --exclude-standard   #Tous les fichiers exclus d
 cat ~/.gitconfig                            #Configuration globale
 git config --global alias.lp "log --pretty" #Création d alias
 git stash                                   #Remiser son travail
+git stash apply                             # applique les modifications et revient sur le stash
+git stash save MESSAGE                      # remise avec un message
+git stash show stash@{0} -p                 # voir les modifications
+git stash branch BRANCH                     # creer une branche a partir des modifs
 git stash pop                               #Applique une remise et la supprime
 git stash list                              #Liste toutes les remises
 git stash drop                              #Supprime la remise la plus récente
@@ -722,7 +729,7 @@ git config --global user.email youremail@mailsite.com
 git config --global color.ui true
 git config --global format.pretty oneline
 
-###>>>utlisation
+###>>>utilisation
 cd /home/user/GITREPOSITORY
 git init
 git add README.md
