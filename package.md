@@ -5,6 +5,8 @@
 - [Gestion des paquets debian](#gestion-des-paquets-debian)
 - [Gestion des paquets fedora vs debian](#gestion-des-paquets-fedora-vs-debian)
 - [Gestion des paquets fedora](#gestion-des-paquets-fedora)
+- [flatpak](#flatpak)
+- [snap](#snap)
 - [Gestion des paquets archlinux](#gestion-des-paquets-archlinux)
 - [Gestion des paquets openSUSE](#gestion-des-paquets-opensuse)
 - [Gestion des paquets Solus](#gestion-des-paquets-solus)
@@ -221,11 +223,49 @@ sudo dnf system-upgrade reboot
 
 ###>>>Détails des mirroirs
 cat /etc/yum.repos.d/fedora.repo
+```
 
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+flatpak
+-------------------------------------------------------------------------------------
+```bash
 ###>>>Activer flatpak
 dnf install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub
+
+flatpak remote-ls REPO --app             # list all availables apps
+flatpak remote-ls flathub --app 
+flatpak install REPO NAME                # install an apps from a repo
+flatpak install flathub com.valvesoftware.Steam
+flatpak run NAME                         # run an apps
+flatpak list                             # list all installed apps
+flatpak update NAME                      # update an apps
+flatpak uninstall NAME                   # remove an apps
+flatpak uninstall --unused               # delete orphans runtines
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+snap
+-------------------------------------------------------------------------------------
+```bash
+###>>>Activer snap
+sudo dnf install snapd
+sudo ln -s /var/lib/snapd/snap /snap
+sudo systemctl start snapd.service # opt ??
+sudo systemctl enable snapd.service
+
+snap search NAME           # search an apps
+snap list NAME             # search an apps
+sudo snap install NAME     # install an apps 
+snap info NAME
+snap list                  # list all installed apps
+sudo snap refresh NAME     # update an installed snap app
+sudo snap remove NAME      # remove a snap
+snap services              # list enabled services
 ```
 
 **[`^        back to top        ^`](#)**
