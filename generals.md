@@ -814,6 +814,17 @@ r w x = 7
 
 r w - r - - - - - = 640
 4+2+0|4+0+0|0+0+0 = 640
+
+
+u user
+g group
+o other
+a all
++ ajout
+- retire
+= affecte
+ex : chmod g+w, o+r-w FILE
+
 ```
 
 **[`^        back to top        ^`](#)**
