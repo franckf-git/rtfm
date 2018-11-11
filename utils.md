@@ -131,6 +131,7 @@ echo 'MESSAGE' | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' #rot13
 stat -c '%A %a %n'    #FICHIER permissions d un fichier en octal
 for i in *.* ; do  j=$(awk -F. '{print "PREFIX"$1"SUFIX."$2}') ; mv "$i" "$j" ; done    #renommage en lot
 sort << EOF           #tri rapide
+sort -n -t ":" -k 3 /etc/password     #trier de facon numerique la troisieme colonne
 ```
 
 **[`^        back to top        ^`](#)**
