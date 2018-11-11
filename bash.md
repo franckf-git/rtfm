@@ -21,6 +21,8 @@ COMMAND &             #commande en arriere plan
 nohup COMMANDE        #commande en arriere plan et hors console
 bg COMMANDE           #commande en arriere plan
 fg COMMANDE           #Reprend la main
+'COMMAND'             #sans interpretation bash echo > $exemple
+"COMMAND"             #interprete les cmd echo > EXEMPLE
 COMMAND && COMMAND    #execute si la premiere est un success
 COMMAND ; COMMAND     #execute toujours la seconde commande
 COMMAND || COMMAND    #execute si la premiere est un echec
@@ -54,6 +56,10 @@ sed             #remplacement de caracteres
 du -ah          #taille de dossier
 sleep           #pause dans l execution
 usleep          #sleep en micro-secondes
+ls ti*          #tito titi
+ls ti?i         #timi titi
+ls t[ia]*       #titi tata titi
+ls t[a-m]*      #tata tete tme
 ```
 
 **[`^        back to top        ^`](#)**
