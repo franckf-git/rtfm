@@ -91,6 +91,7 @@ fichiers texte et binaire
 ```bash
 wc FICHIER            #compte le nombre de lignes, de mots, d octets de fichier
 cat FICHIERS          #concatene les fichiers
+cat > FILE            #ecriture fichier rapide
 tac FICHIERS          #cat inverse
 more FICHIER          #Espace=page suivante, Entree=ligne suivante, u=remonter
 less FICHIER          #navigation Left/Right/Up/Down/PageUp/PageDown
@@ -129,6 +130,7 @@ clip < FILE           #copier dans le presse-passier
 echo 'MESSAGE' | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' #rot13
 stat -c '%A %a %n'    #FICHIER permissions d un fichier en octal
 for i in *.* ; do  j=$(awk -F. '{print "PREFIX"$1"SUFIX."$2}') ; mv "$i" "$j" ; done    #renommage en lot
+sort << EOF           #tri rapide
 ```
 
 **[`^        back to top        ^`](#)**
@@ -635,6 +637,7 @@ mkfs.ext3      #/dev/sdb1
 mkfs.ext4dev   #/dev/sdb1
 mkfs.msdos     #/dev/sdb1
 mkfs.vfat      #/dev/sdb1
+mkfs.fat -I -F 32 /dev/sdb               #réparer une clé USB
 mount -o remount,rw /                    #remonter une partition en lecture/ecriture
 sudo blkid                               #UUID des partitions
 mount -t TYPE /dev/sda3 /media/MOUNT     #monter un systeme de fichier inconnu
