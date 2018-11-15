@@ -237,6 +237,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 flatpak remote-ls REPO --app             # list all availables apps
 flatpak remote-ls flathub --app
+flatpak search NAME                      # search for a package
+flatpak info NAME                        # info on a package
 flatpak install REPO NAME                # install an apps from a repo
 flatpak install flathub com.valvesoftware.Steam
 flatpak run NAME                         # run an apps
@@ -251,6 +253,8 @@ flatpak list                             # list all installed apps
 flatpak update NAME                      # update an apps
 flatpak uninstall NAME                   # remove an apps
 flatpak uninstall --unused               # delete orphans runtines
+.local/share/flatpak/                    # configuration de flatpak
+.var/app/                                # configuration des apps
 ```
 
 **[`^        back to top        ^`](#)**
