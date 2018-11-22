@@ -3,6 +3,7 @@
 [TOC]
 
 - [Raccourcis terminal](#raccourcis-terminal)
+- [Clavier QWERTY](#clavier-qwerty)
 - [Liste des masques de sous-reseaux](#liste-des-masques-de-sous-reseaux)
 - [OSI 3](#osi-3)
 - [plage d adresses methode du nombre magique](#plage-d-adresses-methode-du-nombre-magique)
@@ -75,6 +76,30 @@ Alt+*             Insert all possible completions
 # Others
 Esc+t             Switch arguments (service vs systmctl)
 Ctrl+x+e          Continue editing your current shell line in a text editor (uses $EDITOR)
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+Clavier QWERTY
+-------------------------------------------------------------------------------------
+```
+┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┲━━━━━━━━━━━┓
+│ ~ │ ! │ @ │ # │ $ │ % │ ^ │ & │ * │ ( │ ) │ _ │ + ┃           ┃
+│ ` │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ - │ = ┃ Backspace ┃
+┢━━━┷━┱─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┺━┳━━━━━━━━━┫
+┃     ┃ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │ { │ } │ |       ┃
+┃Tab  ┃   │   │   │   │   │   │   │   │   │   │ [ │ ] │ \       ┃
+┣━━━━━┻┱──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬━━━━━━━━━━━━┫
+┃Caps  ┃ A │ S │ D │ F │ G │ H │ J │ K │ L │ : │ " │            ┃
+┃Lock  ┃   │   │   │   │   │   │   │   │   │ ; │ ' │ Entrée     ┃
+┣━━━━━┳┹──┬┴──┬┴───┴──┬┴──┬┴──┬┴──┬┴──┬┴──┬┴──┳┴━━━╋━━━━━━━━━━━━┫
+┃     │ Z │ X │ C │ V │ B │ N │ M │ < │ > │ ? ┃                 ┃
+┃Shift┃   │   │   │   │   │   │   │ , │ . │ / ┃    Shift        ┃
+┣━━━━━╋━━━┷━┳━┷━┱─┴───┴───┴───┴───┴───┲━━━━━━━╋━━━━━━━┳━━━━━━━━━┫
+┃     ┃     ┃   ┃                     ┃       ┃       ┃         ┃
+┃Ctrl ┃Meta ┃Alt┃      Espace         ┃Alt gr ┃ Menu  ┃   Ctrl  ┃
+┗━━━━━┻━━━━━┻━━━┹─────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━━━┛
 ```
 
 **[`^        back to top        ^`](#)**
