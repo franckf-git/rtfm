@@ -173,7 +173,7 @@ cat /sys/class/net/enp0s25/                    #infos interface reseau
 sudo nano /etc/hostname     #renommer la Machine
 hostnamectl set-hostname "HOSTNAME"
 hostnamectl                 #afficher le nom de la machine
-type COMMAND                #emplacement d une commande 
+type COMMAND                #emplacement d une commande
 vmstat                      #statistiques systeme
 powertop                    #statistiques systeme
 dmidecode                   #lit les info du bios
@@ -314,9 +314,9 @@ ________________________________________________________________________________
 archivage
 -------------------------------------------------------------------------------------
 ```bash
-#.tar.gz   temps de compression rapide      taux de compression faible
-#.tar.bz2  temps de compression moyen       taux de compression moyen
-#.tar.xz   temps de compression lent        taux de compression fort
+#.tar.gz   temps de compression rapide      taux de compression faible  # z
+#.tar.bz2  temps de compression moyen       taux de compression moyen   # j
+#.tar.xz   temps de compression lent        taux de compression fort    # J
 
 #creation archive                   #desarchivage
 tar -cvjf ARCHIVE.tar.bz2 REP       tar -xvjf ARCHIVE.tar.bz2 REP
@@ -644,9 +644,9 @@ sudo blkid                               #UUID des partitions
 mount -t TYPE /dev/sda3 /media/MOUNT     #monter un systeme de fichier inconnu
 umount -l                                #forcer le demontage
 pvdisplay                                #afficher les volumes physiques
-pvdisplay -C                             #sous forme de liste 
-pvcreate /dev/sd2                        #creer un volume physique 
-vgdisplay                                #afficher les groupes de volumes 
+pvdisplay -C                             #sous forme de liste
+pvcreate /dev/sd2                        #creer un volume physique
+vgdisplay                                #afficher les groupes de volumes
 vgcreate name /dev/sda1 /dev/sdb3        #creer un groupe de volume
 lvdisplay                                #afficher les disques virtuels
 lvcreate -n LV_FILES -L 5G NAME_VG       #creer un disque virtuel
@@ -769,7 +769,7 @@ loadkeys us
 dpkg-reconfigure tzdata                          #définir l heure
 timedatectl list-timezones                       #définir l heure systemd
 timedatectl set-timezone 'COUNTRY'
-sudo nano /etc/default/grub 
+sudo nano /etc/default/grub
 ###>>>ajouter vga=791 a GRUB_CMDLINE_LINUX       #tty avec une meilleure resolution
 sudo aptitude -u                                 #gestion interactive des paquets
 hd                                               #lecteur hexadecimal avec trad
