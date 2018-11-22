@@ -270,8 +270,9 @@ sudo systemctl start snapd.service # opt ??
 sudo systemctl enable snapd.service
 
 snap search NAME           # search an apps
+snap find                  # search an apps in the repos
 snap list NAME             # search an apps
-sudo snap install NAME     # install an apps 
+sudo snap install NAME     # install an apps
 snap info NAME
 snap list                  # list all installed apps
 sudo snap refresh NAME     # update an installed snap app
@@ -517,9 +518,9 @@ debian passer en testing
 -------------------------------------------------------------------------------------
 ```bash
 sudo nano /etc/apt/sources.list
-deb http://ftp.fr.debian.org/debian/ testing main contrib non-free 
-deb http://security.debian.org/debian-security/ testing/updates main contrib non-free 
-deb http://ftp.fr.debian.org/debian/ testing-updates main contrib non-free 
+deb http://ftp.fr.debian.org/debian/ testing main contrib non-free
+deb http://security.debian.org/debian-security/ testing/updates main contrib non-free
+deb http://ftp.fr.debian.org/debian/ testing-updates main contrib non-free
 
 sudo apt-get update
 sudo apt-get dist-upgrade
@@ -652,9 +653,9 @@ compilation
 ```bash
 sudo apt install build-essential
 wget https://SOFT.tar.bz2
-tar -xf SOFT.tar.bz2 
+tar -xf SOFT.tar.bz2
 cd SOFT/
-./configure 
+./configure
 make
 sudo make install
 ```
