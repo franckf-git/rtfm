@@ -142,6 +142,8 @@ $(COMMANDE)           #variable venant d une commande
 $VARIABLE             #reformatage la variable
 "$VARIABLE"           #conserve les espaces et retour a la ligne
 '$VARIABLE'           #interprétation littérale pas de variable
+VARIABLE${1:-VALEUR}  #prend valeur par default si arg non defini
+VARIABLE${1:MESSAGE DERREUR}   #affiche un message d erreur si arg non defini
 VARIABLE1=`<FICHIER1`
 ###>>>plus rapide que
 VARIABLE2=`cat FICHIER2`
