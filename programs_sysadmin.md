@@ -621,8 +621,10 @@ sentence `code` follow
 code
 ~~~
 
-```bash
+```
+
 code
+
 ```
 
 (LINE)
