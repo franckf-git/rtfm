@@ -662,6 +662,9 @@ Term 2
 
 - [x] This is a complete item
 - [ ] This is an incomplete item
+
+![progress](http://progressed.io/bar/28 "progress")
+![progress](http://progressed.io/bar/59?title=completed "progress")
 ```
 
 **[`^        back to top        ^`](#)**
