@@ -13,6 +13,7 @@
 - [minimal install of centos](#minimal-install-of-centos)
 - [proxmox interface web en local](#proxmox-interface-web-en-local)
 - [proxmox connexions web](#proxmox-connexions-web)
+- [proxmox retirer le popup](#proxmox-retirer-le-popup)
 - [transfer.sh](#transfersh)
 - [nikto scanner pour serveur web](#nikto-scanner-pour-serveur-web)
 - [webmin administration](#webmin-administration)
@@ -209,6 +210,17 @@ iface enp3s0 inet dhcp
 ```
 
 **[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+proxmox retirer le popup
+-------------------------------------------------------------------------------------
+```bash
+vi /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
+if (data.status == 'Active') {
+```
+
+**[`^        back to top        ^`](#)**
+
 _____________________________________________________________________________________
 transfer.sh
 -------------------------------------------------------------------------------------
