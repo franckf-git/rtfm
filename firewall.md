@@ -33,6 +33,9 @@ sudo iptables -A FORWARD -j LOG_DROP
 sudo iptables -A INPUT -j LOG_DROP
 sudo iptables -A OUTPUT -j LOG_DROP
 
+iptables -nvL --line-numbers # suppresion iptable
+iptables -D INPUT {{num}}
+
 ###>>>Pings
 sudo iptables -A INPUT -p icmp -j DROP
 iptables -A OUTPUT -p icmp -m conntrack --ctstate NEW,ESTABLISHED,RELATED -j ACCEPT
