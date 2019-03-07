@@ -513,6 +513,8 @@ tcpdump port http         #Capturer le trafic HTTP
 tcpdump -i eth0 PROTOCOL  #Filtrage par protocole tcp,udp,arp,icmp
 tcpdump -A src IPS and dst IPD and port ftp    #Capturer le trafic FTP
 tcpdump -c 50             #Capturer seulement 50 paquets
+tcpdump -q                #Capture legere
+tcpdump -lA -i any -n "dst host IPMACHINE1 and src host IPMACHINE2" # ecouter le traffic entre deux machines
 ```
 
 **[`^        back to top        ^`](#)**
