@@ -121,8 +121,10 @@ to .bashrc
 
 ### Anonymous
 
+
 - [Receive SMS](http://www.receive-sms-online.info/)
 - [Receive SMS 2](http://receivefreesms.com/)
+- [Receive SMS 3](http://www.receive-sms-now.com/)
 - [Send SMS](http://www.sms-anonyme.net/index.php)
 - [Send SMS 2](http://www.monsmsgratuit.com/)
 - [Receive Email](https://10minutemail.com/10MinuteMail/index.html?dswid=2971)
@@ -137,6 +139,7 @@ to .bashrc
 - [FreeNet](https://freenetproject.org/fr/pages/download.html)
 - [SearcX](https://searx.laquadrature.net/)
 - [Qwant](https://lite.qwant.com/)
+- [Quick OS SADD](https://sadd.io/)
 
 **[`^        back to top        ^`](#)**
 
