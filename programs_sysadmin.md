@@ -193,8 +193,20 @@ SQL
 -------------------------------------------------------------------------------------
 ```bash
 sudo apt-get install mysql-server mysql-client
+#or 
+dnf install mariadb mariadb-server
+
+systemctl start mariadb
+systemctl enable mariadb
+tail /var/log/mariadb/mariadb.log
+
 mysql_install_db #script to initialize the database
 mysql_secure_installation #secure your MySQL installation
+#Set root password? [Y/n] y
+#Remove anonymous users? [Y/n] y
+#Disallow root login remotely? [Y/n] y
+#Remove test database and access to it? [Y/n] y
+#Reload privilege tables now? [Y/n] y
 mysql -h localhost -u root -pMOTDEPASS
 cat ~/.mysql_history #history des requetes sql
 ```
