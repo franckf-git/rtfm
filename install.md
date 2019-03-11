@@ -78,12 +78,16 @@ ________________________________________________________________________________
 install de chrome et iridium (chrome sans google)
 -------------------------------------------------------------------------------------
 ```bash
-apt-get install gconf-service libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libappindicator1 libcurl3
-dpkg -i google-chrome-stable_current_amd64.deb
-#ou
+#pour fedora
 sudo dnf install fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf install google-chrome-stable
+
+#pour debian
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get update
+sudo apt install google-chrome-stable -y
 
 dnf config-manager --add-repo https://dl.iridiumbrowser.de/fedora_28/iridium-browser.repo
 dnf install iridium-browser
