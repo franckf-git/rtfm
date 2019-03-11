@@ -197,9 +197,10 @@ ________________________________________________________________________________
 selinux
 -------------------------------------------------------------------------------------
 ```bash
-sudo apt install selinux-basics selinux-policy-default
+sudo apt install selinux-basics selinux-policy-default auditd
 sudo apt install setools setools-gui selinux-policy-devel setools-devel
-selinux-activate 
+selinux-activate  #to configure GRUB
+#Reboot it will take a while to label the filesystems
 check-selinux-installation
 touch /.autorelabel && systemctl reboot #réétiquetage du système de fichiers
 
