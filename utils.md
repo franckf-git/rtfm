@@ -729,6 +729,9 @@ scriptreplay -s FILE.log -t time.log             #rejouer la session
 mc                                               #explorateur de fichier
 mc -e ou mcedit FICHIER                          #editeur de fichier
 mc -v ou mcview FICHIER                          #visualisateur
+jnettop                                          # Network traffic tracker
+powertop                                         # Power consumption monitor
+mytop                                            # A top clone for MySQL
 ranger                                           #explorateur de fichier avec visualisation
 sudo apt-get install ranger caca-utils highlight atool w3m-img poppler-utils mediainfo
 ranger --copy-config=all
@@ -813,6 +816,7 @@ figlet -f
 apt install sysvbanner
 banner MESSAGES
 
+apt moo
 #When I wrote this, only God and I understood what I was doing
 #Now, God only knows
 
