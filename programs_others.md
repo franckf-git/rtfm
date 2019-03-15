@@ -435,6 +435,12 @@ nano ~/.tmux.conf
 unbind C-b
 set-option -g prefix C-a
 bind-key C-a send-prefix
+set -g mouse on
+set -g status-position bottom
+set -g status-bg colour237
+set -g status-fg colour137
+set -g status-right-length 100
+set -g status-left-length 70
 ```
 
 ### screen
