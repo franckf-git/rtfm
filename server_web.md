@@ -4,6 +4,7 @@
 
 - [Serveur Web Apache](#serveur-web-apache)
 - [simple serveur web](#simple-serveur-web)
+- [redirection html](#redirection-html)
 - [serveur Web](#serveur-web)
 - [bloquer l indexation web](#bloquer-l-indexation-web)
 - [html minimal](#html-minimal)
@@ -33,6 +34,16 @@ simple serveur web
 -------------------------------------------------------------------------------------
 ```bash
 python -m SimpleHTTPServer 7777
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+redirection html
+-------------------------------------------------------------------------------------
+```html
+<!DOCTYPE html>
+<meta http-equiv="refresh" content="0;URL=NOUVELLE_URL" />
 ```
 
 **[`^        back to top        ^`](#)**
