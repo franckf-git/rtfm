@@ -7,6 +7,7 @@
 - [installation de steam](#installation-de-steam)
 - [chromium authoriser l installation d extensions](#chromium-authoriser-l-installation-d-extensions)
 - [install de chrome](#install-de-chrome)
+- [install de Brave](#install-de-brave)
 - [install de firefox 57](#install-de-firefox-57)
 - [install multimedia fedora](#install-multimedia-fedora)
 - [minimal desktop](#minimal-desktop)
@@ -91,6 +92,17 @@ sudo apt install google-chrome-stable -y
 
 dnf config-manager --add-repo https://dl.iridiumbrowser.de/fedora_28/iridium-browser.repo
 dnf install iridium-browser
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+install de brave
+-------------------------------------------------------------------------------------
+```bash
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+sudo dnf install brave-keyring brave-browser
 ```
 
 **[`^        back to top        ^`](#)**
