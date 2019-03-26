@@ -1304,6 +1304,12 @@ ________________________________________________________________________________
 256 couleurs
 -------------------------------------------------------------------------------------
 ```
+# tester le nbr de couleurs d un terminal
+tput colors
+
+# tester les couleurs dans vim
+:runtime syntax/colortest.vim
+
 00 #000000
 01 #AA0000
 02 #00AA00
