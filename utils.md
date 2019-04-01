@@ -706,6 +706,7 @@ cat LIST | gnuplot -p -e 'plot "-"'              #afficher un graphique de nombr
 nano /home/$USER/.mpv/config                     #mpv reprise
 save-position-on-quit
 
+mpv pape.mp4 -wid 0 # mettre une video en fond d ecran
 mpv --no-audio --start=00:01:30 --frames=1 /path/to/video/file --o=/path/to/screenshot.png    #mpv capture ecran
 ```
 
