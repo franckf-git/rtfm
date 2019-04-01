@@ -142,7 +142,7 @@ ________________________________________________________________________________
 minimal desktop
 -------------------------------------------------------------------------------------
 ```bash
-sudo apt-get install chromium-browser xinit openbox obconf obmenu xterm leafpad wicd gmrun alsa-utils pulseaudio pcmanfm
+sudo apt-get install chromium-browser xinit openbox obconf obmenu xterm leafpad wicd pulseaudio tint2
 
 feh --bg-scale /ADRESSE/VERS/VOTRE/IMAGE.jpg ###>>>(wallpaper)
 
