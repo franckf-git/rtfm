@@ -109,6 +109,7 @@ to .bashrc
 - [QR Code](http://generator.code-qr.net/#vcard)
 - [Generate BDD](http://www.generatedata.com/)
 - [HTML Color](http://www.code-couleur.com/)
+- [Color Scheme](https://coolors.co/browser/best/1)
 - [Abstract Fonts](http://www.abstractfonts.com/)
 - [Chmod](https://chmodcommand.com/)
 - [Crontab](http://www.crontabgenerator.com/)
