@@ -7,6 +7,7 @@
 - [transformer une machine en routeur](#transformer-une-machine-en-routeur)
 - [monter un partage samba au demarrage](#monter-un-partage-samba-au-demarrage)
 - [changement adresse mac](#changement-adresse-mac)
+- [load balancing simple avec iptable](load-balancing-simple-avec-iptable)
 - [desactiver ipv6](#desactiver-ipv6)
 - [tor en cli](#tor-en-cli)
 - [protonvpn](#protonvpn)
@@ -89,6 +90,33 @@ changement adresse mac
 /etc/init.d/networking stop
 ifconfig eth0 hw ether 02:01:02:03:04:08
 /etc/init.d/networking start
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+load balancing simple avec iptable
+-------------------------------------------------------------------------------------
+```bash
+# on active le transfert de données
+sysctl net.ipv4.ip_forward=1
+
+# on crée un filtre qui transfère les accès au port 80 vers plusieurs machines
+
+# un appel sur 4
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 80 -m state --state NEW -m statistic --mode nth --every 4 --packet 0 -j DNAT --to-destination 10.0.0.3:80
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 80 -m state --state NEW -m statistic --mode nth --every 4 --packet 1 -j DNAT --to-destination 10.0.0.4:80
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 80 -m state --state NEW -m statistic --mode nth --every 4 --packet 2 -j DNAT --to-destination 10.0.0.5:80
+iptables -t nat -A PREROUTING -p tcp -i eth0 --dport 80 -m state --state NEW -m statistic --mode nth --every 4 --packet 3 -j DNAT --to-destination 10.0.0.6:80
+
+# un appel sur 4 aléatoirement
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -m state --state NEW -m statistic --mode random --probability .25 -j DNAT --to-destination 10.0.0.3:80
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -m state --state NEW -m statistic --mode random --probability .25 -j DNAT --to-destination 10.0.0.4:80
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -m state --state NEW -m statistic --mode random --probability .25 -j DNAT --to-destination 10.0.0.5:80
+iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -m state --state NEW -m statistic --mode random --probability .25 -j DNAT --to-destination 10.0.0.6:80
+
+# enfin il faut créer une régle pour le renvoi des données
+iptables -t nat -A POSTROUTING -j MASQUERADE
 ```
 
 **[`^        back to top        ^`](#)**
