@@ -306,6 +306,7 @@ procinfo                                #informations systemes /proc
 lshw -html > FILE.html                  #obtenir le détail dans un fichier html
 systemctl poweroff -i                   #extinction sans sudo
 iw dev DEV set power_save off           #full energie sur le wifi (DEV dans ip a)
+setxkbmap -option keypad:pointerkeys    # transforme le clavier numérique en souris
 ```
 
 **[`^        back to top        ^`](#)**
