@@ -745,6 +745,7 @@ w3mimg () {
 }
 googler                                          #recheche google (--news)
 ddgr                                             #recheche duckduck (avec bang)
+aspell                                           #correcteur orthographique
 column -s';' -t FILE.csv                         #tableur
 bc                                               #calculatrice
 echo "MESSAGE" | mail -s "OBJET" MAIL@MAIL.com   #mail
