@@ -306,7 +306,8 @@ procinfo                                #informations systemes /proc
 lshw -html > FILE.html                  #obtenir le détail dans un fichier html
 systemctl poweroff -i                   #extinction sans sudo
 iw dev DEV set power_save off           #full energie sur le wifi (DEV dans ip a)
-setxkbmap -option keypad:pointerkeys    # transforme le clavier numérique en souris
+setxkbmap -option keypad:pointerkeys    #transforme le clavier numérique en souris
+xmodmap -e "pointer = 3 2 1"            #boutons de souris pour gauchers
 ```
 
 **[`^        back to top        ^`](#)**
@@ -728,6 +729,7 @@ nmon                                             #moniteur systeme
 glances                                          #moniteur (copr tartare/glances)
 script  FILE.log -t time.log                     #enregistreur terminal
 scriptreplay -s FILE.log -t time.log             #rejouer la session
+watch -n1 "date '+%D%n%T'| figlet -k -f big"     #horloge
 mc                                               #explorateur de fichier
 mc -e ou mcedit FICHIER                          #editeur de fichier
 mc -v ou mcview FICHIER                          #visualisateur
@@ -815,6 +817,7 @@ bastet
 nethack
 bsd-games
 figlet -f
+fortune | cowsay -f $(ls /usr/share/cowsay/ | shuf -n 1) | lolcat
 
 apt install sysvbanner
 banner MESSAGES
