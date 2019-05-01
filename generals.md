@@ -7,6 +7,7 @@
 - [surf](#surf)
 - [Clavier AZERTY](#clavier-azerty)
 - [Clavier QWERTY](#clavier-qwerty)
+- [Raccourcis .desktop](#raccourcis-.desktop)
 - [Liste des masques de sous-reseaux](#liste-des-masques-de-sous-reseaux)
 - [OSI 3](#osi-3)
 - [plage d adresses methode du nombre magique](#plage-d-adresses-methode-du-nombre-magique)
@@ -174,6 +175,25 @@ Clavier QWERTY
 ┃     ┃     ┃   ┃                     ┃       ┃       ┃         ┃
 ┃Ctrl ┃Meta ┃Alt┃      Espace         ┃Alt gr ┃ Menu  ┃   Ctrl  ┃
 ┗━━━━━┻━━━━━┻━━━┹─────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━━━┛
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+Raccourcis .desktop
+-------------------------------------------------------------------------------------
+```
+# /usr/share/applications
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0                                     # version of an app.
+Name=NAME                                       # name of an app.
+GenericName=LONG DETAILLED NAME                 # longer name of an app.
+Exec=COMMAND AND PATH TO LAUCH                  # command used to launch an app.
+Terminal=false                                  # whether an app requires to be run in a terminal.
+Icon=ICON                                       # location of icon file. /usr/share/icons/ by default
+Type=Application                                # type.
+Categories=Application;Network;Security;System;Utility;WebBrowser;TextEditor;FileManager; # categories in which this app should be listed.
 ```
 
 **[`^        back to top        ^`](#)**
