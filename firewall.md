@@ -208,7 +208,7 @@ touch /.autorelabel && systemctl reboot #réétiquetage du système de fichiers
 sudo sed -i 's/SELINUX=.*/SELINUX=enforcing/' /etc/selinux/config
 ###>>>Permissive
 sudo sed -i 's/SELINUX=.*/SELINUX=permissive/' /etc/selinux/config
-sudo systemctl restart selinux-basics.service 
+sudo systemctl restart selinux-basics.service
 
 sediff                       #SELinux policy difference tool
 sedta                        #domain transition analysis for SELinux policies
