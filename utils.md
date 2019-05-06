@@ -48,6 +48,7 @@ ln basic.file hardlink.file       #lien vers les données du fichier basic (inod
 gio info FILEFOLDER | grep metadata
 gio set FILEFOLDER 'metadata::comment' 'COMMENT'
 gio set FILEFOLDER -t stringv metadata::emblems emblem-default
+rifle $(du -a FOLDER/ | cut -f2- | dmenu -l 10) #lanceur rapide d'un dossier spécifique
 ```
 
 **[`^        back to top        ^`](#)**
@@ -818,6 +819,7 @@ nethack
 bsd-games
 figlet -f
 fortune | cowsay -f $(ls /usr/share/cowsay/ | shuf -n 1) | lolcat
+https://mayccoll.github.io/Gogh/ #cloner le dépot pour avoir une large liste de themes
 
 apt install sysvbanner
 banner MESSAGES
