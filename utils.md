@@ -486,7 +486,8 @@ tshark -q -i _eth0 -w DISTANT.cap \ -a filesize:4096 tcp and ! host
 curl freegeoip.net/xml/IP                      #localisation ip externe
 geoiplookup IP            #sudo apt-get install geoip-bin geoip-database
 cat IP.LIST | xargs -n 1 geoiplookup { }
-curl ipinfo.io/IP
+curl ipinfo.io                                #infos détaillés sur une IP
+curl ipinfo.io/IPADRESSE
 nc URL/IP PORT                    #test connexions reseaux
 nc -zv IP PORT | PORT PORT | PORT-PORT         #test ouverture port
 
@@ -533,6 +534,7 @@ wget -nd -H -p -A jpg,jpeg,png,gif -e robots=off URL       #recuperer les images
 curl https://URL.fr                #get classique
 curl https://URL.fr -D -           #headers
 curl -X HEAD https://URL.fr        #requête de type X (HEAD, POST, PUT, PATCH, DELETE…)
+curl -u username:password ftp://www.SITE.com/FILE.zip #ftp
 curl                               #more protocols
 wget                               #recursive
 sha256sum -c DOWNLOAD.sha256       #comparaison sha256sum
