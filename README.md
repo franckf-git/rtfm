@@ -2,237 +2,63 @@
 
 Manual pages for GNU/linux and others tips.
 
-[TOC]
+**IT**                                                                                                            |  **Testing**                                                                       |  **Generator**                                                                                
+ ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- 
+[Internet Archive](https://archive.org/index.php)                                                                 | [W3C Validation Service](https://validator.w3.org/#validate_by_input+with_options) | [Text to ASCII](http://patorjk.com/software/taag/#p=display&f=Banner3&t=Type%20Something%20) 
+[Linux Packages](https://pkgs.org/)                                                                               | [User Agent Testing](https://www.whoishostingthis.com/tools/user-agent/)           | [Image to ASCII](http://www.text-image.com/convert/ascii.html)                               
+[French Reporting](https://www.internet-signalement.gouv.fr/PortailWeb/planets/SignalerEtapeInformer!load.action) | [HTML5test](https://html5test.com/)                                                | [QR Code](http://generator.code-qr.net/#vcard)                                               
+[Python Documentation](https://www.python.org/)                                                                   | [Online Regex Tester](https://regex101.com/)                                       | [Generate BDD](http://www.generatedata.com/)                                                 
+[Bash Documentation](https://abs.traduc.org/abs-fr/index.html)                                                    | [Shell Check](https://www.shellcheck.net/#)                                        | [HTML Color](http://www.code-couleur.com/)                                                   
+[IANA](https://www.iana.org/numbers)                                                                              | [EICAR Test Files](http://securite-informatique.info/virus/eicar/)                 | [Color Scheme](https://coolors.co/browser/best/1)                                            
+[First to do](https://lmgtfy.com/)                                                                                | [Test OpenDNS](https://welcome.opendns.com/)                                       | [Abstract Fonts](http://www.abstractfonts.com/)                                              
+[1st April](http://fakeupdate.net/)                                                                               | [Test your IPv6 Configuration](http://216.218.228.119/)                            | [Chmod](https://chmodcommand.com/)                                                           
+[Securing Debian Howto](https://www.debian.org/doc/manuals/securing-debian-howto/ap-checklist.fr.html)            | [Web Browser Benchmark](http://browserbench.org/JetStream/)                        | [Crontab](http://www.crontabgenerator.com/)                                                  
+[DistroWatch](https://distrowatch.com/)                                                                           | [Markdown Visualisation](https://stackedit.io/app)                                 | [Crontab translator](https://crontab.guru/)                                                  
+[Selfhosted](https://github.com/Kickball/awesome-selfhosted/blob/master/README.md)                                | [Down Detector](http://downdetector.fr/)                                           | [Bash Prompt](http://ezprompt.net/)                                                          
+[Register domain ?](https://www.freenom.com/en/index.html)                                                        | [HTML5 Editor](https://liveweave.com/)                                             | [Timestamp](http://www.timestampgenerator.com/)                                              
+[Sysadmin help](https://github.com/n1trux/awesome-sysadmin/blob/master/README.md)                                 | [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)                            | [Python calculator](https://www.numworks.com/fr/simulateur/)                                 
+[Post code](https://gist.github.com/)                                                                             | [Multi-Password tests](https://madiba.encs.concordia.ca/software/passwordchecker/) | [OpenData](https://www.data.gouv.fr/fr/datasets/)                                            
+[Licenses](https://choosealicense.com/)                                                                           | [Test debit and latency](https://testdebit.info/)                                  |                                                                                              
+[CVE global](http://cve.circl.lu/)                                                                                | [Test SMTP Server](https://mxtoolbox.com/diagnostic.aspx)                          |                                                                                              
+[Github Cheatsheet](https://github.com/tiimgreen/github-cheat-sheet)                                              |                                                                                    |                                                                                              
+[Games](https://github.com/leereilly/games)                                                                       |                                                                                    |                                                                                              
+[How to name commit](https://www.grafikart.fr/formations/git/nommage-commit)                                      |                                                                                    |                                                                                              
+[Cheatsheets](https://devhints.io/)                                                                               |                                                                                    |                                                                                              
 
-- [Index](#index)
-- [Install](#install)
-- [IT](#it)
-- [Testing](#testing)
-- [Generator](#generator)
-- [Anonymous](#anonymous)
-- [Security](#security)
-- [RGPD](#rgpd)
-- [Raspberry Pi](#raspberry-pi)
-- [Santé](#sante)
-- [Sources](#sources)
-- [License](#license)
+ **Anonymous**                                                               |  **Security**                                                          |  **Raspberry Pi**                                                                                               
+ --------------------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- 
+[Receive SMS](http://www.receive-sms-online.info/)                           | [IP Tracker](http://www.ip-tracker.org/)                               | [Pinout](http://fr.pinout.xyz/)                                                                                
+[Receive SMS 2](http://receivefreesms.com/)                                  | [Web Browser Tracker](https://amiunique.org/fp)                        | [SenseHat Emulator](https://trinket.io/sense-hat)                                                              
+[Receive SMS 3](http://www.receive-sms-now.com/)                             | [Web Browser Tracker 2](https://panopticlick.eff.org/results?&dnt=111) | [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_intro/py_intro.html) 
+[Send SMS](http://www.sms-anonyme.net/index.php)                             | [Torrent tracker](https://iknowwhatyoudownload.com/)                   | [Gpiozero Library](https://gpiozero.readthedocs.io/en/stable/recipes.html)                                     
+[Send SMS 2](http://www.monsmsgratuit.com/)                                  | [Security Checks](https://www.botfree.eu/en/tools/securitychecks.html) | [Guizero Library](https://lawsie.github.io/guizero/#on-raspberry-pi)                                           
+[Receive Email](https://10minutemail.com/10MinuteMail/index.html?dswid=2971) | [Pwned Passwords](https://haveibeenpwned.com/Passwords)                | [Config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)                     
+[Receive Email 2](http://www.yopmail.com/fr/)                                | [DNS Leak Test](https://dnsleaktest.com/)                              | [NextCloud](https://ownyourbits.com/2017/02/13/nextcloud-ready-raspberry-pi-image/)                            
+[Receive Email 3](https://www.mailinator.com/)                               | [CERT](https://www.cert.ssi.gouv.fr/)                                  | [Gladys](https://gladysproject.com/fr/)                                                                        
+[Send Email](http://send-email.org/)                                         | [Exploit DataBase](https://www.exploit-db.com/)                        | [Seafile](https://github.com/haiwen/seafile-rpi/releases)                                                      
+[Send Email 2](http://anonymouse.org/cgi-bin/anon-email.cgi)                 | [Terms of Service](https://tosdr.org/)                                 | [Magic Mirror](https://magicmirror.builders/)                                                                  
+[Fake Name](http://www.fakenamegenerator.com/)                               | [QubesOS](https://github.com/QubesOS)                                  | [Pirate Box](https://piratebox.cc/raspberry_pi:diy)                                                            
+[Pastebin](https://pastebin.com/)                                            | [Virus Total](https://www.virustotal.com/#/home/url)                   | [Jasper](https://jasperproject.github.io/documentation/installation/)                                          
+[TOR](https://www.torproject.org/projects/torbrowser.html)                   | [Private Message](https://privnote.com/#)                              | [Alexa](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)                                       
+[ZeroNet](https://github.com/HelloZeroNet/ZeroNet)                           | [Private Message2](http://www.destructingmessage.com/)                 | [Simulate circuit](http://qucs.sourceforge.net/)                                                               
+[I2P](https://geti2p.net/fr/download)                                        |                                                                        |                                                                                                                
+[FreeNet](https://freenetproject.org/fr/pages/download.html)                 |                                                                        |                                                                                                                
+[SearcX](https://searx.laquadrature.net/)                                    |                                                                        |                                                                                                                
+[Qwant](https://lite.qwant.com/)                                             |                                                                        |                                                                                                                
+[Quick OS SADD](https://sadd.io/)                                            |                                                                        |                                                                                                                
+
+**RGPD**                                                                                                  | 
+ -------------------------------------------------------------------------------------------------------- | 
+[RoadMap](https://www.cnil.fr/fr/principes-cles/rgpd-se-preparer-en-6-etapes)                             | 
+[Simplify](https://www.kanjian.fr/7-points-declaircissement-sur-le-rgpd-applique-aux-sites-internet.html) | 
+[Reality](https://open-freax.fr/rgpd-12-mots-cles/)                                                       | 
+[Checklist](https://gdprchecklist.io/)                                                                    | 
+[What to do for DevOps](https://bohzo.developpez.com/rgpd-guide-pratique-developpeurs/)                   | 
+[Incident](https://www.kanjian.fr/wp-content/uploads/2017/09/DFqrUm8WAAEZ8ll.jpg)                         | 
+[Tool CNIL PIA](https://www.cnil.fr/fr/outil-pia-telechargez-et-installez-le-logiciel-de-la-cnil)         | 
+[Videos](https://www.youtube.com/playlist?list=PLuQRA2ya9-BluC6w8rsf_d_2U9ykxixwp)                        | 
+[Day 1, reality](http://www.zdnet.fr/blogs/green-si/rgpd-le-jour-d-apres-39868698.htm)                    | 
+
+**[`^        back to top        ^`](#)**
 
 ![rtfm, for real.](https://imgs.xkcd.com/comics/rtfm.png)
-
-**[`^        back to top        ^`](#)**
-
-## Index
-
-- [How to write Bash script](./bash.md)
-- [Cryptography and encryption](./crypto.md)
-- [Firewall and secure kernel](./firewall.md)
-- [General informations about networks and systems](./generals.md)
-- [Install software not in the repository](./install.md)
-- [Local network and anonymous connections](./network.md)
-- [Package manager for all Linux distributions](./package.md)
-- [Various programs and how to use them](./programs_others.md)
-- [Tips for sysadmin programs](./programs_sysadmin.md)
-- [Raspberry Pi basics commands](./rasp_basics.md)
-- [Raspberry Pi manage GPIO](./rasp_gpio.md)
-- [Security of the system and SSH tips](./security.md)
-- [Install and config server online](./server_web.md)
-- [Startup and install of the system](./startup.md)
-- [The most useful commands](./utils.md)
-
-**[`^        back to top        ^`](#)**
-
-## Install
-
-git clone in a .rtfm folder and add
-
-```bash
-rtfm () {
-  grep $1 -n -A 3 ~/.rtfm/*
-}
-```
-
-to .bashrc
-
-**[`^        back to top        ^`](#)**
-
-### IT
-
-- [Internet Archive](https://archive.org/index.php)
-- [Linux Packages](https://pkgs.org/)
-- [French Reporting](https://www.internet-signalement.gouv.fr/PortailWeb/planets/SignalerEtapeInformer!load.action)
-- [Python Documentation](https://www.python.org/)
-- [Bash Documentation](https://abs.traduc.org/abs-fr/index.html)
-- [IANA](https://www.iana.org/numbers)
-- [First to do](https://lmgtfy.com/)
-- [1st April](http://fakeupdate.net/)
-- [Securing Debian Howto](https://www.debian.org/doc/manuals/securing-debian-howto/ap-checklist.fr.html)
-- [DistroWatch](https://distrowatch.com/)
-- [Selfhosted](https://github.com/Kickball/awesome-selfhosted/blob/master/README.md)
-- [Register domain ?](https://www.freenom.com/en/index.html)
-- [Sysadmin help](https://github.com/n1trux/awesome-sysadmin/blob/master/README.md)
-- [Post code](https://gist.github.com/)
-- [Licenses](https://choosealicense.com/)
-- [CVE global](http://cve.circl.lu/)
-- [Github Cheatsheet](https://github.com/tiimgreen/github-cheat-sheet)
-- [Games](https://github.com/leereilly/games)
-- [How to name commit](https://www.grafikart.fr/formations/git/nommage-commit)
-- [Cheatsheets](https://devhints.io/)
-
-**[`^        back to top        ^`](#)**
-
-### Testing
-
-- [W3C Validation Service](https://validator.w3.org/#validate_by_input+with_options)
-- [User Agent Testing](https://www.whoishostingthis.com/tools/user-agent/)
-- [HTML5test](https://html5test.com/)
-- [Online Regex Tester](https://regex101.com/)
-- [Shell Check](https://www.shellcheck.net/#)
-- [EICAR Test Files](http://securite-informatique.info/virus/eicar/)
-- [Test OpenDNS](https://welcome.opendns.com/)
-- [Test your IPv6 Configuration](http://216.218.228.119/)
-- [Web Browser Benchmark](http://browserbench.org/JetStream/)
-- [Markdown Visualisation](https://stackedit.io/app)
-- [GitHub Markdown Visualisation](https://jbt.github.io/markdown-editor/)
-- [Down Detector](http://downdetector.fr/)
-- [HTML5 Editor](https://liveweave.com/)
-- [DNSEC Test](https://dnssec-debugger.verisignlabs.com/)
-- [Multi-Password tests](https://madiba.encs.concordia.ca/software/passwordchecker/)
-- [Test debit and latency](https://testdebit.info/)
-- [Test SMTP Server](https://mxtoolbox.com/diagnostic.aspx)
-
-**[`^        back to top        ^`](#)**
-
-### Generator
-
-- [Text to ASCII](http://patorjk.com/software/taag/#p=display&f=Banner3&t=Type%20Something%20)
-- [Image to ASCII](http://www.text-image.com/convert/ascii.html)
-- [QR Code](http://generator.code-qr.net/#vcard)
-- [Generate BDD](http://www.generatedata.com/)
-- [HTML Color](http://www.code-couleur.com/)
-- [Color Scheme](https://coolors.co/browser/best/1)
-- [Abstract Fonts](http://www.abstractfonts.com/)
-- [Chmod](https://chmodcommand.com/)
-- [Crontab](http://www.crontabgenerator.com/)
-- [Crontab translator](https://crontab.guru/)
-- [Bash Prompt](http://ezprompt.net/)
-- [Timestamp](http://www.timestampgenerator.com/)
-- [Python calculator](https://www.numworks.com/fr/simulateur/)
-- [OpenData](https://www.data.gouv.fr/fr/datasets/)
-
-**[`^        back to top        ^`](#)**
-
-### Anonymous
-
-
-- [Receive SMS](http://www.receive-sms-online.info/)
-- [Receive SMS 2](http://receivefreesms.com/)
-- [Receive SMS 3](http://www.receive-sms-now.com/)
-- [Send SMS](http://www.sms-anonyme.net/index.php)
-- [Send SMS 2](http://www.monsmsgratuit.com/)
-- [Receive Email](https://10minutemail.com/10MinuteMail/index.html?dswid=2971)
-- [Receive Email 2](http://www.yopmail.com/fr/)
-- [Receive Email 3](https://www.mailinator.com/)
-- [Send Email](http://send-email.org/)
-- [Send Email 2](http://anonymouse.org/cgi-bin/anon-email.cgi)
-- [Fake Name](http://www.fakenamegenerator.com/)
-- [Pastebin](https://pastebin.com/)
-- [TOR](https://www.torproject.org/projects/torbrowser.html)
-- [ZeroNet](https://github.com/HelloZeroNet/ZeroNet)
-- [I2P](https://geti2p.net/fr/download)
-- [FreeNet](https://freenetproject.org/fr/pages/download.html)
-- [SearcX](https://searx.laquadrature.net/)
-- [Qwant](https://lite.qwant.com/)
-- [Quick OS SADD](https://sadd.io/)
-
-**[`^        back to top        ^`](#)**
-
-### Security
-
-- [IP Tracker](http://www.ip-tracker.org/)
-- [Web Browser Tracker](https://amiunique.org/fp)
-- [Web Browser Tracker 2](https://panopticlick.eff.org/results?&dnt=111)
-- [Torrent tracker](https://iknowwhatyoudownload.com/)
-- [Security Checks](https://www.botfree.eu/en/tools/securitychecks.html)
-- [Pwned Passwords](https://haveibeenpwned.com/Passwords)
-- [DNS Leak Test](https://dnsleaktest.com/)
-- [CERT](https://www.cert.ssi.gouv.fr/)
-- [Exploit DataBase](https://www.exploit-db.com/)
-- [Terms of Service](https://tosdr.org/)
-- [QubesOS](https://github.com/QubesOS)
-- [Virus Total](https://www.virustotal.com/#/home/url)
-- [Private Message](https://privnote.com/#)
-- [Private Message2](http://www.destructingmessage.com/)
-
-**[`^        back to top        ^`](#)**
-
-### RGPD
-
-- [RoadMap](https://www.cnil.fr/fr/principes-cles/rgpd-se-preparer-en-6-etapes)
-- [Simplify](https://www.kanjian.fr/7-points-declaircissement-sur-le-rgpd-applique-aux-sites-internet.html)
-- [Reality](https://open-freax.fr/rgpd-12-mots-cles/)
-- [Checklist](https://gdprchecklist.io/)
-- [What to do for DevOps](https://bohzo.developpez.com/rgpd-guide-pratique-developpeurs/)
-- [Incident](https://www.kanjian.fr/wp-content/uploads/2017/09/DFqrUm8WAAEZ8ll.jpg)
-- [Tool CNIL PIA](https://www.cnil.fr/fr/outil-pia-telechargez-et-installez-le-logiciel-de-la-cnil)
-- [Videos](https://www.youtube.com/playlist?list=PLuQRA2ya9-BluC6w8rsf_d_2U9ykxixwp)
-- [Day 1, reality](http://www.zdnet.fr/blogs/green-si/rgpd-le-jour-d-apres-39868698.htm)
-
-**[`^        back to top        ^`](#)**
-
-### Raspberry Pi
-
-- [Pinout](http://fr.pinout.xyz/)
-- [SenseHat Emulator](https://trinket.io/sense-hat)
-- [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_setup/py_intro/py_intro.html)
-- [Gpiozero Library](https://gpiozero.readthedocs.io/en/stable/recipes.html)
-- [Guizero Library](https://lawsie.github.io/guizero/#on-raspberry-pi)
-- [Config.txt](https://www.raspberrypi.org/documentation/configuration/config-txt/README.md)
-- [NextCloud](https://ownyourbits.com/2017/02/13/nextcloud-ready-raspberry-pi-image/)
-- [Gladys](https://gladysproject.com/fr/)
-- [Seafile](https://github.com/haiwen/seafile-rpi/releases)
-- [Magic Mirror](https://magicmirror.builders/)
-- [Pirate Box](https://piratebox.cc/raspberry_pi:diy)
-- [Jasper](https://jasperproject.github.io/documentation/installation/)
-- [Alexa](https://github.com/alexa/alexa-avs-sample-app/wiki/Raspberry-Pi)
-- [Simulate circuit](http://qucs.sourceforge.net/)
-
-**[`^        back to top        ^`](#)**
-
-## Santé
-
-* Faire une pause de 5 min toutes les heures et bouger pendant les pauses
-
-* Regarder au loin toutes les 20 minutes (gauche et droite sans bouger la tête)
-
-* Avoir un éclairage indirect
-
-* Le haut de l'écran doit être juste en dessous de la ligne de regard
-
-* Distance optimale de l'écran
-```
-17 / 18 pouces  70 cm
-21 / 22 pouces  90 cm
-```
-
-**Etre confortable sans forcer le corps**
-
-**[`^        back to top        ^`](#)**
-
-## Sources
-
-- [Wikipedia](https://www.wikipedia.org/)
-- [Linuxtricks](https://www.linuxtricks.fr/)
-- [OpenClassroom](http://openclassrooms.com/)
-- [Advanced Bash scripts](https://abs.traduc.org/abs-fr/index.html)
-- [Developpez.com](https://www.developpez.com/)
-- [Admin Linux](https://www.admin-linux.fr/)
-- [MicroLinux](https://blog.microlinux.fr/)
-- Personal works
-
-**[`^        back to top        ^`](#)**
-
-## License
-
-[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
