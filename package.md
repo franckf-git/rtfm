@@ -402,20 +402,59 @@ sudo dnf system-upgrade reboot
 _____________________________________________________________________________________
 centos ajout de depots
 -------------------------------------------------------------------------------------
+
+EPEL Repository
 ```bash
-# must have
 yum -y install deltarpm
 yum-config-manager --enable extras
-# must have
 yum install epel-release
-# multimedia
-yum install --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
-yum install --nogpgcheck https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
-# workstation
-yum install https://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
-# hardware drivers
-yum install http://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+subscription-manager repos --enable "rhel-*-optional-rpms" --enable "rhel-*-extras-rpms"
+```
 
+REMI Repository - PHP
+```bash
+yum install epel-release
+wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+rpm -Uvh remi-release-7.rpm
+```
+
+ELRepo Repository - hardware/drivers
+```bash
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+```
+
+RPMFusion Repository - free and non-free add-on software
+```bash
+yum install epel-release
+yum localinstall --nogpgcheck https://download1.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm
+yum localinstall --nogpgcheck https://download1.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-7.noarch.rpm
+```
+
+GhettoForge Repository - add softwares
+```bash
+rpm -Uvh http://mirror.ghettoforge.org/distributions/gf/gf-release-latest.gf.el7.noarch.rpm
+```
+
+Psychotic Ninja - add softwares
+```bash
+rpm --import http://wiki.psychotic.ninja/RPM-GPG-KEY-psychotic
+rpm -ivh http://packages.psychotic.ninja/7/base/x86_64/RPMS/psychotic-release-1.0.0-1.el6.psychotic.noarch.rpm
+```
+
+NUX-dextop Repository - desktop and multimedia packages
+```bash
+yum -y install epel-release
+rpm -Uvh http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-5.el7.nux.noarch.rpm
+```
+
+IUS Community Repository - latest versions of PHP, Python, MySQL
+```bash
+yum -y install epel-release
+rpm -Uvh https://centos7.iuscommunity.org/ius-release.rpm
+```
+
+```bash
 yum check-update
 yum -y update
 ```
