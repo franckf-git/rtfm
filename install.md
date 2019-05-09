@@ -11,6 +11,7 @@
 - [install de firefox 57](#install-de-firefox-57)
 - [install multimedia fedora](#install-multimedia-fedora)
 - [minimal desktop](#minimal-desktop)
+- [dwm suckless](#dwm-suckless)
 - [minimal install of centos](#minimal-install-of-centos)
 - [proxmox interface web en local](#proxmox-interface-web-en-local)
 - [proxmox connexions web](#proxmox-connexions-web)
@@ -163,6 +164,29 @@ systemctl set-default graphical.target
 systemctl isolate graphical.target
 echo "exec i3" >> ~/.xinitrc #si pas de lightdm-gtk
 startx
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+dwm suckless
+-------------------------------------------------------------------------------------
+```bash
+#http://linuxpedia.fr/doku.php/dwm
+#https://gitlab.com/Blaskowitz/dotfiles/blob/master/dwm/laptop/dwm-6.1.h
+
+apt install git
+
+git clone http://git.suckless.org/dwm
+git clone http://git.suckless.org/dmenu
+git clone http://git.suckless.org/st
+git clone http://git.suckless.org/slock
+git clone http://git.suckless.org/slstatus
+git clone http://git.suckless.org/surf
+
+apt-get install xinit build-essential libx11-dev libxft-dev libxinerama-dev libxrandr-dev webkit2gtk-4.0 libgcr-3-dev
+
+#make clean install !!
 ```
 
 **[`^        back to top        ^`](#)**
