@@ -112,7 +112,17 @@ gpasswd -a USER autologin
 update-alternatives --config FICHIER.jpg
 
 ###>>>ou
-echo 'startx' >> .bashrc
+# Install the xorg-xinit package
+
+echo startx >> ~/.bashrc
+
+~/.xinitrc
+#!/bin/bash
+feh --bg-scale ~/.bg.png
+exec /usr/local/bin/dwm
+exec openbox-session
+exec chromium
+# etc
 ```
 
 **[`^        back to top        ^`](#)**
