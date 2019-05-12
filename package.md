@@ -68,7 +68,11 @@ apt-mark hold PACKAGE                      #bloquer en version actuelle (pas d u
 apt-cache policy PACKAGE                   #montre le paquet et les versions disponibles
 sudo aptitude install PACKAGE=VERSIONS     #Installer un paquet dans une version spécifique
 apt-get install --no-install-recommends PACKAGE    #ne pas installer les paquets recommandés
+tasksel                                    #Installeur ncurse pour les groupes
+tasksel --list-tasks                       #liste des groupes disponibles
+apt-get install lamp-server^               #installation d un group (^)
 ```
+
 
 **[`^        back to top        ^`](#)**
 
