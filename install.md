@@ -173,8 +173,6 @@ dwm suckless
 -------------------------------------------------------------------------------------
 ```bash
 #http://linuxpedia.fr/doku.php/dwm
-#https://gitlab.com/Blaskowitz/dotfiles/blob/master/dwm/laptop/dwm-6.1.h
-
 apt install git
 
 git clone http://git.suckless.org/dwm
@@ -186,7 +184,28 @@ git clone http://git.suckless.org/surf
 
 apt-get install xinit build-essential libx11-dev libxft-dev libxinerama-dev libxrandr-dev webkit2gtk-4.0 libgcr-3-dev
 
-#make clean install !!
+cd dwm/
+make clean install
+cd ../dmenu/
+make clean install
+cd ../st/
+make clean install
+cd ../slock/
+make clean install
+cd ../slstatus/
+make clean install
+cd ../surf/
+make clean install
+
+echo "exec dwm" >> ~/.xinitrc
+echo "startx" >> ~/.bashrc
+
+#debian you will need fontconfig 2.11.92 or newer, or switch to 6.1
+wget https://dl.suckless.org/dwm/dwm-6.1.tar.gz
+
+vim config.mk
+#comment out line 21 (BSD)
+#FREETYPEINC = ${X11INC}/freetype2
 ```
 
 **[`^        back to top        ^`](#)**
