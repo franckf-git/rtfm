@@ -197,8 +197,14 @@ make clean install
 cd ../surf/
 make clean install
 
-echo "exec dwm" >> ~/.xinitrc
-echo "startx" >> ~/.bashrc
+echo "
+slstatus &
+exec dwm" >> ~/.xinitrc
+echo "
+if [[ "$(tty)" == "/dev/tty1" ]]
+then
+    exec startx
+fi" >> ~/.bashrc
 
 #debian you will need fontconfig 2.11.92 or newer, or switch to 6.1
 wget https://dl.suckless.org/dwm/dwm-6.1.tar.gz
@@ -206,6 +212,13 @@ wget https://dl.suckless.org/dwm/dwm-6.1.tar.gz
 vim config.mk
 #comment out line 21 (BSD)
 #FREETYPEINC = ${X11INC}/freetype2
+
+#patch
+#creer une branche
+git apply some_patch.diff
+https://dwm.suckless.org/patches/noborder/dwm-noborder-6.1.diff
+https://tools.suckless.org/slock/patches/message/slock-message-20180626-35633d4.diff
+https://st.suckless.org/patches/scrollback/st-scrollback-20190331-21367a0.diff
 ```
 
 **[`^        back to top        ^`](#)**
