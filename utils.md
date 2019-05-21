@@ -708,6 +708,7 @@ convert -density 600 *.pdf *.jpg                 #Convertir des fichiers pdf en 
 convert *.jpg FICHIER.pdf  -limit memory 1mb -limit map 1mb            #jpg en pdf
 aplay /dev/urandom                               #bruit rose
 cat LIST | gnuplot -p -e 'plot "-"'              #afficher un graphique de nombre
+xsetroot -mod 16 16 -foreground '#1f1f1f' -background '#1f1f1f' #background uni xorg
 nano /home/$USER/.mpv/config                     #mpv reprise
 save-position-on-quit
 
