@@ -254,6 +254,9 @@ flatpak run --sandbox NAME               # full security
 --device=dri                             #OpenGL rendering
 --socket=wayland                         #Show windows using Wayland
 --socket=pulseaudio                      #Play sounds using PulseAudio
+flatpak info --show-permissions NAME     #voir les permissions
+flatpak override --nofilesystem=home NOM #changer les permissions
+flatpak override --reset NAME            #reinitialiser les permissions
 flatpak list                             # list all installed apps
 flatpak update NAME                      # update an apps
 flatpak uninstall NAME                   # remove an apps
