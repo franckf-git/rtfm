@@ -728,6 +728,10 @@ jp2a                                             #image en ascii
 ccze                                             #coloration syntaxique des logs
 most                                             #colorisation man pages
 fc-list                                          #lister les polices installées
+# local fonts
+mkdir ~/.local/share/fonts/robofont
+cp robofont.ttf ~/.local/share/fonts/robofont
+fc-cache -v
 xprop                                            #lecture d une fenetre
 nmon                                             #moniteur systeme
 glances                                          #moniteur (copr tartare/glances)
