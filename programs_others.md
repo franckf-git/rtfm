@@ -184,6 +184,17 @@ mdadm --manage /dev/md0 --add /dev/sdd
 mdadm --manage /dev/md0 --fail /dev/sdc --remove /dev/sdc
 ###>>>stopper un raid
 mdadm --stop /dev/md0
+
+#Create a RAID array
+mdadm --create /dev/md/test --homehost=any --metadata=1.0 --level=1 --raid-devices=2 /dev/sda1 /dev/sdb1
+#Assemble (and start) a RAID array
+mdadm --assemble /dev/md/test /dev/sda1 /dev/sdb1
+#Stop a RAID array
+mdadm --stop /dev/md/test
+#Delete a RAID array
+mdadm --zero-superblock /dev/sda1 /dev/sdb1
+#Check the status of all assembled RAID arrays
+cat /proc/mdstat
 ```
 
 **[`^        back to top        ^`](#)**
