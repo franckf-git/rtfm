@@ -250,6 +250,10 @@ DESCRIBE table;  -     -- liste les colonnes et leurs caracteristiques
 DROP TABLE table;
 SELECT * FROM table;
 
+SHOW GLOBAL VARIABLES LIKE 'innodb_fil%';
+SHOW INDEX FROM mytable;
+SHOW TABLE STATUS;
+
 -- modification table
 ALTER TABLE nom_table ADD ...              -- permet d ajouter
 ALTER TABLE nom_table DROP ...             -- permet de retirer
