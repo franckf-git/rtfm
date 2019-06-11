@@ -354,9 +354,10 @@ ________________________________________________________________________________
 cockpit surveillance
 -------------------------------------------------------------------------------------
 ```bash
-echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list
-apt-get update
-sudo apt-get install cockpit
+sudo dnf install cockpit
+sudo systemctl enable --now cockpit.socket
+sudo firewall-cmd --add-service=cockpit
+sudo firewall-cmd --add-service=cockpit --permanent
 
 ###>>>https://IP_ADDRESS:9090
 ```
