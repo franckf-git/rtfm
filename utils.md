@@ -128,6 +128,7 @@ jq                    #gestion de json
 column -s C -t FIC    #affichage en colonnes selon le caractère C
 apropos TERMES        #recherche dans toutes les man pages
 clip < FILE           #copier dans le presse-passier
+cat file  | od -c     #voir les retours à la ligne
 echo 'MESSAGE' | tr '[A-Za-z]' '[N-ZA-Mn-za-m]' #rot13
 stat -c '%A %a %n'    #FICHIER permissions d un fichier en octal
 for i in *.* ; do  j=$(awk -F. '{print "PREFIX"$1"SUFIX."$2}') ; mv "$i" "$j" ; done    #renommage en lot
