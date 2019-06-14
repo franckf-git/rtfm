@@ -390,6 +390,7 @@ Dépots supplémentaires fedora
 #NVIDIA graphics drivers
 #Steam client
 sudo dnf install fedora-workstation-repositories
+dnf config-manager --set-enabled google-chrome
 ```
 
 **[`^        back to top        ^`](#)**
