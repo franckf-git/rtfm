@@ -239,6 +239,7 @@ flatpak
 ###>>>Activer flatpak
 dnf install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add fedora oci+https://registry.fedoraproject.org
 
 flatpak remote-ls REPO --app             # list all availables apps
 flatpak remote-ls flathub --app
