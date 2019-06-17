@@ -171,6 +171,17 @@ dtoverlay=dwc2
 
 > /boot/ssh #active le ssh sur raspian
 
+wpa_supplicant.conf #configuration du wifi
+
+country=gb
+update_config=1
+ctrl_interface=/var/run/wpa_supplicant
+network={
+scan_ssid=1
+ssid="Your network name"
+psk="Your network password"
+}
+
 sudo nano /boot/cmdline.txt
 modules-load=dwc2,g_ether ###>>>entre rootwait et quiet
 
