@@ -164,6 +164,19 @@ systemctl set-default graphical.target
 systemctl isolate graphical.target
 echo "exec i3" >> ~/.xinitrc #si pas de lightdm-gtk
 startx
+
+#fedora personalisee gnome _minimal_
+dnf install gdm gnome-shell gnome-terminal gnome-tweaks levien-inconsolata-fonts
+set defaut graphical
+
+# wayland twm https://wiki.archlinux.org/index.php/Sway
+dnf install gdm sway
+dnf group install "Standard" "Multimedia" "Hardware Support"
+mkdir -p ~/.config/sway
+cp /etc/sway/config ~/.config/sway/
+set defaut graphical
+
+echo $WAYLAND_DISPLAY
 ```
 
 **[`^        back to top        ^`](#)**
