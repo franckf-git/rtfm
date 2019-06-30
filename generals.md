@@ -85,6 +85,48 @@ Ctrl+x+e          Continue editing your current shell line in a text editor (use
 **[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
+sway / Gnome
+-------------------------------------------------------------------------------------
+```
+List of Keybindings
+User Menu > System Settings > Keyboard > Shortcuts
+
+## moves
+Super + Page Up/Down        switch between workspaces
+Ctrl  + Alt + Up/Down       switch between workspaces
+Super + Right/Left          move window to right/left half of screen
+Super + Up                  maximize window
+Super + Shift + Right/Left  move window to right/left monitor 
+Ctrl  + Alt + Shift + Up/Do move the current window to a different workspace
+
+## applications
+Super                  brings Activity
+Alt   + F1             switch between overview and desktop
+Super + Tab            switch between the running applications
+Alt   + Tab            switch between the running applications
+Alt   + Shift + Tab    switch reverse between the running applications
+Alt   + [above Tab]    switch between windows of the same application
+Super + a              show applications menu
+Alt   + F2             running commands
+
+## system
+Ctrl  + Alt + Del      power off
+Super + L              lock the screen
+Alt   + F2 + r         restart the shell
+Ctrl  + Alt + Tab      brings up the accessibility switcher
+Super + m              show message tray
+
+## screenshot
+PrintScreen             screenshot to a file
+Alt   + PrintScreen     screenshot only of active window
+Shift + PrintScreen     screenshot region of screen
+Ctrl  + PrintScreen     screenshot to clipboard
+Ctrl  + Shift + Alt + R screencast recording
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
 tabbed
 -------------------------------------------------------------------------------------
 ```
