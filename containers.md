@@ -14,6 +14,10 @@ podman image rm UUID           #remove images
 podman info
 podman images
 
+podman run -dit -v ~/Documents/InProgress/test-nodejs:/var/www/html:Z -p 8080:80/tcp registry.fedoraproject.org/fedora
+
+podman exec --user=root -it ID /bin/bash
+
 #Dockerfile
 FROM centos:latest
 RUN yum -y install httpd
