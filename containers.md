@@ -2,33 +2,53 @@
 
 ## podman
 
-https://hub.docker.com/r/centos/httpd-24-centos7
-
+```bash
 podman ps                      #check podman
-podman run hello-world
+podman container list --all    #list container
 podman image ls -a             #check your images
-podman ps -a see               #your containers
 podman rm UUID                 #remove containers
 podman search httpd            #searching
 podman image rm UUID           #remove images
 podman info
-podman images
 
-podman run -dit -v ~/Documents/InProgress/test-nodejs:/var/www/html:Z -p 8080:80/tcp registry.fedoraproject.org/fedora
+podman run -d -v /root/mysql-data:/var/lib/mysql/data:Z -e MYSQL_USER=user -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=db -p 3306:3306 registry.access.redhat.com/rhscl/mariadb-102-rhel7
+```
 
-podman exec --user=root -it ID /bin/bash
+```bash
+args=(
+    # Disable SELinux label to enable mounting runtime socket
+    --security-opt label=disable
+    # Enable legacy X11
+    -v /tmp/.X11-unix/:/tmp/.X11-unix/
+    -e DISPLAY=:0
+    # Enable xdg runtime for wayland and pulseaudio socket  
+    -v /run/user/1000/:/run/user/1000/
+    -e XDG_RUNTIME_DIR=/run/user/1000
+    -e PULSE_SERVER=/run/user/1000/pulse/native
+    # fix XError bad access
+    --ipc host
+)
+podman run ${args[@]} ...
+```
 
-#Dockerfile
+### Create a container with a Dockerfile, run it and enter into
+
+```bash
+podman build --tag fedora-nodejs:podman .
+podman run --name livre-d-or --detach --interactive --tty --volume ~/livre-d-or:/home:Z --publish 8080:8080/tcp localhost/fedora-nodejs:podman
+podman exec --user=root --interactive --tty livre-d-or /bin/bash
+```
+
+### Examples Dockerfile
+
+```config
 FROM centos:latest
 RUN yum -y install httpd
 CMD [“/usr/sbin/httpd”, “-D”, “FOREGROUND”]
 EXPOSE 80
-podman build .                 #build it
+```
 
-podman run -dit -p 80:80       #list your images and run
-curl -I http://localhost:80    #test
-
-#Dockerfile
+```config
 FROM registry.centos.org/che-stacks/centos-stack-base
 
 WORKDIR /usr/src/open-adventure
@@ -49,27 +69,22 @@ RUN sudo yum -y update && \
     sudo make
 
 CMD tail -f /dev/null 
+```
 
-podman build -t open-adventure:podman .
+```config
+FROM registry.fedoraproject.org/fedora
 
-podman run -d -v /root/mysql-data:/var/lib/mysql/data:Z -e MYSQL_USER=user -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=db -p 3306:3306 registry.access.redhat.com/rhscl/mariadb-102-rhel7
+RUN dnf -y update && \
+    dnf -y install nodejs mysql-server
+```
 
-args=(
-    # Disable SELinux label to enable mounting runtime socket
-    --security-opt label=disable
-    # Enable legacy X11
-    -v /tmp/.X11-unix/:/tmp/.X11-unix/
-    -e DISPLAY=:0
-    # Enable xdg runtime for wayland and pulseaudio socket  
-    -v /run/user/1000/:/run/user/1000/
-    -e XDG_RUNTIME_DIR=/run/user/1000
-    -e PULSE_SERVER=/run/user/1000/pulse/native
-    # fix XError bad access
-    --ipc host
-)
-podman run ${args[@]} ...
+### Create a systemd service with podman
 
-/etc/systemd/system/mariadb-podman.service
+```bash
+vi /etc/systemd/system/mariadb-podman.service
+```
+
+```config
 [Unit]
 Description=Custom MariaDB Podman Container
 After=network.target
@@ -88,11 +103,15 @@ Restart=always
 RestartSec=30
 
 [Install]
+```
 
+```bash
 systemctl daemon-reload
+```
 
+### --help
 
-
+```
   attach      #Attach to a running container
   build       #Build an image using instructions from Dockerfiles
   commit      #Create new image based on the changed container
@@ -145,26 +164,4 @@ systemctl daemon-reload
   version     #Display the Podman Version Information
   volume      #Manage volumes
   wait        #Block on one or more containers
-
-
-
-
-
-docker run -d \
-    --name pihole \
-    -p 53:53/tcp -p 53:53/udp \
-    -p 80:80 \
-    -p 443:443 \
-    -e TZ="America/Chicago" \
-    -v "$(pwd)/etc-pihole/:/etc/pihole/" \
-    -v "$(pwd)/etc-dnsmasq.d/:/etc/dnsmasq.d/" \
-    --dns=127.0.0.1 --dns=1.1.1.1 \
-    --restart=unless-stopped \
-    pihole/pihole:latest
-
-
-
-
-
-
-
+```
