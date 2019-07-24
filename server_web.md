@@ -34,6 +34,7 @@ simple serveur web
 -------------------------------------------------------------------------------------
 ```bash
 python -m SimpleHTTPServer 7777
+python3 -m http.server 8080
 ```
 
 **[`^        back to top        ^`](#)**
