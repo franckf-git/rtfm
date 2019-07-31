@@ -68,7 +68,7 @@ RUN sudo yum -y update && \
     sudo yum -y install python-yaml && \
     sudo make
 
-CMD tail -f /dev/null 
+CMD tail -f /dev/null
 ```
 
 ```config
