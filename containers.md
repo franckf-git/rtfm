@@ -72,6 +72,17 @@ CMD tail -f /dev/null
 ```
 
 ```config
+FROM node:alpine
+
+WORKDIR /nodebook
+ADD ./package.json ./package-lock.json ./
+RUN npm ci
+ADD ./examples ./examples
+
+CMD ["node", "examples/hello.js"]
+```
+
+```config
 FROM registry.fedoraproject.org/fedora
 
 RUN dnf -y update && \
