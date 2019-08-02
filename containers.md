@@ -72,6 +72,17 @@ CMD tail -f /dev/null
 ```
 
 ```config
+FROM registry.fedoraproject.org/fedora
+
+RUN dnf -y update && \
+    dnf -y install nodejs mysql-server
+```
+
+#### Projet Node
+
+Dockerfile
+
+```config
 FROM node:alpine
 
 WORKDIR /nodebook
@@ -82,11 +93,10 @@ ADD ./examples ./examples
 CMD ["node", "examples/hello.js"]
 ```
 
-```config
-FROM registry.fedoraproject.org/fedora
+.dockerignore
 
-RUN dnf -y update && \
-    dnf -y install nodejs mysql-server
+```config
+node_modules
 ```
 
 ### Create a systemd service with podman
