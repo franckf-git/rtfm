@@ -130,6 +130,34 @@ RestartSec=30
 systemctl daemon-reload
 ```
 
+### systemd in podman
+
+Dockerfile
+
+```config
+FROM fedora
+
+RUN dnf -y install httpd; dnf clean all; systemctl enable httpd
+
+EXPOSE 80
+
+CMD [ "/sbin/init" ]
+```
+
+```bash
+podman build -t systemd .
+```
+
+sur la machine hôte :
+
+```bash
+sudo setsebool -P container_manage_cgroup true
+```
+
+```bash
+podman run -ti -p 80:80 systemd
+```
+
 ### --help
 
 ```
