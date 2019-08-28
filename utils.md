@@ -859,6 +859,7 @@ COM !:1 !:3                       #reutilise les arguments 1 et 3 de la dernièr
 COM !211:1                        #reutilise l argument 1 de la commande 211
 [ECHAP].                          #rappelle le dernier argument
 !$
+!COMMAND
 export HISTTIMEFORMAT='%F %T '                     #date des commandes
 export HISTIGNORE='ls -l:pwd:history'              #ignorer certaines commandes
 unset export HISTIGNORE                            #desactiver ignorance
