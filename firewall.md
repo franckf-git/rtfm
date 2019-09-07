@@ -112,6 +112,10 @@ firewall-cmd --query-panic
 nano /etc/firewalld/services/service.xml
 firewall-cmd --reload
 
+firewall-cmd --list-ports                            #list of allowed ports
+sudo firewall-cmd --add-port=port-number/port-type   #add a port for incoming traffic
+sudo firewall-cmd --runtime-to-permanent             #new settings persistent
+
 ###>>>ajouter un service à la zone active
 firewall-cmd --add-service=rtmp
 ###>>>bloquer les ping
