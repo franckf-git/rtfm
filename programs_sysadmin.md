@@ -789,3 +789,18 @@ git push -u origin master
 ```
 
 **[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+git flow
+-------------------------------------------------------------------------------------
+```bash
+git flow init                       # pour initialiser Git et GitFlow dans un projet.
+git flow feature start <nom>        # pour démarrer le développement d'une nouvelle fonctionnalité.
+git flow feature finish <nom>       # pour terminer le développement d'une nouvelle fonctionnalité.
+git flow release start <version>    # pour démarrer le développement d'une nouvelle release.
+git flow release finish <nom>       # pour terminer le développement d'une nouvelle release.
+git flow hotfix start <version>     # pour démarrer le développement d'un nouveau hotfix.
+git flow hotfix finish <nom>        # pour terminer le développement d'un nouveau hotfix.
+```
+
+**[`^        back to top        ^`](#)**
