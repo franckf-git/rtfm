@@ -85,6 +85,15 @@ firewall-cmd --state
 ###>>>les zones disponibles
 firewall-cmd --get-zones
 firewall-cmd --list-all-zones
+#block – All incoming network connections rejected. Only network connections initiated from within the system are possible.
+#dmz – Classic demilitarized zone (DMZ) zone that provided limited access to your LAN and only allows selected incoming ports.
+#drop – All incoming network connections dropped, and only outgoing network connections allowed.
+#external – Useful for router type of connections. You need LAN and WAN interfaces too for masquerading (NAT) to work correctly.
+#home – Useful for home computers such as laptops and desktops within your LAN where you trust other computers. Allows only selected TCP/IP ports.
+#internal – For use on internal networks when you mostly trust the other servers or computers on the LAN.
+#public – You do not trust any other computers and servers on the network. You only allow the required ports and services.
+#trusted – All network connections are accepted. I do not recommend this zone for dedicated servers or VMs connected to WAN.
+#work – For use at your workplace where you trust your coworkers and other servers.
 ###>>>la zone active en cours
 firewall-cmd --get-default-zone
 firewall-cmd --get-active-zones
@@ -114,6 +123,7 @@ firewall-cmd --reload
 
 firewall-cmd --list-ports                            #list of allowed ports
 sudo firewall-cmd --add-port=port-number/port-type   #add a port for incoming traffic
+sudo firewall-cmd --zone=drop --add-port=9090/tcp --permanent
 sudo firewall-cmd --runtime-to-permanent             #new settings persistent
 
 ###>>>ajouter un service à la zone active
