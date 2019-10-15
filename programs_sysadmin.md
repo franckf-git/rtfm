@@ -786,6 +786,11 @@ git add --all
 git commit -m "Initial commit"
 git push -u origin master
 ###>>>https://USERNAME.github.io
+
+###>>>config file with git
+git init --bare $HOME/.dotfiles # bare repo
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # alias
+mydotfiles config --local status.showUntrackedFiles no # show only what is add
 ```
 
 **[`^        back to top        ^`](#)**
