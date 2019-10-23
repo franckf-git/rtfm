@@ -809,3 +809,38 @@ git flow hotfix finish <nom>        # pour terminer le développement d'un nouve
 ```
 
 **[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
+my git workflow
+-------------------------------------------------------------------------------------
+```bash
+# new feature
+git checkout -b feature/my-feature master
+git commit ...
+git push -u origin feature/my-feature
+git commit ...
+git commit ...
+git push -u origin feature/my-feature
+git tag 2.3.0
+
+# end new feature
+git checkout master
+git merge --no-ff feature/my-feature
+git push origin master
+git branch -d feature/my-feature
+git push origin :feature/my-feature
+
+# new hotfix
+git checkout -b hotfix/my-fix master
+git commit ...
+git tag 2.3.4
+
+# end new hotfix
+git checkout master
+git merge --no-ff hotfix/my-fix
+git push origin master
+git branch -d hotfix/my-fix
+git push origin :hotfix/my-fix
+```
+
+**[`^        back to top        ^`](#)**
