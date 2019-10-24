@@ -216,6 +216,10 @@ deltarpm=0
 sudo nano /etc/dnf/dnf.conf
 fastestmirror=true
 
+###>>>Téléchargements parallèles
+sudo nano /etc/dnf/dnf.conf
+max_parallel_downloads=5
+
 ###>>>Nombre de kernel disponibles au démarrage
 sudo nano /etc/dnf/dnf.conf
 installonly_limit=2
