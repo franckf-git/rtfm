@@ -12,6 +12,7 @@
 - [dokuwiki](#dokuwiki)
 - [markdown](#markdown)
 - [git](#git)
+- [my git workflow](#my-git-workflow)
 
 _____________________________________________________________________________________
 crontab -e
@@ -821,7 +822,7 @@ git push -u origin feature/my-feature
 git commit ...
 git commit ...
 git push -u origin feature/my-feature
-git tag 2.3.0
+git tag -a 2.3.0 -m 'ajout de la fonctionnalité feature'
 
 # end new feature
 git checkout master
