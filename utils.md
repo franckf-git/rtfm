@@ -24,6 +24,54 @@
 - [commandes tokill](#commandes-tokill)
 
 _____________________________________________________________________________________
+top
+-------------------------------------------------------------------------------------
+```bash
+ifconfig
+iwconfig
+ifstat
+ethtool
+arpwatch
+bmon
+telnet
+ssh
+sendmail
+write
+mail
+mailstats
+w
+curl
+wget
+ftp
+rcp
+scp
+rsync
+socat
+sftp
+sshfs
+hostname
+iptables
+route
+dig
+ip
+nslookup
+netstat
+ping
+traceroute
+iftop
+nload
+ss
+whois
+tcpdump
+dhclient
+dstat
+tshark
+hping3
+```
+
+**[`^        back to top        ^`](#)**
+
+_____________________________________________________________________________________
 navigation systeme
 -------------------------------------------------------------------------------------
 ```bash
