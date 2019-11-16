@@ -14,9 +14,10 @@
 - [git](#git)
 - [my git workflow](#my-git-workflow)
 
-_____________________________________________________________________________________
-crontab -e
--------------------------------------------------------------------------------------
+---
+
+## crontab -e
+
 ```
  .---------------- minute (0 - 59)
  |  .------------- hour (0 - 23)
@@ -48,11 +49,12 @@ exemples :
 24 7 * * Lwed-fri          -> 7:24 AM on the last wednesday, thursday, and friday of every month
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-cron quotidienne
--------------------------------------------------------------------------------------
+---
+
+## cron quotidienne
+
 ```bash
 ###>>>vérifie si les paquets sont toujours marqués comme bogués
 cat /etc/cron.daily/apt-listbugs
@@ -85,11 +87,12 @@ prefclean()
 prefclean
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-commandes periodiques en dessous de une minute
--------------------------------------------------------------------------------------
+---
+
+## commandes periodiques en dessous de une minute
+
 ```bash
 while (sleep 5 && COMMAND) &
 do
@@ -111,11 +114,11 @@ done
 * * * * * while true; do COMMAND & sleep 1; done
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-Ansible
--------------------------------------------------------------------------------------
+---
+
+## Ansible
 
 - [Ansible Documentation](https://docs.ansible.com/ansible/latest/index.html)
 - [All modules](https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html)
@@ -166,11 +169,11 @@ nano upgrade.yml
     - name: install nano
       apt: name=nano state=present
     - name: install common packages for all servers
-      apt: 
+      apt:
         update_cache=yes
         state=latest
         name={{item}}
-      with_items: 
+      with_items:
       - curl
       - htop
       - ncdu
@@ -187,14 +190,15 @@ nano upgrade.yml
 ansible-playbook upgrade.yml --verbose
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-SQL
--------------------------------------------------------------------------------------
+---
+
+## SQL
+
 ```bash
 sudo apt-get install mysql-server mysql-client
-#or 
+#or
 dnf install mariadb mariadb-server
 
 systemctl start mariadb
@@ -211,16 +215,19 @@ mysql_secure_installation #secure your MySQL installation
 mysql -h localhost -u root -pMOTDEPASS
 cat ~/.mysql_history #history des requetes sql
 ```
+
 ```sql
 -- creation base de donnees et affectation des droits
 SET NAMES 'utf8';
 GRANT ALL PRIVILEGES ON basededonnee * TO 'USER'@'localhost' IDENTIFIED BY 'MOTDEPASS';
 ```
+
 ```bash
 ls /var/lib/mysql/DATABASE #dossier de la base
 mysql -h localhost -u USER -pMOTDEPASS --default-character-set=utf8
 mysql -A -hIP -uUSER -p BASE -e "SHOW TABLES LIKE 'TABLE%';"
 ```
+
 ```sql
 SELECT 'value';
 
@@ -303,6 +310,7 @@ mysqldump -u USER -p --opt NOM_DE_LA_BASE > SAUVEGARDE.sql
 mysqldump -hIP -uUSER -p BASE TABLE1 T2 T3 > DUMP.sql
 mysql NOM_BASE < CHEMIN/FICHIER_DE_SAUVEGARDE.sql
 ```
+
 ```sql
 --ou
 USE nom_base;
@@ -326,6 +334,7 @@ OPTIMIZE TABLE myTable:
 SHOW CREATE TABLE myTable;
 ALTER TABLE myTable ENGINE = InnoDB;
 ```
+
 ```bash
 mysqlcheck --repair --databases db_name ...
 mysqlcheck --repair --all-databases
@@ -335,11 +344,12 @@ mysqldump --all-databases > dump.sql
 mysql < dump.sql
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-Cassandra
--------------------------------------------------------------------------------------
+---
+
+## Cassandra
+
 ```bash
 wget http://www.apache.org/dyn/closer.lua/cassandra/3.0.15/apache-cassandra-3.0.15-bin.tar.gz
 tar -xvzf apache-cassandra-3.0.15-bin.tar.gz apache-cassandra-3.0.15
@@ -361,6 +371,7 @@ sudo rm -rf /var/lib/cassandra/data/data/system/*
 - Determine the snitch and replication strategy.
 
 > cassandra.yaml :
+>
 > - cluster_name : nom du cluster
 > - listen_address : adresse IP ou nom de machine du noeud
 > - seed_provider : adresse IP pour la découverte du réseau
@@ -450,11 +461,12 @@ nodetool snapshot                                       # sauvegarde
 COPY nomtable (colonne, colonne, ...) FROM 'dump.csv';  # restoration
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-syslog-ng
--------------------------------------------------------------------------------------
+---
+
+## syslog-ng
+
 ```bash
 sudo apt install syslog-ng
 
@@ -499,11 +511,12 @@ sudo systemctl restart syslog-ng.service
 tail /var/log/perso.log
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-dokuwiki
--------------------------------------------------------------------------------------
+---
+
+## dokuwiki
+
 ```
 **gras**
 //italique//
@@ -583,15 +596,16 @@ afficher du texte exactement comme il est saisi
 Ceci est du code colorisé et disponible au téléchargement
 </code>
 <file>
-citation d un fichier 
+citation d un fichier
 </file>
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-markdown
--------------------------------------------------------------------------------------
+---
+
+## markdown
+
 ```
 *italic text*
 _italic text_
@@ -600,7 +614,7 @@ __my bold text__
 ***my bold and italic text***
 ___my bold and italic text___
 
-jump line, two spaces at the end  
+jump line, two spaces at the end
 
 # Heading level 1
 ## Heading level 2
@@ -684,11 +698,12 @@ Term 2
 ![progress](http://progressed.io/bar/59?title=completed "progress")
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-git
--------------------------------------------------------------------------------------
+---
+
+## git
+
 ```bash
 git init NOM-DU-PROJET                      #Crée un dépôt local
 git init --bare                             # creer un depot sur le serveur
@@ -794,11 +809,12 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # ali
 mydotfiles config --local status.showUntrackedFiles no # show only what is add
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-git flow
--------------------------------------------------------------------------------------
+---
+
+## git flow
+
 ```bash
 git flow init                       # pour initialiser Git et GitFlow dans un projet.
 git flow feature start <nom>        # pour démarrer le développement d'une nouvelle fonctionnalité.
@@ -809,11 +825,12 @@ git flow hotfix start <version>     # pour démarrer le développement d'un nouv
 git flow hotfix finish <nom>        # pour terminer le développement d'un nouveau hotfix.
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-my git workflow
--------------------------------------------------------------------------------------
+---
+
+## my git workflow
+
 ```bash
 # new feature
 git checkout -b feature/my-feature master
@@ -822,26 +839,26 @@ git push -u origin feature/my-feature
 git commit ...
 git commit ...
 git push -u origin feature/my-feature
-git tag -a 2.3.0 -m 'ajout de la fonctionnalité feature'
 
 # end new feature
 git checkout master
 git merge --no-ff feature/my-feature
-git push origin master
+git tag 2.3.0
+git push origin master --tags
 git branch -d feature/my-feature
 git push origin :feature/my-feature
 
 # new hotfix
 git checkout -b hotfix/my-fix master
 git commit ...
-git tag 2.3.4
 
 # end new hotfix
 git checkout master
 git merge --no-ff hotfix/my-fix
-git push origin master
+git tag 2.3.4
+git push origin master --tags
 git branch -d hotfix/my-fix
 git push origin :hotfix/my-fix
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
