@@ -14,11 +14,12 @@
 - [montage nfs](#montage-nfs)
 - [gestion ssmtp mailutils](#gestion-ssmtp-mailutils)
 
-_____________________________________________________________________________________
-changer serveur DNS en CLI
--------------------------------------------------------------------------------------
+---
+
+## changer serveur DNS en CLI
+
 ```bash
-cat /etc/resolv.conf 
+cat /etc/resolv.conf
 sudo nano /etc/dhcph.conf
 static domain_name_servers=80.67.169.12
 
@@ -29,11 +30,12 @@ sudo nano /etc/network/interfaces
 dns-nameservers 80.67.169.12
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-DNScrypt
--------------------------------------------------------------------------------------
+---
+
+## DNScrypt
+
 ```bash
 install dnscrypt-proxy
 dig SITE.TEST | grep server
@@ -44,11 +46,12 @@ dnscrypt-proxy -R CHOIXDNS
 dig SITE.TEST | grep server
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-transformer une machine en routeur
--------------------------------------------------------------------------------------
+---
+
+## transformer une machine en routeur
+
 ```bash
 ###>>>creer interface reseau virtuel
 ifconfig eth0:0 192.168.11.254 netmask 255.255.255.0
@@ -66,11 +69,12 @@ route -n
 traceroute
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-monter un partage samba au demarrage
--------------------------------------------------------------------------------------
+---
+
+## monter un partage samba au demarrage
+
 ```bash
 sudo nano /etc/fstab
 //IP_SERVEUR/PARTAGE    /MEDIA/PARTAGE cifs credentials=/root/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,_netdev 0 0
@@ -81,22 +85,24 @@ password=MOT_DE_PASSE
 domain=NOM_DE_DOMAINE(facultatif)
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-changement adresse mac
--------------------------------------------------------------------------------------
+---
+
+## changement adresse mac
+
 ```bash
 /etc/init.d/networking stop
 ifconfig eth0 hw ether 02:01:02:03:04:08
 /etc/init.d/networking start
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-load balancing simple avec iptable
--------------------------------------------------------------------------------------
+---
+
+## load balancing simple avec iptable
+
 ```bash
 # on active le transfert de données
 sysctl net.ipv4.ip_forward=1
@@ -119,11 +125,12 @@ iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -m state --state NEW -m 
 iptables -t nat -A POSTROUTING -j MASQUERADE
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-desactiver ipv6
--------------------------------------------------------------------------------------
+---
+
+## desactiver ipv6
+
 ```bash
 ###>>>redhat
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
@@ -148,15 +155,16 @@ su -c 'echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf'
 su -c 'sysctl -p'
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-tor en cli
--------------------------------------------------------------------------------------
+---
+
+## tor en cli
+
 ```bash
 sudo apt-get install tor
 
-sudo nano /etc/tor/torrc 
+sudo nano /etc/tor/torrc
 SocksPort 9050
 ControlPort 9051
 CookieAuthentication 0
@@ -176,11 +184,12 @@ sudo systemctl restart privoxy.service
 /usr/bin/chromium --proxy-server="socks5://127.0.0.1:8118"
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-protonvpn
--------------------------------------------------------------------------------------
+---
+
+## protonvpn
+
 ```bash
 ###>>>inscription sur ProtonVPN.com
 ###>>>Account > OpenVPN Login > OpenVPN Login | OpenVPN Password
@@ -194,11 +203,12 @@ sudo openvpn PAYS-00.protonvpn.com.udp1194.ovpn
 ###>>>insérez identifiants de connexion : OpenVPN Login | OpenVPN Password
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-montage nfs
--------------------------------------------------------------------------------------
+---
+
+## montage nfs
+
 ```bash
 ###>>>serveur ports 2049 (TCP et UDP)
 sudo apt install nfs-kernel
@@ -212,7 +222,7 @@ nano /etc/exports
 
 exportfs -a
 /etc/init.d/nfs-kernel-server reload
-showmount -e 
+showmount -e
 nfstat
 
 ###>>>client
@@ -227,11 +237,12 @@ IP_SERVEUR:/CHEMIN/PARTAGE/ /media/MONTAGE nfs4 defaults,user,auto,noatime,intr 
 sudo mount -a
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-gestion ssmtp mailutils
--------------------------------------------------------------------------------------
+---
+
+## gestion ssmtp mailutils
+
 ```bash
 sudo apt install ssmtp mailutils
 
@@ -261,4 +272,4 @@ sudo dpkg-statoverride --add root mail 0640 /etc/ssmtp/ssmtp.conf
 sudo dpkg-statoverride --add root mail 0644 /etc/ssmtp/revaliases
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

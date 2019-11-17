@@ -14,6 +14,7 @@ Valid items are: shows, books, music, artists, movies, authors, games
 </div>
 
 ### Needs an API Key (don't worry it's free)
-* Get the API key [here](https://tastedive.com/account/api_access)
-* After getting the API key run the following line ```export TASTE_API_KEY="yourAPIKeyGoesHere" >> ~/.bash_profile```
-</details>
+
+- Get the API key [here](https://tastedive.com/account/api_access)
+- After getting the API key run the following line `export TASTE_API_KEY="yourAPIKeyGoesHere" >> ~/.bash_profile`
+  </details>

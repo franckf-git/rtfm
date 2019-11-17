@@ -21,7 +21,7 @@ args=(
     # Enable legacy X11
     -v /tmp/.X11-unix/:/tmp/.X11-unix/
     -e DISPLAY=:0
-    # Enable xdg runtime for wayland and pulseaudio socket  
+    # Enable xdg runtime for wayland and pulseaudio socket
     -v /run/user/1000/:/run/user/1000/
     -e XDG_RUNTIME_DIR=/run/user/1000
     -e PULSE_SERVER=/run/user/1000/pulse/native

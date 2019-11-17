@@ -16,9 +16,10 @@
 - [ftp](#ftp)
 - [serveur dns](#serveur-dns)
 
-_____________________________________________________________________________________
-Serveur Web Apache
--------------------------------------------------------------------------------------
+---
+
+## Serveur Web Apache
+
 ```bash
 sudo aptitude install apache2
 sudo chown -R www-data:pi /var/www/html/
@@ -27,39 +28,41 @@ ab #outil utile pour une vérification rapide des performances. Pour des tests d
 apachectl graceful #demarrage sécurisé des services hhtpd
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-simple serveur web
--------------------------------------------------------------------------------------
+---
+
+## simple serveur web
+
 ```bash
 python -m SimpleHTTPServer 7777
 python3 -m http.server 8080
 php -S localhost:8000
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-redirection html
--------------------------------------------------------------------------------------
+---
+
+## redirection html
+
 ```html
-<!DOCTYPE html>
-<meta http-equiv="refresh" content="0;URL=NOUVELLE_URL" />
+<!DOCTYPE html> <meta http-equiv="refresh" content="0;URL=NOUVELLE_URL" />
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-serveur Web
--------------------------------------------------------------------------------------
+---
+
+## serveur Web
+
 ```bash
 ###>>>debian depots
 ###>>>upg
 ###>>>ssh echange de cle
 ###>>>firewall ufw
 
-sudo apt-get install -y haveged curl git unzip zip dirmngr nginx mariadb php-common php-pear php-zip php7.0-cli php7.0-common php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-imap php7.0-intl php7.0-json php7.0-mbstring php7.0-mysql php7.0-opcache php7.0-pspell php7.0-readline 
+sudo apt-get install -y haveged curl git unzip zip dirmngr nginx mariadb php-common php-pear php-zip php7.0-cli php7.0-common php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-imap php7.0-intl php7.0-json php7.0-mbstring php7.0-mysql php7.0-opcache php7.0-pspell php7.0-readline
 mysql_secure_installation
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
@@ -69,11 +72,12 @@ yum install httpd php php-mysql mariadb-server mariadb sqlite php-dom php-mbstri
 apt-get install apache2 php5 php5-common php5-gd php5-mysql php5-curl mariadb-server php5-sqlite sqlite wget bzip2 openssl
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-bloquer l indexation web
--------------------------------------------------------------------------------------
+---
+
+## bloquer l indexation web
+
 ```bash
 <?php header("Location: https://URLREDIRECT"); exit; ?> #redirection php
 
@@ -82,45 +86,59 @@ User-agent: *
 Disallow: /
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-html minimal
--------------------------------------------------------------------------------------
+---
+
+## html minimal
+
 ```html
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Titre de la page</title>
-    </head>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Titre de la page</title>
+  </head>
 
-    <body>
+  <body>
     <script>
-        alert('runs');
+      alert("runs");
     </script>
     <!-- Ceci est un commentaire -->
-    <video width="400" height="222" controls="controls"><source src="1917.webm" type="video/webm" />Ici alternative a la vidéo</video>
-    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Ce(tte) œuvre est mise à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licence Creative Commons Attribution - 4.0 International</a>.
-    </body>
+    <video width="400" height="222" controls="controls">
+      <source src="1917.webm" type="video/webm" />
+      Ici alternative a la vidéo
+    </video>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+      ><img
+        alt="Licence Creative Commons"
+        style="border-width:0"
+        src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a
+    ><br />Ce(tte) œuvre est mise à disposition selon les termes de la
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+      >Licence Creative Commons Attribution - 4.0 International</a
+    >.
+  </body>
 </html>
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-phpmyadmin minimal
--------------------------------------------------------------------------------------
+---
+
+## phpmyadmin minimal
+
 ```bash
 mkdir -p /var/www/adminer/ && touch /var/www/adminer/index.php && wget -O - https://github.com/vrana/adminer/releases/download/v4.6.3/adminer-4.6.3-en.php > /var/www/adminer/index.php
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-nginx simple authentification
--------------------------------------------------------------------------------------
+---
+
+## nginx simple authentification
+
 ```bash
 sudo yum -y install epel-release
 sudo yum -y install nginx httpd-tools
@@ -133,11 +151,12 @@ server {
 }
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-serveur dhcp
--------------------------------------------------------------------------------------
+---
+
+## serveur dhcp
+
 ```bash
 sudo apt-get install isc-dhcp-server
 
@@ -164,7 +183,7 @@ option routers 192.168.0.254;
 # Le reseau utilisé et les particularites associees
 subnet 192.168.0.0 netmask 255.255.255.0 {
 # Ici nous ne voulons attribuer dynamiquement que les adresses de 10 a 100
-        range 192.168.0.10 192.168.0.100;        
+        range 192.168.0.10 192.168.0.100;
         host HOSTNAME {
                 hardware ethernet MAC:AD:RE:SS:XX:XX;
                 fixed-address 192.168.0.10;
@@ -179,11 +198,12 @@ netstat -anup | grep dhcp
 sudo dhclient eth0
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-fail2ban
--------------------------------------------------------------------------------------
+---
+
+## fail2ban
+
 ```bash
 sudo apt-get install fail2ban
 sudo fail2ban-client -x start
@@ -224,11 +244,12 @@ sudo fail2ban-client reload
 sudo fail2ban-client status
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-denyhosts (alternative fail2ban)
--------------------------------------------------------------------------------------
+---
+
+## denyhosts (alternative fail2ban)
+
 ```bash
 sudo apt install denyhosts
 
@@ -265,7 +286,7 @@ DENY_THRESHOLD_VALID = 10
 # bloque l hôte
 DENY_THRESHOLD_ROOT = 1
 # Indiquer le nombre d échec accepté avec les identifiants d utilisateurs indiqué dans le fichier
-# restricted-usernames qui doit se situer dans le répertoire de travail du paquet. 
+# restricted-usernames qui doit se situer dans le répertoire de travail du paquet.
 DENY_THRESHOLD_RESTRICTED = 1
 # Indiquer le nom de l hôte dans le fichier des hôtes refusés, lorsque c est possible de le
 # récupérer. HOSTNAME_LOOKUP=YES|NO
@@ -283,11 +304,12 @@ sudo nano /etc/hosts.deny
 service denyhosts restart
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-ftp
--------------------------------------------------------------------------------------
+---
+
+## ftp
+
 ```bash
 sudo apt-get install vsftpd
 sudo nano /etc/vsftpd.conf
@@ -299,11 +321,12 @@ Ascii_upload_enabled=YES
 Ascii_download_enabled=YES
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-serveur dns
--------------------------------------------------------------------------------------
+---
+
+## serveur dns
+
 ```bash
 ###>>>ip statique et ntp valide
 ###>>>ouvrir le port 53 en TCP et en UDP
@@ -490,7 +513,7 @@ sudo mknod /var/bind9/chroot/dev/null c 1 3
 sudo mknod /var/bind9/chroot/dev/random c 1 8
 sudo chmod 660 /var/bind9/chroot/dev/{null,random}
 sudo mv /etc/bind /var/bind9/chroot/etc
-sudo ln -s /var/bind9/chroot/etc/bind /etc/bind 
+sudo ln -s /var/bind9/chroot/etc/bind /etc/bind
 sudo cp /etc/localtime /var/bind9/chroot/etc/
 sudo chown bind:bind /var/bind9/chroot/etc/bind/rndc.key
 sudo chmod 775 /var/bind9/chroot/var/{cache/bind,run/named}
@@ -517,4 +540,4 @@ time (for i in `seq 1 1000`;   do dig google.com @8.8.8.8 >   /dev/null 2>>/dev/
 time (for i in `seq 1 1000`;   do dig google.com @127.0.0.1 >   /dev/null 2>>/dev/null; done)
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

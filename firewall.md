@@ -10,9 +10,10 @@
 - [apparmor](#apparmor)
 - [isolation](#isolation)
 
-_____________________________________________________________________________________
-iptables
--------------------------------------------------------------------------------------
+---
+
+## iptables
+
 ```bash
 dnf install iptables-services
 #gui firestarter
@@ -70,11 +71,12 @@ sudo service iptables save
 sudo service iptables start
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-firewalld
--------------------------------------------------------------------------------------
+---
+
+## firewalld
+
 ```bash
 systemctl list-unit-files | grep firewall
 systemctl enable firewalld
@@ -140,11 +142,12 @@ firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 1 -p tcp -m tcp 
 firewall-cmd --permanent --direct --add-rule ipv4 filter OUTPUT 1 -p udp --dport 53 -j ACCEPT
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-fedora remplacer firewalld par ufw
--------------------------------------------------------------------------------------
+---
+
+## fedora remplacer firewalld par ufw
+
 ```bash
 systemctl list-unit-files | grep firewall
 systemctl disable firewalld
@@ -153,11 +156,12 @@ systemctl enable ufw
 dnf remove firewalld
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-ufw
--------------------------------------------------------------------------------------
+---
+
+## ufw
+
 ```bash
 sudo ufw enable
 sudo ufw default deny incoming
@@ -187,7 +191,7 @@ sudo nano /etc/default/ufw
 IP6=no
 
 ###>>>authoriser toutes les connexions entrantes du port 12122 sur le reseau local
-sudo ufw allow from 192.168.1.0/24 proto tcp to any port 12122 
+sudo ufw allow from 192.168.1.0/24 proto tcp to any port 12122
 
 ###>>>seulement a partir d une machine
 sudo ufw allow from IP proto tcp to any port 12122
@@ -205,11 +209,12 @@ sudo nano /etc/ufw/before.rules
 # -A ufw-before-input -p icmp --icmp-type echo-request -j ACCEPT
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-selinux
--------------------------------------------------------------------------------------
+---
+
+## selinux
+
 ```bash
 sudo apt install selinux-basics selinux-policy-default auditd
 sudo apt install setools setools-gui selinux-policy-devel setools-devel
@@ -253,11 +258,12 @@ sudo apt install setroubleshoot-server
 sealert -a /var/log/audit/audit.log | less
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-apparmor
--------------------------------------------------------------------------------------
+---
+
+## apparmor
+
 ```bash
 apt install apparmor apparmor-profiles apparmor-utils apparmor-profiles-extra
 perl -pi -e 's,GRUB_CMDLINE_LINUX="(.*)"$,GRUB_CMDLINE_LINUX="$1 apparmor=1 security=apparmor",' /etc/default/grub
@@ -280,11 +286,12 @@ aa-genprof /CHEMIN/VERS/EXECUTABLE_OU_CONF
 aa-unconfined --paranoid
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-isolation
--------------------------------------------------------------------------------------
+---
+
+## isolation
+
 ```bash
 firetools                            #gui
 firemon                              #debug
@@ -296,4 +303,4 @@ firejail --list                      #applications utilisant firejail
 firejail --tree                      #verifications
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

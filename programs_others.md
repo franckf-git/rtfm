@@ -19,9 +19,10 @@
 - [QR code](#qr-code)
 - [i3-wm](#i3-wm)
 
-_____________________________________________________________________________________
-openscad syntax
--------------------------------------------------------------------------------------
+---
+
+## openscad syntax
+
 ```
 var = value;
 module name(…) { … }
@@ -74,12 +75,13 @@ intersection()
 % transparent / background
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-irc - discord
--------------------------------------------------------------------------------------
-```
+---
+
+## irc - discord
+
+````
 /join NOMSALON                    #Rejoindre le salon NomSalon
 /list                             #Affiche une liste des salons
 /nick NOUVEAUPSEUDO               #Changer son nom pour nouveaupseudo
@@ -110,17 +112,18 @@ __souligné__
 __*italique souligné*__
 __**gras souligné**__
 __***italique gras souligné***__
-`code` 
+`code`
 ```language
 bloc de code
 
-```
+````
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-lxc
--------------------------------------------------------------------------------------
+---
+
+## lxc
+
 ```bash
 sudo apt install lxc lxc-templates
 ###>>>Paquets optionnels
@@ -139,7 +142,7 @@ lxc-halt -n NOMDUCONTENEUR                         #Arrêter un conteneur propre
 lxc-clone NOM NOUVEAUNOM                           #Cloner un conteneur
 lxc-snapshot -n NOM                                #Instantanés de conteneurs
 lxc-snapshot -n NOM -L                             #Pour voir les snapshots réalisés
-lxc-snapshot -n NOM -r NOMDUSNAPSHOT               #Pour restaurer un snapshot 
+lxc-snapshot -n NOM -r NOMDUSNAPSHOT               #Pour restaurer un snapshot
 lxc-snapshot -n NOM -d NOMDUSNAPSHOT               #Pour supprimer un snapshot
 lxc-destroy -n NOM                                 #Supprimer un conteneur
 
@@ -154,11 +157,12 @@ lxc.network.ipv4.gateway = IPCONTENEUR.254                  #passerelle conteneu
 lxc.mount.entry=/MONTAGE/ CHEMIN/CONTENEUR none rw,bind 0 0 #Points de montage
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-raid logiciel mdadm
--------------------------------------------------------------------------------------
+---
+
+## raid logiciel mdadm
+
 ```bash
 su
 apt-get install mdadm
@@ -197,11 +201,12 @@ mdadm --zero-superblock /dev/sda1 /dev/sdb1
 cat /proc/mdstat
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-imagemagick traitement image en cli
--------------------------------------------------------------------------------------
+---
+
+## imagemagick traitement image en cli
+
 ```bash
 display IMAGE.png
 identify IMAGE.jpg
@@ -228,11 +233,12 @@ composite -compose Over -gravity NorthEast IMAGE1.png IMAGE2.jpeg IMAGE_FINAL.jp
 composite -watermark valeur_luminosite Premiere Deuxieme IMAGE_resultante
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-install virtualbox
--------------------------------------------------------------------------------------
+---
+
+## install virtualbox
+
 ```bash
 sudo nano /etc/apt/sources.list
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
@@ -243,11 +249,12 @@ sudo apt-get update
 sudo apt-get install virtualbox-5.1
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-installation des addons invites virtualbox
--------------------------------------------------------------------------------------
+---
+
+## installation des addons invites virtualbox
+
 ```bash
 ###>>>en utilisant l iso et le .run ou
 sudo apt-get install virtualbox-guest-x11
@@ -256,17 +263,18 @@ apt-get update
 apt-get upgrade
 apt-get install build-essential module-assistant
 ###>>>Configure your system for building kernel modules by running m-a prepare
-###>>>Click on Install Guest Additions from the Devices menu, then run 
+###>>>Click on Install Guest Additions from the Devices menu, then run
 mount /media/cdrom
 sh /media/cdrom/VBoxLinuxAdditions.run
 reboot
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-monter un disque virtualbox
--------------------------------------------------------------------------------------
+---
+
+## monter un disque virtualbox
+
 ```bash
 ###>>>VDI
 sudo apt-get install qemu-kvm
@@ -298,11 +306,12 @@ losetup -d /dev/loop0
 umount /media/MONDISQUE/
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-QEMU
--------------------------------------------------------------------------------------
+---
+
+## QEMU
+
 ```bash
 sudo apt install qemu qemu-kvm qemu-launcher
 sudo ln -s /usr/bin/qemu-system-x86_64 /usr/bin/qemu
@@ -323,7 +332,7 @@ qemu -boot c -hda /dev/hda
 
 ###>>>demarrage
 qemu -hda HDD.img -m 256
-#options : -enable-audio -soundhw all -full-screen -no-acpi 
+#options : -enable-audio -soundhw all -full-screen -no-acpi
 -net nic -net user #reseau
 --enable-kvm       #kvm rapidité
 qemu-system-x86_64 -hda HDD.qcow2 -m 1024
@@ -340,21 +349,23 @@ mount /dev/nbd0p1 /mnt
 mount -o loop,offset=32256 /PATH/TO/HDD.img /mnt/MOUNTPOINT
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-gestionnaire de machines virtuelles
--------------------------------------------------------------------------------------
+---
+
+## gestionnaire de machines virtuelles
+
 ```bash
 sudo apt install gnome-boxes virt-manager qemu-kvm qemu gir1.2-spice-client-gtk-3.0 ovmf
 sudo systemctl start libvirtd
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-disques smart
--------------------------------------------------------------------------------------
+---
+
+## disques smart
+
 ```bash
 sudo apt-get install smartmontools smart-notifier
 
@@ -374,11 +385,12 @@ sudo smartctl -l selftest /dev/sdX
 sudo smartctl -a /dev/sdX
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-correction de commande en python
--------------------------------------------------------------------------------------
+---
+
+## correction de commande en python
+
 ```bash
 sudo apt-get update
 sudo apt-get install python3-dev python3-pip
@@ -391,11 +403,12 @@ fuck
 ###>>>sudo apt install apache2
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-outil de benchmarking simple
--------------------------------------------------------------------------------------
+---
+
+## outil de benchmarking simple
+
 ```bash
 sudo apt-get install stress
 stress -c                     ###>>>nb de coeurs
@@ -406,11 +419,12 @@ stress -d 2 --hdd-bytes 512M  ###>>>2 process de 512mo
 stress -c 4 -m 2 -d 1 -t 40s
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-multi-fenetre terminal
--------------------------------------------------------------------------------------
+---
+
+## multi-fenetre terminal
+
 ### tmux
 
 ```bash
@@ -478,11 +492,12 @@ screen -X -S NOM kill        #kill NOM
 [CTRL+a] n                #Aller au panel suivant
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-QR code
--------------------------------------------------------------------------------------
+---
+
+## QR code
+
 ```bash
 ###>>>generation
 sudo apt-get install qrencode
@@ -496,11 +511,11 @@ sudo apt-get install libdecodeqr-examples
 libdecodeqr-simpletest IMAGE.png
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-i3-wm
--------------------------------------------------------------------------------------
+---
+
+## i3-wm
 
 ### Controlling i3
 
@@ -530,7 +545,7 @@ $mod+Shift+;       #Move window right
 ### Workspaces
 
 ```
-$mod+NUM           #Switch to workspace 
+$mod+NUM           #Switch to workspace
 $mod+Shift+NUM     #Move current window to workspace number
 ```
 
@@ -554,4 +569,4 @@ $mod+Enter         #Open new terminal window
 $mod+d             #Open dmenu
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

@@ -13,9 +13,10 @@
   - [Syntaxes diverses](#syntaxes-diverses)
 - [PS1](#ps1)
 
-_____________________________________________________________________________________
-interaction entre les commandes
--------------------------------------------------------------------------------------
+---
+
+## interaction entre les commandes
+
 ```bash
 COMMAND &             #commande en arriere plan
 nohup COMMANDE        #commande en arriere plan et hors console
@@ -62,11 +63,12 @@ ls t[ia]*       #titi tata titi
 ls t[a-m]*      #tata tete tme
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-completions personnelles
--------------------------------------------------------------------------------------
+---
+
+## completions personnelles
+
 ```bash
 #lister les completions dans une fonctions
 nano .bashrc
@@ -86,11 +88,12 @@ FONCTION { }
 complete -W "ARG1 ARG2 ARG3" FONCTION
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-shell
--------------------------------------------------------------------------------------
+---
+
+## shell
+
 ```bash
 #! /bin/bash          #en debut de script
 0                     #TRUE
@@ -327,12 +330,14 @@ let "m += 15"                             #equiv. "m = m + 15"
 echo "32.0 + 1.4" | bc                    #flottant
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-résumé shell
--------------------------------------------------------------------------------------
+---
+
+## résumé shell
+
 ### Variables spéciales du shell
+
 ```
 Variable   Signification
 $0         Nom du script
@@ -352,6 +357,7 @@ $!         Identifiant du processus (PID) du dernier job exécuté en tâche de 
 ```
 
 ### Opérateurs de test : comparaison binaire
+
 ```
 Opérateur     Signification     -----     Opérateur    Signification
 Comparaison arithmétique                  Comparaison de chaînes
@@ -372,6 +378,7 @@ Comparaison arithmétique (( ... ))
 ```
 
 ### Opérateurs de test : fichiers
+
 ```
 Opérateur     Tests si                            -----    Opérateur     Tests si
 -e   Le fichier existe                                         -s     Le fichier est vide
@@ -391,6 +398,7 @@ Opérateur     Tests si                            -----    Opérateur     Tests
 ```
 
 ### Substitution et expansion de paramètres
+
 ```
 Expression        Signification
 ${var}            Valeur de var (identique à $var)
@@ -407,6 +415,7 @@ ${!varprefix@}    Correspond à toutes les variables déclarées précédemment 
 ```
 
 ### Opérations sur les chaînes
+
 ```
 Expression                                   Signification
 ${#chaine}                                   Longueur de $chaine
@@ -431,6 +440,7 @@ expr "$chaine" : '.*\($sous-chaine\)'        Extrait $sous-chaine* en cherchant 
 ```
 
 ### Syntaxes diverses
+
 ```
 Expression                        Interprétation
 Crochets
@@ -489,11 +499,12 @@ var++ var--                   #post-incrément, post-décrément                
 ###>>>PLUS BASSE PRECEDENCE
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-PS1
--------------------------------------------------------------------------------------
+---
+
+## PS1
+
 ```
 export PS1="\\[\e[1;31m\]\$\[\e[1;31m\]>\[\e[m\]\A\[\e[34m\][\[\e[m\]\u\[\e[34m\]@\[\e[m\]\h\[\e[34m\]]\[\e[m\]\[\e[1;31m\]-\[\e[m\]\[\e[34m\][\[\e[m\]\W\[\e[34m\]]\[\e[m\]\[\e[1;31m\]:\[\e[m\] "
 
@@ -635,11 +646,12 @@ On_ICyan='\033[0;106m'    # Cyan
 On_IWhite='\033[0;107m'   # White
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-export LESS_TERMCAP_XX
--------------------------------------------------------------------------------------
+---
+
+## export LESS_TERMCAP_XX
+
 ```
 termcap terminfo
 ks      smkx      make the keypad send commands
@@ -654,4 +666,4 @@ us      smul      start underline
 ue      rmul      stop underline
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

@@ -22,20 +22,22 @@
 - [cockpit surveillance](#cockpit-surveillance)
 - [BoopSuite wifi](#boopsuite-wifi)
 
-_____________________________________________________________________________________
-wine
--------------------------------------------------------------------------------------
+---
+
+## wine
+
 ```bash
 sudo dpkg --add-architecture i386
-sudo apt install wine32 
+sudo apt install wine32
 wine PROGRAM.exe
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-back in time outil de sauvegarde graphique
--------------------------------------------------------------------------------------
+---
+
+## back in time outil de sauvegarde graphique
+
 ```bash
 ###>>>Ubuntu PPA
 sudo add-apt-repository ppa:bit-team/stable
@@ -49,22 +51,24 @@ sudo dpkg -i ../backintime-common-1.1.20.deb
 sudo dpkg -i ../backintime-qt-1.1.20.deb
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-installation de steam
--------------------------------------------------------------------------------------
+---
+
+## installation de steam
+
 ```bash
 sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt install steam
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-chromium authoriser l installation d extensions
--------------------------------------------------------------------------------------
+---
+
+## chromium authoriser l installation d extensions
+
 ```bash
 apt-get update && apt-get install chromium chromium-l10n
 cd /etc/chromium.d
@@ -74,11 +78,12 @@ export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --enable-remote-extensions"
 chromium --incognito
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-install de chrome et iridium (chrome sans google)
--------------------------------------------------------------------------------------
+---
+
+## install de chrome et iridium (chrome sans google)
+
 ```bash
 #pour fedora
 sudo dnf install fedora-workstation-repositories
@@ -95,22 +100,24 @@ dnf config-manager --add-repo https://dl.iridiumbrowser.de/fedora_28/iridium-bro
 dnf install iridium-browser
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-install de brave
--------------------------------------------------------------------------------------
+---
+
+## install de brave
+
 ```bash
 sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf install brave-keyring brave-browser
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-install de firefox 57
--------------------------------------------------------------------------------------
+---
+
+## install de firefox 57
+
 ```bash
 sudo nano /etc/apt/sources.list
 deb http://ftp.fr.debian.org/debian/ unstable main contrib non-free
@@ -122,11 +129,12 @@ sudo nano /etc/apt/sources.list
 #deb http://ftp.fr.debian.org/debian/ unstable main contrib non-free
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-install multimedia fedora
--------------------------------------------------------------------------------------
+---
+
+## install multimedia fedora
+
 ```bash
 ###>>>rip dvd
 dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.repo
@@ -137,11 +145,12 @@ dnf config-manager --add-repo=https://negativo17.org/repos/fedora-multimedia.rep
 dnf -y install libdvdcss libdvdread libdvdnav
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-minimal desktop
--------------------------------------------------------------------------------------
+---
+
+## minimal desktop
+
 ```bash
 sudo apt-get install chromium-browser xinit openbox obconf obmenu xterm leafpad wicd pulseaudio tint2
 
@@ -179,11 +188,12 @@ set defaut graphical
 echo $WAYLAND_DISPLAY
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-dwm suckless
--------------------------------------------------------------------------------------
+---
+
+## dwm suckless
+
 ```bash
 #http://linuxpedia.fr/doku.php/dwm
 apt install git
@@ -234,11 +244,12 @@ https://tools.suckless.org/slock/patches/message/slock-message-20180626-35633d4.
 https://st.suckless.org/patches/scrollback/st-scrollback-20190331-21367a0.diff
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-minimal install of centos
--------------------------------------------------------------------------------------
+---
+
+## minimal install of centos
+
 ```bash
 #install centos from minimal cd
 #use source
@@ -254,21 +265,23 @@ systemctl isolate graphical.target
 #it is really working (for once)
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-proxmox interface web en local
--------------------------------------------------------------------------------------
+---
+
+## proxmox interface web en local
+
 ```bash
 apt install xorg i3 xinit chromium wicd-curses xterm
 echo "exec --no-startup-id chromium --no-sandbox --start-fullscreen https://localhost:8006" >> .config/i3/config
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-proxmox connexions web
--------------------------------------------------------------------------------------
+---
+
+## proxmox connexions web
+
 ```bash
 nano /etc/networks/interfaces
 #configuration pour machines virtuelles
@@ -294,35 +307,38 @@ auto enp3s0
 iface enp3s0 inet dhcp
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-proxmox retirer le popup
--------------------------------------------------------------------------------------
+---
+
+## proxmox retirer le popup
+
 ```bash
 vi /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
 if (data.status == 'Active') {
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-transfer.sh
--------------------------------------------------------------------------------------
+---
+
+## transfer.sh
+
 ```bash
 wget --method PUT --body-file=/tmp/file.tar https://transfer.sh/file.tar -O - -nv
 
-###>>>Encrypt files with password using gpg 
-cat /tmp/TEXT.txt|gpg -ac -o-|curl -X PUT --upload-file "-" https://transfer.sh/TEXT.txt 
-###>>>Download and decrypt 
+###>>>Encrypt files with password using gpg
+cat /tmp/TEXT.txt|gpg -ac -o-|curl -X PUT --upload-file "-" https://transfer.sh/TEXT.txt
+###>>>Download and decrypt
 curl https://transfer.sh/ID/TEXT.txt|gpg -o- > /tmp/TEXT.txt
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-nikto scanner pour serveur web
--------------------------------------------------------------------------------------
+---
+
+## nikto scanner pour serveur web
+
 ```bash
 git clone https://github.com/sullo/nikto.git
 cd nikto/program
@@ -331,11 +347,12 @@ perl nikto.pl -h 192.168.0.1
 nikto -host SITEWEB.COM -port 443 -ssl
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-webmin administration
--------------------------------------------------------------------------------------
+---
+
+## webmin administration
+
 ```bash
 su
 echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
@@ -361,11 +378,12 @@ rpm --import jcameron-key.asc
 yum install webmin
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-cockpit surveillance
--------------------------------------------------------------------------------------
+---
+
+## cockpit surveillance
+
 ```bash
 sudo dnf install cockpit
 sudo systemctl enable --now cockpit.socket
@@ -375,11 +393,12 @@ sudo firewall-cmd --add-service=cockpit --permanent
 ###>>>https://IP_ADDRESS:9090
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-BoopSuite wifi
--------------------------------------------------------------------------------------
+---
+
+## BoopSuite wifi
+
 ```bash
 git clone https://github.com/M1ND-B3ND3R/BoopSuite.git
 cd BoopSuite
@@ -392,4 +411,4 @@ cd ~/pcap
 aircrack-ng -a2 -b MAC:AD:RE:SS:XX:XX -w wordlist.txt fichier.pcap
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

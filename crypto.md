@@ -11,9 +11,10 @@
 - [creer une archive chiffrée](#creer-une-archive-chiffrée)
 - [Chiffrement de fichier](#chiffrement-de-fichier)
 
-_____________________________________________________________________________________
-gpg
--------------------------------------------------------------------------------------
+---
+
+## gpg
+
 ```bash
 gpg --gen-key                            #générer une nouvelle clé
 gpg --gen-revoke ID_USER                 #générer une clé de révocation pour ID_USER
@@ -40,18 +41,19 @@ gpg --verify FICHIER.sig FICHIER                 #vérifier un fichier avec fich
 gpg -o FICHIER_CHIFFRE.gpg -r NOM -e FICHIER     #chiffrement par clé publique vers binaire
 gpg -o FICHIER_CHIFFRE.gpg --recipient NOM --encrypt FICHIER    # , ,
 gpg -o FICHIER_CHIFFRE.asc -a -r NOM -e FICHIER  #chiffrement par clé publique vers ASCII
-gpg -o FICHIER_CHIFFRE.gpg -c FICHIER            #chiffrement symétrique vers .gpg 
+gpg -o FICHIER_CHIFFRE.gpg -c FICHIER            #chiffrement symétrique vers .gpg
 gpg -o FICHIER_CHIFFRE.gpg --symmetric FICHIER   # , ,
 gpg -o FICHIER_CHIFFRE.asc -a -c FICHIER         #chiffrement symétrique vers ASCII
 gpg -o FICHIER -d FICHIER_CHIFFRE.gpg -r NOM     #déchiffrement
 gpg -o FICHIER --decrypt FICHIER_CHIFFRE.gpg     # , ,
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-GPG/PGP
--------------------------------------------------------------------------------------
+---
+
+## GPG/PGP
+
 ```bash
 ###>>>formater une cle avec luks
 ###>>>nom banal et mdp fort
@@ -99,7 +101,7 @@ gpg --edit-key IDENTIFIANT
 ###>>>S = Pour signer
 ###>>>C = Pour certifier une autre signature
 ###>>>E = Pour chiffrer
-###>>>A = Pour authentifier 
+###>>>A = Pour authentifier
 ###>>>addkey
 ###>>>4
 ###>>>4096
@@ -148,22 +150,24 @@ steghide embed -cf IMAGE.jpg -ef CLE.txt
 steghide extract -sf IMAGE.jpg
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-creer une archive chiffree
--------------------------------------------------------------------------------------
+---
+
+## creer une archive chiffree
+
 ```bash
 tar -cvzf - DOSSIER/ | openssl enc -e -aes-256-ecb -in - -out DOSSIER  -pass pass:MOTDEPASS
 sha256sum DOSSIER
 openssl enc -d -aes-256-ecb -in FICHIER-CHIFFRE -out FICHIER-DECHIFFRE
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-chiffrement disque dur externe
--------------------------------------------------------------------------------------
+---
+
+## chiffrement disque dur externe
+
 ```bash
 sudo apt-get install cryptsetup
 sudo cryptsetup luksFormat -h sha256 /dev/XXX
@@ -171,11 +175,12 @@ sudo cryptsetup luksOpen /dev/XXX NOMDISQUE
 sudo mkfs.ext4 /dev/mapper/NOMDISQUE
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-chiffrement de dossier par ecryptfs
--------------------------------------------------------------------------------------
+---
+
+## chiffrement de dossier par ecryptfs
+
 ```bash
 mkdir .DOSSIER DOSSIER .ecryptfs
 touch .ecryptfs/DOSSIER.conf .ecryptfs/DOSSIER.sig
@@ -191,11 +196,12 @@ ecryptfs-add-passphrase
 mount.ecryptfs_private DOSSIER
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-chiffrement de dossier par encfs
--------------------------------------------------------------------------------------
+---
+
+## chiffrement de dossier par encfs
+
 ```bash
 apt install encfs
 #attention vunérable
@@ -205,11 +211,12 @@ encfs /home/.DOSSIER_CRYPTE /home/MONTAGE_CLAIR
 fusermount -u MONTAGE_CLAIR
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-creer une archive chiffrée
--------------------------------------------------------------------------------------
+---
+
+## creer une archive chiffrée
+
 ```bash
 apt-get install p7zip-full
 7z a /CHEMIN/ARCHIVE_SECURE.7z /CHEMIN/FICHIER -p
@@ -219,11 +226,12 @@ apt-get install p7zip-full
 7z x /CHEMIN/ARCHIVE_SECURE.7z
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-Chiffrement de fichier
--------------------------------------------------------------------------------------
+---
+
+## Chiffrement de fichier
+
 ```bash
 apt install gnupg2
 gpg2 --full-gen-key
@@ -232,4 +240,4 @@ gpg2 --encrypt FICHIER
 gpg2 --output FICHIER --decrypt FICHIER.gpg
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

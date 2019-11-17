@@ -23,9 +23,10 @@
 - [log](#log)
 - [commandes tokill](#commandes-tokill)
 
-_____________________________________________________________________________________
-top
--------------------------------------------------------------------------------------
+---
+
+## top
+
 ```bash
 ifconfig
 iwconfig
@@ -69,11 +70,12 @@ tshark
 hping3
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-navigation systeme
--------------------------------------------------------------------------------------
+---
+
+## navigation systeme
+
 ```bash
 pwd                 #affiche le repertoire courant
 cd REP              #se place dans le repertoire rep
@@ -99,11 +101,12 @@ gio set FILEFOLDER -t stringv metadata::emblems emblem-default
 rifle $(du -a FOLDER/ | cut -f2- | dmenu -l 10) #lanceur rapide d'un dossier spécifique
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-operations sur les fichiers
--------------------------------------------------------------------------------------
+---
+
+## operations sur les fichiers
+
 ```bash
 mv SOURCE CIBLE          #deplace le fichier source vers cible
 cp SOURCE CIBLE          #copie le fichier source vers cible
@@ -132,11 +135,12 @@ sudo nano /etc/sysctl.d/inotify.conf     #modifier le temps de rafraichissement 
 fs.inotify.max_user_watches = 524288
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-fichiers texte et binaire
--------------------------------------------------------------------------------------
+---
+
+## fichiers texte et binaire
+
 ```bash
 wc FICHIER            #compte le nombre de lignes, de mots, d octets de fichier
 cat FICHIERS          #concatene les fichiers
@@ -184,11 +188,12 @@ sort << EOF           #tri rapide
 sort -n -t ":" -k 3 /etc/password     #trier de facon numerique la troisieme colonne
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-infos systemes
--------------------------------------------------------------------------------------
+---
+
+## infos systemes
+
 ```bash
 whoami                      #affiche le login de l utilisateur
 who                         #affiche les utilisateurs connectes
@@ -231,11 +236,12 @@ dmesg                       #affiche le buffer du noyau
 set                         #liste variables d environnement
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-gestion des utilisateurs
--------------------------------------------------------------------------------------
+---
+
+## gestion des utilisateurs
+
 ```bash
 passwd                       #changer le mot de passe de l utilisateur courant
 useradd                      #ajouter utilisateur
@@ -262,11 +268,12 @@ nano /etc/sudoers            #activer sudo
 %sudo    #ALL=(ALL:ALL) ALL
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-gestion processus
--------------------------------------------------------------------------------------
+---
+
+## gestion processus
+
 ```bash
 ps                           #afficher les processus de l utilisateur
 ps ax                        #afficher tous les processus
@@ -326,11 +333,12 @@ cat /proc/PID/smaps
 cat /proc/PID/status         #status d un processus
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-infos materiel
--------------------------------------------------------------------------------------
+---
+
+## infos materiel
+
 ```bash
 lsusb                       #liste les peripheriques de type usb connectes
 lspci                       #liste les peripheriques de type pci connectes
@@ -360,11 +368,12 @@ setxkbmap -option keypad:pointerkeys    #transforme le clavier numérique en sou
 xmodmap -e "pointer = 3 2 1"            #boutons de souris pour gauchers
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-archivage
--------------------------------------------------------------------------------------
+---
+
+## archivage
+
 ```bash
 #.tar.gz   temps de compression rapide      taux de compression faible  # z
 #.tar.bz2  temps de compression moyen       taux de compression moyen   # j
@@ -388,11 +397,12 @@ tar -c --listed-incremental=data.snar    #tar incremental (-g)
 tar --append -f FILE.tar /A_ARCHIVER     #rajouter des fichiers à une archive
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-streameditor
--------------------------------------------------------------------------------------
+---
+
+## streameditor
+
 ```bash
 sed 'OPTION/PATTERN1/PATTERN2/OPTION'
 -i        #ecriture dans le fichier
@@ -453,11 +463,12 @@ iconv -f utf8 -t ascii//TRANSLIT < FICHIER.txt > NOACCENTS.txt  #translitteratio
 echo $_str | iconv -f utf8 -t ascii//TRANSLIT
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-infos reseau
--------------------------------------------------------------------------------------
+---
+
+## infos reseau
+
 ```bash
 hostname                  #affiche le nom d hote de la machine
 /etc/hosts                #liste des résolutions IP
@@ -571,11 +582,12 @@ tcpdump -q                #Capture legere
 tcpdump -lA -i any -n "dst host IPMACHINE1 and src host IPMACHINE2" # ecouter le traffic entre deux machines
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-recuperation web
--------------------------------------------------------------------------------------
+---
+
+## recuperation web
+
 ```bash
 wget -r -k -T 5 -t 2 http://URL    #aspirer un site web
 wget ‐‐input URL-LIST.TXT          #depuis une liste
@@ -601,11 +613,12 @@ odt2txt               #convertisseur du texte OpenDocument vers texte
 txt2html              #convertisseur de texte vers HTML
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-recherche
--------------------------------------------------------------------------------------
+---
+
+## recherche
+
 ```bash
 locate MOTIF                       #recherche des fichiers
 updatedb                           #mettre a jour la base de donnees de locate
@@ -635,11 +648,12 @@ find -type f | xargs grep EXPRESSION
 find /CHEMIN/ -name "*" -exec mv {} /DEST/ \;       #sortir les fichiers des dossiers
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-benchmark
--------------------------------------------------------------------------------------
+---
+
+## benchmark
+
 ```bash
 wget http://test-debit.free.fr/1024.rnd   #tester le debit descendant
 
@@ -668,11 +682,12 @@ ssh IP_AUTRE dd if=/dev/zero | dd of=/dev/null                   #reseau recepti
 cat /proc/sys/kernel/random/entropy_avail #vérifier niveau entropie (inf à 3000)
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-hdd et partitions
--------------------------------------------------------------------------------------
+---
+
+## hdd et partitions
+
 ```bash
 photorec                                 #recuperation disque dur
 dd if=/dev/zero of=/dev/sdc              #effacement disque dur
@@ -721,11 +736,12 @@ LABEL=MY_USB_DRIVE /MNT/POINT auto defaults,auto,nofail 0 2
 sudo systemctl daemon-reload
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-ram / swap
--------------------------------------------------------------------------------------
+---
+
+## ram / swap
+
 ```bash
 sudo swapoff -a && sudo swapon -a    #passer le swap en RAM
 sudo fstrim -av                      #trim sdd manuel sans discard
@@ -740,11 +756,12 @@ bleachbit --clean firefox.vacuum
 bleachbit -c --preset
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-audiovisuel
--------------------------------------------------------------------------------------
+---
+
+## audiovisuel
+
 ```bash
 arecord -f cd STEREO.wav                         #capture audio
 aplay STEREO.wav                                 #lire audio
@@ -766,11 +783,12 @@ mpv pape.mp4 -wid 0 # mettre une video en fond d ecran
 mpv --no-audio --start=00:01:30 --frames=1 /path/to/video/file --o=/path/to/screenshot.png    #mpv capture ecran
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-outils CLI ligne de commande
--------------------------------------------------------------------------------------
+---
+
+## outils CLI ligne de commande
+
 ```bash
 zmap                                             #scanner reseau plus rapide que nmap
 shc -v -f FILE.sh                                #convertir un script en binaire
@@ -858,11 +876,12 @@ sample_rate=
 /etc/init.d/gpm restart
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-commandes futiles
--------------------------------------------------------------------------------------
+---
+
+## commandes futiles
+
 ```bash
 sudo visudo
 Defaults insults
@@ -888,11 +907,12 @@ apt moo
 #Magic. Do not touch.
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-log
--------------------------------------------------------------------------------------
+---
+
+## log
+
 ```bash
 journalctl -p err -b                               #messages d erreurs
 watch -n 1800 ps aux > $(date +%H%M).log           #log avec date
@@ -918,11 +938,12 @@ export HISTSIZE=0                                  #desactiver history
 dmesg -e                                           #message du kernel
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-commandes tokill
--------------------------------------------------------------------------------------
+---
+
+## commandes tokill
+
 ```bash
 sudo rm -rf /*
 :(){:|:&};:
@@ -936,4 +957,4 @@ https://www.google.com/search?rls=en&q=%77%68%65%72%65%20%63%61%6e%20%49%20%64%6
 me') IF NOT EXISTS; DROP TABLE users; #nom d utilisateur
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**

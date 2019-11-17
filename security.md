@@ -20,9 +20,10 @@
 - [generateur password](#generateur-password)
 - [durcissement et suggestions de securite](#durcissement-et-suggestions-de-securite)
 
-_____________________________________________________________________________________
-message of the day ssh custom
--------------------------------------------------------------------------------------
+---
+
+## message of the day ssh custom
+
 ```bash
 nano ON_LOGIN.sh
 #! /usr/bin/env bash
@@ -56,11 +57,12 @@ sudo chmod +x /etc/update-motd.d/05-info
 sudo echo "" > /etc/motd
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-ssh
--------------------------------------------------------------------------------------
+---
+
+## ssh
+
 ```bash
 ssh -p PORT USER@IP
 sudo apt-get install ssh
@@ -82,11 +84,12 @@ sudo systemctl status ssh
 sshfs USER@MACHINE:/home/SERVER mnt/CLIENT
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-ssh echange de cle
--------------------------------------------------------------------------------------
+---
+
+## ssh echange de cle
+
 ```bash
 ###>>>client
 cd $HOME/.ssh
@@ -150,11 +153,12 @@ ssh-add -d ~/.ssh/id_rsa
 ssh-keygen -R NOMDUSERVEUR
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-reverse ssh
--------------------------------------------------------------------------------------
+---
+
+## reverse ssh
+
 ```bash
 ###>>>sur client on autorise les tunnels
 sudo nano /etc/ssh/sshd_config
@@ -170,11 +174,12 @@ ssh -p 22222 USER@127.0.0.1
 ssh -R PORT_LOCAL:IP_SERVEUR_DISTANT:PORT_SERVEUR_DISTANT UTILISATEUR@IP_SERVEUR_SSH
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-ssh-X affichage gui server X
--------------------------------------------------------------------------------------
+---
+
+## ssh-X affichage gui server X
+
 ```bash
 ###>>>server
 sudo nano /etc/ssh/sshd_config
@@ -192,11 +197,12 @@ export DISPLAY=:10.0
 ###>>>outils grahiques accessibles
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-tester WannaCry Bulletin CVE-2017-0143 ou MS17-010
--------------------------------------------------------------------------------------
+---
+
+## tester WannaCry Bulletin CVE-2017-0143 ou MS17-010
+
 ```bash
 ###>>>un pc
 nmap -sC -p 445 --script smb-vuln-ms17-010.nse 10.21.21.187
@@ -204,22 +210,24 @@ nmap -sC -p 445 --script smb-vuln-ms17-010.nse 10.21.21.187
 nmap -sC -p 445 --script smb-vuln-ms17-010.nse 10.21.21.0/24
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-Spectre et Meltdown
--------------------------------------------------------------------------------------
+---
+
+## Spectre et Meltdown
+
 ```bash
 wget https://raw.githubusercontent.com/speed47/spectre-meltdown-checker/master/spectre-meltdown-checker.sh
 sudo bash spectre-meltdown-checker.sh
 grep . /sys/devices/system/cpu/vulnerabilities/*
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-backup incremental
--------------------------------------------------------------------------------------
+---
+
+## backup incremental
+
 ```bash
 rsync -av --recursive --delete --ignore-errors --stats home/ backup/
 rsync -av --recursive --delete --exclude '*.EXT' --ignore-errors --stats home/ backup/
@@ -229,50 +237,55 @@ rsync -av --recursive --delete --exclude USER/EXCLUDE/ --ignore-errors --stats h
 rsync -av --delete --backup --backup-dir=/HOME/USER/ USER@IP_DU_SERVEUR:BACKUPS/
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-eicar test antivirus
--------------------------------------------------------------------------------------
+---
+
+## eicar test antivirus
+
 ```
 X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-hasher un mot de passe
--------------------------------------------------------------------------------------
+---
+
+## hasher un mot de passe
+
 ```bash
 echo "PASSWORD" | sha1sum
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-effacer le disque
--------------------------------------------------------------------------------------
+---
+
+## effacer le disque
+
 ```bash
 sudo dd if=/dev/zero of=/dev/XXX bs=4K
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-chkrootkit
--------------------------------------------------------------------------------------
+---
+
+## chkrootkit
+
 ```bash
 sudo apt install chkrootkit
 sudo chkrootkit
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-rkhunter
--------------------------------------------------------------------------------------
+---
+
+## rkhunter
+
 ```bash
-sudo apt-get install rkhunter 
+sudo apt-get install rkhunter
 sudo rkhunter --update
 
 sudo nano /etc/rkhunter.conf
@@ -287,11 +300,12 @@ sudo rkhunter -c --skip-keypress --pkgmgr dpkg
 sudo rkhunter -c --rwo
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-verifications des paquets
--------------------------------------------------------------------------------------
+---
+
+## verifications des paquets
+
 ```bash
 sudo debsums -as > RESULT
 sudo debsums -cs
@@ -300,11 +314,12 @@ sudo debsums -cs
 sudo apt-get --reinstall install $(debsums -c 2>&1 | grep -E -o 'from [^ ]* package' | cut -d\ -f2 | sort -u)
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-protection basique contre attaques classiques
--------------------------------------------------------------------------------------
+---
+
+## protection basique contre attaques classiques
+
 ```bash
 echo "1" > /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts          #anti smurf (attaque par rebond via ping)
 echo "0" > /proc/sys/net/ipv4/conf/all/accept_source_route         #source routing
@@ -316,22 +331,24 @@ echo "0" > /proc/sys/net/ipv4/conf/all/accept_redirects            #desactive re
 echo "0" > /proc/sys/net/ipv4/conf/all/secure_redirects
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-generateur password
--------------------------------------------------------------------------------------
+---
+
+## generateur password
+
 ```bash
 date +%s | sha256sum | base64 | head -c 10 ; echo
 echo $RANDOM | sha256sum | head -c 32 ; echo
 pwmake 128
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
 
-_____________________________________________________________________________________
-durcissement et suggestions de securite
--------------------------------------------------------------------------------------
+---
+
+## durcissement et suggestions de securite
+
 ```bash
 sudo apt-get install lynis
 sudo lynis update release
@@ -339,11 +356,11 @@ sudo lynis --checkall
 sudo lynis -c -Q ###>>>(sudo lynis audit system)
 cat /var/log/lynis-report.dat
 
-sudo nano /etc/lynis/default.prf 
+sudo nano /etc/lynis/default.prf
 ###>>>decommenter
 410   config:update_local_directory:/usr/local:
 412   config:update_local_version_info:/usr/local/lynis/client-version:
 417   config:update_server_protocol:http:
 ```
 
-**[`^        back to top        ^`](#)**
+**[`^ back to top ^`](#)**
