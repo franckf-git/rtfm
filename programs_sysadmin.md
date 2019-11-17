@@ -839,6 +839,7 @@ git push -u origin feature/my-feature
 git commit ...
 git commit ...
 git push -u origin feature/my-feature
+vim package.json # version 2.3.0
 
 # end new feature
 git checkout master
@@ -851,6 +852,7 @@ git push origin :feature/my-feature
 # new hotfix
 git checkout -b hotfix/my-fix master
 git commit ...
+vim package.json # version 2.3.4
 
 # end new hotfix
 git checkout master
