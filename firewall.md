@@ -126,6 +126,8 @@ firewall-cmd --reload
 firewall-cmd --list-ports                            #list of allowed ports
 sudo firewall-cmd --add-port=port-number/port-type   #add a port for incoming traffic
 sudo firewall-cmd --zone=drop --add-port=9090/tcp --permanent
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --reload
 sudo firewall-cmd --runtime-to-permanent             #new settings persistent
 
 ###>>>ajouter un service à la zone active
