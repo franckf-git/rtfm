@@ -10,6 +10,7 @@ podman rm UUID                 #remove containers
 podman search httpd            #searching
 podman image rm UUID           #remove images
 podman info
+podman run -P                  #allocation dynamique sur tous les ports exposés dans le Dockerfile
 
 podman run -d -v /root/mysql-data:/var/lib/mysql/data:Z -e MYSQL_USER=user -e MYSQL_PASSWORD=pass -e MYSQL_DATABASE=db -p 3306:3306 registry.access.redhat.com/rhscl/mariadb-102-rhel7
 ```
