@@ -177,6 +177,7 @@ unexpand              #transforme les espaces en tabulations
 fold -w N             #retour à la ligne après N caractères
 fmt                   #formatage paragraphe
 jq                    #gestion de json
+... | python -m json.tool # directement avec python
 column -s C -t FIC    #affichage en colonnes selon le caractère C
 apropos TERMES        #recherche dans toutes les man pages
 clip < FILE           #copier dans le presse-passier
