@@ -32,6 +32,20 @@ args=(
 podman run ${args[@]} ...
 ```
 
+### Volumes
+
+Créer un container avec un volume "testvolume" persistant (et créer au lancement de la commande)
+
+```bash
+podman run --name=test --detach --interactive --tty --mount type=volume,source=testvolume,destination=/home/node/app --publish=8080:80/tcp --publish=8000:8000/tcp devnodesqlhttpd
+```
+
+Les données de ce volume seront disponibles dans :
+
+```
+.local/share/containers/storage/volumes/testvolume/_data
+```
+
 ### Create a container with a Dockerfile, run it and enter into
 
 ```bash
