@@ -96,6 +96,7 @@ complete -W "ARG1 ARG2 ARG3" FONCTION
 
 ```bash
 #! /bin/bash          #en debut de script
+#! /bin/bash -x       # affichera chaque avant execution
 0                     #TRUE
 1                     #FALSE
 exit $?               #en fin de script
