@@ -758,6 +758,7 @@ git tag -a v1.4 -m "my version 1.4"         #Annotated Tags
 git tag v1.4-lw                             #Lightweight Tags
 git tag -a v1.2 9fceb02                     #tag after commits
 git tag -d v1.4-lw                          #Deleting Tags
+git blame FILE                              #Check modif by users
 
 ###>>>installation
 sudo apt-get install git
