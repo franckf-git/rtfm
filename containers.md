@@ -114,6 +114,15 @@ CMD ["node", "examples/hello.js"]
 node_modules
 ```
 
+### Pods
+
+```bash
+podman pod create --name=podID #créer un POD
+podman run --pod podID -it fedora:latest /bin/bash
+podman pod ls #Liste les PODs
+podman pod stop podID #Stoppe le POD correspondant au podID
+```
+
 ### Create a systemd service with podman
 
 ```bash
@@ -146,6 +155,10 @@ systemctl daemon-reload
 ```
 
 ### systemd in podman
+
+```bash
+podman generate systemd NOMDELIMAGE
+```
 
 Dockerfile
 
