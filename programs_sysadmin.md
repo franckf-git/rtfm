@@ -760,6 +760,8 @@ git tag -a v1.2 9fceb02                     #tag after commits
 git tag -d v1.4-lw                          #Deleting Tags
 git blame FILE                              #Check modif by users
 
+git grep 'import' $(git rev-list --all)     #full search in history
+
 ###>>>installation
 sudo apt-get install git
 git config --global user.name "Your Name"
