@@ -95,6 +95,8 @@ sshfs USER@MACHINE:/home/SERVER mnt/CLIENT
 cd $HOME/.ssh
 ssh-keygen -t rsa -b 4096
 ssh-keygen -o -a 100 -t ed25519 -f id_ed -C "COMMENTAIRES"
+ssh-keygen -t ecdsa -b 256
+
 ###>>>clé privée (id_rsa)
 ###>>>clé publique (id_rsa.pub)
 ssh -i ~/.ssh/id_ed -o "IdentitiesOnly=yes" USER_SERVER@SERVER

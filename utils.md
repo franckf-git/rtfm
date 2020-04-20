@@ -555,6 +555,7 @@ nc -zv IP PORT | PORT PORT | PORT-PORT         #test ouverture port
 ssh USER@IP COMMAND       #lancer une commande distante sans connexion ssh
 ssh -o "PubkeyAuthentication=no" USER@HOSTNAME              #sans clé disponible
 ssh -D                    # proxy
+ssh -N -L 3306:localhost:3306 IP_BDD # creer un tunnel ssH depuis le serveur web
 iftop -i                  #afficher l utilisation de la bande passante
 iperf                     #outil de mesure de la bande passante du protocole Internet
 ifstat                    #InterFace STATistics Monitoring
