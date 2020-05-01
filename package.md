@@ -145,6 +145,7 @@ ________________________________________________________________________________
 Gestion des paquets fedora
 -------------------------------------------------------------------------------------
 ```bash
+pkcon                                      #PackageKit Console Program
 dnf repolist all                           #Lister les dépots disponibles
 dnf install PACKAGE                        #Installer un paquet
 dnf remove PACKAGE                         #Supprimer un paquet
