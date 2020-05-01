@@ -96,6 +96,7 @@ cd $HOME/.ssh
 ssh-keygen -t rsa -b 4096
 ssh-keygen -o -a 100 -t ed25519 -f id_ed -C "COMMENTAIRES"
 ssh-keygen -t ecdsa -b 256
+ssh-keygen -t ecdsa -b 384
 
 ###>>>clé privée (id_rsa)
 ###>>>clé publique (id_rsa.pub)
