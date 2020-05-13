@@ -682,6 +682,7 @@ cat /dev/sda3 | pipebench -q > /dev/null  #hdd
 dd if=/dev/zero | ssh IP_AUTRE dd of=/dev/null                   #reseau emission
 ssh IP_AUTRE dd if=/dev/zero | dd of=/dev/null                   #reseau reception
 cat /proc/sys/kernel/random/entropy_avail #vérifier niveau entropie (inf à 3000)
+ab -c 500 -n 1000 -s 90 URL               # benchmark apache
 ```
 
 **[`^ back to top ^`](#)**
