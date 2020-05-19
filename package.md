@@ -203,6 +203,7 @@ dnf info-security                          #affiche le détails des modification
 dnf check-update --security                #affiche les paquets vitaux
 dnf check-update --sec-severity {Critical,Important,Moderate,Low,None}
 rpm -Va                                    #verification de l intégrité des paquets
+# --setopt=install_weak_deps=False         # ignorer les dépendances faibles
 
 ###>>>Limiter la bande passante de dnf
 sudo nano /etc/dnf/dnf.conf
