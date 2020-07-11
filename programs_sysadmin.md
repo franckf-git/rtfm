@@ -762,6 +762,8 @@ git blame FILE                              #Check modif by users
 
 git grep 'import' $(git rev-list --all)     #full search in history
 
+git instaweb                                # create web server to display repo
+
 ###>>>installation
 sudo apt-get install git
 git config --global user.name "Your Name"
