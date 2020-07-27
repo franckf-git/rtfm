@@ -255,6 +255,22 @@ ls -Z                        #contexte de sécurité fichiers
 ps axZ                       #contexte de sécurité processus
 ###>>>utilisateur:rôle:type:niveau        contexte SELinux
 
+# tout autoriser pour nginx
+sudo semanage permissive -a httpd_t
+### ou
+# permettre le proxy node/nginx
+sudo semanage port -a -t http_port_t -p tcp 5500
+# vérification
+sudo semanage port -l | grep http
+# étendre les permissions de nginx
+sudo grep nginx /var/log/audit/audit.log | audit2allow -m nginx > nginx.te
+cat nginx.te
+# compilation du module
+sudo grep nginx /var/log/audit/audit.log | audit2allow -M nginx
+# chargement du module
+sudo semodule -i nginx.pp
+sudo semodule -l | grep nginx
+
 ###>>>logs
 sudo apt install setroubleshoot-server
 sealert -a /var/log/audit/audit.log | less
