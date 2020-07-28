@@ -367,6 +367,8 @@ systemctl poweroff -i                   #extinction sans sudo
 iw dev DEV set power_save off           #full energie sur le wifi (DEV dans ip a)
 setxkbmap -option keypad:pointerkeys    #transforme le clavier numérique en souris
 xmodmap -e "pointer = 3 2 1"            #boutons de souris pour gauchers
+
+/sys/class/backlight/intel_backlight/brightness #luminosité ecran en cli
 ```
 
 **[`^ back to top ^`](#)**
