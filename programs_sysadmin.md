@@ -12,6 +12,7 @@
 - [dokuwiki](#dokuwiki)
 - [markdown](#markdown)
 - [git](#git)
+- [git commit messages](#git-commit-messages)
 - [my git workflow](#my-git-workflow)
 
 ---
@@ -813,6 +814,20 @@ git init --bare $HOME/.dotfiles # bare repo
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' # alias
 mydotfiles config --local status.showUntrackedFiles no # show only what is add
 ```
+
+**[`^ back to top ^`](#)**
+
+---
+
+## git commit messages
+
+feat - a new feature
+fix - a bug fix
+docs - changes in documentation
+style - everything related to styling
+refactor - code changes that neither fixes a bug or adds a feature
+test - everything related to testing
+chore - updating build tasks, package manager configs, etc
 
 **[`^ back to top ^`](#)**
 

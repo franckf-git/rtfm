@@ -2,6 +2,7 @@
 
 [TOC]
 
+- [HTML codes et status](#html-codes-et-status)
 - [Raccourcis terminal](#raccourcis-terminal)
 - [tabbed](#tabbed)
 - [surf](#surf)
@@ -33,6 +34,38 @@
 - [lorem ipsum](#lorem-ipsum)
 - [Creative Commons by-nc-sa](#creative-commons-by-nc-sa)
 - [256 couleurs](#256-couleurs)
+
+_____________________________________________________________________________________
+HTML codes et status
+-------------------------------------------------------------------------------------
+
+| Code  | Raison                  | Explication
+| --- | --- | --- |
+| `101` | `Switching Protocol`    | Le serveur indique basculer vers le protocole specifie dans l'en-tete `Upgrade`.
+| `200` | `OK`                    | La ressource demandee est retournee en reponse.
+| `201` | `Created`               | La ressource demandee a ete creee.
+| `202` | `Accepted`              | La demande a ete acceptee et la ressource sera disponible ulterieurement.
+| `204` | `No Content`            | La ressource demandee n'a pas de contenu.
+| `301` | `Moved Permanently`     | La ressource demandee a ete deplacee.
+| `302` | `Found`                 | La ressource demandee est temporairement disponible a une autre adresse.
+| `304` | `Not Modified`          | La ressource n'a pas ete modifiee depuis la derniere fois.
+| `400` | `Bad Request`           | La requete est incomplete ou incomprehensible par le serveur.
+| `401` | `Unauthorized`          | La ressource n'est accessible que sur preuve d'identification.
+| `403` | `Forbidden`             | L'acces a la ressource est interdit.
+| `404` | `Not Found`             | La ressource n'existe pas.
+| `500` | `Internal Server Error` | Le serveur distant est en erreur.
+| `503` | `Service Unavailable`   | Le serveur distant repond qu'il n'est pas disponible pour l'instant.
+
+| Verbe     | Description
+| --- | --- |
+| `GET`     | Recuperation d'une ressource.
+| `HEAD`    | Recuperation d'une ressource - seulement les en-tetes.
+| `POST`    | Creation d'une ressource.
+| `PUT`     | Mise a jour d'une ressource.
+| `PATCH`   | Mise a jour partielle d'une ressource.
+| `DELETE`  | Demande de suppression d'une ressource.
+
+**[`^        back to top        ^`](#)**
 
 _____________________________________________________________________________________
 Raccourcis terminal
