@@ -597,6 +597,7 @@ wget -r -k -T 5 -t 2 http://URL    #aspirer un site web
 wget ‐‐input URL-LIST.TXT          #depuis une liste
 wget http://remote.com/filenumber{1..10}.ext               #incremental
 wget -nd -H -p -A jpg,jpeg,png,gif -e robots=off URL       #recuperer les images
+wget --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:60.1) Gecko/20100101 Firefox/60.1"'   #firefox agent
 curl https://URL.fr                #get classique
 curl https://URL.fr -D -           #headers
 curl -X HEAD https://URL.fr        #requête de type X (HEAD, POST, PUT, PATCH, DELETE…)
