@@ -466,6 +466,16 @@ set -g status-bg colour237
 set -g status-fg colour137
 set -g status-right-length 100
 set -g status-left-length 70
+
+# tmux au demarrage
+# bashrc
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
+# ou
+(exec tmux attach || exec tmux new-session)
+# ou bash_profile
+if [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
 ```
 
 ### screen
