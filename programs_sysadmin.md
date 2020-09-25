@@ -760,6 +760,9 @@ git tag v1.4-lw                             #Lightweight Tags
 git tag -a v1.2 9fceb02                     #tag after commits
 git tag -d v1.4-lw                          #Deleting Tags
 git blame FILE                              #Check modif by users
+git switch -                                #Switch between the last 2 branch
+git restore myFile.txt                      #Discarding your local changes in a certain file
+git restore .                               #Undoing all of the local changes in the working copy (be careful)
 
 git grep 'import' $(git rev-list --all)     #full search in history
 
