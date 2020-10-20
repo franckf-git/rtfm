@@ -14,6 +14,7 @@
 - [git](#git)
 - [git commit messages](#git-commit-messages)
 - [my git workflow](#my-git-workflow)
+- [export web page  CLI](#export-web-page-cli)
 
 ---
 
@@ -887,3 +888,18 @@ git push origin :hotfix/my-fix
 ```
 
 **[`^ back to top ^`](#)**
+
+---
+
+## export web page  CLI
+
+```bash
+# https://peter.sh/experiments/chromium-command-line-switches/
+chromium --headless --disable-gpu --print-to-pdf https://site.com
+chromium --headless --disable-gpu --dump-dom https://site.com
+chromium --headless --disable-gpu --screenshot https://site.com
+chromium --headless --hide-scrollbars --run-all-compositor-stages-before-draw --screenshot=single-page-app.png --fullPage --window-size=1920,8640 https://site.com--virtual-time-budget=10000
+```
+
+**[`^ back to top ^`](#)**
+
