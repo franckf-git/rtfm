@@ -788,6 +788,7 @@ save-position-on-quit
 
 mpv pape.mp4 -wid 0 # mettre une video en fond d ecran
 mpv --no-audio --start=00:01:30 --frames=1 /path/to/video/file --o=/path/to/screenshot.png    #mpv capture ecran
+ffmpeg -ss 00:01:00.00 -i media.mkv -y -f image2 -vcodec mjpeg -vframes 1 screen.jpg
 
 ### DL et encode yt avec sous-titres
 youtube-dl --write-auto-sub --add-metadata -ic $URL
