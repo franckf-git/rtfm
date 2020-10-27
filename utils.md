@@ -793,6 +793,15 @@ mpv --no-audio --start=00:01:30 --frames=1 /path/to/video/file --o=/path/to/scre
 youtube-dl --write-auto-sub --add-metadata -ic $URL
 ffmpeg -i $FILE.vtt $FILE.ass
 ffmpeg -i $FILE.mp4 -vf ass=$FILE.ass $FILE_sub.mp4
+
+### capture screen
+# video
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0+100,200 output.mp4
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 output.mp4
+# video + alsa
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
+# video + pulse
+ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default output.mkv
 ```
 
 **[`^ back to top ^`](#)**
