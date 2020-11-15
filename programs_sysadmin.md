@@ -855,6 +855,18 @@ git flow hotfix finish <nom>        # pour terminer le développement d'un nouve
 
 ## my git workflow
 
+All commit messages must begin with :
+
+```
+[FEAT]
+[FIX]
+[TEST]
+[STYLE]
+[REFACTOR]
+[CHORE]
+[DOCS]
+```
+
 ```bash
 # new feature
 git checkout -b feature/my-feature master
