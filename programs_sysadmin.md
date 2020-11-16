@@ -855,9 +855,13 @@ git flow hotfix finish <nom>        # pour terminer le développement d'un nouve
 
 ## my git workflow
 
-All commit messages must begin with :
+All commit messages must formated :
 
 ```
+type scope/application short-message
+long-message
+
+type :
 [FEAT]
 [FIX]
 [TEST]
@@ -865,6 +869,48 @@ All commit messages must begin with :
 [REFACTOR]
 [CHORE]
 [DOCS]
+[SYSTEM]
+[CONFIG]
+
+scope :
+controller
+route
+middleware
+view
+config
+service
+
+application :
+mail
+auth
+export
+...
+
+short-message :
+describe simply
+
+long-message :
+justify if need can add issue_ID for closing
+
+```
+
+All branch must be formated :
+
+```
+<type>/<name>/<issue_ID>
+
+type :
+feature
+bugfix
+hotfix
+chore
+experiment
+
+name :
+explicit -> add-mail-parser OR change-bdd
+
+issue_ID :
+id of gitlab/gihub/youtrack issue (close automatictly when merge)
 ```
 
 ```bash
