@@ -858,8 +858,9 @@ git flow hotfix finish <nom>        # pour terminer le développement d'un nouve
 All commit messages must formated :
 
 ```
-type scope/application short-message
+type (scope) : /application short-message
 long-message
+...
 
 type :
 [FEAT]
@@ -890,8 +891,12 @@ short-message :
 describe simply
 
 long-message :
-justify if need can add issue_ID for closing
-
+justify if need
+issues will by automatictly closed with :
+    close #1
+    fix #26
+    resolve #8
+    implement #901
 ```
 
 All branch must be formated :
@@ -910,7 +915,9 @@ name :
 explicit -> add-mail-parser OR change-bdd
 
 issue_ID :
+optional
 id of gitlab/gihub/youtrack issue (close automatictly when merge)
+if the branch is for only one issue 
 ```
 
 ```bash
