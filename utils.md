@@ -803,6 +803,13 @@ ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 output.mp4
 ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw:0 output.mkv
 # video + pulse
 ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default output.mkv
+
+### send video to camera
+sudo {dnf,apt} install ffmpeg v4l2loopback-dkms
+# add a new virtual camera to kernel
+sudo modprobe v4l2loopback
+# send video to new camera
+ffmpeg -re -i video.ext -f v4l2 /dev/video3
 ```
 
 **[`^ back to top ^`](#)**
