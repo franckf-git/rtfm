@@ -3,6 +3,8 @@
 ## podman
 
 ```bash
+sudo dnf install -y @container-tools
+
 podman ps                      #check podman
 podman container list --all    #list container
 podman image ls -a             #check your images
