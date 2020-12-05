@@ -5,7 +5,6 @@
 * [bash](bash.md)
 * [containers](containers.md)
 * [crypto](crypto.md)
-* [dispatch.sh](dispatch.sh)
 * [firewall](firewall.md)
 * [front_end](front_end.md)
 * [generals](generals.md)
