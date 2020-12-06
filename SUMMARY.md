@@ -18,6 +18,5 @@
 * [security](security.md)
 * [server_web](server_web.md)
 * [startup](startup.md)
-* [test](test.md)
 * [utils](utils.md)
 
