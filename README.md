@@ -1,7 +1,6 @@
 # [RTFM](https://franckf.gitlab.io/rtfm)
 
 Manual pages for GNU/linux and others tips.  
-Also available at [rtfm.fauchet.ovh](http://rtfm.fauchet.ovh)
 
 [Generate BDD](http://www.generatedata.com/)
 [Online Regex Tester](https://regex101.com/)
