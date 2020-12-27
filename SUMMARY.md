@@ -10,6 +10,7 @@
 * [generals](generals.md)
 * [install](install.md)
 * [network](network.md)
+* [nginx](nginx.md)
 * [package](package.md)
 * [programs_others](programs_others.md)
 * [programs_sysadmin](programs_sysadmin.md)
