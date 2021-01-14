@@ -187,7 +187,7 @@ dnf copr enable USER/PROJECT               #Installer un projet hors dépot
 dnf help                                   #Aide
 dnf mark                                   #marquer paquets installés par utilisateur
 dnf shell                                  #exécute un interpréteur DNF interactif
-dnf updateinfo                             #affiche des avertissements sur les paquets
+dnf updateinfo --info                      #affiche des avertissements sur les paquets
 dnf builddep                               #Install build dependencies for package
 dnf config-manager                         #Gestion de la config et des dépôts dnf
 dnf debug-dump                             #déverse les infos des rpm dans le fichier
@@ -200,7 +200,7 @@ dnf repograph                              #Sortie d un graphe de dépendance
 dnf repomanage                             #Gère un dossier de paquets rpm
 dnf reposync                               #télécharge tous les paquets depuis distant
 dnf info-security                          #affiche le détails des modifications
-dnf check-update --security                #affiche les paquets vitaux
+dnf check-update --security                #affiche les paquets vitaux Critical & Important
 dnf check-update --sec-severity {Critical,Important,Moderate,Low,None}
 rpm -Va                                    #verification de l intégrité des paquets
 # --setopt=install_weak_deps=False         # ignorer les dépendances faibles
