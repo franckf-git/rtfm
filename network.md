@@ -13,6 +13,7 @@
 - [protonvpn](#protonvpn)
 - [montage nfs](#montage-nfs)
 - [gestion ssmtp mailutils](#gestion-ssmtp-mailutils)
+- [ncat](#ncat)
 
 ---
 
@@ -273,3 +274,32 @@ sudo dpkg-statoverride --add root mail 0644 /etc/ssmtp/revaliases
 ```
 
 **[`^ back to top ^`](#)**
+
+---
+
+## ncat
+
+``` bash
+# basic port scan
+nc -z -v site.com
+
+# simple web server
+while : ; do ( echo -ne "HTTP/1.1 200 OK\r\n" ; cat index.html; ) | nc -l -p 8080 ; done
+
+# insecure chat
+# first host
+nc -lp 2424
+# second host
+nc 192.168.0.IPfirstHOST 2424
+
+# stream
+# video server
+cat sample_video.avi | nc -l 2424
+# client
+nc 192.168.0.IPserver 2424 | mplayer -vo x11 -cache 3000 -
+
+printf "GET / HTTP/1.0\r\n\r\n" | nc text.example.com 80
+```
+
+**[`^ back to top ^`](#)**
+
