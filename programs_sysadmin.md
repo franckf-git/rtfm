@@ -519,6 +519,8 @@ tail /var/log/perso.log
 
 ## dokuwiki
 
+`URL.com/PAGE/&do=export_xhtml` cleaner view (for print)
+
 ```
 **gras**
 //italique//
