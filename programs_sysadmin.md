@@ -13,7 +13,6 @@
 - [markdown](#markdown)
 - [git](#git)
 - [git commit messages](#git-commit-messages)
-- [my git workflow](#my-git-workflow)
 - [export web page  CLI](#export-web-page-cli)
 
 ---
@@ -827,6 +826,16 @@ mydotfiles config --local status.showUntrackedFiles no # show only what is add
 
 ## git commit messages
 
+commitlint
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+type:
 feat - a new feature
 fix - a bug fix
 docs - changes in documentation
@@ -834,6 +843,38 @@ style - everything related to styling
 refactor - code changes that neither fixes a bug or adds a feature
 test - everything related to testing
 chore - updating build tasks, package manager configs, etc
+build -
+ci -
+perf -
+revert -
+
+add "!" if BREAKING CHANGE
+
+body: details, fix #34
+
+footer: "BREAKING CHANGE:"
+
+branchlint
+```
+<type>/<name>/<issue_ID>
+```
+
+type :
+feature
+bugfix
+hotfix
+chore
+experiment
+
+name :
+explicit - ex: add-mail-parser OR change-bdd
+
+issue_ID :
+optional
+id of gitlab/gihub/youtrack issue (close automatictly when merge)
+if the branch is for only one issue 
+
+> can be use for automatic changelogs
 
 **[`^ back to top ^`](#)**
 
@@ -849,109 +890,6 @@ git flow release start <version>    # pour démarrer le développement d'une nou
 git flow release finish <nom>       # pour terminer le développement d'une nouvelle release.
 git flow hotfix start <version>     # pour démarrer le développement d'un nouveau hotfix.
 git flow hotfix finish <nom>        # pour terminer le développement d'un nouveau hotfix.
-```
-
-**[`^ back to top ^`](#)**
-
----
-
-## my git workflow
-
-All commit messages must formated :
-
-```
-type (scope) : /application short-message
-long-message
-...
-
-type :
-[FEAT]
-[FIX]
-[TEST]
-[STYLE]
-[REFACTOR]
-[CHORE]
-[DOCS]
-[SYSTEM]
-[CONFIG]
-
-scope :
-controller
-route
-middleware
-view
-config
-service
-
-application :
-mail
-auth
-export
-...
-
-short-message :
-describe simply
-
-long-message :
-justify if need
-issues will by automatictly closed with :
-    close #1
-    fix #26
-    resolve #8
-    implement #901
-```
-
-All branch must be formated :
-
-```
-<type>/<name>/<issue_ID>
-
-type :
-feature
-bugfix
-hotfix
-chore
-experiment
-
-name :
-explicit -> add-mail-parser OR change-bdd
-
-issue_ID :
-optional
-id of gitlab/gihub/youtrack issue (close automatictly when merge)
-if the branch is for only one issue 
-```
-
-```bash
-# new feature
-git checkout -b feature/my-feature master
-git commit ...
-git push -u origin feature/my-feature
-git commit ...
-git commit ...
-git push -u origin feature/my-feature
-vim package.json # version 2.3.0
-
-# end new feature
-git checkout master
-git merge --no-ff feature/my-feature
-git tag 2.3.0
-git push origin master --tags
-git branch -d feature/my-feature
-git push origin :feature/my-feature
-
-# new hotfix
-git checkout -b hotfix/my-fix master
-git commit ...
-vim package.json # version 2.3.4
-
-# end new hotfix
-git checkout master
-git merge --no-ff hotfix/my-fix
-git tag 2.3.4
-git push origin master --tags
-git branch -d hotfix/my-fix
-git push origin :hotfix/my-fix
 ```
 
 **[`^ back to top ^`](#)**
