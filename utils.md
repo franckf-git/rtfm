@@ -369,6 +369,12 @@ setxkbmap -option keypad:pointerkeys    #transforme le clavier numérique en sou
 xmodmap -e "pointer = 3 2 1"            #boutons de souris pour gauchers
 
 /sys/class/backlight/intel_backlight/brightness #luminosité ecran en cli
+
+fwupd                                   #firmware et bios
+fwupdmgr get-devices
+fwupdmgr refresh
+fwupdmgr get-updates
+fwupdmgr update
 ```
 
 **[`^ back to top ^`](#)**
