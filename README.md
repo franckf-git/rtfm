@@ -7,6 +7,7 @@ Manual pages for GNU/linux and others tips.
 [OpenData](https://www.data.gouv.fr/fr/datasets/)
 [Python calculator](https://www.numworks.com/fr/simulateur/)
 [QR Code](http://generator.code-qr.net/#vcard)
+[Speed Test](https://speed.cloudflare.com/)
 
 ### Raspberry
 
