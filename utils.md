@@ -608,6 +608,7 @@ curl https://URL.fr                #get classique
 curl https://URL.fr -D -           #headers
 curl -X HEAD https://URL.fr        #requête de type X (HEAD, POST, PUT, PATCH, DELETE…)
 curl -u username:password ftp://www.SITE.com/FILE.zip #ftp
+curl --header "X-MyHeader: 123" --header "api: 10101" # send with headers
 curl                               #more protocols
 wget                               #recursive
 sha256sum -c DOWNLOAD.sha256       #comparaison sha256sum
