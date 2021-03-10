@@ -71,6 +71,8 @@ apt-get install --no-install-recommends PACKAGE    #ne pas installer les paquets
 tasksel                                    #Installeur ncurse pour les groupes
 tasksel --list-tasks                       #liste des groupes disponibles
 apt-get install lamp-server^               #installation d un group (^)
+#deb http://deb.debian.org/debian buster-backports main
+apt-get install <package>/buster-backports #install from backport
 ```
 
 
