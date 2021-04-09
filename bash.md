@@ -61,6 +61,7 @@ ls ti*          #tito titi
 ls ti?i         #timi titi
 ls t[ia]*       #titi tata titi
 ls t[a-m]*      #tata tete tme
+shc             # compilateur bash
 
 ###>>> check and linting for shell scripts
 sudo dnf install ShellCheck
