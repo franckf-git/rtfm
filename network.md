@@ -303,3 +303,19 @@ printf "GET / HTTP/1.0\r\n\r\n" | nc text.example.com 80
 
 **[`^ back to top ^`](#)**
 
+---
+
+## hotspot network manager
+
+```bash
+# https://fedoramagazine.org/internet-connection-sharing-networkmanager/
+# Carrefull all wifi chip doen't allow an Access Point mode
+nmcli con add type wifi ifname wlo1 con-name Hostspot autoconnect yes ssid MYSSID
+nmcli con modify Hostspot 802-11-wireless.mode ap ipv4.method shared
+nmcli con modify Hostspot wifi-sec.key-mgmt wpa-psk
+nmcli con modify Hostspot wifi-sec.psk "veryveryhardpassword1234"
+nmcli con up Hostspot
+```
+
+**[`^ back to top ^`](#)**
+
