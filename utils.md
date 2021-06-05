@@ -878,8 +878,6 @@ espeak -w AUDIO.wav "MESSAGE"                    #ecriture dans un fichier
 echo "MESSAGE" | espeak -s 160 -a 100 -g 4       #resultat commande
 moc                                              #music on command
 wordgrinder                                      #traitement de texte
-pandoc                                           #convertiseur format texte
-pandoc -f markdown -t html5 -o WEB.html INPUTTEXT.md -c STYLE.css
 calcurse                                         #calendrier et todo-list
 finch                                            #client de messagerie
 mapscii                                          #carte
@@ -899,6 +897,11 @@ vboxmanage startvm NOM_DE_LA_MACHINE_VIRTUELLE   #demarrer virtualbox via une co
 mount -t vboxsf NOM_VIRTUALBOX /CHEMIN_MONTAGE   #partage de dossier
 sudo mount -o loop IMAGE.iso /media/iso/         #monter une iso
 genisoimage -r -v -J -o /tmp/IMAGE.iso /REP      #creer une image ISO
+pandoc                                           #convertiseur format texte
+pandoc -f markdown -t html5 -o WEB.html INPUTTEXT.md -c STYLE.css
+# pandoc in docker
+podman run --detach --interactive --tty  --volume "`pwd`:/data:Z" pandoc/latex
+podman exec --user=root --interactive --tty relaxed_solomon pandoc README.md -o README.pdf
 
 gpm                                              #souris en tty
 sudo nano /etc/gpm.conf
