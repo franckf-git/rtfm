@@ -31,13 +31,12 @@ COMMAND !(*.FILE)     #execute la commande sauf pour les file
 COMMAND | COMMAND     #la seconde commande execute le resultat de la premiere
 (COMMAND1 && COMMAND2) || (COMMAND3 && COMMAND4)   #separe les commandes
 TEST\(1\).txt         #pour les caracteres speciaux
-COMMAND >> FILE.log   #rediriger les resultats a la fin d un fichier
-COMMAND 2>> FILE.log  #rediriger les erreurs a la fin d un fichier
-COMMAND >> FILE.log 2>&1   #rediriger les resultats et les erreurs
-COMMANDE > FILE.log 2>&1   #rediriger à la fois la sortie standard et l erreur standard
-COMMANDE < FILE.log        #rediriger l entrée standard de la commande vers le fichier
-COMMANDE << DELIMITEUR     #rediriger l entrée standard de la commande vers les lignes
-DELIMITEUR                 #+ suivantes jusqu à ce que le délimiteur soit rencontré
+
+COMMAND >> stdout.log 2>> stderr.log # rediriger les deux sorties dans 2 fichiers
+COMMAND >> stdout.log                # rediriger les resultats a la fin d un fichier "1>> equivalaut à >>"
+COMMAND 2>> stderr.log               # rediriger les erreurs a la fin d un fichier
+COMMAND >> combined.log 2>&1         # rediriger les resultats et les erreurs
+
 COMMAND && echo "OK" || echo "FAIL"       #exemples
 COMMAND | COMMAND -   # - recupere la sortie de commande
 VARIABLE=$(COMMAND)   #commande dans une variable
