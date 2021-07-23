@@ -814,6 +814,9 @@ ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f alsa -ac 2 -i hw
 # video + pulse
 ffmpeg -video_size 1024x768 -framerate 25 -f x11grab -i :0.0 -f pulse -ac 2 -i default output.mkv
 
+ffmpeg -i /dev/video0 -f mpegts udp://localhost:8000 #transform webcam to stream
+#https://trac.ffmpeg.org/wiki/StreamingGuide
+
 ### send video to camera
 sudo {dnf,apt} install ffmpeg v4l2loopback-dkms
 # add a new virtual camera to kernel
