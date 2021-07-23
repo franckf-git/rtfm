@@ -133,6 +133,9 @@ mkdir -p FOLD-{a,b,c}/SUBFOLD-{1,2,3}    #aborescence de répertoire avec toutes
 sudo nano /etc/sysctl.d/inotify.conf     #modifier le temps de rafraichissement des dossiers
 # Monitor directories for change
 fs.inotify.max_user_watches = 524288
+
+ls | xargs COMMAND
+# plutôt que for i in $(ls) ; do COMMAND ...
 ```
 
 **[`^ back to top ^`](#)**
