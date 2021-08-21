@@ -1,6 +1,6 @@
-## Index
+[[_TOC_]]
 
-[TOC]
+## Index
 
 - [interaction entre les commandes](#interaction-entre-les-commandes)
 - [shell](#shell)
