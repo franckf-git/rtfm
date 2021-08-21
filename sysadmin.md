@@ -1,7 +1,5 @@
 ## Index
 
-[TOC]
-
 - [crontab -e](#crontab--e)
 - [cron quotidienne](#cron-quotidienne)
 - [commandes periodiques en dessous de une minute](#commandes-periodiques-en-dessous-de-une-minute)

@@ -1,7 +1,5 @@
 ## Index
 
-[TOC]
-
 - [Serveur Web Apache](#serveur-web-apache)
 - [simple serveur web](#simple-serveur-web)
 - [redirection html](#redirection-html)

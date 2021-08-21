@@ -1,7 +1,5 @@
 ## Index
 
-[TOC]
-
 - [wine](#wine)
 - [back in time outil de sauvegarde graphique](#back-in-time-outil-de-sauvegarde-graphique)
 - [installation de steam](#installation-de-steam)

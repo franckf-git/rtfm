@@ -1,7 +1,5 @@
 ## Index
 
-[TOC]
-
 - [HTML codes et status](#html-codes-et-status)
 - [Raccourcis terminal](#raccourcis-terminal)
 - [tabbed](#tabbed)

@@ -1,7 +1,5 @@
 ## Index
 
-[TOC]
-
 - [Bootstrap](#bootstrap)
 
 ---

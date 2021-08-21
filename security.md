@@ -1,7 +1,5 @@
 ## Index
 
-[TOC]
-
 - [message of the day ssh custom](#message-of-the-day-ssh-custom)
 - [ssh](#ssh)
 - [ssh echange de cle](#ssh-echange-de-cle)

@@ -1,7 +1,5 @@
 ## Index
 
-[TOC]
-
 - [changer serveur DNS en CLI](#changer-serveur-dns-en-cli)
 - [DNScrypt](#dnscrypt)
 - [transformer une machine en routeur](#transformer-une-machine-en-routeur)

@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 ## Index
 
 - [interaction entre les commandes](#interaction-entre-les-commandes)
