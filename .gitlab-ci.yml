@@ -31,3 +31,16 @@ pages:
     expire_in: 1 week
   only:
     - master # this job will affect only the 'master' branch
+
+build:
+  image: docker:19.03.12
+  stage: build
+  services:
+    - docker:19.03.12-dind
+  variables:
+    CONTAINER_IMAGE: $CI_REGISTRY_IMAGE/$CI_PROJECT_NAME
+    CONTAINER_RELEASE_TAG: $CONTAINER_IMAGE:$CI_COMMIT_REF_SLUG
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -f Containerfile -t $CONTAINER_RELEASE_TAG .
+    - docker push $CONTAINER_RELEASE_TAG
